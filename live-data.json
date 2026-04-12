@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T17:39:00Z",
+  "generatedAt": "2026-04-12T17:41:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -10,12 +10,12 @@
     {
       "name": "mission-control",
       "status": "active",
-      "note": "Live dashboard refresh cron is running"
+      "note": "Main cron refresh is currently running"
     },
     {
       "name": "contact-enrichment-ops",
       "status": "standby",
-      "note": "Last batch completed; waiting for next queue"
+      "note": "No active run; waiting for next enrichment queue"
     },
     {
       "name": "linkedin-ops",
@@ -26,7 +26,7 @@
   "goalProgress": [
     {
       "goal": "Operational visibility",
-      "progress": 82,
+      "progress": 84,
       "status": "on_track"
     },
     {
@@ -51,7 +51,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last run processed rows and marked unresolved as not_found",
+      "task": "Last known run completed a batch and marked unresolved fields",
       "pending": "Await next Notion-backed enrichment batch"
     },
     {
@@ -60,7 +60,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn profile lookup support",
-      "task": "No active run; latest visible sessions are completed",
+      "task": "No active run; latest visible runs are completed",
       "pending": "Await next lookup instructions"
     },
     {
@@ -77,7 +77,7 @@
       "name": "flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Flowise build/support",
+      "goal": "Flowise build and support",
       "task": "No currently running session in snapshot",
       "pending": "Await next build request"
     }
