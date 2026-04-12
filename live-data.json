@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T23:35:00Z",
+  "generatedAt": "2026-04-12T23:37:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -11,8 +11,8 @@
   ],
   "goalProgress": {
     "operations": "Live status refresh running on schedule",
-    "contactPipeline": "Last run processed 99 rows with unresolved fields marked not_found",
-    "linkedinPipeline": "Worker reachable, no active batch running"
+    "contactPipeline": "Last run processed 99 rows; unresolved fields marked not_found",
+    "linkedinPipeline": "No active LinkedIn batch running"
   },
   "agents": [
     {
@@ -39,7 +39,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich LinkedIn data for requested records",
-      "task": "No active run; previous group task returned zero updates",
+      "task": "No active run; recent batch returned zero updates",
       "pending": "Await next lookup batch"
     },
     {
