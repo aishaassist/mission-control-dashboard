@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T21:33:00Z",
+  "generatedAt": "2026-04-12T21:35:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,14 +13,14 @@
     }
   },
   "priorities": [
-    "Keep main operations stable",
-    "Unblock contact enrichment by confirming Notion integration access",
-    "Queue the next LinkedIn enrichment batch"
+    "Keep mission-control refresh and runtime monitoring stable",
+    "Unblock contactenrichment by ensuring Notion integration access is valid",
+    "Prepare next linkedin enrichment trigger with fresh source rows"
   ],
   "goalProgress": {
-    "operations": "Main (Aisha) is actively running the mission-control refresh cron.",
-    "automation": "n8n and flowise are idle and ready for new workflow/build requests.",
-    "enrichment": "contactenrichment is on standby after last batch; linkedin is on standby pending new trigger."
+    "operations": "main (Aisha) is actively running the live-data refresh cron.",
+    "automation": "n8n and flowise are idle/standby and ready for new build or automation requests.",
+    "enrichment": "contactenrichment is standby after last batch completion; linkedin is standby with recent failed session history."
   },
   "agents": [
     {
@@ -29,8 +29,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Mission-control runtime orchestration",
-      "task": "Cron live-data refresh running",
-      "pending": "Commit and push updated dashboard snapshot"
+      "task": "Live-data refresh cron currently running",
+      "pending": "Finalize snapshot, then commit and push if changed"
     },
     {
       "name": "contactenrichment",
@@ -38,8 +38,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Backfill missing school email and phone fields",
-      "task": "Last run processed batch and completed",
-      "pending": "Await Notion access confirmation and next enrichment batch"
+      "task": "Last enrichment run completed",
+      "pending": "Await Notion access confirmation and next batch"
     },
     {
       "name": "linkedin",
@@ -47,7 +47,7 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Enrich records with LinkedIn profile data",
-      "task": "No active run; latest sessions show completed and failed states",
+      "task": "No active run; recent history includes failed session",
       "pending": "Await next source list and execution trigger"
     },
     {
@@ -64,7 +64,7 @@
       "alias": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Support Flowise flow building and updates",
+      "goal": "Support flow building and updates",
       "task": "Idle with no active runs",
       "pending": "Await next flow build/update request"
     }
