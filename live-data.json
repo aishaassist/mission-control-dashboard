@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T22:17:00Z",
+  "generatedAt": "2026-04-12T22:19:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -16,7 +16,7 @@
     },
     {
       "goal": "Contact enrichment throughput",
-      "progress": "Latest known contactenrichment run processed 99 rows"
+      "progress": "Latest known contactenrichment run completed 99 rows"
     },
     {
       "goal": "Specialist readiness",
@@ -48,7 +48,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Execute delegated LinkedIn lookup tasks",
-      "task": "Latest run completed with no active workload",
+      "task": "No running session detected; latest run completed",
       "pending": "Await next LinkedIn lookup request"
     },
     {
