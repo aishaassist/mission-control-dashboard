@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T23:23:00Z",
+  "generatedAt": "2026-04-12T23:25:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -43,10 +43,10 @@
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Idle",
-      "health": "warn",
+      "health": "bad",
       "goal": "Handle LinkedIn lookup and update requests",
-      "task": "No active run; latest group workflow processed 0 rows",
-      "pending": "Await next queue and monitor slash-session failures"
+      "task": "No active run; latest workflow returned 0 rows",
+      "pending": "Investigate recent failed slash session and await next queue"
     },
     {
       "name": "n8n",
