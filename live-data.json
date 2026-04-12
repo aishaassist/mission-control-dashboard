@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T18:57:00Z",
+  "generatedAt": "2026-04-12T18:59:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -18,7 +18,7 @@
     {
       "goal": "Specialist utilization",
       "status": "waiting",
-      "note": "Only main sessions are currently running"
+      "note": "Main is active; specialist agents are idle/standby"
     }
   ],
   "agents": [
@@ -29,7 +29,7 @@
       "health": "ok",
       "goal": "Mission-control live data refresh",
       "task": "Cron refresh and primary chat sessions are running",
-      "pending": "Stage, commit, and push only if file changed"
+      "pending": "Commit and push only when this file has changed"
     },
     {
       "name": "contactenrichment",
@@ -37,7 +37,7 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Notion contact completion",
-      "task": "Last known run completed a Notion enrichment batch",
+      "task": "Last known runs are complete; no active execution",
       "pending": "Await next enrichment request"
     },
     {
@@ -46,7 +46,7 @@
       "status": "Standby",
       "health": "bad",
       "goal": "LinkedIn lookup support",
-      "task": "No active run; recent slash session failed",
+      "task": "No active run; recent slash session shows failed",
       "pending": "Await next lookup task"
     },
     {
