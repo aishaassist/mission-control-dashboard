@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T20:49:00Z",
+  "generatedAt": "2026-04-12T20:51:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -17,8 +17,8 @@
     "Queue next actionable LinkedIn enrichment batch"
   ],
   "goalProgress": {
-    "operations": "Main cron refresh session is running and updating dashboard telemetry",
-    "dataEnrichment": "Contactenrichment and LinkedIn are standby with no active runtime sessions",
+    "operations": "Main cron refresh session is active and updating dashboard telemetry",
+    "dataEnrichment": "Contactenrichment and LinkedIn are idle/standby with no active runtime sessions",
     "automation": "n8n and flowise are idle, awaiting automation or build tasks"
   },
   "agents": [
@@ -36,7 +36,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Populate missing school email and phone records",
-      "task": "Last run completed; no current session running",
+      "task": "Last run completed; currently no running session",
       "pending": "Await Notion integration readiness and next queued rows"
     },
     {
@@ -44,7 +44,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill LinkedIn profile fields for queued records",
-      "task": "No active session; latest completion reported zero rows processed",
+      "task": "No active session; latest run reported zero rows processed",
       "pending": "Await next LinkedIn lookup trigger"
     },
     {
