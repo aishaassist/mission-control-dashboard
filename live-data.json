@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T20:29:00Z",
+  "generatedAt": "2026-04-12T20:31:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -17,9 +17,9 @@
     "Queue next LinkedIn enrichment batch"
   ],
   "goalProgress": {
-    "operations": "Live refresh pipeline running on schedule",
-    "dataEnrichment": "Blocked on external access/config prerequisites",
-    "automation": "No active n8n/flowise execution in last cycle"
+    "operations": "Main cron refresh currently active",
+    "dataEnrichment": "Contact + LinkedIn pipelines idle, waiting next actionable batch",
+    "automation": "n8n and flowise on standby with no active runs"
   },
   "agents": [
     {
@@ -27,41 +27,41 @@
       "alias": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Keep mission control current",
-      "task": "Cron live-data refresh is running",
-      "pending": "Complete write, commit, and push if changed"
+      "goal": "Operate mission-control and orchestrate agents",
+      "task": "Running cron mission-control-live-data-refresh",
+      "pending": "Finalize git commit and push only on diff"
     },
     {
       "name": "contactenrichment",
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact email/phone fields",
-      "task": "Last run finished with no updates",
-      "pending": "Await valid Notion integration access/shared DB"
+      "task": "Last run completed with rows processed, no verified updates",
+      "pending": "Await valid Notion integration access and next dataset"
     },
     {
       "name": "linkedin",
       "status": "Standby",
       "health": "warn",
-      "goal": "Update LinkedIn fields for enrichment rows",
-      "task": "No active processing; last batch reported zero rows",
-      "pending": "Need next input batch or trigger"
+      "goal": "Populate LinkedIn profile fields for enrichment rows",
+      "task": "No active run, last batch returned zero processed rows",
+      "pending": "Await new lookup queue or trigger"
     },
     {
       "name": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Automation workflow execution support",
-      "task": "No currently running session detected",
-      "pending": "Await workflow deployment/execution request"
+      "goal": "Deploy and run workflow automations",
+      "task": "No running session detected",
+      "pending": "Await automation request"
     },
     {
       "name": "flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise build and orchestration support",
-      "task": "No currently running session detected",
-      "pending": "Await build or troubleshooting task"
+      "goal": "Support Flowise builds and troubleshooting",
+      "task": "No running session detected",
+      "pending": "Await build or debugging task"
     }
   ]
 }
