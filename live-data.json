@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T17:45:00Z",
+  "generatedAt": "2026-04-12T17:47:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -15,18 +15,18 @@
     {
       "name": "contact-enrichment-ops",
       "status": "standby",
-      "note": "Awaiting next Notion contact enrichment batch"
+      "note": "Last contact enrichment batch completed; awaiting next queue"
     },
     {
       "name": "linkedin-ops",
-      "status": "standby",
-      "note": "Awaiting next LinkedIn lookup instruction"
+      "status": "monitor",
+      "note": "No active run; recent history includes a failed session"
     }
   ],
   "goalProgress": [
     {
       "goal": "Operational visibility",
-      "progress": 86,
+      "progress": 87,
       "status": "on_track"
     },
     {
@@ -51,17 +51,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last run completed with final enrichment counts",
-      "pending": "Await next queue and verified source updates"
+      "task": "Latest visible run finished with final enrichment counts",
+      "pending": "Await next Notion batch"
     },
     {
       "agent": "linkedin",
       "name": "linkedin",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Support LinkedIn lookup operations",
-      "task": "Latest visible runs are completed, none active",
-      "pending": "Await next lookup request"
+      "task": "No active run; recent snapshot shows one failed session",
+      "pending": "Await next lookup request and verify stability"
     },
     {
       "agent": "n8n",
@@ -69,8 +69,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Handle workflow automation deployments",
-      "task": "No active n8n session in current snapshot",
-      "pending": "Await trigger for workflow build/deploy"
+      "task": "No running n8n session in current snapshot",
+      "pending": "Await workflow trigger/build request"
     },
     {
       "agent": "flowise",
@@ -78,7 +78,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise builds and maintenance",
-      "task": "No active Flowise session in current snapshot",
+      "task": "No running Flowise session in current snapshot",
       "pending": "Await next build request"
     }
   ]
