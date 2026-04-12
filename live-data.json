@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-12T22:31:00Z",
+  "generatedAt": "2026-04-12T22:33:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main (Aisha) responsive while cron refresh runs",
-    "Re-queue contactenrichment only when fresh Notion items are available",
+    "Queue contactenrichment only when fresh Notion rows are ready",
     "Keep linkedin, n8n, and flowise in warm standby for delegation"
   ],
   "goalProgress": [
@@ -20,7 +20,7 @@
     },
     {
       "goal": "Specialist readiness",
-      "progress": "linkedin, n8n, and flowise are currently idle/standby"
+      "progress": "linkedin, n8n, and flowise are idle/standby"
     }
   ],
   "agents": [
