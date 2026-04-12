@@ -1,64 +1,75 @@
 {
-  "generatedAt": "2026-04-12T23:47:00Z",
+  "generatedAt": "2026-04-12T23:49:00Z",
   "source": {
-    "sessions": "sessions_list(limit=50,messageLimit=1)",
-    "subagents": "subagents(action=list,recentMinutes=1440)"
+    "sessionsList": {
+      "limit": 50,
+      "messageLimit": 1,
+      "count": 12
+    },
+    "subagents": {
+      "recentMinutes": 1440,
+      "active": 0,
+      "recent": 0
+    }
   },
   "priorities": [
-    "Keep mission-control snapshots fresh for operator visibility",
-    "Unblock Contact Enrichment Notion access for row-level updates",
-    "Route repetitive execution work to n8n where possible"
+    "Keep main coordination session responsive",
+    "Unblock contactenrichment Notion-connected runs",
+    "Queue next actionable workloads for linkedin, n8n, and flowise"
   ],
   "goalProgress": {
-    "operations": "Main cron refresh is actively running",
-    "contactPipeline": "Last Contact Enrichment run processed 99 rows; awaiting next Notion-enabled batch",
-    "linkedinPipeline": "LinkedIn is on standby after last run returned 0 updates"
+    "summary": "Main orchestration active; specialist agents mostly on standby awaiting next assignments.",
+    "completion": {
+      "active": 1,
+      "standby": 4,
+      "failed": 0
+    }
   },
   "agents": [
     {
-      "agent": "main",
-      "name": "Aisha",
+      "name": "main",
+      "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission control and delegated agents",
-      "task": "Refreshing live dashboard data",
-      "pending": "Continue scheduled runtime snapshots"
+      "goal": "Orchestrate mission-control refresh and cross-agent coordination",
+      "task": "Running cron live-data refresh",
+      "pending": "Publish updated dashboard snapshot"
     },
     {
-      "agent": "contactenrichment",
-      "name": "Contact Enrichment",
-      "status": "Idle/Standby",
+      "name": "contactenrichment",
+      "label": "Contact Enrichment",
+      "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school contact fields from official sources",
-      "task": "Last batch complete with 99 rows processed",
-      "pending": "Await next Notion-enabled enrichment run"
+      "goal": "Fill missing school contact email/phone fields",
+      "task": "Last run processed school rows with final metrics reported",
+      "pending": "Await next Notion-connected enrichment batch"
     },
     {
-      "agent": "linkedin",
-      "name": "LinkedIn",
-      "status": "Idle/Standby",
+      "name": "linkedin",
+      "label": "LinkedIn",
+      "status": "Standby",
       "health": "warn",
-      "goal": "Enrich LinkedIn data for requested records",
-      "task": "No active run; last quick batch returned 0 updates",
-      "pending": "Await next lookup request"
+      "goal": "LinkedIn lookup and profile coverage support",
+      "task": "No active run; last task closed with zero rows processed",
+      "pending": "Await fresh lookup list or outreach batch"
     },
     {
-      "agent": "n8n",
       "name": "n8n",
-      "status": "Idle/Standby",
+      "label": "n8n",
+      "status": "Standby",
       "health": "warn",
-      "goal": "Automate repetitive operational workflows",
+      "goal": "Automation workflow build and deployment",
       "task": "No active execution detected",
-      "pending": "Queue next automation deployment"
+      "pending": "Await next automation request"
     },
     {
-      "agent": "flowise",
-      "name": "Flowise",
-      "status": "Idle/Standby",
+      "name": "flowise",
+      "label": "Flowise",
+      "status": "Standby",
       "health": "warn",
-      "goal": "Support Flowise build and integration tasks",
-      "task": "No active execution detected",
-      "pending": "Await next build or integration request"
+      "goal": "Flowise agent/workflow implementation",
+      "task": "Idle, waiting for build instructions",
+      "pending": "Await new Flowise build task"
     }
   ]
 }
