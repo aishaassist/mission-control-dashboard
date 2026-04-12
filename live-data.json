@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T19:09:00Z",
+  "generatedAt": "2026-04-12T19:11:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -25,7 +25,7 @@
     },
     {
       "goal": "Specialist execution readiness",
-      "progress": "No specialist runs currently active; all specialist lanes in standby",
+      "progress": "Main is active; specialist lanes are idle with linkedin showing prior failure signal",
       "status": "watch"
     }
   ],
@@ -37,7 +37,7 @@
       "health": "ok",
       "goal": "Coordinate Kumar's operations and route work to specialists",
       "task": "Running mission-control live-data refresh cron session",
-      "pending": "Continue runtime stability checks and clear auth friction as needed"
+      "pending": "Continue runtime monitoring and keep delegation lanes clear"
     },
     {
       "name": "contactenrichment",
@@ -45,8 +45,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records from verifiable official sources",
-      "task": "Last known run completed contact enrichment reporting",
-      "pending": "Await next Notion enrichment assignment"
+      "task": "Last known run completed and reported final enrichment summary",
+      "pending": "Await next Notion enrichment batch"
     },
     {
       "name": "linkedin",
@@ -54,8 +54,8 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Handle LinkedIn lookup and profile update workflows",
-      "task": "No running LinkedIn session; latest visible history includes a failed slash session",
-      "pending": "Await next lookup batch and watch for runtime stability"
+      "task": "No current run; recent visible history includes a failed slash session",
+      "pending": "Await next lookup assignment and verify runtime stability"
     },
     {
       "name": "n8n",
@@ -64,7 +64,7 @@
       "health": "warn",
       "goal": "Build and deploy automations across configured n8n instances",
       "task": "No active n8n session currently running",
-      "pending": "Stand by for next automation build or deploy request"
+      "pending": "Stand by for next automation build/deploy request"
     },
     {
       "name": "flowise",
