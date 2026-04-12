@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T17:41:00Z",
+  "generatedAt": "2026-04-12T17:43:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -15,18 +15,18 @@
     {
       "name": "contact-enrichment-ops",
       "status": "standby",
-      "note": "No active run; waiting for next enrichment queue"
+      "note": "No active enrichment run in current snapshot"
     },
     {
       "name": "linkedin-ops",
       "status": "standby",
-      "note": "No active lookup run in current snapshot"
+      "note": "No active LinkedIn lookup run in current snapshot"
     }
   ],
   "goalProgress": [
     {
       "goal": "Operational visibility",
-      "progress": 84,
+      "progress": 85,
       "status": "on_track"
     },
     {
@@ -41,9 +41,9 @@
       "name": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Run mission-control live refresh and orchestration",
-      "task": "Refreshing dashboard runtime snapshot",
-      "pending": "Continue periodic cron refreshes"
+      "goal": "Maintain mission-control orchestration",
+      "task": "Running live dashboard refresh cron",
+      "pending": "Continue periodic runtime snapshots"
     },
     {
       "agent": "contactenrichment",
@@ -51,34 +51,34 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last known run completed a batch and marked unresolved fields",
-      "pending": "Await next Notion-backed enrichment batch"
+      "task": "Last run processed enrichment batch and returned final counts",
+      "pending": "Await next Notion-backed enrichment queue"
     },
     {
       "agent": "linkedin",
       "name": "linkedin",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "LinkedIn profile lookup support",
+      "goal": "Support LinkedIn lookup operations",
       "task": "No active run; latest visible runs are completed",
-      "pending": "Await next lookup instructions"
+      "pending": "Await next lookup instruction"
     },
     {
       "agent": "n8n",
       "name": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Workflow automation deployments",
-      "task": "No currently running session in snapshot",
-      "pending": "Await automation task trigger"
+      "goal": "Handle workflow automation deployments",
+      "task": "No currently running n8n session in snapshot",
+      "pending": "Await automation trigger"
     },
     {
       "agent": "flowise",
       "name": "flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Flowise build and support",
-      "task": "No currently running session in snapshot",
+      "goal": "Support Flowise builds and maintenance",
+      "task": "No currently running Flowise session in snapshot",
       "pending": "Await next build request"
     }
   ]
