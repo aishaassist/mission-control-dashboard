@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-12T23:07:48Z",
+  "generatedAt": "2026-04-12T23:11:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main (Aisha) responsive while cron refresh is running",
-    "Queue contactenrichment only when new Notion rows are ready",
-    "Maintain linkedin, n8n, and flowise in standby for delegations"
+    "Keep main (Aisha) responsive while scheduled refresh runs",
+    "Queue contactenrichment when new Notion enrichment rows are available",
+    "Keep linkedin, n8n, and flowise warm in standby for delegations"
   ],
   "goalProgress": [
     {
@@ -16,11 +16,11 @@
     },
     {
       "goal": "Contact enrichment throughput",
-      "progress": "Latest contactenrichment run finalized with 99 rows processed"
+      "progress": "Latest contactenrichment result: FINAL with 99 rows processed"
     },
     {
       "goal": "Specialist readiness",
-      "progress": "linkedin, n8n, and flowise are currently idle"
+      "progress": "linkedin, n8n, and flowise are idle and ready"
     }
   ],
   "agents": [
@@ -31,7 +31,7 @@
       "health": "ok",
       "goal": "Coordinate mission control and core operations",
       "task": "Running cron mission-control-live-data-refresh",
-      "pending": "Continue scheduled monitoring and delegation"
+      "pending": "Continue scheduled monitoring and delegations"
     },
     {
       "name": "contactenrichment",
@@ -48,7 +48,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Execute delegated LinkedIn lookup tasks",
-      "task": "Latest run completed with no active batch",
+      "task": "No current running session; latest run completed",
       "pending": "Await next lookup batch"
     },
     {
