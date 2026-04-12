@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T21:13:00Z",
+  "generatedAt": "2026-04-12T21:15:00Z",
   "source": {
     "cronId": "32ef53fa-2d22-4e89-abbb-34ab918e57d5",
     "sessionsList": {
@@ -27,7 +27,7 @@
     {
       "goal": "Specialist execution readiness",
       "status": "at_risk",
-      "progress": "No active specialist runs in the last cycle"
+      "progress": "No active specialist runs in the current cycle"
     }
   ],
   "agents": [
