@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T21:25:00Z",
+  "generatedAt": "2026-04-12T21:27:00Z",
   "source": {
     "cronId": "32ef53fa-2d22-4e89-abbb-34ab918e57d5",
     "sessionsList": {
@@ -15,8 +15,8 @@
   },
   "priorities": [
     "Keep main (Aisha) run-loop healthy and responsive",
-    "Recover linkedin from failed residue before next lookup batch",
-    "Queue fresh tasks for contactenrichment, n8n, and flowise"
+    "Prime fresh specialist workloads across contactenrichment, linkedin, n8n, and flowise",
+    "Clear linkedin reliability residue before the next lookup batch"
   ],
   "goalProgress": [
     {
@@ -53,10 +53,10 @@
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "Enrich and validate LinkedIn profile coverage",
-      "task": "No active run; recent session history includes failure",
-      "pending": "Stabilize runtime and start next lookup workload"
+      "task": "Idle after recent no-op final run; older sessions include failures",
+      "pending": "Next lookup workload with runtime stability check"
     },
     {
       "name": "n8n",
