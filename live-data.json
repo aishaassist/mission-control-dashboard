@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-04-12T22:01:00Z",
+  "generatedAt": "2026-04-12T22:03:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main (Aisha) responsive while cron refresh runs",
-    "Queue contact enrichment when new Notion rows are assigned",
-    "Keep LinkedIn, n8n, and Flowise on standby for delegated work"
+    "Trigger contact enrichment only when new Notion rows are assigned",
+    "Maintain linkedin, n8n, and flowise in ready standby"
   ],
   "goalProgress": [
     {
       "goal": "Mission control continuity",
-      "progress": "Live dashboard refresh cron is active"
+      "progress": "Cron refresh is currently running in main"
     },
     {
       "goal": "Contact enrichment throughput",
@@ -20,7 +20,7 @@
     },
     {
       "goal": "Specialist readiness",
-      "progress": "LinkedIn, n8n, and Flowise are idle and ready"
+      "progress": "linkedin, n8n, and flowise are idle and ready for delegation"
     }
   ],
   "agents": [
@@ -30,7 +30,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control and primary operations",
-      "task": "Cron mission-control-live-data-refresh is in progress",
+      "task": "Running cron mission-control-live-data-refresh",
       "pending": "Continue scheduled monitoring and dispatch"
     },
     {
@@ -39,7 +39,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contacts from verified official sources",
-      "task": "Last run completed with a 99-row final summary",
+      "task": "Last run completed with final summary: 99 rows processed",
       "pending": "Await next Notion enrichment assignment"
     },
     {
@@ -49,7 +49,7 @@
       "health": "warn",
       "goal": "Handle delegated LinkedIn lookups",
       "task": "Last run reported no active rows processed",
-      "pending": "Await next lookup task; monitor occasional failed slash sessions"
+      "pending": "Await next lookup task; watch for failed slash-session retries"
     },
     {
       "name": "n8n",
