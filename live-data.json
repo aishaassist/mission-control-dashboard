@@ -1,52 +1,85 @@
 {
-  "generatedAt": "2026-04-12T23:07:00+05:30",
-  "source": "OpenClaw runtime snapshot (sessions_list + subagents)",
+  "generatedAt": "2026-04-12T17:39:00Z",
+  "source": {
+    "sessions": "sessions_list(limit=50,messageLimit=1)",
+    "subagents": "subagents(action=list,recentMinutes=1440)",
+    "snapshotSessionCount": 12,
+    "snapshotSubagentCount": 0
+  },
   "priorities": [
-    "Keep mission-control dashboard synced with live runtime state",
-    "Maintain stable cron-based refresh with change-only git pushes",
-    "Track specialist readiness across core delivery agents"
+    {
+      "name": "mission-control",
+      "status": "active",
+      "note": "Live dashboard refresh cron is running"
+    },
+    {
+      "name": "contact-enrichment-ops",
+      "status": "standby",
+      "note": "Last batch completed; waiting for next queue"
+    },
+    {
+      "name": "linkedin-ops",
+      "status": "standby",
+      "note": "No active lookup run in current snapshot"
+    }
   ],
-  "goalProgress": 78,
+  "goalProgress": [
+    {
+      "goal": "Operational visibility",
+      "progress": 82,
+      "status": "on_track"
+    },
+    {
+      "goal": "Automated enrichment pipeline",
+      "progress": 64,
+      "status": "monitor"
+    }
+  ],
   "agents": [
     {
-      "name": "main (Aisha)",
+      "agent": "main",
+      "name": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Run mission-control and keep live telemetry current",
-      "task": "Executing mission-control-live-data-refresh cron run",
-      "pending": "Continue periodic refresh and publish only when changed"
+      "goal": "Run mission-control live refresh and orchestration",
+      "task": "Refreshing dashboard runtime snapshot",
+      "pending": "Continue periodic cron refreshes"
     },
     {
+      "agent": "contactenrichment",
       "name": "contactenrichment",
-      "status": "Idle",
+      "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contact records in Notion from official sources",
-      "task": "Last run processed 99 rows with no verified contact updates",
-      "pending": "Re-run unresolved rows after verification or access updates"
+      "goal": "Enrich school contact records",
+      "task": "Last run processed rows and marked unresolved as not_found",
+      "pending": "Await next Notion-backed enrichment batch"
     },
     {
+      "agent": "linkedin",
       "name": "linkedin",
-      "status": "Idle",
+      "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Improve LinkedIn coverage for school and contact datasets",
-      "task": "Latest run completed with no rows processed",
-      "pending": "Start next lookup batch for missing profile links"
+      "goal": "LinkedIn profile lookup support",
+      "task": "No active run; latest visible sessions are completed",
+      "pending": "Await next lookup instructions"
     },
     {
+      "agent": "n8n",
       "name": "n8n",
-      "status": "Standby",
+      "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Build and deploy automation workflows",
-      "task": "No active execution in current runtime snapshot",
-      "pending": "Resume queued automation work when assigned"
+      "goal": "Workflow automation deployments",
+      "task": "No currently running session in snapshot",
+      "pending": "Await automation task trigger"
     },
     {
+      "agent": "flowise",
       "name": "flowise",
-      "status": "Standby",
+      "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Support flow orchestration and implementation tasks",
-      "task": "No active execution in current runtime snapshot",
-      "pending": "Pick up next flow build cycle when requested"
+      "goal": "Flowise build/support",
+      "task": "No currently running session in snapshot",
+      "pending": "Await next build request"
     }
   ]
 }
