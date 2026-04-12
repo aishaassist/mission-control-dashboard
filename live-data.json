@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T19:43:00Z",
+  "generatedAt": "2026-04-12T19:45:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -26,7 +26,7 @@
     {
       "goal": "Execution readiness",
       "status": "Watch",
-      "note": "Only main is active; specialist agents are on standby"
+      "note": "Only main is active; specialist agents remain standby"
     }
   ],
   "agents": [
