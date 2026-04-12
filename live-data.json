@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-12T22:29:00Z",
+  "generatedAt": "2026-04-12T22:31:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main (Aisha) responsive while cron refresh runs",
-    "Resume contactenrichment when new Notion queue items arrive",
-    "Keep linkedin, n8n, and flowise ready for delegation"
+    "Re-queue contactenrichment only when fresh Notion items are available",
+    "Keep linkedin, n8n, and flowise in warm standby for delegation"
   ],
   "goalProgress": [
     {
@@ -20,7 +20,7 @@
     },
     {
       "goal": "Specialist readiness",
-      "progress": "linkedin, n8n, and flowise are idle and on standby"
+      "progress": "linkedin, n8n, and flowise are currently idle/standby"
     }
   ],
   "agents": [
@@ -48,7 +48,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Execute delegated LinkedIn lookup tasks",
-      "task": "No running session detected; latest completed run processed 0 rows",
+      "task": "No running session detected; latest done run reported 0 rows",
       "pending": "Await next LinkedIn lookup request"
     },
     {
