@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T18:33:00Z",
+  "generatedAt": "2026-04-12T18:35:00Z",
   "source": {
     "cron": "32ef53fa-2d22-4e89-abbb-34ab918e57d5",
     "sessionsList": {
@@ -14,25 +14,25 @@
     }
   },
   "priorities": [
-    "Keep Aisha main runtime stable while this refresh cron is active.",
-    "Resume contact enrichment and LinkedIn queues when new rows arrive.",
-    "Trigger concrete n8n and Flowise runs to move automation stack out of standby."
+    "Keep Aisha runtime stable and mission-control refreshes continuous.",
+    "Queue next contact enrichment and LinkedIn batches when new rows arrive.",
+    "Move n8n and Flowise from standby into active automation runs."
   ],
   "goalProgress": [
     {
       "goal": "Mission control runtime visibility",
       "status": "on_track",
-      "progress": "Live operations snapshot refreshed from current OpenClaw runtime state"
+      "progress": "Live snapshot refreshed from current OpenClaw session and subagent state"
     },
     {
       "goal": "Contact and LinkedIn operations",
       "status": "paused",
-      "progress": "No active runs; latest visible batches are complete and waiting for next trigger"
+      "progress": "No active runs; latest visible contact run completed and LinkedIn awaits next trigger"
     },
     {
       "goal": "Automation stack activity",
       "status": "standby",
-      "progress": "n8n and Flowise have no running session detected"
+      "progress": "n8n and Flowise currently idle with no running sessions"
     }
   ],
   "agents": [
@@ -41,27 +41,27 @@
       "name": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Orchestrate Kumar operations and keep mission-control sync current.",
-      "task": "Running mission-control-live-data-refresh cron execution.",
-      "pending": "Complete this refresh cycle and continue periodic monitoring."
+      "goal": "Coordinate operations and keep dashboard state current.",
+      "task": "Executing mission-control live data refresh cron run.",
+      "pending": "Finish refresh cycle and continue scheduled updates."
     },
     {
       "id": "contactenrichment",
       "name": "contactenrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Enrich missing contact fields from verifiable official sources.",
-      "task": "Latest visible run completed with final contact summary output.",
-      "pending": "Await next Notion/contact enrichment assignment."
+      "goal": "Fill missing contact fields from verifiable official sources.",
+      "task": "Latest visible batch finished with final summary output.",
+      "pending": "Await next Notion/contact enrichment workload."
     },
     {
       "id": "linkedin",
       "name": "linkedin",
       "status": "Standby",
       "health": "bad",
-      "goal": "Support LinkedIn profile discovery and update workflows.",
-      "task": "No running session; latest recent slash session shows failed state.",
-      "pending": "Stabilize next LinkedIn batch run and clear failure condition."
+      "goal": "Handle LinkedIn profile discovery and update workflows.",
+      "task": "No running session; recent slash context includes a failed state.",
+      "pending": "Resume next batch and verify stable execution."
     },
     {
       "id": "n8n",
@@ -69,8 +69,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Build and deploy workflow automations.",
-      "task": "No current active session detected.",
-      "pending": "Start next deployment or health-check execution."
+      "task": "No active session detected.",
+      "pending": "Start next deployment or automation run."
     },
     {
       "id": "flowise",
@@ -78,8 +78,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Build and maintain Flowise chains and integrations.",
-      "task": "No current active session detected.",
-      "pending": "Await next Flowise build or testing request."
+      "task": "No active session detected.",
+      "pending": "Await next Flowise build/test request."
     }
   ]
 }
