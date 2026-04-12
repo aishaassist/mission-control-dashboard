@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-04-12T22:03:00Z",
+  "generatedAt": "2026-04-12T22:07:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main (Aisha) responsive while cron refresh runs",
-    "Trigger contact enrichment only when new Notion rows are assigned",
+    "Queue contact enrichment only when new Notion rows are assigned",
     "Maintain linkedin, n8n, and flowise in ready standby"
   ],
   "goalProgress": [
     {
       "goal": "Mission control continuity",
-      "progress": "Cron refresh is currently running in main"
+      "progress": "Main is actively running the dashboard refresh cron"
     },
     {
       "goal": "Contact enrichment throughput",
-      "progress": "Latest completed batch processed 99 rows"
+      "progress": "Last completed batch processed 99 rows"
     },
     {
       "goal": "Specialist readiness",
@@ -39,7 +39,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contacts from verified official sources",
-      "task": "Last run completed with final summary: 99 rows processed",
+      "task": "Last run completed with 99 rows processed",
       "pending": "Await next Notion enrichment assignment"
     },
     {
@@ -48,8 +48,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Handle delegated LinkedIn lookups",
-      "task": "Last run reported no active rows processed",
-      "pending": "Await next lookup task; watch for failed slash-session retries"
+      "task": "Last run completed with no active rows processed",
+      "pending": "Await next lookup task"
     },
     {
       "name": "n8n",
