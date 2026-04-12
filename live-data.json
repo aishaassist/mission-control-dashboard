@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T22:53:00Z",
+  "generatedAt": "2026-04-12T22:55:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -20,7 +20,7 @@
     },
     {
       "goal": "Specialist readiness",
-      "progress": "linkedin, n8n, and flowise have no running sessions"
+      "progress": "linkedin, n8n, and flowise are currently idle"
     }
   ],
   "agents": [
