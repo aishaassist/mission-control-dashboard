@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T23:19:00Z",
+  "generatedAt": "2026-04-12T23:21:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -28,7 +28,7 @@
       "health": "ok",
       "goal": "Run scheduled operations and coordinate multi-agent workflows",
       "task": "Executing mission-control live-data refresh cron",
-      "pending": "Continue periodic dashboard refresh and monitor downstream agent activity"
+      "pending": "Continue periodic dashboard refresh and monitor downstream agents"
     },
     {
       "name": "contactenrichment",
@@ -36,8 +36,8 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Last run completed with 99 rows processed",
-      "pending": "Verify Notion integration access before next enrichment batch"
+      "task": "Last run completed: 99 rows processed",
+      "pending": "Reconfirm Notion integration access before next enrichment batch"
     },
     {
       "name": "linkedin",
@@ -45,8 +45,8 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Handle LinkedIn lookup and update requests",
-      "task": "No active run; latest group workflow ended with 0 rows processed",
-      "pending": "Await next queue and monitor for session failures"
+      "task": "No active run; latest group workflow processed 0 rows",
+      "pending": "Await next queue and watch for failed slash-session retries"
     },
     {
       "name": "n8n",
