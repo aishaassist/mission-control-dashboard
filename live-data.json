@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T23:37:00Z",
+  "generatedAt": "2026-04-12T23:43:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -10,9 +10,9 @@
     "Route repetitive execution work to n8n where possible"
   ],
   "goalProgress": {
-    "operations": "Live status refresh running on schedule",
-    "contactPipeline": "Last run processed 99 rows; unresolved fields marked not_found",
-    "linkedinPipeline": "No active LinkedIn batch running"
+    "operations": "Main cron refresh is actively running",
+    "contactPipeline": "Last Contact Enrichment run processed 99 rows",
+    "linkedinPipeline": "LinkedIn agent is on standby; no active batch"
   },
   "agents": [
     {
@@ -31,7 +31,7 @@
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
       "task": "Last batch complete; 99 rows processed",
-      "pending": "Await next batch with Notion integration access"
+      "pending": "Await next Notion-enabled enrichment batch"
     },
     {
       "agent": "linkedin",
@@ -39,8 +39,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich LinkedIn data for requested records",
-      "task": "No active run; recent batch returned zero updates",
-      "pending": "Await next lookup batch"
+      "task": "No active run; last quick batch returned 0 updates",
+      "pending": "Await next lookup request"
     },
     {
       "agent": "n8n",
@@ -49,7 +49,7 @@
       "health": "warn",
       "goal": "Automate repetitive operational workflows",
       "task": "No active execution detected",
-      "pending": "Queue next automation request"
+      "pending": "Queue next automation deployment"
     },
     {
       "agent": "flowise",
@@ -57,8 +57,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise build and integration tasks",
-      "task": "No active run; standing by",
-      "pending": "Await next build request"
+      "task": "No active run detected",
+      "pending": "Await next build or integration request"
     }
   ]
 }
