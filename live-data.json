@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T21:49:00Z",
+  "generatedAt": "2026-04-12T21:51:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -46,9 +46,9 @@
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Handle delegated LinkedIn lookups",
-      "task": "No active run, latest group run closed with zero rows",
+      "task": "No active run; latest slash session ended failed",
       "pending": "Await next lookup instruction"
     },
     {
