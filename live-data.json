@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T23:29:00Z",
+  "generatedAt": "2026-04-12T23:31:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -7,17 +7,17 @@
   },
   "priorities": [
     "Keep mission-control refreshes running from main (Aisha)",
-    "Unblock contactenrichment Notion access for next data pass",
-    "Queue clear next tasks for linkedin, n8n, and flowise"
+    "Unblock contactenrichment Notion integration for next contact pass",
+    "Prepare next queued work for linkedin, n8n, and flowise"
   ],
   "goalProgress": [
     {
       "goal": "Mission control visibility",
-      "progress": "Runtime snapshot refreshed from current OpenClaw session state"
+      "progress": "Live runtime snapshot refreshed from current OpenClaw session state"
     },
     {
       "goal": "Contact ops throughput",
-      "progress": "Last contactenrichment batch processed 99 rows; integration dependency still open"
+      "progress": "Last contactenrichment run completed 99 rows; access dependency remains"
     }
   ],
   "agents": [
@@ -28,7 +28,7 @@
       "health": "ok",
       "goal": "Coordinate operations and keep mission-control automations stable",
       "task": "Running scheduled live-data refresh cron",
-      "pending": "Continue periodic refresh and monitor specialist agent readiness"
+      "pending": "Continue periodic refresh and track specialist readiness"
     },
     {
       "name": "contactenrichment",
@@ -36,17 +36,17 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Enrich school contact records from official sources",
-      "task": "Latest run finished: 99 rows processed",
-      "pending": "Restore/verify Notion integration access before next batch"
+      "task": "Latest run finished with 99 rows processed",
+      "pending": "Reconfirm Notion integration access before next batch"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Idle",
       "health": "bad",
-      "goal": "Execute LinkedIn lookup and update workflows",
-      "task": "No active run; recent session includes failed state",
-      "pending": "Diagnose failed path and wait for next queued request"
+      "goal": "Execute LinkedIn lookup/update workflows",
+      "task": "No active run; recent history includes a failed session",
+      "pending": "Investigate failure path and pick up next queued lookup"
     },
     {
       "name": "n8n",
