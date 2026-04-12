@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T19:15:00Z",
+  "generatedAt": "2026-04-12T19:17:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,13 +13,13 @@
   },
   "priorities": [
     "Monitor active main cron refresh loop",
-    "Queue next contact enrichment run when new rows arrive",
+    "Prepare next contact enrichment run when fresh rows arrive",
     "Keep LinkedIn, n8n, and Flowise agents on standby"
   ],
   "goalProgress": [
     {
       "goal": "Mission control runtime visibility",
-      "progress": "Live snapshot refreshed from runtime state"
+      "progress": "Live snapshot refreshed from current runtime state"
     },
     {
       "goal": "Contact operations",
@@ -33,8 +33,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control-live-data-refresh cron",
-      "task": "Collect current sessions and refresh dashboard JSON",
-      "pending": "Commit and push only when dashboard data changes"
+      "task": "Collect session/subagent state and refresh dashboard JSON",
+      "pending": "Commit and push only when live-data.json changes"
     },
     {
       "name": "contactenrichment",
@@ -42,8 +42,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school contact details in Notion",
-      "task": "Last run processed 99 rows with final summary reported",
-      "pending": "Await next dataset or enrichment trigger"
+      "task": "Last run completed with 99 rows processed",
+      "pending": "Await next enrichment trigger"
     },
     {
       "name": "linkedin",
@@ -51,16 +51,16 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn lookup support for contact ops",
-      "task": "Most recent group run returned no rows processed",
-      "pending": "Await lookup task payload"
+      "task": "No current running session; last group run reported zero rows",
+      "pending": "Await lookup payload"
     },
     {
       "name": "n8n",
       "label": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Automation workflow build/deploy support",
-      "task": "No active runtime session detected",
+      "goal": "Automation workflow build and deployment",
+      "task": "No current running session detected",
       "pending": "Await automation request"
     },
     {
@@ -69,7 +69,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Flowise build support",
-      "task": "No active runtime session detected",
+      "task": "No current running session detected",
       "pending": "Await flow build task"
     }
   ]
