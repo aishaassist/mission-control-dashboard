@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T23:43:00Z",
+  "generatedAt": "2026-04-12T23:45:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -11,8 +11,8 @@
   ],
   "goalProgress": {
     "operations": "Main cron refresh is actively running",
-    "contactPipeline": "Last Contact Enrichment run processed 99 rows",
-    "linkedinPipeline": "LinkedIn agent is on standby; no active batch"
+    "contactPipeline": "Last Contact Enrichment run processed 99 rows; awaiting next Notion-enabled batch",
+    "linkedinPipeline": "LinkedIn is on standby after last run returned 0 updates"
   },
   "agents": [
     {
@@ -30,8 +30,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Last batch complete; 99 rows processed",
-      "pending": "Await next Notion-enabled enrichment batch"
+      "task": "Last batch complete with 99 rows processed",
+      "pending": "Await next Notion-enabled enrichment run"
     },
     {
       "agent": "linkedin",
@@ -57,7 +57,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise build and integration tasks",
-      "task": "No active run detected",
+      "task": "No active execution detected",
       "pending": "Await next build or integration request"
     }
   ]
