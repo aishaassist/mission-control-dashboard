@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T19:41:00Z",
+  "generatedAt": "2026-04-12T19:43:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,19 +14,19 @@
   },
   "priorities": [
     "Keep main orchestration responsive",
-    "Resume linkedin/contactenrichment pipelines when new tasks arrive",
-    "Validate n8n and flowise queues before next campaign window"
+    "Prepare contactenrichment and linkedin for next intake batch",
+    "Verify n8n and flowise readiness before next automation request"
   ],
   "goalProgress": [
     {
       "goal": "Mission control visibility",
       "status": "On track",
-      "note": "Live agent snapshot refreshed"
+      "note": "Runtime snapshot refreshed from sessions + subagents"
     },
     {
       "goal": "Execution readiness",
       "status": "Watch",
-      "note": "4 of 5 tracked agents are in standby"
+      "note": "Only main is active; specialist agents are on standby"
     }
   ],
   "agents": [
@@ -37,16 +37,16 @@
       "health": "ok",
       "goal": "Chief-of-staff orchestration across channels",
       "task": "Running mission-control live-data refresh cron",
-      "pending": "Continue scheduled refreshes and handle inbound ops tasks"
+      "pending": "Continue refresh cadence and respond to inbound tasks"
     },
     {
       "name": "contactenrichment",
       "label": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school contact fields from official sources",
+      "goal": "Fill missing school contact details from official sources",
       "task": "Last run completed School DB contact pass",
-      "pending": "Await fresh rows and next Notion-backed enrichment cycle"
+      "pending": "Await next row batch for enrichment"
     },
     {
       "name": "linkedin",
@@ -54,7 +54,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; latest group task reported 0 rows",
+      "task": "No active lookup run",
       "pending": "Start next requested lookup batch"
     },
     {
@@ -62,7 +62,7 @@
       "label": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Workflow automation deployment and upkeep",
+      "goal": "Automation workflow deployment and upkeep",
       "task": "No active automation session",
       "pending": "Queue next integration or deployment request"
     },
