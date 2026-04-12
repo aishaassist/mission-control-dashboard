@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T23:21:00Z",
+  "generatedAt": "2026-04-12T23:23:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -46,12 +46,12 @@
       "health": "warn",
       "goal": "Handle LinkedIn lookup and update requests",
       "task": "No active run; latest group workflow processed 0 rows",
-      "pending": "Await next queue and watch for failed slash-session retries"
+      "pending": "Await next queue and monitor slash-session failures"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
-      "status": "Idle",
+      "status": "Standby",
       "health": "warn",
       "goal": "Build and deploy automation workflows",
       "task": "No current runtime activity",
@@ -60,7 +60,7 @@
     {
       "name": "flowise",
       "displayName": "flowise",
-      "status": "Idle",
+      "status": "Standby",
       "health": "warn",
       "goal": "Build flow-based AI workflows",
       "task": "No current runtime activity",
