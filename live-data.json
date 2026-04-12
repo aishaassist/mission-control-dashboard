@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T21:05:00Z",
+  "generatedAt": "2026-04-12T21:07:00Z",
   "source": {
     "cronId": "32ef53fa-2d22-4e89-abbb-34ab918e57d5",
     "sessionsList": {
@@ -15,8 +15,8 @@
   },
   "priorities": [
     "Keep main (Aisha) run-loop healthy and responsive",
-    "Unblock contactenrichment Notion access and resume row updates",
-    "Stabilize linkedin worker after recent failed slash-session"
+    "Unblock contactenrichment Notion pipeline for next enrichment batch",
+    "Re-activate specialist queues (linkedin, n8n, flowise) with fresh tasks"
   ],
   "goalProgress": [
     {
@@ -25,9 +25,9 @@
       "progress": "Live snapshot refreshed from current session graph"
     },
     {
-      "goal": "Contact enrichment pipeline",
+      "goal": "Specialist execution readiness",
       "status": "at_risk",
-      "progress": "Last run completed, pending fresh tasks and access stability"
+      "progress": "No active specialist runs in the last cycle"
     }
   ],
   "agents": [
@@ -46,17 +46,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Last batch completed with final enrichment summary",
+      "task": "Last run completed with final enrichment summary",
       "pending": "Next Notion-ready row set"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "Enrich and validate LinkedIn profile fields",
-      "task": "No active run; latest slash session shows failure",
-      "pending": "Rerun next workload on stable session"
+      "task": "No active run; most recent group run completed",
+      "pending": "Next lookup workload"
     },
     {
       "name": "n8n",
