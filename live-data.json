@@ -1,85 +1,71 @@
 {
-  "generatedAt": "2026-04-12T18:45:00Z",
+  "generatedAt": "2026-04-12T18:47:00Z",
   "source": {
-    "cron": "32ef53fa-2d22-4e89-abbb-34ab918e57d5",
-    "sessionsList": {
-      "limit": 50,
-      "messageLimit": 1,
-      "count": 12
-    },
-    "subagents": {
-      "recentMinutes": 1440,
-      "active": 0,
-      "recent": 0
-    }
+    "sessions": "sessions_list(limit=50,messageLimit=1)",
+    "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main agent refresh loop healthy and mission-control snapshots current.",
-    "Prepare next contactenrichment and linkedin execution batch when new rows land.",
-    "Activate n8n and flowise workloads from standby when automation requests arrive."
+    "Keep main mission-control automation healthy",
+    "Resume contact enrichment only when new rows/instructions arrive",
+    "Queue LinkedIn and n8n/Flowise work on demand"
   ],
   "goalProgress": [
     {
-      "goal": "Mission control runtime visibility",
-      "status": "on_track",
-      "progress": "Snapshot refreshed from live sessions and subagent state."
+      "goal": "Ops visibility",
+      "status": "on-track",
+      "note": "Live runtime snapshot refreshed from current OpenClaw state"
     },
     {
-      "goal": "Contact and LinkedIn operations",
-      "status": "paused",
-      "progress": "No active runs; contact enrichment is complete and linkedin is awaiting the next trigger."
-    },
-    {
-      "goal": "Automation stack activity",
-      "status": "standby",
-      "progress": "n8n and flowise remain idle with no running sessions."
+      "goal": "Agent throughput",
+      "status": "waiting",
+      "note": "No active specialist subagent runs in last 24h"
     }
   ],
   "agents": [
     {
-      "id": "main",
-      "name": "Aisha",
+      "name": "main",
+      "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate operations and keep mission-control data current.",
-      "task": "Running mission-control live-data refresh.",
-      "pending": "Complete this refresh cycle and continue scheduled runs."
+      "goal": "Mission-control live data refresh",
+      "task": "Cron refresh in progress",
+      "pending": "Commit and push if dashboard file changed"
     },
     {
-      "id": "contactenrichment",
       "name": "contactenrichment",
-      "status": "Standby",
+      "displayName": "Contact Enrichment",
+      "status": "Idle",
       "health": "warn",
-      "goal": "Enrich missing school contact records from verifiable official sources.",
-      "task": "Latest visible run completed with final contact enrichment summary.",
-      "pending": "Await next Notion/contact enrichment queue."
+      "goal": "Notion contact data completion",
+      "task": "Last run completed batch update",
+      "pending": "Await next enrichment batch/instructions"
     },
     {
-      "id": "linkedin",
       "name": "linkedin",
+      "displayName": "LinkedIn",
       "status": "Standby",
       "health": "warn",
-      "goal": "Execute LinkedIn discovery and profile update workflows.",
-      "task": "No active session; most recent visible runs are completed.",
-      "pending": "Await next LinkedIn batch trigger."
+      "goal": "LinkedIn lookup/update support",
+      "task": "No current running session",
+      "pending": "Await next lookup request"
     },
     {
-      "id": "n8n",
       "name": "n8n",
+      "displayName": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Build and deploy automation workflows.",
-      "task": "No active session detected.",
-      "pending": "Start next deployment or automation execution."
+      "goal": "Workflow automation deployments",
+      "task": "No active runtime session",
+      "pending": "Await automation brief"
     },
     {
-      "id": "flowise",
       "name": "flowise",
+      "displayName": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Build and maintain Flowise chains and integrations.",
-      "task": "No active session detected.",
-      "pending": "Await next flowise build or test request."
+      "goal": "Flowise build/support",
+      "task": "No active runtime session",
+      "pending": "Await next build request"
     }
   ]
 }
