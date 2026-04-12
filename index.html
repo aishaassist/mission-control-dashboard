@@ -14,6 +14,7 @@
       --ok: #2ecc71;
       --warn: #f1c40f;
       --bad: #e74c3c;
+      --line: #223152;
     }
     * { box-sizing: border-box; }
     body {
@@ -25,16 +26,18 @@
       padding: 24px;
     }
     h1 { margin: 0 0 6px; font-size: 32px; }
-    .sub { color: var(--muted); margin-bottom: 18px; }
+    .sub { color: var(--muted); margin-bottom: 8px; }
     .meta { color: var(--muted); font-size: 13px; margin-bottom: 18px; }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 16px;
+      margin-bottom: 16px;
     }
     .card {
       background: linear-gradient(180deg, #151f39, var(--card));
-      border: 1px solid #223152;
+      border: 1px solid var(--line);
       border-radius: 14px;
       padding: 16px;
       box-shadow: 0 6px 20px rgba(0,0,0,.25);
@@ -43,65 +46,184 @@
     .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
     .bar { background:#1f2b4a; border-radius: 999px; height: 10px; overflow: hidden; margin-top:8px; }
     .fill { height:100%; border-radius:999px; }
-    .row { display:flex; justify-content:space-between; align-items:center; margin:10px 0; gap:8px; }
-    .pill { padding: 4px 10px; border-radius:999px; font-size:12px; font-weight:600; white-space:nowrap; }
+    .pill { padding: 4px 10px; border-radius:999px; font-size:12px; font-weight:600; white-space:nowrap; display:inline-block; }
     .ok{ background:rgba(46,204,113,.18); color:#9af0be; }
     .warn{ background:rgba(241,196,15,.18); color:#ffe58a; }
     .bad{ background:rgba(231,76,60,.18); color:#ffb0a8; }
-    ul { padding-left: 18px; margin: 10px 0 0; }
-    li { margin: 8px 0; }
-    .brands li { display:flex; justify-content:space-between; gap:10px; }
-    .small { font-size: 12px; color: var(--muted); }
+
+    .table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(18,26,47,0.7);
+    }
+    .table th, .table td {
+      text-align: left;
+      vertical-align: top;
+      border-bottom: 1px solid var(--line);
+      padding: 12px;
+      font-size: 14px;
+    }
+    .table th {
+      font-size: 12px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      background: rgba(9,14,28,.65);
+      position: sticky;
+      top: 0;
+    }
+    .table tr:last-child td { border-bottom: none; }
+    .small { color: var(--muted); font-size: 12px; }
+
+    @media (max-width: 900px) {
+      .table th:nth-child(4), .table td:nth-child(4),
+      .table th:nth-child(5), .table td:nth-child(5) { display: none; }
+    }
   </style>
 </head>
 <body>
   <h1>Founder Mission Control</h1>
-  <div class="sub">Execution board for priorities, delegation, and daily momentum</div>
-  <div class="meta">Last updated: <span id="ts"></span></div>
+  <div class="sub">Live operations snapshot, agents, goals, active tasks, pending tasks</div>
+  <div class="meta" id="meta"></div>
 
   <div class="grid">
     <div class="card">
       <div class="label">Top Goal</div>
-      <div class="kpi">Revenue Growth</div>
-      <div class="row"><span>Progress</span><strong>45%</strong></div>
-      <div class="bar"><div class="fill" style="width:45%; background:var(--accent)"></div></div>
-      <div class="small" style="margin-top:10px">Target: ₹30L monthly run-rate</div>
+      <div class="kpi">Execution Velocity</div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+        <span class="small">Progress</span><strong id="goalProgress">0%</strong>
+      </div>
+      <div class="bar"><div class="fill" id="goalBar" style="width:0%;background:var(--accent)"></div></div>
     </div>
 
     <div class="card">
-      <div class="label">Active Agents</div>
-      <div class="row"><span>@scout</span><span class="pill ok">Running</span></div>
-      <div class="row"><span>@webaudit</span><span class="pill warn">Queued</span></div>
-      <div class="row"><span>@brandgrowth</span><span class="pill ok">Running</span></div>
-      <div class="row"><span>@n8n</span><span class="pill warn">Drafting flow</span></div>
+      <div class="label">Agent Health</div>
+      <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
+        <span class="pill ok" id="countOk">0 Active</span>
+        <span class="pill warn" id="countWarn">0 Watch</span>
+        <span class="pill bad" id="countBad">0 Blocked</span>
+      </div>
     </div>
 
     <div class="card">
-      <div class="label">Today Focus</div>
-      <ul>
-        <li>Close 3 high-value follow-ups</li>
-        <li>Publish weekly priorities across all brands</li>
-        <li>Finalize Ahmedabad higher-ed outreach batch</li>
-        <li>Delegate automation backlog to @n8n</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <div class="label">Brand Priorities</div>
-      <ul class="brands">
-        <li><span>campusdice.ai</span><span class="pill ok">Growth</span></li>
-        <li><span>campushiring.in</span><span class="pill warn">Content</span></li>
-        <li><span>mavitriqglobal.com</span><span class="pill ok">Offers</span></li>
-        <li><span>mavitriqconsulting.com</span><span class="pill warn">Pipeline</span></li>
-        <li><span>reeduversity.com</span><span class="pill bad">Stalled</span></li>
-        <li><span>a1adzmedia.com</span><span class="pill ok">Campaign</span></li>
-      </ul>
+      <div class="label">Immediate Priorities</div>
+      <ul id="priorities" style="margin:8px 0 0 18px"></ul>
     </div>
   </div>
 
+  <table class="table" aria-label="Agent status table">
+    <thead>
+      <tr>
+        <th>Agent</th>
+        <th>Status</th>
+        <th>Current Goal</th>
+        <th>Current Task</th>
+        <th>Pending</th>
+        <th>Updated</th>
+      </tr>
+    </thead>
+    <tbody id="agentRows"></tbody>
+  </table>
+
   <script>
-    const now = new Date();
-    document.getElementById('ts').textContent = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+    const snapshot = {
+      generatedAt: '2026-04-12T22:40:00+05:30',
+      source: 'OpenClaw live session snapshot',
+      priorities: [
+        'Ship live dashboard data wiring for founder ops',
+        'Keep WhatsApp and command flow stable',
+        'Sync specialist agents into one execution board'
+      ],
+      goalProgress: 68,
+      agents: [
+        {
+          name: 'main (Aisha)',
+          status: 'Active',
+          health: 'ok',
+          goal: 'Founder command center with real live data',
+          task: 'Implement agent-wise tasks, goals, pending view on live dashboard',
+          pending: 'Add auto-refresh + true API-backed metrics',
+          updated: 'Now'
+        },
+        {
+          name: 'contactenrichment',
+          status: 'Idle',
+          health: 'warn',
+          goal: 'Notion contact enrichment (Email/Phone)',
+          task: 'Processed 99 rows last run (0 email updates, 0 phone updates)',
+          pending: 'Re-run with verified source coverage + fill remaining as not_found where needed',
+          updated: 'Recent'
+        },
+        {
+          name: 'linkedin',
+          status: 'Idle',
+          health: 'warn',
+          goal: 'LinkedIn profile fill for School DB',
+          task: 'Last run completed with 0 rows updated',
+          pending: 'Run fresh pass on missing rows and verify profile URL quality',
+          updated: 'Recent'
+        },
+        {
+          name: 'n8n',
+          status: 'Standby',
+          health: 'ok',
+          goal: 'Automation deployment and recurring workflows',
+          task: 'No active run currently',
+          pending: 'Build workflows for daily digest, reminders, and reporting',
+          updated: 'Earlier'
+        },
+        {
+          name: 'flowise',
+          status: 'Standby',
+          health: 'warn',
+          goal: 'Fallback assistant workflows',
+          task: 'No active run currently',
+          pending: 'Model/config stabilization before next operational use',
+          updated: 'Earlier'
+        }
+      ]
+    };
+
+    const meta = document.getElementById('meta');
+    meta.textContent = `${snapshot.source} · Updated ${new Date(snapshot.generatedAt).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}`;
+
+    document.getElementById('goalProgress').textContent = `${snapshot.goalProgress}%`;
+    document.getElementById('goalBar').style.width = `${snapshot.goalProgress}%`;
+
+    const healthCounts = snapshot.agents.reduce((acc, a) => {
+      acc[a.health] = (acc[a.health] || 0) + 1;
+      return acc;
+    }, { ok: 0, warn: 0, bad: 0 });
+
+    document.getElementById('countOk').textContent = `${healthCounts.ok} Active`;
+    document.getElementById('countWarn').textContent = `${healthCounts.warn} Watch`;
+    document.getElementById('countBad').textContent = `${healthCounts.bad} Blocked`;
+
+    const priorities = document.getElementById('priorities');
+    snapshot.priorities.forEach(p => {
+      const li = document.createElement('li');
+      li.textContent = p;
+      priorities.appendChild(li);
+    });
+
+    const rows = document.getElementById('agentRows');
+    const pillClass = { ok: 'ok', warn: 'warn', bad: 'bad' };
+
+    snapshot.agents.forEach(agent => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td><strong>${agent.name}</strong></td>
+        <td><span class="pill ${pillClass[agent.health] || 'warn'}">${agent.status}</span></td>
+        <td>${agent.goal}</td>
+        <td>${agent.task}</td>
+        <td>${agent.pending}</td>
+        <td class="small">${agent.updated}</td>
+      `;
+      rows.appendChild(tr);
+    });
   </script>
 </body>
 </html>
