@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T20:35:00Z",
+  "generatedAt": "2026-04-12T20:37:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -17,9 +17,9 @@
     "Queue next LinkedIn enrichment batch"
   ],
   "goalProgress": {
-    "operations": "Main cron refresh is currently running",
-    "dataEnrichment": "Contact and LinkedIn agents are on standby pending next actionable batch",
-    "automation": "n8n and flowise remain on standby with no active runs"
+    "operations": "Main cron refresh is running and updating live dashboard state",
+    "dataEnrichment": "Contactenrichment and LinkedIn are on standby pending new batches and access readiness",
+    "automation": "n8n and flowise are idle with no active runs"
   },
   "agents": [
     {
@@ -29,14 +29,14 @@
       "health": "ok",
       "goal": "Operate mission-control and orchestrate agents",
       "task": "Running cron mission-control-live-data-refresh",
-      "pending": "Finalize dashboard refresh commit and push only if diff exists"
+      "pending": "Finalize this refresh cycle and push if live-data.json changed"
     },
     {
       "name": "contactenrichment",
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact email and phone fields",
-      "task": "Last run completed, processed rows but no verified field updates",
+      "task": "Latest run completed with processed rows and no verified updates",
       "pending": "Await Notion integration access and next enrichment queue"
     },
     {
