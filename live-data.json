@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-12T22:54:00+05:30",
+  "generatedAt": "2026-04-12T22:57:00+05:30",
   "source": "OpenClaw runtime snapshot (sessions_list + subagents)",
   "priorities": [
     "Keep mission-control dashboard synced with live runtime state",
     "Track specialist agent execution health and pending work",
     "Maintain reliable auto-refresh and git-backed publishing"
   ],
-  "goalProgress": 72,
+  "goalProgress": 73,
   "agents": [
     {
       "name": "main (Aisha)",
@@ -22,8 +22,8 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Notion contact enrichment (email/phone)",
-      "task": "Last run processed 99 rows with no new contact fields",
-      "pending": "Re-run for unresolved rows and verified-source fill",
+      "task": "Last run processed 99 rows; 0 email/phone updates",
+      "pending": "Re-run for unresolved rows with verified official sources",
       "updated": "Recent"
     },
     {
@@ -32,7 +32,7 @@
       "health": "warn",
       "goal": "LinkedIn URL coverage for School DB rows",
       "task": "Most recent group run reported 0 rows processed",
-      "pending": "Execute fresh pass on missing profile links",
+      "pending": "Run fresh pass for missing LinkedIn profile links",
       "updated": "Recent"
     },
     {
@@ -50,7 +50,7 @@
       "health": "warn",
       "goal": "Flow orchestration support agent readiness",
       "task": "No active session running",
-      "pending": "Stabilize configs before next execution cycle",
+      "pending": "Prepare next flow execution cycle",
       "updated": "Earlier"
     }
   ]
