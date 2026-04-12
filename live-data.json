@@ -1,37 +1,23 @@
 {
-  "generatedAt": "2026-04-12T23:15:00Z",
+  "generatedAt": "2026-04-12T23:17:00Z",
   "source": {
-    "sessionsList": {
-      "limit": 50,
-      "messageLimit": 1,
-      "count": 12
-    },
-    "subagents": {
-      "recentMinutes": 1440,
-      "active": 0,
-      "recent": 0
-    }
+    "sessions": "sessions_list(limit=50,messageLimit=1)",
+    "subagents": "subagents(action=list,recentMinutes=1440)",
+    "cron": "32ef53fa-2d22-4e89-abbb-34ab918e57d5"
   },
   "priorities": [
-    "Keep main mission-control refresh cycle healthy",
-    "Resume contact enrichment when new Notion batch arrives",
-    "Keep specialist agents ready for next execution"
+    "Keep main agent stable for mission-control automations",
+    "Unblock contactenrichment Notion integration for reliable updates",
+    "Queue next actionable workload for linkedin, n8n, and flowise"
   ],
   "goalProgress": [
     {
-      "goal": "Live dashboard runtime visibility",
-      "progress": "in_progress",
-      "note": "Cron refresh is actively generating latest snapshot"
+      "goal": "Mission control visibility",
+      "progress": "Live agent snapshot refreshed from runtime"
     },
     {
-      "goal": "Contact data enrichment execution",
-      "progress": "standby",
-      "note": "Last batch completed, awaiting next Notion run"
-    },
-    {
-      "goal": "Specialist agent readiness",
-      "progress": "in_progress",
-      "note": "No active specialist runs; standing by for tasks"
+      "goal": "Contact ops throughput",
+      "progress": "Last contactenrichment run completed (99 rows), integration dependency remains"
     }
   ],
   "agents": [
@@ -40,45 +26,45 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Mission-control continuity",
-      "task": "Refresh and publish live dashboard snapshot",
-      "pending": "Commit and push only if diff exists"
+      "goal": "Run scheduled operations and coordinate multi-agent workflows",
+      "task": "Executing mission-control live-data refresh cron",
+      "pending": "Continue periodic dashboard refresh and monitor downstream agent activity"
     },
     {
       "name": "contactenrichment",
       "displayName": "contactenrichment",
-      "status": "Idle",
+      "status": "Standby",
       "health": "warn",
-      "goal": "Enrich school contact records",
-      "task": "Previous Notion enrichment batch completed",
-      "pending": "Await next enrichment request"
+      "goal": "Fill missing school contact fields from official sources",
+      "task": "Most recent run finished with row processing summary",
+      "pending": "Restore/verify Notion API access and integration sharing before next batch"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
-      "status": "Idle",
+      "status": "Standby",
       "health": "warn",
-      "goal": "LinkedIn lookup support",
-      "task": "No active run; latest visible run finished",
-      "pending": "Await next lookup batch"
+      "goal": "Support LinkedIn lookup/update requests",
+      "task": "No active run; last group workflow reported no rows processed",
+      "pending": "Await next queue and validate slash-session stability"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Workflow automation support",
-      "task": "No active deployment or trigger session",
-      "pending": "Await automation task"
+      "goal": "Build and deploy automations",
+      "task": "No current runtime activity detected",
+      "pending": "Pick up next automation brief when assigned"
     },
     {
       "name": "flowise",
       "displayName": "flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise build support",
-      "task": "No active flow-building session",
-      "pending": "Await next build request"
+      "goal": "Build flow-based AI workflows",
+      "task": "Idle since last prompt",
+      "pending": "Await new build request"
     }
   ]
 }
