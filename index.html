@@ -86,8 +86,8 @@
 </head>
 <body>
   <h1>Founder Mission Control</h1>
-  <div class="sub">Live operations snapshot, agents, goals, active tasks, pending tasks</div>
-  <div class="meta" id="meta"></div>
+  <div class="sub">Auto-refreshing board for agents, goals, active and pending tasks</div>
+  <div class="meta" id="meta">Loading live data...</div>
 
   <div class="grid">
     <div class="card">
@@ -129,101 +129,90 @@
   </table>
 
   <script>
-    const snapshot = {
-      generatedAt: '2026-04-12T22:40:00+05:30',
-      source: 'OpenClaw live session snapshot',
-      priorities: [
-        'Ship live dashboard data wiring for founder ops',
-        'Keep WhatsApp and command flow stable',
-        'Sync specialist agents into one execution board'
-      ],
-      goalProgress: 68,
-      agents: [
-        {
-          name: 'main (Aisha)',
-          status: 'Active',
-          health: 'ok',
-          goal: 'Founder command center with real live data',
-          task: 'Implement agent-wise tasks, goals, pending view on live dashboard',
-          pending: 'Add auto-refresh + true API-backed metrics',
-          updated: 'Now'
-        },
-        {
-          name: 'contactenrichment',
-          status: 'Idle',
-          health: 'warn',
-          goal: 'Notion contact enrichment (Email/Phone)',
-          task: 'Processed 99 rows last run (0 email updates, 0 phone updates)',
-          pending: 'Re-run with verified source coverage + fill remaining as not_found where needed',
-          updated: 'Recent'
-        },
-        {
-          name: 'linkedin',
-          status: 'Idle',
-          health: 'warn',
-          goal: 'LinkedIn profile fill for School DB',
-          task: 'Last run completed with 0 rows updated',
-          pending: 'Run fresh pass on missing rows and verify profile URL quality',
-          updated: 'Recent'
-        },
-        {
-          name: 'n8n',
-          status: 'Standby',
-          health: 'ok',
-          goal: 'Automation deployment and recurring workflows',
-          task: 'No active run currently',
-          pending: 'Build workflows for daily digest, reminders, and reporting',
-          updated: 'Earlier'
-        },
-        {
-          name: 'flowise',
-          status: 'Standby',
-          health: 'warn',
-          goal: 'Fallback assistant workflows',
-          task: 'No active run currently',
-          pending: 'Model/config stabilization before next operational use',
-          updated: 'Earlier'
+    const DATA_URLS = [
+      'https://raw.githubusercontent.com/aishaassist/mission-control-dashboard/main/live-data.json',
+      './live-data.json'
+    ];
+
+    function escapeHtml(v) {
+      return String(v ?? '')
+        .replaceAll('&', '&amp;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;');
+    }
+
+    async function loadData() {
+      let lastErr;
+      for (const base of DATA_URLS) {
+        try {
+          const url = `${base}?t=${Date.now()}`;
+          const res = await fetch(url, { cache: 'no-store' });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          return await res.json();
+        } catch (e) {
+          lastErr = e;
         }
-      ]
-    };
+      }
+      throw lastErr || new Error('Unable to fetch live data');
+    }
 
-    const meta = document.getElementById('meta');
-    meta.textContent = `${snapshot.source} · Updated ${new Date(snapshot.generatedAt).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}`;
+    function render(snapshot) {
+      const generated = snapshot.generatedAt ? new Date(snapshot.generatedAt).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }) : 'Unknown';
+      document.getElementById('meta').textContent = `${snapshot.source || 'Live feed'} · Updated ${generated} · Auto-refresh: 30s`;
 
-    document.getElementById('goalProgress').textContent = `${snapshot.goalProgress}%`;
-    document.getElementById('goalBar').style.width = `${snapshot.goalProgress}%`;
+      const gp = Number(snapshot.goalProgress || 0);
+      document.getElementById('goalProgress').textContent = `${gp}%`;
+      document.getElementById('goalBar').style.width = `${Math.max(0, Math.min(100, gp))}%`;
 
-    const healthCounts = snapshot.agents.reduce((acc, a) => {
-      acc[a.health] = (acc[a.health] || 0) + 1;
-      return acc;
-    }, { ok: 0, warn: 0, bad: 0 });
+      const agents = Array.isArray(snapshot.agents) ? snapshot.agents : [];
+      const healthCounts = agents.reduce((acc, a) => {
+        const h = a.health || 'warn';
+        acc[h] = (acc[h] || 0) + 1;
+        return acc;
+      }, { ok: 0, warn: 0, bad: 0 });
 
-    document.getElementById('countOk').textContent = `${healthCounts.ok} Active`;
-    document.getElementById('countWarn').textContent = `${healthCounts.warn} Watch`;
-    document.getElementById('countBad').textContent = `${healthCounts.bad} Blocked`;
+      document.getElementById('countOk').textContent = `${healthCounts.ok || 0} Active`;
+      document.getElementById('countWarn').textContent = `${healthCounts.warn || 0} Watch`;
+      document.getElementById('countBad').textContent = `${healthCounts.bad || 0} Blocked`;
 
-    const priorities = document.getElementById('priorities');
-    snapshot.priorities.forEach(p => {
-      const li = document.createElement('li');
-      li.textContent = p;
-      priorities.appendChild(li);
-    });
+      const priorities = document.getElementById('priorities');
+      priorities.innerHTML = '';
+      (snapshot.priorities || []).forEach(p => {
+        const li = document.createElement('li');
+        li.textContent = p;
+        priorities.appendChild(li);
+      });
 
-    const rows = document.getElementById('agentRows');
-    const pillClass = { ok: 'ok', warn: 'warn', bad: 'bad' };
+      const rows = document.getElementById('agentRows');
+      rows.innerHTML = '';
+      for (const agent of agents) {
+        const health = agent.health || 'warn';
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td><strong>${escapeHtml(agent.name)}</strong></td>
+          <td><span class="pill ${escapeHtml(health)}">${escapeHtml(agent.status)}</span></td>
+          <td>${escapeHtml(agent.goal)}</td>
+          <td>${escapeHtml(agent.task)}</td>
+          <td>${escapeHtml(agent.pending)}</td>
+          <td class="small">${escapeHtml(agent.updated)}</td>
+        `;
+        rows.appendChild(tr);
+      }
+    }
 
-    snapshot.agents.forEach(agent => {
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td><strong>${agent.name}</strong></td>
-        <td><span class="pill ${pillClass[agent.health] || 'warn'}">${agent.status}</span></td>
-        <td>${agent.goal}</td>
-        <td>${agent.task}</td>
-        <td>${agent.pending}</td>
-        <td class="small">${agent.updated}</td>
-      `;
-      rows.appendChild(tr);
-    });
+    async function refresh() {
+      try {
+        const data = await loadData();
+        render(data);
+      } catch (e) {
+        document.getElementById('meta').textContent = `Live refresh failed: ${e.message}. Retrying in 30s...`;
+      }
+    }
+
+    refresh();
+    setInterval(refresh, 30000);
   </script>
 </body>
 </html>
