@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-12T18:47:00Z",
+  "generatedAt": "2026-04-12T18:49:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main mission-control automation healthy",
-    "Resume contact enrichment only when new rows/instructions arrive",
-    "Queue LinkedIn and n8n/Flowise work on demand"
+    "Resume contact enrichment only when new rows or instructions arrive",
+    "Queue LinkedIn, n8n, and Flowise work on demand"
   ],
   "goalProgress": [
     {
@@ -37,16 +37,16 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Notion contact data completion",
-      "task": "Last run completed batch update",
-      "pending": "Await next enrichment batch/instructions"
+      "task": "Last batch run completed",
+      "pending": "Await next enrichment batch or instructions"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Standby",
-      "health": "warn",
-      "goal": "LinkedIn lookup/update support",
-      "task": "No current running session",
+      "health": "bad",
+      "goal": "LinkedIn lookup and profile updates",
+      "task": "No running session; recent history includes a failed session",
       "pending": "Await next lookup request"
     },
     {
@@ -54,7 +54,7 @@
       "displayName": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Workflow automation deployments",
+      "goal": "Automation workflow deployments",
       "task": "No active runtime session",
       "pending": "Await automation brief"
     },
@@ -63,7 +63,7 @@
       "displayName": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise build/support",
+      "goal": "Flowise build and support",
       "task": "No active runtime session",
       "pending": "Await next build request"
     }
