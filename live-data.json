@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-12T22:41:00Z",
+  "generatedAt": "2026-04-12T22:45:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main (Aisha) responsive while cron refresh runs",
-    "Queue contactenrichment when fresh Notion rows are ready",
-    "Keep linkedin, n8n, and flowise in warm standby for delegation"
+    "Resume contactenrichment only when new Notion rows are queued",
+    "Keep linkedin, n8n, and flowise in warm standby for delegated work"
   ],
   "goalProgress": [
     {
@@ -20,7 +20,7 @@
     },
     {
       "goal": "Specialist readiness",
-      "progress": "linkedin, n8n, and flowise are idle or standby"
+      "progress": "linkedin, n8n, and flowise have no running sessions"
     }
   ],
   "agents": [
@@ -39,17 +39,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contacts from verified official sources",
-      "task": "Latest run completed with 99 rows processed",
+      "task": "Latest run reported FINAL with 99 rows processed",
       "pending": "Await next Notion enrichment assignment"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Execute delegated LinkedIn lookup tasks",
-      "task": "No running session detected; latest done run reported 0 rows",
-      "pending": "Await next LinkedIn lookup request"
+      "task": "No running session; recent history includes a failed slash session",
+      "pending": "Await next lookup task and clear failed state on next successful run"
     },
     {
       "name": "n8n",
