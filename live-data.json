@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-04-12T23:25:00Z",
+  "generatedAt": "2026-04-12T23:27:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
     "cron": "32ef53fa-2d22-4e89-abbb-34ab918e57d5"
   },
   "priorities": [
-    "Keep main agent stable for mission-control automations",
-    "Unblock contactenrichment Notion integration for reliable updates",
-    "Queue next actionable workload for linkedin, n8n, and flowise"
+    "Keep mission-control refreshes running from main (Aisha)",
+    "Unblock contactenrichment Notion access for next data pass",
+    "Queue clear next tasks for linkedin, n8n, and flowise"
   ],
   "goalProgress": [
     {
       "goal": "Mission control visibility",
-      "progress": "Live agent snapshot refreshed from runtime"
+      "progress": "Runtime snapshot refreshed from current OpenClaw session state"
     },
     {
       "goal": "Contact ops throughput",
-      "progress": "Last contactenrichment run completed (99 rows), integration dependency remains"
+      "progress": "Last contactenrichment batch processed 99 rows; integration dependency still open"
     }
   ],
   "agents": [
@@ -26,27 +26,27 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Run scheduled operations and coordinate multi-agent workflows",
-      "task": "Executing mission-control live-data refresh cron",
-      "pending": "Continue periodic dashboard refresh and monitor downstream agents"
+      "goal": "Coordinate operations and keep mission-control automations stable",
+      "task": "Running scheduled live-data refresh cron",
+      "pending": "Continue periodic refresh and monitor specialist agent readiness"
     },
     {
       "name": "contactenrichment",
       "displayName": "contactenrichment",
       "status": "Idle",
       "health": "warn",
-      "goal": "Fill missing school contact fields from official sources",
-      "task": "Last run completed: 99 rows processed",
-      "pending": "Reconfirm Notion integration access before next enrichment batch"
+      "goal": "Enrich school contact records from official sources",
+      "task": "Latest run finished: 99 rows processed",
+      "pending": "Restore/verify Notion integration access before next batch"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Idle",
       "health": "bad",
-      "goal": "Handle LinkedIn lookup and update requests",
-      "task": "No active run; latest workflow returned 0 rows",
-      "pending": "Investigate recent failed slash session and await next queue"
+      "goal": "Execute LinkedIn lookup and update workflows",
+      "task": "No active run; recent slash session shows failed state",
+      "pending": "Diagnose failed session path and wait for next queued request"
     },
     {
       "name": "n8n",
@@ -64,7 +64,7 @@
       "health": "warn",
       "goal": "Build flow-based AI workflows",
       "task": "No current runtime activity",
-      "pending": "Await new build request"
+      "pending": "Await next build request"
     }
   ]
 }
