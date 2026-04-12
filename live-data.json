@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T19:23:00Z",
+  "generatedAt": "2026-04-12T19:25:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,17 +13,17 @@
   },
   "priorities": [
     "Keep mission-control-live-data-refresh healthy and current",
-    "Keep contact enrichment ready for next Notion dataset",
+    "Keep contact enrichment ready for the next Notion dataset",
     "Hold LinkedIn, n8n, and Flowise in standby for inbound tasks"
   ],
   "goalProgress": [
     {
       "goal": "Mission control runtime visibility",
-      "progress": "Snapshot refreshed from sessions_list and subagents state"
+      "progress": "Live snapshot refreshed from current sessions and subagents state"
     },
     {
       "goal": "Contact ops continuity",
-      "progress": "Latest contactenrichment run completed; waiting for next trigger"
+      "progress": "Latest contact enrichment run completed, waiting for next trigger"
     }
   ],
   "agents": [
@@ -34,7 +34,7 @@
       "health": "ok",
       "goal": "Operate mission control and orchestration",
       "task": "Running cron refresh for live dashboard state",
-      "pending": "Commit and push only if file diff exists"
+      "pending": "Commit and push only if live-data.json changed"
     },
     {
       "name": "contactenrichment",
@@ -42,7 +42,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school Email and Phone fields in Notion",
-      "task": "No running session; latest run completed",
+      "task": "No running session, latest enrichment batch completed",
       "pending": "Await next contact dataset trigger"
     },
     {
@@ -51,8 +51,8 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Handle LinkedIn lookup and enrichment requests",
-      "task": "No running session; recent history includes a failed session",
-      "pending": "Investigate failure on next trigger and resume normal runs"
+      "task": "No running session, recent history includes a failed run",
+      "pending": "Validate next run path and recover normal operation"
     },
     {
       "name": "n8n",
