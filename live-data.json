@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T18:53:00Z",
+  "generatedAt": "2026-04-12T18:57:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -18,7 +18,7 @@
     {
       "goal": "Specialist utilization",
       "status": "waiting",
-      "note": "No active specialist runs in the last 24h"
+      "note": "Only main sessions are currently running"
     }
   ],
   "agents": [
@@ -28,7 +28,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Mission-control live data refresh",
-      "task": "Cron refresh run is active",
+      "task": "Cron refresh and primary chat sessions are running",
       "pending": "Stage, commit, and push only if file changed"
     },
     {
@@ -37,7 +37,7 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Notion contact completion",
-      "task": "Last run processed a batch and finished",
+      "task": "Last known run completed a Notion enrichment batch",
       "pending": "Await next enrichment request"
     },
     {
@@ -46,7 +46,7 @@
       "status": "Standby",
       "health": "bad",
       "goal": "LinkedIn lookup support",
-      "task": "No current run; recent known session includes failure",
+      "task": "No active run; recent slash session failed",
       "pending": "Await next lookup task"
     },
     {
@@ -55,7 +55,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Workflow automation deployments",
-      "task": "No current runtime session",
+      "task": "No active runtime session",
       "pending": "Await automation brief"
     },
     {
@@ -64,7 +64,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Flowise build support",
-      "task": "No current runtime session",
+      "task": "No active runtime session",
       "pending": "Await next build request"
     }
   ]
