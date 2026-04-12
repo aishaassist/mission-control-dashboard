@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-04-12T18:51:00Z",
+  "generatedAt": "2026-04-12T18:53:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main mission-control automation healthy",
-    "Resume contact enrichment only when new rows or instructions arrive",
-    "Queue LinkedIn, n8n, and Flowise work on demand"
+    "Keep mission-control cron refresh reliable",
+    "Maintain contact enrichment readiness for next Notion batch",
+    "Keep LinkedIn, n8n, and Flowise on standby for queued work"
   ],
   "goalProgress": [
     {
       "goal": "Ops visibility",
       "status": "on-track",
-      "note": "Live runtime snapshot refreshed from current OpenClaw state"
+      "note": "Runtime snapshot refreshed from current OpenClaw sessions"
     },
     {
-      "goal": "Agent throughput",
+      "goal": "Specialist utilization",
       "status": "waiting",
-      "note": "No active specialist subagent runs in last 24h"
+      "note": "No active specialist runs in the last 24h"
     }
   ],
   "agents": [
@@ -28,34 +28,34 @@
       "status": "Active",
       "health": "ok",
       "goal": "Mission-control live data refresh",
-      "task": "Cron refresh in progress",
-      "pending": "Commit and push if dashboard file changed"
+      "task": "Cron refresh run is active",
+      "pending": "Stage, commit, and push only if file changed"
     },
     {
       "name": "contactenrichment",
       "displayName": "Contact Enrichment",
       "status": "Idle",
       "health": "warn",
-      "goal": "Notion contact data completion",
-      "task": "Last batch run completed",
-      "pending": "Await next enrichment batch or instructions"
+      "goal": "Notion contact completion",
+      "task": "Last run processed a batch and finished",
+      "pending": "Await next enrichment request"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Standby",
       "health": "bad",
-      "goal": "LinkedIn lookup and profile updates",
-      "task": "No running session; recent history includes a failed session",
-      "pending": "Await next lookup request"
+      "goal": "LinkedIn lookup support",
+      "task": "No current run; recent known session includes failure",
+      "pending": "Await next lookup task"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Automation workflow deployments",
-      "task": "No active runtime session",
+      "goal": "Workflow automation deployments",
+      "task": "No current runtime session",
       "pending": "Await automation brief"
     },
     {
@@ -63,8 +63,8 @@
       "displayName": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise build and support",
-      "task": "No active runtime session",
+      "goal": "Flowise build support",
+      "task": "No current runtime session",
       "pending": "Await next build request"
     }
   ]
