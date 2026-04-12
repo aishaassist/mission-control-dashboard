@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T23:01:00+05:30",
+  "generatedAt": "2026-04-12T23:03:00+05:30",
   "source": "OpenClaw runtime snapshot (sessions_list + subagents)",
   "priorities": [
     "Keep mission-control dashboard synced with live runtime state",
