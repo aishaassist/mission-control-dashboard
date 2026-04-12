@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T18:07:00Z",
+  "generatedAt": "2026-04-12T18:09:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -20,7 +20,7 @@
     {
       "name": "agent-fleet-readiness",
       "status": "monitor",
-      "note": "linkedin, n8n, and flowise are on standby with no active runs"
+      "note": "linkedin shows a recent failed session; n8n and flowise are standby"
     }
   ],
   "goalProgress": [
@@ -31,7 +31,7 @@
     },
     {
       "goal": "Agent execution readiness",
-      "progress": 68,
+      "progress": 64,
       "status": "monitor"
     }
   ],
@@ -58,10 +58,10 @@
       "agent": "linkedin",
       "name": "linkedin",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Run LinkedIn lookup support",
-      "task": "No active run; latest group execution finished done",
-      "pending": "Await next lookup request"
+      "task": "No active run; latest session mix includes a failed slash session",
+      "pending": "Validate session stability, then await next lookup request"
     },
     {
       "agent": "n8n",
@@ -69,7 +69,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Deliver workflow automations",
-      "task": "No active session in current snapshot",
+      "task": "No active run in current snapshot",
       "pending": "Await deployment or workflow build request"
     },
     {
@@ -78,7 +78,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise builds and maintenance",
-      "task": "No active session in current snapshot",
+      "task": "No active run in current snapshot",
       "pending": "Await next Flowise task"
     }
   ]
