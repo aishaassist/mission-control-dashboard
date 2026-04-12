@@ -1,56 +1,56 @@
 {
-  "generatedAt": "2026-04-12T22:44:00+05:30",
-  "source": "OpenClaw live session snapshot",
+  "generatedAt": "2026-04-12T22:54:00+05:30",
+  "source": "OpenClaw runtime snapshot (sessions_list + subagents)",
   "priorities": [
-    "Ship live dashboard data wiring for founder ops",
-    "Keep WhatsApp and command flow stable",
-    "Sync specialist agents into one execution board"
+    "Keep mission-control dashboard synced with live runtime state",
+    "Track specialist agent execution health and pending work",
+    "Maintain reliable auto-refresh and git-backed publishing"
   ],
-  "goalProgress": 68,
+  "goalProgress": 72,
   "agents": [
     {
       "name": "main (Aisha)",
       "status": "Active",
       "health": "ok",
-      "goal": "Founder command center with real live data",
-      "task": "Implement agent-wise tasks, goals, pending view on live dashboard",
-      "pending": "Add auto-refresh + true API-backed metrics",
+      "goal": "Operate founder mission control with live telemetry",
+      "task": "Running cron live-data refresh for dashboard",
+      "pending": "Continue periodic refresh and push only on change",
       "updated": "Now"
     },
     {
       "name": "contactenrichment",
       "status": "Idle",
       "health": "warn",
-      "goal": "Notion contact enrichment (Email/Phone)",
-      "task": "Processed 99 rows last run (0 email updates, 0 phone updates)",
-      "pending": "Re-run with verified source coverage + fill remaining as not_found where needed",
+      "goal": "Notion contact enrichment (email/phone)",
+      "task": "Last run processed 99 rows with no new contact fields",
+      "pending": "Re-run for unresolved rows and verified-source fill",
       "updated": "Recent"
     },
     {
       "name": "linkedin",
       "status": "Idle",
       "health": "warn",
-      "goal": "LinkedIn profile fill for School DB",
-      "task": "Last run completed with 0 rows updated",
-      "pending": "Run fresh pass on missing rows and verify profile URL quality",
+      "goal": "LinkedIn URL coverage for School DB rows",
+      "task": "Most recent group run reported 0 rows processed",
+      "pending": "Execute fresh pass on missing profile links",
       "updated": "Recent"
     },
     {
       "name": "n8n",
       "status": "Standby",
-      "health": "ok",
-      "goal": "Automation deployment and recurring workflows",
-      "task": "No active run currently",
-      "pending": "Build workflows for daily digest, reminders, and reporting",
+      "health": "warn",
+      "goal": "Automation workflows and scheduled reporting",
+      "task": "No active session running",
+      "pending": "Resume workflow build and deployment queue",
       "updated": "Earlier"
     },
     {
       "name": "flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fallback assistant workflows",
-      "task": "No active run currently",
-      "pending": "Model/config stabilization before next operational use",
+      "goal": "Flow orchestration support agent readiness",
+      "task": "No active session running",
+      "pending": "Stabilize configs before next execution cycle",
       "updated": "Earlier"
     }
   ]
