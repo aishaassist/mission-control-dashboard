@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Founder Mission Control</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #121a2f;
+      --muted: #9aa7bd;
+      --text: #eaf0ff;
+      --accent: #6ea8fe;
+      --ok: #2ecc71;
+      --warn: #f1c40f;
+      --bad: #e74c3c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, #1a2752, var(--bg));
+      color: var(--text);
+      min-height: 100vh;
+      padding: 24px;
+    }
+    h1 { margin: 0 0 6px; font-size: 28px; }
+    .sub { color: var(--muted); margin-bottom: 20px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: linear-gradient(180deg, #151f39, var(--card));
+      border: 1px solid #223152;
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,.25);
+    }
+    .kpi { font-size: 32px; font-weight: 700; margin: 4px 0 0; }
+    .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
+    .bar { background:#1f2b4a; border-radius: 999px; height: 10px; overflow: hidden; margin-top:8px; }
+    .fill { height:100%; border-radius:999px; }
+    .row { display:flex; justify-content:space-between; align-items:center; margin:10px 0; }
+    .pill { padding: 4px 10px; border-radius:999px; font-size:12px; font-weight:600; }
+    .ok{ background:rgba(46,204,113,.18); color:#9af0be; }
+    .warn{ background:rgba(241,196,15,.18); color:#ffe58a; }
+    .bad{ background:rgba(231,76,60,.18); color:#ffb0a8; }
+    ul { padding-left: 18px; margin: 10px 0 0; }
+    li { margin: 8px 0; }
+    a.btn {
+      display:inline-block; margin-top:14px; text-decoration:none; color:white;
+      background: var(--accent); padding:10px 14px; border-radius:10px; font-weight:600;
+    }
+  </style>
+</head>
+<body>
+  <h1>Founder Mission Control</h1>
+  <div class="sub">v1 placeholder dashboard, ready for live data wiring</div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="label">Top Goal</div>
+      <div class="kpi">Revenue Growth</div>
+      <div class="row"><span>Progress</span><strong>45%</strong></div>
+      <div class="bar"><div class="fill" style="width:45%; background:var(--accent)"></div></div>
+    </div>
+
+    <div class="card">
+      <div class="label">Active Agents</div>
+      <div class="row"><span>@scout</span><span class="pill ok">Running</span></div>
+      <div class="row"><span>@webaudit</span><span class="pill warn">Idle</span></div>
+      <div class="row"><span>@n8n</span><span class="pill bad">Blocked</span></div>
+    </div>
+
+    <div class="card">
+      <div class="label">Today Focus</div>
+      <ul>
+        <li>Finalize outreach list for Ahmedabad higher-ed</li>
+        <li>Publish weekly brand growth priorities</li>
+        <li>Clear top 3 founder bottlenecks by EOD</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="label">Next Steps</div>
+      <ul>
+        <li>Wire Google Calendar events</li>
+        <li>Connect Notion goals table</li>
+        <li>Automate daily status digest</li>
+      </ul>
+      <a class="btn" href="https://vercel.com/new" target="_blank" rel="noreferrer">Deploy on Vercel</a>
+    </div>
+  </div>
+</body>
+</html>
