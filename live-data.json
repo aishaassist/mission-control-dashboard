@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-04-12T21:57:00Z",
+  "generatedAt": "2026-04-12T21:59:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main (Aisha) responsive while cron refresh is running",
+    "Keep main (Aisha) responsive while cron refresh runs",
     "Queue contact enrichment when new Notion rows are assigned",
     "Keep LinkedIn, n8n, and Flowise on standby for delegated work"
   ],
