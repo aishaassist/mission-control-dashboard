@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T18:11:00Z",
+  "generatedAt": "2026-04-12T18:13:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -10,17 +10,17 @@
     {
       "name": "mission-control",
       "status": "active",
-      "note": "Main cron refresh session is running"
+      "note": "Main cron refresh is running"
     },
     {
       "name": "contact-enrichment-ops",
       "status": "standby",
-      "note": "Latest contact enrichment batch completed; awaiting new queue"
+      "note": "Last contact enrichment batch completed; waiting for next queue"
     },
     {
       "name": "agent-fleet-readiness",
       "status": "monitor",
-      "note": "linkedin has a recent failed session; n8n and flowise are idle"
+      "note": "linkedin shows a failed recent session; n8n and flowise remain idle"
     }
   ],
   "goalProgress": [
@@ -42,7 +42,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Maintain mission-control orchestration",
-      "task": "Running cron refresh and active user support session",
+      "task": "Cron live-data refresh is currently running",
       "pending": "Continue scheduled runtime snapshots"
     },
     {
@@ -51,7 +51,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last completion reported rows_processed=99",
+      "task": "Last completion reported FINAL rows_processed=99",
       "pending": "Await next Notion enrichment batch"
     },
     {
@@ -60,7 +60,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup support",
-      "task": "No current run; recent history includes failed slash session",
+      "task": "No current run; recent snapshot includes a failed session",
       "pending": "Stability check then await next lookup request"
     },
     {
@@ -69,7 +69,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Deliver workflow automations",
-      "task": "No active run in snapshot",
+      "task": "No active run in current snapshot",
       "pending": "Await deployment/build request"
     },
     {
@@ -78,7 +78,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise builds and maintenance",
-      "task": "No active run in snapshot",
+      "task": "No active run in current snapshot",
       "pending": "Await next Flowise task"
     }
   ]
