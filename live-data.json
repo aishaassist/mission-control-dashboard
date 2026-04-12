@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T21:29:00Z",
+  "generatedAt": "2026-04-12T21:31:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,13 +14,13 @@
   },
   "priorities": [
     "Keep main operations stable",
-    "Resume contact enrichment after Notion access validation",
-    "Queue next LinkedIn enrichment batch"
+    "Unblock contact enrichment by confirming Notion integration access",
+    "Prepare next LinkedIn enrichment trigger"
   ],
   "goalProgress": {
-    "operations": "Core agent stack online; only main is currently active.",
-    "automation": "n8n and flowise idle, no active runs detected.",
-    "enrichment": "contactenrichment and linkedin awaiting next task trigger."
+    "operations": "Main agent is active on cron-driven mission control refresh.",
+    "automation": "n8n and flowise are idle with no active sessions.",
+    "enrichment": "contactenrichment and linkedin are on standby, awaiting next batch triggers."
   },
   "agents": [
     {
@@ -28,45 +28,45 @@
       "alias": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Mission-control live data refresh and coordination",
-      "task": "Cron refresh in progress",
-      "pending": "Publish latest snapshot"
+      "goal": "Mission-control runtime orchestration",
+      "task": "Cron live-data refresh running",
+      "pending": "Commit and push updated dashboard snapshot"
     },
     {
       "name": "contactenrichment",
       "alias": "ContactEnrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school email/phone fields from official sources",
-      "task": "Last run completed; rows processed previously",
-      "pending": "Await Notion integration access and next batch"
+      "goal": "Backfill missing school email and phone fields",
+      "task": "Last run completed with row processing",
+      "pending": "Await Notion access validation and next enrichment batch"
     },
     {
       "name": "linkedin",
       "alias": "LinkedIn",
       "status": "Standby",
       "health": "warn",
-      "goal": "Populate LinkedIn profile fields for target records",
-      "task": "No active run; last group run processed 0 rows",
-      "pending": "Receive next search list / trigger"
+      "goal": "Enrich records with LinkedIn profile data",
+      "task": "No active run; most recent group task processed 0 rows",
+      "pending": "Await next source list and execution trigger"
     },
     {
       "name": "n8n",
       "alias": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Automation workflow deployment and execution",
-      "task": "No recent active sessions",
-      "pending": "Await workflow build/deploy request"
+      "goal": "Deploy and operate automations",
+      "task": "No active sessions detected",
+      "pending": "Await workflow request"
     },
     {
       "name": "flowise",
       "alias": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise builder support and maintenance",
-      "task": "Idle; no active runs",
-      "pending": "Await flow build/update request"
+      "goal": "Support Flowise flow building and updates",
+      "task": "Idle with no active runs",
+      "pending": "Await next flow build/update request"
     }
   ]
 }
