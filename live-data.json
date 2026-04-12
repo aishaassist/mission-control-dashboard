@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T17:49:00Z",
+  "generatedAt": "2026-04-12T17:51:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -15,7 +15,7 @@
     {
       "name": "contact-enrichment-ops",
       "status": "standby",
-      "note": "Last enrichment batch completed, waiting for next queue"
+      "note": "Latest contact enrichment batch completed, waiting for next queue"
     },
     {
       "name": "linkedin-ops",
@@ -26,7 +26,7 @@
   "goalProgress": [
     {
       "goal": "Operational visibility",
-      "progress": 88,
+      "progress": 89,
       "status": "on_track"
     },
     {
@@ -60,7 +60,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Support LinkedIn lookup operations",
-      "task": "No active run, recent snapshot shows a failed session",
+      "task": "No active run; recent snapshot includes a failed session",
       "pending": "Await next lookup request and verify stability"
     },
     {
