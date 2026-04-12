@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T18:41:00Z",
+  "generatedAt": "2026-04-12T18:43:00Z",
   "source": {
     "cron": "32ef53fa-2d22-4e89-abbb-34ab918e57d5",
     "sessionsList": {
@@ -14,25 +14,25 @@
     }
   },
   "priorities": [
-    "Keep Aisha runtime stable and mission-control refreshes continuous.",
-    "Queue next contactenrichment and linkedin batches when new rows arrive.",
-    "Move n8n and flowise from standby into active automation runs."
+    "Keep main agent refresh loop healthy and mission-control snapshots current.",
+    "Prepare next contactenrichment and linkedin execution batch when new rows land.",
+    "Activate n8n and flowise workloads from standby when automation requests arrive."
   ],
   "goalProgress": [
     {
       "goal": "Mission control runtime visibility",
       "status": "on_track",
-      "progress": "Live snapshot refreshed from current OpenClaw session and subagent state."
+      "progress": "Snapshot refreshed from live sessions and subagent state."
     },
     {
       "goal": "Contact and LinkedIn operations",
       "status": "paused",
-      "progress": "No active runs; latest contact batch completed and linkedin is waiting for trigger."
+      "progress": "No current runs; last contact batch finished and linkedin is waiting for next trigger."
     },
     {
       "goal": "Automation stack activity",
       "status": "standby",
-      "progress": "n8n and flowise currently idle with no running sessions."
+      "progress": "n8n and flowise are idle with no running sessions."
     }
   ],
   "agents": [
@@ -42,16 +42,16 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate operations and keep mission-control data current.",
-      "task": "Running the live dashboard refresh cron now.",
-      "pending": "Complete this refresh and continue scheduled cycles."
+      "task": "Running mission-control live-data refresh.",
+      "pending": "Complete refresh cycle and continue scheduled runs."
     },
     {
       "id": "contactenrichment",
       "name": "contactenrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing contact fields from official verifiable sources.",
-      "task": "Most recent visible run finished with final batch summary.",
+      "goal": "Enrich missing school contact records from verifiable official sources.",
+      "task": "Latest run completed with final contact enrichment summary.",
       "pending": "Await next Notion/contact enrichment queue."
     },
     {
@@ -59,8 +59,8 @@
       "name": "linkedin",
       "status": "Standby",
       "health": "warn",
-      "goal": "Run LinkedIn discovery and update workflows.",
-      "task": "No running session; latest visible run is complete.",
+      "goal": "Execute LinkedIn discovery and profile update workflows.",
+      "task": "No running session; most recent visible run is complete.",
       "pending": "Await next LinkedIn batch trigger."
     },
     {
@@ -70,7 +70,7 @@
       "health": "warn",
       "goal": "Build and deploy automation workflows.",
       "task": "No active session detected.",
-      "pending": "Start next deployment or automation run."
+      "pending": "Start next deployment or automation execution."
     },
     {
       "id": "flowise",
@@ -79,7 +79,7 @@
       "health": "warn",
       "goal": "Build and maintain Flowise chains and integrations.",
       "task": "No active session detected.",
-      "pending": "Await next flowise build/test request."
+      "pending": "Await next flowise build or test request."
     }
   ]
 }
