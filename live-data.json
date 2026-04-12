@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T20:51:00Z",
+  "generatedAt": "2026-04-12T20:53:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -17,9 +17,9 @@
     "Queue next actionable LinkedIn enrichment batch"
   ],
   "goalProgress": {
-    "operations": "Main cron refresh session is active and updating dashboard telemetry",
-    "dataEnrichment": "Contactenrichment and LinkedIn are idle/standby with no active runtime sessions",
-    "automation": "n8n and flowise are idle, awaiting automation or build tasks"
+    "operations": "Main cron refresh is running and maintaining mission-control telemetry",
+    "dataEnrichment": "Contactenrichment and LinkedIn are idle with no active runtime sessions",
+    "automation": "n8n and flowise are on standby awaiting new automation or build requests"
   },
   "agents": [
     {
@@ -29,23 +29,23 @@
       "health": "ok",
       "goal": "Run mission-control orchestration and live telemetry refresh",
       "task": "Executing mission-control-live-data-refresh cron session",
-      "pending": "Complete refresh cycle and push if file diff exists"
+      "pending": "Finish refresh cycle and push only if live-data diff is staged"
     },
     {
       "name": "contactenrichment",
       "status": "Standby",
       "health": "warn",
       "goal": "Populate missing school email and phone records",
-      "task": "Last run completed; currently no running session",
-      "pending": "Await Notion integration readiness and next queued rows"
+      "task": "Last enrichment run completed; no current running session",
+      "pending": "Wait for Notion integration readiness and next queued rows"
     },
     {
       "name": "linkedin",
       "status": "Standby",
       "health": "warn",
       "goal": "Fill LinkedIn profile fields for queued records",
-      "task": "No active session; latest run reported zero rows processed",
-      "pending": "Await next LinkedIn lookup trigger"
+      "task": "No active session; latest completed run processed zero rows",
+      "pending": "Wait for next LinkedIn lookup trigger"
     },
     {
       "name": "n8n",
@@ -53,7 +53,7 @@
       "health": "warn",
       "goal": "Build and deploy workflow automations",
       "task": "No active runtime session detected",
-      "pending": "Await automation implementation request"
+      "pending": "Wait for automation implementation request"
     },
     {
       "name": "flowise",
@@ -61,7 +61,7 @@
       "health": "warn",
       "goal": "Support Flowise app build and troubleshooting",
       "task": "No active runtime session detected",
-      "pending": "Await build or debugging request"
+      "pending": "Wait for build or debugging request"
     }
   ]
 }
