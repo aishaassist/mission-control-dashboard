@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T19:03:00Z",
+  "generatedAt": "2026-04-12T19:07:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -13,19 +13,19 @@
     }
   },
   "priorities": [
-    "Unblock Google Calendar auth in main runtime",
-    "Keep contact enrichment pipeline ready for next Notion batch",
-    "Stand by specialist agents for delegated work"
+    "Stabilize main runtime auth/services for uninterrupted orchestration",
+    "Keep contact enrichment and LinkedIn agents ready for next delegated batches",
+    "Maintain standby automation capacity across n8n and Flowise"
   ],
   "goalProgress": [
     {
       "goal": "Mission control operational visibility",
-      "progress": "Live snapshot refreshed from runtime sessions",
+      "progress": "Runtime sessions snapshot refreshed from current OpenClaw state",
       "status": "on_track"
     },
     {
       "goal": "Specialist execution readiness",
-      "progress": "No active specialist runs; agents in standby",
+      "progress": "No active specialist runs detected; all specialist agents in standby",
       "status": "watch"
     }
   ],
@@ -35,45 +35,45 @@
       "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate Kumar's tasks and orchestrate specialists",
-      "task": "Running cron refresh and active main-session operations",
-      "pending": "Complete Google Calendar auth to enable calendar actions"
+      "goal": "Coordinate Kumar's operations and route work to specialists",
+      "task": "Running mission-control live data refresh cron",
+      "pending": "Resolve remaining Google Calendar auth friction in main runtime"
     },
     {
       "name": "contactenrichment",
       "label": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contact records",
-      "task": "Last run completed Notion contact enrichment batch",
-      "pending": "Await next school/contact batch"
+      "goal": "Enrich school contact records from verifiable sources",
+      "task": "Last known run completed a Notion contact enrichment batch",
+      "pending": "Await next contact enrichment assignment"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Find and update LinkedIn profile data",
-      "task": "No running LinkedIn session currently",
-      "pending": "Await next lookup instructions"
+      "goal": "Support LinkedIn profile lookup and update workflows",
+      "task": "No running LinkedIn session in current runtime",
+      "pending": "Await next LinkedIn lookup/update batch"
     },
     {
       "name": "n8n",
       "label": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Automation workflow execution",
-      "task": "No active n8n runtime session detected",
-      "pending": "Standby for workflow deployment tasks"
+      "goal": "Deliver automation workflow execution and deployment",
+      "task": "No active n8n session currently running",
+      "pending": "Stand by for workflow build/deploy requests"
     },
     {
       "name": "flowise",
       "label": "Flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Flowise build and support",
-      "task": "No active Flowise runtime session detected",
-      "pending": "Standby for next build/support request"
+      "goal": "Build and support Flowise-based AI flows",
+      "task": "No active Flowise session currently running",
+      "pending": "Stand by for next Flowise build/support request"
     }
   ]
 }
