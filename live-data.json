@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-12T22:49:00Z",
+  "generatedAt": "2026-04-12T22:51:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main (Aisha) responsive while cron refresh is running",
-    "Hold contactenrichment until fresh Notion rows are assigned",
-    "Keep linkedin, n8n, and flowise on standby for delegated tasks"
+    "Queue contactenrichment only when new Notion rows are ready",
+    "Keep linkedin, n8n, and flowise warm for delegated execution"
   ],
   "goalProgress": [
     {
@@ -16,11 +16,11 @@
     },
     {
       "goal": "Contact enrichment throughput",
-      "progress": "Latest contactenrichment run completed 99 rows"
+      "progress": "Latest contactenrichment completion reported 99 rows processed"
     },
     {
       "goal": "Specialist readiness",
-      "progress": "linkedin, n8n, and flowise have no running sessions"
+      "progress": "linkedin, n8n, and flowise currently show no running sessions"
     }
   ],
   "agents": [
@@ -31,7 +31,7 @@
       "health": "ok",
       "goal": "Coordinate mission control and core operations",
       "task": "Running cron mission-control-live-data-refresh",
-      "pending": "Continue scheduled monitoring and dispatch"
+      "pending": "Continue scheduled monitoring and delegation"
     },
     {
       "name": "contactenrichment",
@@ -48,7 +48,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Execute delegated LinkedIn lookup tasks",
-      "task": "No running session; latest bot report shows zero-row completion",
+      "task": "No current running session; last group run completed",
       "pending": "Await next lookup batch"
     },
     {
@@ -58,7 +58,7 @@
       "health": "warn",
       "goal": "Build and deploy workflow automations",
       "task": "No running session detected",
-      "pending": "Await next automation build request"
+      "pending": "Await next automation request"
     },
     {
       "name": "flowise",
