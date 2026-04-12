@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-12T22:15:00Z",
+  "generatedAt": "2026-04-12T22:17:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main (Aisha) responsive while cron refresh is running",
-    "Trigger contactenrichment when new Notion queue work arrives",
-    "Maintain linkedin, n8n, and flowise in ready standby"
+    "Keep main (Aisha) responsive while cron refresh runs",
+    "Resume contactenrichment when new Notion queue items arrive",
+    "Keep linkedin, n8n, and flowise ready for delegation"
   ],
   "goalProgress": [
     {
@@ -16,11 +16,11 @@
     },
     {
       "goal": "Contact enrichment throughput",
-      "progress": "Latest known run processed 99 rows"
+      "progress": "Latest known contactenrichment run processed 99 rows"
     },
     {
       "goal": "Specialist readiness",
-      "progress": "linkedin, n8n, and flowise are idle and ready for delegation"
+      "progress": "linkedin, n8n, and flowise are idle and on standby"
     }
   ],
   "agents": [
@@ -38,8 +38,8 @@
       "label": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contact data from verified official sources",
-      "task": "Latest run completed 99 rows",
+      "goal": "Enrich school contacts from verified official sources",
+      "task": "Latest run completed with 99 rows processed",
       "pending": "Await next Notion enrichment assignment"
     },
     {
