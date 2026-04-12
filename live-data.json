@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T18:17:00Z",
+  "generatedAt": "2026-04-12T18:19:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -13,7 +13,7 @@
     "overall": "Monitoring",
     "active": 1,
     "standby": 4,
-    "failed": 0
+    "failed": 1
   },
   "agents": [
     {
@@ -38,10 +38,10 @@
       "agent": "linkedin",
       "name": "linkedin",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "LinkedIn lookup and profile updates when tasks arrive",
-      "task": "No active run; last bot summary reported zero rows processed",
-      "pending": "Wait for next lookup queue"
+      "task": "No active run; recent history includes a failed slash session",
+      "pending": "Wait for next lookup queue and stabilize slash trigger"
     },
     {
       "agent": "n8n",
