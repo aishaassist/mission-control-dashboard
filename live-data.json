@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T23:27:00Z",
+  "generatedAt": "2026-04-12T23:29:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -45,8 +45,8 @@
       "status": "Idle",
       "health": "bad",
       "goal": "Execute LinkedIn lookup and update workflows",
-      "task": "No active run; recent slash session shows failed state",
-      "pending": "Diagnose failed session path and wait for next queued request"
+      "task": "No active run; recent session includes failed state",
+      "pending": "Diagnose failed path and wait for next queued request"
     },
     {
       "name": "n8n",
