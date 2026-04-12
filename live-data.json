@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T20:59:00Z",
+  "generatedAt": "2026-04-12T21:01:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,13 +13,13 @@
   },
   "priorities": [
     "Keep mission-control live telemetry current",
-    "Unblock Notion access for contact enrichment",
-    "Queue next actionable LinkedIn enrichment batch"
+    "Restore Notion access path for contact enrichment runs",
+    "Prepare next LinkedIn enrichment trigger with actionable rows"
   ],
   "goalProgress": {
-    "operations": "Main cron refresh is running and maintaining mission-control telemetry",
-    "dataEnrichment": "Contactenrichment and LinkedIn are idle with no active runtime sessions",
-    "automation": "n8n and flowise are on standby awaiting new automation or build requests"
+    "operations": "Main cron refresh is actively running and updating dashboard telemetry",
+    "dataEnrichment": "Contactenrichment and LinkedIn are in standby awaiting fresh row queues",
+    "automation": "n8n and flowise remain idle, ready for new automation and build tasks"
   },
   "agents": [
     {
@@ -27,41 +27,41 @@
       "alias": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Run mission-control orchestration and live telemetry refresh",
+      "goal": "Run mission-control orchestration and keep runtime telemetry fresh",
       "task": "Executing mission-control-live-data-refresh cron session",
-      "pending": "Finish refresh cycle and push only if live-data diff is staged"
+      "pending": "Complete refresh cycle and push only if git diff exists"
     },
     {
       "name": "contactenrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Populate missing school email and phone records",
-      "task": "Last enrichment run completed; no current running session",
-      "pending": "Wait for Notion integration readiness and next queued rows"
+      "goal": "Fill missing school email and phone fields from official sources",
+      "task": "No running session; last run completed with not_found outcomes",
+      "pending": "Await Notion integration readiness and next processing batch"
     },
     {
       "name": "linkedin",
       "status": "Standby",
-      "health": "warn",
-      "goal": "Fill LinkedIn profile fields for queued records",
-      "task": "No active session; latest completed run processed zero rows",
-      "pending": "Wait for next LinkedIn lookup trigger"
+      "health": "bad",
+      "goal": "Enrich queued records with valid LinkedIn profile links",
+      "task": "No active runtime session; recent history includes failed slash session",
+      "pending": "Wait for next lookup batch and rerun with healthy session"
     },
     {
       "name": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Build and deploy workflow automations",
-      "task": "No active runtime session detected",
-      "pending": "Wait for automation implementation request"
+      "goal": "Build and deploy n8n automations for operations",
+      "task": "No current running session detected",
+      "pending": "Await automation build or deployment request"
     },
     {
       "name": "flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Support Flowise app build and troubleshooting",
-      "task": "No active runtime session detected",
-      "pending": "Wait for build or debugging request"
+      "goal": "Support Flowise implementation and troubleshooting",
+      "task": "No current running session detected",
+      "pending": "Await Flowise build or debugging request"
     }
   ]
 }
