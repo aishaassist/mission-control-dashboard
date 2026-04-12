@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T21:17:00Z",
+  "generatedAt": "2026-04-12T21:19:00Z",
   "source": {
     "cronId": "32ef53fa-2d22-4e89-abbb-34ab918e57d5",
     "sessionsList": {
@@ -15,19 +15,19 @@
   },
   "priorities": [
     "Keep main (Aisha) run-loop healthy and responsive",
-    "Prepare next contactenrichment batch once Notion inputs are ready",
-    "Re-activate specialist queues (linkedin, n8n, flowise) with fresh tasks"
+    "Clear failure residue on linkedin before next batch",
+    "Re-activate specialist queues (contactenrichment, n8n, flowise) with fresh tasks"
   ],
   "goalProgress": [
     {
       "goal": "Mission control runtime visibility",
       "status": "on_track",
-      "progress": "Live snapshot refreshed from current session graph"
+      "progress": "Live snapshot refreshed from current OpenClaw session graph"
     },
     {
       "goal": "Specialist execution readiness",
       "status": "at_risk",
-      "progress": "No active specialist runs in the current cycle"
+      "progress": "No specialist agent is currently running"
     }
   ],
   "agents": [
@@ -36,7 +36,7 @@
       "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission control and delegate specialist work",
+      "goal": "Coordinate mission control and specialist delegation",
       "task": "Running cron refresh for live dashboard data",
       "pending": "Await next operator directive"
     },
@@ -45,18 +45,18 @@
       "label": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Fill missing school contact fields from official sources",
-      "task": "Last run completed with final enrichment summary",
-      "pending": "Next Notion-ready row set"
+      "goal": "Fill missing school email and phone fields from official sources",
+      "task": "Last run completed and returned final enrichment summary",
+      "pending": "Next Notion-ready enrichment batch"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "warn",
-      "goal": "Enrich and validate LinkedIn profile fields",
-      "task": "No active run; most recent batch reported final output",
-      "pending": "Next lookup workload"
+      "health": "bad",
+      "goal": "Enrich and validate LinkedIn profile coverage",
+      "task": "No active run; recent history includes a failed session",
+      "pending": "Stabilize session, then load next lookup workload"
     },
     {
       "name": "n8n",
@@ -73,7 +73,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise build and chatflow operations",
-      "task": "Idle; last known prompt was readiness check",
+      "task": "Idle; last known state was readiness check",
       "pending": "New build or maintenance request"
     }
   ]
