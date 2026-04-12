@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-04-12T21:41:00Z",
+  "generatedAt": "2026-04-12T21:43:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main (Aisha) responsive while cron refresh is running",
-    "Queue contact enrichment only when fresh Notion tasks arrive",
-    "Maintain LinkedIn, n8n, and Flowise in ready standby for delegated work"
+    "Queue contact enrichment when new Notion rows are assigned",
+    "Keep LinkedIn, n8n, and Flowise on standby for delegated work"
   ],
   "goalProgress": [
     {
       "goal": "Mission control continuity",
-      "progress": "Live dashboard refresh is actively running"
+      "progress": "Live dashboard refresh cron is running now"
     },
     {
       "goal": "Contact enrichment throughput",
       "progress": "Latest completed batch processed 99 rows"
     },
     {
-      "goal": "Automation readiness",
-      "progress": "LinkedIn, n8n, and Flowise are idle and available"
+      "goal": "Specialist readiness",
+      "progress": "LinkedIn, n8n, and Flowise are idle and ready"
     }
   ],
   "agents": [
@@ -30,7 +30,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control and primary operations",
-      "task": "Cron mission-control-live-data-refresh is running",
+      "task": "Cron mission-control-live-data-refresh is in progress",
       "pending": "Continue scheduled monitoring and dispatch"
     },
     {
@@ -38,8 +38,8 @@
       "label": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contact records from verified official sources",
-      "task": "Last run completed with final 99-row summary",
+      "goal": "Enrich school contacts from verified official sources",
+      "task": "Last run completed with a 99-row final summary",
       "pending": "Await next Notion enrichment assignment"
     },
     {
@@ -48,8 +48,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Handle delegated LinkedIn lookups",
-      "task": "No current run; latest group task reported zero-row completion",
-      "pending": "Await new lookup instructions"
+      "task": "No active run; latest group run closed with zero rows",
+      "pending": "Await next lookup instruction"
     },
     {
       "name": "n8n",
@@ -58,7 +58,7 @@
       "health": "warn",
       "goal": "Build and deploy automation workflows",
       "task": "No active execution detected",
-      "pending": "Await automation build requests"
+      "pending": "Await next automation build request"
     },
     {
       "name": "flowise",
