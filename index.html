@@ -24,11 +24,12 @@
       min-height: 100vh;
       padding: 24px;
     }
-    h1 { margin: 0 0 6px; font-size: 28px; }
-    .sub { color: var(--muted); margin-bottom: 20px; }
+    h1 { margin: 0 0 6px; font-size: 32px; }
+    .sub { color: var(--muted); margin-bottom: 18px; }
+    .meta { color: var(--muted); font-size: 13px; margin-bottom: 18px; }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 16px;
     }
     .card {
@@ -42,22 +43,21 @@
     .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; }
     .bar { background:#1f2b4a; border-radius: 999px; height: 10px; overflow: hidden; margin-top:8px; }
     .fill { height:100%; border-radius:999px; }
-    .row { display:flex; justify-content:space-between; align-items:center; margin:10px 0; }
-    .pill { padding: 4px 10px; border-radius:999px; font-size:12px; font-weight:600; }
+    .row { display:flex; justify-content:space-between; align-items:center; margin:10px 0; gap:8px; }
+    .pill { padding: 4px 10px; border-radius:999px; font-size:12px; font-weight:600; white-space:nowrap; }
     .ok{ background:rgba(46,204,113,.18); color:#9af0be; }
     .warn{ background:rgba(241,196,15,.18); color:#ffe58a; }
     .bad{ background:rgba(231,76,60,.18); color:#ffb0a8; }
     ul { padding-left: 18px; margin: 10px 0 0; }
     li { margin: 8px 0; }
-    a.btn {
-      display:inline-block; margin-top:14px; text-decoration:none; color:white;
-      background: var(--accent); padding:10px 14px; border-radius:10px; font-weight:600;
-    }
+    .brands li { display:flex; justify-content:space-between; gap:10px; }
+    .small { font-size: 12px; color: var(--muted); }
   </style>
 </head>
 <body>
   <h1>Founder Mission Control</h1>
-  <div class="sub">v1 placeholder dashboard, ready for live data wiring</div>
+  <div class="sub">Execution board for priorities, delegation, and daily momentum</div>
+  <div class="meta">Last updated: <span id="ts"></span></div>
 
   <div class="grid">
     <div class="card">
@@ -65,33 +65,43 @@
       <div class="kpi">Revenue Growth</div>
       <div class="row"><span>Progress</span><strong>45%</strong></div>
       <div class="bar"><div class="fill" style="width:45%; background:var(--accent)"></div></div>
+      <div class="small" style="margin-top:10px">Target: ₹30L monthly run-rate</div>
     </div>
 
     <div class="card">
       <div class="label">Active Agents</div>
       <div class="row"><span>@scout</span><span class="pill ok">Running</span></div>
-      <div class="row"><span>@webaudit</span><span class="pill warn">Idle</span></div>
-      <div class="row"><span>@n8n</span><span class="pill bad">Blocked</span></div>
+      <div class="row"><span>@webaudit</span><span class="pill warn">Queued</span></div>
+      <div class="row"><span>@brandgrowth</span><span class="pill ok">Running</span></div>
+      <div class="row"><span>@n8n</span><span class="pill warn">Drafting flow</span></div>
     </div>
 
     <div class="card">
       <div class="label">Today Focus</div>
       <ul>
-        <li>Finalize outreach list for Ahmedabad higher-ed</li>
-        <li>Publish weekly brand growth priorities</li>
-        <li>Clear top 3 founder bottlenecks by EOD</li>
+        <li>Close 3 high-value follow-ups</li>
+        <li>Publish weekly priorities across all brands</li>
+        <li>Finalize Ahmedabad higher-ed outreach batch</li>
+        <li>Delegate automation backlog to @n8n</li>
       </ul>
     </div>
 
     <div class="card">
-      <div class="label">Next Steps</div>
-      <ul>
-        <li>Wire Google Calendar events</li>
-        <li>Connect Notion goals table</li>
-        <li>Automate daily status digest</li>
+      <div class="label">Brand Priorities</div>
+      <ul class="brands">
+        <li><span>campusdice.ai</span><span class="pill ok">Growth</span></li>
+        <li><span>campushiring.in</span><span class="pill warn">Content</span></li>
+        <li><span>mavitriqglobal.com</span><span class="pill ok">Offers</span></li>
+        <li><span>mavitriqconsulting.com</span><span class="pill warn">Pipeline</span></li>
+        <li><span>reeduversity.com</span><span class="pill bad">Stalled</span></li>
+        <li><span>a1adzmedia.com</span><span class="pill ok">Campaign</span></li>
       </ul>
-      <a class="btn" href="https://vercel.com/new" target="_blank" rel="noreferrer">Deploy on Vercel</a>
     </div>
   </div>
+
+  <script>
+    const now = new Date();
+    document.getElementById('ts').textContent = now.toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' });
+  </script>
 </body>
 </html>
