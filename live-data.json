@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T21:59:00Z",
+  "generatedAt": "2026-04-12T22:01:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -12,7 +12,7 @@
   "goalProgress": [
     {
       "goal": "Mission control continuity",
-      "progress": "Live dashboard refresh cron is running now"
+      "progress": "Live dashboard refresh cron is active"
     },
     {
       "goal": "Contact enrichment throughput",
@@ -46,10 +46,10 @@
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "Handle delegated LinkedIn lookups",
-      "task": "Recent slash session ended failed; no active run now",
-      "pending": "Stabilize next lookup run and await instruction"
+      "task": "Last run reported no active rows processed",
+      "pending": "Await next lookup task; monitor occasional failed slash sessions"
     },
     {
       "name": "n8n",
