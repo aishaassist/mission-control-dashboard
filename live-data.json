@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T19:19:00Z",
+  "generatedAt": "2026-04-12T19:21:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -12,18 +12,18 @@
     }
   },
   "priorities": [
-    "Keep main cron refresh healthy and observable",
-    "Queue next contact enrichment run when new rows arrive",
+    "Keep mission-control-live-data-refresh running cleanly",
+    "Keep contact enrichment queued for next inbound dataset",
     "Maintain LinkedIn, n8n, and Flowise in ready standby"
   ],
   "goalProgress": [
     {
       "goal": "Mission control runtime visibility",
-      "progress": "Snapshot refreshed from current OpenClaw session and subagent state"
+      "progress": "Live snapshot refreshed from sessions_list and subagents state"
     },
     {
-      "goal": "Contact operations readiness",
-      "progress": "Last enrichment batch completed, awaiting next trigger"
+      "goal": "Contact ops continuity",
+      "progress": "Latest contactenrichment run completed; waiting for next trigger"
     }
   ],
   "agents": [
@@ -32,26 +32,26 @@
       "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Run mission-control-live-data-refresh cron",
-      "task": "Collect runtime state and update live dashboard data",
-      "pending": "Commit and push only if live-data.json changed"
+      "goal": "Operate mission control and orchestration",
+      "task": "Running cron to refresh live dashboard state",
+      "pending": "Stage, commit, and push only if live-data.json changed"
     },
     {
       "name": "contactenrichment",
       "label": "ContactEnrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Populate missing school contacts in Notion",
-      "task": "Last run processed 99 rows and completed",
-      "pending": "Await next dataset or run trigger"
+      "goal": "Fill missing school Email and Phone fields in Notion",
+      "task": "Last run completed with rows processed and no active session",
+      "pending": "Await next contact dataset trigger"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Support LinkedIn lookup tasks",
-      "task": "No active session; last group run reported zero rows",
+      "goal": "Handle LinkedIn lookup and enrichment requests",
+      "task": "No running session; latest visible run is completed",
       "pending": "Await next lookup payload"
     },
     {
@@ -59,18 +59,18 @@
       "label": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Automation workflow build and deployment",
+      "goal": "Build and deploy automations",
       "task": "No running session detected",
-      "pending": "Await automation request"
+      "pending": "Await automation build request"
     },
     {
       "name": "flowise",
       "label": "Flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Flowise build support",
+      "goal": "Support Flowise flow development",
       "task": "No running session detected",
-      "pending": "Await flow build task"
+      "pending": "Await next flow task"
     }
   ]
 }
