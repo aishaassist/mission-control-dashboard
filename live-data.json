@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-12T22:57:00+05:30",
+  "generatedAt": "2026-04-12T22:59:00+05:30",
   "source": "OpenClaw runtime snapshot (sessions_list + subagents)",
   "priorities": [
     "Keep mission-control dashboard synced with live runtime state",
     "Track specialist agent execution health and pending work",
     "Maintain reliable auto-refresh and git-backed publishing"
   ],
-  "goalProgress": 73,
+  "goalProgress": 74,
   "agents": [
     {
       "name": "main (Aisha)",
@@ -21,35 +21,35 @@
       "name": "contactenrichment",
       "status": "Idle",
       "health": "warn",
-      "goal": "Notion contact enrichment (email/phone)",
-      "task": "Last run processed 99 rows; 0 email/phone updates",
-      "pending": "Re-run for unresolved rows with verified official sources",
+      "goal": "Notion contact enrichment for school records",
+      "task": "Last run processed 99 rows with no verified email or phone additions",
+      "pending": "Re-run for unresolved rows using official sources",
       "updated": "Recent"
     },
     {
       "name": "linkedin",
       "status": "Idle",
       "health": "warn",
-      "goal": "LinkedIn URL coverage for School DB rows",
-      "task": "Most recent group run reported 0 rows processed",
-      "pending": "Run fresh pass for missing LinkedIn profile links",
+      "goal": "LinkedIn profile coverage for school database",
+      "task": "Latest group run reported 0 rows processed",
+      "pending": "Execute a fresh lookup pass for missing profile links",
       "updated": "Recent"
     },
     {
       "name": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Automation workflows and scheduled reporting",
-      "task": "No active session running",
-      "pending": "Resume workflow build and deployment queue",
+      "goal": "Automation workflow build and deployment",
+      "task": "No current running session",
+      "pending": "Resume queued workflow implementation when assigned",
       "updated": "Earlier"
     },
     {
       "name": "flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flow orchestration support agent readiness",
-      "task": "No active session running",
+      "goal": "Flow orchestration support readiness",
+      "task": "No current running session",
       "pending": "Prepare next flow execution cycle",
       "updated": "Earlier"
     }
