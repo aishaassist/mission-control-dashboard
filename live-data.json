@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T20:01:00Z",
+  "generatedAt": "2026-04-12T20:03:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,19 +14,19 @@
   },
   "priorities": [
     "Keep main orchestration responsive",
-    "Stage contactenrichment and linkedin for next data intake",
-    "Keep n8n and flowise warm for automation/build requests"
+    "Prepare contactenrichment and linkedin for next intake",
+    "Keep n8n and flowise ready for automation/build requests"
   ],
   "goalProgress": [
     {
       "goal": "Mission control visibility",
       "status": "On track",
-      "note": "Runtime snapshot refreshed from sessions and subagents"
+      "note": "Live snapshot refreshed from session and subagent state"
     },
     {
       "goal": "Specialist readiness",
       "status": "Watch",
-      "note": "Specialist agents are idle/standby while main is active"
+      "note": "Specialist agents are on standby while main is active"
     }
   ],
   "agents": [
@@ -36,16 +36,16 @@
       "status": "Active",
       "health": "ok",
       "goal": "Chief-of-staff orchestration across channels",
-      "task": "Running mission-control live-data refresh cron",
-      "pending": "Continue refresh cadence and respond to inbound ops"
+      "task": "Running mission-control live-data refresh",
+      "pending": "Continue refresh cadence and handle inbound operations"
     },
     {
       "name": "contactenrichment",
       "label": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school contact fields from official sources",
-      "task": "Last run completed School DB contact pass",
+      "goal": "Fill missing school contacts from official sources",
+      "task": "Last pass completed for School DB contact fields",
       "pending": "Await next enrichment batch"
     },
     {
@@ -54,7 +54,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "Last run ended with no rows processed",
+      "task": "Last run finished with no rows processed",
       "pending": "Await next lookup request"
     },
     {
