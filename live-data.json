@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T20:17:00Z",
+  "generatedAt": "2026-04-12T20:19:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -21,7 +21,7 @@
     {
       "goal": "Mission control visibility",
       "status": "On track",
-      "note": "Live snapshot refreshed from current session and subagent state"
+      "note": "Live snapshot refreshed from current runtime state"
     },
     {
       "goal": "Specialist readiness",
@@ -36,7 +36,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Chief-of-staff orchestration across channels",
-      "task": "Running mission-control live-data refresh",
+      "task": "Running mission-control live data refresh",
       "pending": "Continue refresh cadence and handle inbound operations"
     },
     {
@@ -45,7 +45,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contacts from official sources",
-      "task": "Last contact pass completed for School DB fields",
+      "task": "Last run processed 99 rows with no new contacts",
       "pending": "Await next enrichment batch"
     },
     {
