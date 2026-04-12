@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-04-12T22:13:00Z",
+  "generatedAt": "2026-04-12T22:15:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main (Aisha) responsive during cron operations",
-    "Run contact enrichment when new Notion rows are queued",
-    "Hold linkedin, n8n, and flowise in ready standby"
+    "Keep main (Aisha) responsive while cron refresh is running",
+    "Trigger contactenrichment when new Notion queue work arrives",
+    "Maintain linkedin, n8n, and flowise in ready standby"
   ],
   "goalProgress": [
     {
       "goal": "Mission control continuity",
-      "progress": "Main is actively executing the live dashboard refresh cron"
+      "progress": "Main is actively running mission-control-live-data-refresh"
     },
     {
       "goal": "Contact enrichment throughput",
-      "progress": "Last known batch completed 99 rows"
+      "progress": "Latest known run processed 99 rows"
     },
     {
       "goal": "Specialist readiness",
-      "progress": "linkedin, n8n, and flowise are idle and available for delegation"
+      "progress": "linkedin, n8n, and flowise are idle and ready for delegation"
     }
   ],
   "agents": [
@@ -38,8 +38,8 @@
       "label": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contacts from verified official sources",
-      "task": "Last run completed with 99 rows processed",
+      "goal": "Enrich school contact data from verified official sources",
+      "task": "Latest run completed 99 rows",
       "pending": "Await next Notion enrichment assignment"
     },
     {
@@ -48,7 +48,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Execute delegated LinkedIn lookup tasks",
-      "task": "Last run finished with no rows processed",
+      "task": "Latest run completed with no active workload",
       "pending": "Await next LinkedIn lookup request"
     },
     {
@@ -57,7 +57,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and deploy workflow automations",
-      "task": "No active execution detected",
+      "task": "No running session detected",
       "pending": "Await next automation build request"
     },
     {
@@ -66,7 +66,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise pipeline and app build tasks",
-      "task": "No active execution detected",
+      "task": "No running session detected",
       "pending": "Await next Flowise task"
     }
   ]
