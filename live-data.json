@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T21:03:00Z",
+  "generatedAt": "2026-04-12T21:05:00Z",
   "source": {
     "cronId": "32ef53fa-2d22-4e89-abbb-34ab918e57d5",
     "sessionsList": {
@@ -43,34 +43,34 @@
     {
       "name": "contactenrichment",
       "label": "Contact Enrichment",
-      "status": "Standby",
+      "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Fill missing school contact fields with verified sources",
-      "task": "Last batch processed with final stats emitted",
-      "pending": "New rows / Notion-ready assignment"
+      "goal": "Fill missing school contact fields from official sources",
+      "task": "Last batch completed with final enrichment summary",
+      "pending": "Next Notion-ready row set"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
-      "status": "Standby",
+      "status": "Idle/Standby",
       "health": "bad",
       "goal": "Enrich and validate LinkedIn profile fields",
-      "task": "No active run; recent session history includes failure",
-      "pending": "Retry workload with stable session path"
+      "task": "No active run; latest slash session shows failure",
+      "pending": "Rerun next workload on stable session"
     },
     {
       "name": "n8n",
       "label": "n8n",
-      "status": "Standby",
+      "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Execute automation workflows via n8n endpoints",
-      "task": "Idle since last heartbeat-style interaction",
+      "goal": "Execute automation workflows via n8n API endpoints",
+      "task": "Idle since last interaction",
       "pending": "Next automation brief"
     },
     {
       "name": "flowise",
       "label": "Flowise",
-      "status": "Standby",
+      "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise build and chatflow operations",
       "task": "Idle; last known prompt was readiness check",
