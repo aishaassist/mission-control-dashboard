@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T19:49:00Z",
+  "generatedAt": "2026-04-12T19:51:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -26,7 +26,7 @@
     {
       "goal": "Execution readiness",
       "status": "Watch",
-      "note": "Only main is active; specialist agents remain standby"
+      "note": "Only main is active; specialist agents are on standby"
     }
   ],
   "agents": [
@@ -37,7 +37,7 @@
       "health": "ok",
       "goal": "Chief-of-staff orchestration across channels",
       "task": "Running mission-control live-data refresh cron",
-      "pending": "Continue refresh cadence and respond to inbound tasks"
+      "pending": "Continue refresh cadence and handle inbound tasks"
     },
     {
       "name": "contactenrichment",
@@ -54,7 +54,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "Last run returned no rows processed",
+      "task": "Last run finished with no rows processed",
       "pending": "Start next requested lookup batch"
     },
     {
