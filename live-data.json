@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T19:11:00Z",
+  "generatedAt": "2026-04-12T19:13:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -13,19 +13,19 @@
     }
   },
   "priorities": [
-    "Keep main orchestration stable while cron-driven mission control remains live",
-    "Keep contactenrichment and linkedin agents ready for next delegated data batches",
-    "Preserve automation standby capacity in n8n and flowise"
+    "Keep main orchestration stable while mission-control cron stays active",
+    "Keep contactenrichment and linkedin ready for the next delegated data runs",
+    "Maintain standby automation capacity in n8n and flowise"
   ],
   "goalProgress": [
     {
-      "goal": "Mission control operational visibility",
-      "progress": "Live runtime snapshot refreshed from OpenClaw sessions and subagents state",
+      "goal": "Mission control runtime visibility",
+      "progress": "Snapshot refreshed from current sessions_list and subagents state",
       "status": "on_track"
     },
     {
-      "goal": "Specialist execution readiness",
-      "progress": "Main is active; specialist lanes are idle with linkedin showing prior failure signal",
+      "goal": "Specialist lane readiness",
+      "progress": "main is active; specialist agents are idle, with linkedin carrying a prior failure signal",
       "status": "watch"
     }
   ],
@@ -44,8 +44,8 @@
       "label": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contact records from verifiable official sources",
-      "task": "Last known run completed and reported final enrichment summary",
+      "goal": "Enrich school contacts from verifiable official sources",
+      "task": "Last known run completed with final enrichment summary",
       "pending": "Await next Notion enrichment batch"
     },
     {
@@ -54,7 +54,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Handle LinkedIn lookup and profile update workflows",
-      "task": "No current run; recent visible history includes a failed slash session",
+      "task": "No current run; latest visible signal includes a failed slash session",
       "pending": "Await next lookup assignment and verify runtime stability"
     },
     {
@@ -64,7 +64,7 @@
       "health": "warn",
       "goal": "Build and deploy automations across configured n8n instances",
       "task": "No active n8n session currently running",
-      "pending": "Stand by for next automation build/deploy request"
+      "pending": "Stand by for next automation build or deploy request"
     },
     {
       "name": "flowise",
@@ -73,7 +73,7 @@
       "health": "warn",
       "goal": "Build and support Flowise-based AI flows",
       "task": "No active Flowise session currently running",
-      "pending": "Stand by for next Flowise build/support request"
+      "pending": "Stand by for next Flowise build or support request"
     }
   ]
 }
