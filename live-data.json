@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T19:01:00Z",
+  "generatedAt": "2026-04-12T19:03:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -25,7 +25,7 @@
     },
     {
       "goal": "Specialist execution readiness",
-      "progress": "No active subagents; all specialists in standby",
+      "progress": "No active specialist runs; agents in standby",
       "status": "watch"
     }
   ],
@@ -36,8 +36,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate Kumar's tasks and orchestrate specialists",
-      "task": "Handling live conversations and cron refresh jobs",
-      "pending": "Google Calendar auth setup to enable calendar actions"
+      "task": "Running cron refresh and active main-session operations",
+      "pending": "Complete Google Calendar auth to enable calendar actions"
     },
     {
       "name": "contactenrichment",
@@ -45,8 +45,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last run completed Notion row processing",
-      "pending": "Awaiting next enrichment batch"
+      "task": "Last run completed Notion contact enrichment batch",
+      "pending": "Await next school/contact batch"
     },
     {
       "name": "linkedin",
@@ -54,8 +54,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Find and update LinkedIn profile data",
-      "task": "No current running session",
-      "pending": "Awaiting next lookup instructions"
+      "task": "No running LinkedIn session currently",
+      "pending": "Await next lookup instructions"
     },
     {
       "name": "n8n",
@@ -63,8 +63,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Automation workflow execution",
-      "task": "No active runtime session detected",
-      "pending": "Standby for automation deployment tasks"
+      "task": "No active n8n runtime session detected",
+      "pending": "Standby for workflow deployment tasks"
     },
     {
       "name": "flowise",
@@ -72,8 +72,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Flowise build and support",
-      "task": "No active runtime session detected",
-      "pending": "Standby for new build requests"
+      "task": "No active Flowise runtime session detected",
+      "pending": "Standby for next build/support request"
     }
   ]
 }
