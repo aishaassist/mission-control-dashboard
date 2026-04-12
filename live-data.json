@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T17:51:00Z",
+  "generatedAt": "2026-04-12T17:53:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -10,23 +10,23 @@
     {
       "name": "mission-control",
       "status": "active",
-      "note": "Cron-driven live refresh is running"
+      "note": "Cron live refresh is currently running"
     },
     {
       "name": "contact-enrichment-ops",
       "status": "standby",
-      "note": "Latest contact enrichment batch completed, waiting for next queue"
+      "note": "Latest enrichment batch finished, awaiting next queue"
     },
     {
       "name": "linkedin-ops",
       "status": "monitor",
-      "note": "No active run, recent history includes a failed session"
+      "note": "No active run; prior session history includes a failure"
     }
   ],
   "goalProgress": [
     {
       "goal": "Operational visibility",
-      "progress": 89,
+      "progress": 90,
       "status": "on_track"
     },
     {
@@ -51,7 +51,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Recent run completed with final enrichment counts",
+      "task": "Recent batch completed with final counts",
       "pending": "Await next Notion processing batch"
     },
     {
@@ -60,8 +60,8 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Support LinkedIn lookup operations",
-      "task": "No active run; recent snapshot includes a failed session",
-      "pending": "Await next lookup request and verify stability"
+      "task": "No active run; failed session seen in recent history",
+      "pending": "Await next lookup request and confirm stability"
     },
     {
       "agent": "n8n",
@@ -69,7 +69,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Handle workflow automation deployments",
-      "task": "No running n8n session in current snapshot",
+      "task": "No running n8n session in snapshot",
       "pending": "Await workflow trigger/build request"
     },
     {
@@ -78,7 +78,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise builds and maintenance",
-      "task": "No running Flowise session in current snapshot",
+      "task": "No running Flowise session in snapshot",
       "pending": "Await next build request"
     }
   ]
