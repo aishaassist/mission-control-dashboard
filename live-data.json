@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T18:13:00Z",
+  "generatedAt": "2026-04-12T18:15:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -20,7 +20,7 @@
     {
       "name": "agent-fleet-readiness",
       "status": "monitor",
-      "note": "linkedin shows a failed recent session; n8n and flowise remain idle"
+      "note": "linkedin has recent failed state in history; n8n and flowise are idle"
     }
   ],
   "goalProgress": [
@@ -60,7 +60,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup support",
-      "task": "No current run; recent snapshot includes a failed session",
+      "task": "No current run; historical snapshot includes a failed session",
       "pending": "Stability check then await next lookup request"
     },
     {
