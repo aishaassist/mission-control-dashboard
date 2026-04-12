@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T21:31:00Z",
+  "generatedAt": "2026-04-12T21:33:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -15,12 +15,12 @@
   "priorities": [
     "Keep main operations stable",
     "Unblock contact enrichment by confirming Notion integration access",
-    "Prepare next LinkedIn enrichment trigger"
+    "Queue the next LinkedIn enrichment batch"
   ],
   "goalProgress": {
-    "operations": "Main agent is active on cron-driven mission control refresh.",
-    "automation": "n8n and flowise are idle with no active sessions.",
-    "enrichment": "contactenrichment and linkedin are on standby, awaiting next batch triggers."
+    "operations": "Main (Aisha) is actively running the mission-control refresh cron.",
+    "automation": "n8n and flowise are idle and ready for new workflow/build requests.",
+    "enrichment": "contactenrichment is on standby after last batch; linkedin is on standby pending new trigger."
   },
   "agents": [
     {
@@ -38,16 +38,16 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Backfill missing school email and phone fields",
-      "task": "Last run completed with row processing",
-      "pending": "Await Notion access validation and next enrichment batch"
+      "task": "Last run processed batch and completed",
+      "pending": "Await Notion access confirmation and next enrichment batch"
     },
     {
       "name": "linkedin",
       "alias": "LinkedIn",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Enrich records with LinkedIn profile data",
-      "task": "No active run; most recent group task processed 0 rows",
+      "task": "No active run; latest sessions show completed and failed states",
       "pending": "Await next source list and execution trigger"
     },
     {
