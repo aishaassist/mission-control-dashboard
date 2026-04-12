@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T23:05:00Z",
+  "generatedAt": "2026-04-12T23:07:48Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -48,7 +48,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Execute delegated LinkedIn lookup tasks",
-      "task": "Latest group run completed with no active batch",
+      "task": "Latest run completed with no active batch",
       "pending": "Await next lookup batch"
     },
     {
