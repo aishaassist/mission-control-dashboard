@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-12T23:03:00+05:30",
+  "generatedAt": "2026-04-12T23:05:00+05:30",
   "source": "OpenClaw runtime snapshot (sessions_list + subagents)",
   "priorities": [
     "Keep mission-control dashboard synced with live runtime state",
     "Maintain stable cron-based refresh with change-only git pushes",
     "Track specialist readiness across core delivery agents"
   ],
-  "goalProgress": 76,
+  "goalProgress": 77,
   "agents": [
     {
       "name": "main (Aisha)",
@@ -21,16 +21,16 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Enrich school contact records in Notion from official sources",
-      "task": "Last run completed 99 rows; no verified email/phone updates",
-      "pending": "Re-run unresolved rows after source verification or access updates"
+      "task": "Last run processed 99 rows; no verified contact updates",
+      "pending": "Re-run unresolved rows after verification or access updates"
     },
     {
       "name": "linkedin",
       "status": "Idle",
       "health": "warn",
       "goal": "Improve LinkedIn coverage for school/contact datasets",
-      "task": "Latest reported run completed with 0 rows processed",
-      "pending": "Start fresh lookup batch for missing profile links"
+      "task": "Latest run finished with 0 rows processed",
+      "pending": "Start next lookup batch for missing profile links"
     },
     {
       "name": "n8n",
