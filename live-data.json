@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T18:03:00Z",
+  "generatedAt": "2026-04-12T18:07:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -15,23 +15,23 @@
     {
       "name": "contact-enrichment-ops",
       "status": "standby",
-      "note": "Latest Notion contact batch completed; waiting for next queue"
+      "note": "Latest contact enrichment batch completed; waiting for next queue"
     },
     {
-      "name": "linkedin-ops",
+      "name": "agent-fleet-readiness",
       "status": "monitor",
-      "note": "No active run; prior slash session failed"
+      "note": "linkedin, n8n, and flowise are on standby with no active runs"
     }
   ],
   "goalProgress": [
     {
       "goal": "Operational visibility",
-      "progress": 94,
+      "progress": 95,
       "status": "on_track"
     },
     {
-      "goal": "Automated enrichment pipeline",
-      "progress": 64,
+      "goal": "Agent execution readiness",
+      "progress": 68,
       "status": "monitor"
     }
   ],
@@ -42,8 +42,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Maintain mission-control orchestration",
-      "task": "Refreshing live dashboard data",
-      "pending": "Continue scheduled runtime snapshots"
+      "task": "Refreshing live dashboard data from runtime state",
+      "pending": "Continue scheduled snapshots and coordination"
     },
     {
       "agent": "contactenrichment",
@@ -51,17 +51,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Recent run completed with final contact report",
-      "pending": "Await next Notion enrichment request"
+      "task": "Last run completed: rows_processed=99, not_found_count=198",
+      "pending": "Await next Notion enrichment batch"
     },
     {
       "agent": "linkedin",
       "name": "linkedin",
       "status": "Idle/Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "Run LinkedIn lookup support",
-      "task": "No active run; previous slash session failed",
-      "pending": "Stabilize next run and process new lookup tasks"
+      "task": "No active run; latest group execution finished done",
+      "pending": "Await next lookup request"
     },
     {
       "agent": "n8n",
@@ -79,7 +79,7 @@
       "health": "warn",
       "goal": "Support Flowise builds and maintenance",
       "task": "No active session in current snapshot",
-      "pending": "Await next Flowise build task"
+      "pending": "Await next Flowise task"
     }
   ]
 }
