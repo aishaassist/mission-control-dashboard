@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T17:57:00Z",
+  "generatedAt": "2026-04-12T17:59:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -10,23 +10,23 @@
     {
       "name": "mission-control",
       "status": "active",
-      "note": "Cron live refresh is currently running"
+      "note": "Main cron refresh session is running"
     },
     {
       "name": "contact-enrichment-ops",
       "status": "standby",
-      "note": "Latest enrichment batch finished, awaiting next queue"
+      "note": "Latest Notion batch completed; waiting for next queue"
     },
     {
       "name": "linkedin-ops",
       "status": "monitor",
-      "note": "No active run; recent history includes a failed session"
+      "note": "No active run and recent failed session detected"
     }
   ],
   "goalProgress": [
     {
       "goal": "Operational visibility",
-      "progress": 92,
+      "progress": 93,
       "status": "on_track"
     },
     {
@@ -42,8 +42,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Maintain mission-control orchestration",
-      "task": "Running live dashboard refresh cron",
-      "pending": "Continue periodic runtime snapshots"
+      "task": "Refreshing live dashboard data",
+      "pending": "Continue scheduled runtime snapshots"
     },
     {
       "agent": "contactenrichment",
@@ -51,26 +51,26 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Recent batch completed with final counts",
-      "pending": "Await next Notion processing batch"
+      "task": "Recent batch finished with final processing counts",
+      "pending": "Await next Notion enrichment request"
     },
     {
       "agent": "linkedin",
       "name": "linkedin",
       "status": "Idle/Standby",
       "health": "bad",
-      "goal": "Support LinkedIn lookup operations",
-      "task": "No active run; recent history includes a failed session",
-      "pending": "Await next lookup request and confirm stability"
+      "goal": "Run LinkedIn lookup support",
+      "task": "No current run; prior slash session failed",
+      "pending": "Stabilize next run and process new lookup tasks"
     },
     {
       "agent": "n8n",
       "name": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Handle workflow automation deployments",
-      "task": "No running n8n session in snapshot",
-      "pending": "Await workflow trigger/build request"
+      "goal": "Deliver workflow automations",
+      "task": "No active session in current snapshot",
+      "pending": "Await deployment or workflow build request"
     },
     {
       "agent": "flowise",
@@ -78,8 +78,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise builds and maintenance",
-      "task": "No running Flowise session in snapshot",
-      "pending": "Await next build request"
+      "task": "No active session in current snapshot",
+      "pending": "Await next Flowise build task"
     }
   ]
 }
