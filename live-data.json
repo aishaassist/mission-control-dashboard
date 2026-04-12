@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-12T18:19:00Z",
+  "generatedAt": "2026-04-12T18:21:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main (Aisha) responsive for active cron and operator requests",
-    "Unblock contactenrichment Notion access to resume row updates",
-    "Queue fresh work for linkedin, n8n, and flowise or keep on standby"
+    "Keep main (Aisha) responsive while cron refresh is running",
+    "Prepare contactenrichment for next Notion-backed enrichment batch",
+    "Hold linkedin, n8n, and flowise in ready standby for incoming work"
   ],
   "goalProgress": {
     "overall": "Monitoring",
@@ -21,45 +21,45 @@
       "name": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Run mission-control live-data refresh cron",
-      "task": "Collect session/subagent state and publish dashboard JSON",
-      "pending": "Commit and push if file changed"
+      "goal": "Operate mission-control live data refresh",
+      "task": "Collect runtime session state and publish dashboard JSON",
+      "pending": "Commit and push only if live-data.json changed"
     },
     {
       "agent": "contactenrichment",
       "name": "contactenrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Enrich school records with verified email/phone",
-      "task": "Last run processed 99 rows; unresolved entries marked not_found",
-      "pending": "Await Notion integration token/share confirmation for next batch"
+      "goal": "Enrich school contacts with verified email and phone",
+      "task": "Last completed run processed 99 rows; unresolved fields set to not_found",
+      "pending": "Await fresh Notion-accessible batch request"
     },
     {
       "agent": "linkedin",
       "name": "linkedin",
       "status": "Standby",
       "health": "bad",
-      "goal": "LinkedIn lookup and profile updates when tasks arrive",
+      "goal": "Handle LinkedIn lookup and profile update jobs",
       "task": "No active run; recent history includes a failed slash session",
-      "pending": "Wait for next lookup queue and stabilize slash trigger"
+      "pending": "Wait for next queue and recover slash-trigger reliability"
     },
     {
       "agent": "n8n",
       "name": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Automation workflow build/deploy support",
-      "task": "No current execution in recent session snapshot",
-      "pending": "Await workflow brief or deployment request"
+      "goal": "Build and deploy automation workflows",
+      "task": "No running sessions in current snapshot",
+      "pending": "Await automation brief or deployment request"
     },
     {
       "agent": "flowise",
       "name": "flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise build/support assistance",
-      "task": "Idle after last check-in",
-      "pending": "Await new build request"
+      "goal": "Support Flowise build and ops tasks",
+      "task": "Idle since last check-in",
+      "pending": "Await next build/support request"
     }
   ]
 }
