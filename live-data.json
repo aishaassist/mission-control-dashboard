@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T17:55:00Z",
+  "generatedAt": "2026-04-12T17:57:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -20,13 +20,13 @@
     {
       "name": "linkedin-ops",
       "status": "monitor",
-      "note": "No active run; prior session history includes a failure"
+      "note": "No active run; recent history includes a failed session"
     }
   ],
   "goalProgress": [
     {
       "goal": "Operational visibility",
-      "progress": 91,
+      "progress": 92,
       "status": "on_track"
     },
     {
