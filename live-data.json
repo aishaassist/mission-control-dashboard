@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-04-12T22:11:00Z",
+  "generatedAt": "2026-04-12T22:13:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main (Aisha) responsive while cron refresh runs",
-    "Queue contact enrichment only when new Notion rows are assigned",
-    "Maintain linkedin, n8n, and flowise in ready standby"
+    "Keep main (Aisha) responsive during cron operations",
+    "Run contact enrichment when new Notion rows are queued",
+    "Hold linkedin, n8n, and flowise in ready standby"
   ],
   "goalProgress": [
     {
       "goal": "Mission control continuity",
-      "progress": "Main is actively running the dashboard refresh cron"
+      "progress": "Main is actively executing the live dashboard refresh cron"
     },
     {
       "goal": "Contact enrichment throughput",
-      "progress": "Last completed batch processed 99 rows"
+      "progress": "Last known batch completed 99 rows"
     },
     {
       "goal": "Specialist readiness",
-      "progress": "linkedin, n8n, and flowise are idle and ready for delegation"
+      "progress": "linkedin, n8n, and flowise are idle and available for delegation"
     }
   ],
   "agents": [
@@ -29,7 +29,7 @@
       "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission control and primary operations",
+      "goal": "Coordinate mission control and core operations",
       "task": "Running cron mission-control-live-data-refresh",
       "pending": "Continue scheduled monitoring and dispatch"
     },
@@ -47,16 +47,16 @@
       "label": "LinkedIn",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Handle delegated LinkedIn lookups",
-      "task": "Last run completed with no active rows processed",
-      "pending": "Await next lookup task"
+      "goal": "Execute delegated LinkedIn lookup tasks",
+      "task": "Last run finished with no rows processed",
+      "pending": "Await next LinkedIn lookup request"
     },
     {
       "name": "n8n",
       "label": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Build and deploy automation workflows",
+      "goal": "Build and deploy workflow automations",
       "task": "No active execution detected",
       "pending": "Await next automation build request"
     },
@@ -65,7 +65,7 @@
       "label": "Flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Support Flowise pipeline and app builds",
+      "goal": "Support Flowise pipeline and app build tasks",
       "task": "No active execution detected",
       "pending": "Await next Flowise task"
     }
