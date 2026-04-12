@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T18:43:00Z",
+  "generatedAt": "2026-04-12T18:45:00Z",
   "source": {
     "cron": "32ef53fa-2d22-4e89-abbb-34ab918e57d5",
     "sessionsList": {
@@ -27,12 +27,12 @@
     {
       "goal": "Contact and LinkedIn operations",
       "status": "paused",
-      "progress": "No current runs; last contact batch finished and linkedin is waiting for next trigger."
+      "progress": "No active runs; contact enrichment is complete and linkedin is awaiting the next trigger."
     },
     {
       "goal": "Automation stack activity",
       "status": "standby",
-      "progress": "n8n and flowise are idle with no running sessions."
+      "progress": "n8n and flowise remain idle with no running sessions."
     }
   ],
   "agents": [
@@ -43,7 +43,7 @@
       "health": "ok",
       "goal": "Coordinate operations and keep mission-control data current.",
       "task": "Running mission-control live-data refresh.",
-      "pending": "Complete refresh cycle and continue scheduled runs."
+      "pending": "Complete this refresh cycle and continue scheduled runs."
     },
     {
       "id": "contactenrichment",
@@ -51,7 +51,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich missing school contact records from verifiable official sources.",
-      "task": "Latest run completed with final contact enrichment summary.",
+      "task": "Latest visible run completed with final contact enrichment summary.",
       "pending": "Await next Notion/contact enrichment queue."
     },
     {
@@ -60,7 +60,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Execute LinkedIn discovery and profile update workflows.",
-      "task": "No running session; most recent visible run is complete.",
+      "task": "No active session; most recent visible runs are completed.",
       "pending": "Await next LinkedIn batch trigger."
     },
     {
