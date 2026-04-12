@@ -1,8 +1,10 @@
 {
-  "generatedAt": "2026-04-12T21:01:00Z",
+  "generatedAt": "2026-04-12T21:03:00Z",
   "source": {
+    "cronId": "32ef53fa-2d22-4e89-abbb-34ab918e57d5",
     "sessionsList": {
       "limit": 50,
+      "messageLimit": 1,
       "count": 12
     },
     "subagents": {
@@ -12,56 +14,67 @@
     }
   },
   "priorities": [
-    "Keep mission-control live telemetry current",
-    "Restore Notion access path for contact enrichment runs",
-    "Prepare next LinkedIn enrichment trigger with actionable rows"
+    "Keep main (Aisha) run-loop healthy and responsive",
+    "Unblock contactenrichment Notion access and resume row updates",
+    "Stabilize linkedin worker after recent failed slash-session"
   ],
-  "goalProgress": {
-    "operations": "Main cron refresh is actively running and updating dashboard telemetry",
-    "dataEnrichment": "Contactenrichment and LinkedIn are in standby awaiting fresh row queues",
-    "automation": "n8n and flowise remain idle, ready for new automation and build tasks"
-  },
+  "goalProgress": [
+    {
+      "goal": "Mission control runtime visibility",
+      "status": "on_track",
+      "progress": "Live snapshot refreshed from current session graph"
+    },
+    {
+      "goal": "Contact enrichment pipeline",
+      "status": "at_risk",
+      "progress": "Last run completed, pending fresh tasks and access stability"
+    }
+  ],
   "agents": [
     {
       "name": "main",
-      "alias": "Aisha",
+      "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Run mission-control orchestration and keep runtime telemetry fresh",
-      "task": "Executing mission-control-live-data-refresh cron session",
-      "pending": "Complete refresh cycle and push only if git diff exists"
+      "goal": "Coordinate mission control and delegate specialist work",
+      "task": "Running cron refresh for live dashboard data",
+      "pending": "Await next operator directive"
     },
     {
       "name": "contactenrichment",
+      "label": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school email and phone fields from official sources",
-      "task": "No running session; last run completed with not_found outcomes",
-      "pending": "Await Notion integration readiness and next processing batch"
+      "goal": "Fill missing school contact fields with verified sources",
+      "task": "Last batch processed with final stats emitted",
+      "pending": "New rows / Notion-ready assignment"
     },
     {
       "name": "linkedin",
+      "label": "LinkedIn",
       "status": "Standby",
       "health": "bad",
-      "goal": "Enrich queued records with valid LinkedIn profile links",
-      "task": "No active runtime session; recent history includes failed slash session",
-      "pending": "Wait for next lookup batch and rerun with healthy session"
+      "goal": "Enrich and validate LinkedIn profile fields",
+      "task": "No active run; recent session history includes failure",
+      "pending": "Retry workload with stable session path"
     },
     {
       "name": "n8n",
+      "label": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Build and deploy n8n automations for operations",
-      "task": "No current running session detected",
-      "pending": "Await automation build or deployment request"
+      "goal": "Execute automation workflows via n8n endpoints",
+      "task": "Idle since last heartbeat-style interaction",
+      "pending": "Next automation brief"
     },
     {
       "name": "flowise",
+      "label": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Support Flowise implementation and troubleshooting",
-      "task": "No current running session detected",
-      "pending": "Await Flowise build or debugging request"
+      "goal": "Support Flowise build and chatflow operations",
+      "task": "Idle; last known prompt was readiness check",
+      "pending": "New build or maintenance request"
     }
   ]
 }
