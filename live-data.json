@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T17:47:00Z",
+  "generatedAt": "2026-04-12T17:49:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -10,23 +10,23 @@
     {
       "name": "mission-control",
       "status": "active",
-      "note": "Main cron refresh is running now"
+      "note": "Cron-driven live refresh is running"
     },
     {
       "name": "contact-enrichment-ops",
       "status": "standby",
-      "note": "Last contact enrichment batch completed; awaiting next queue"
+      "note": "Last enrichment batch completed, waiting for next queue"
     },
     {
       "name": "linkedin-ops",
       "status": "monitor",
-      "note": "No active run; recent history includes a failed session"
+      "note": "No active run, recent history includes a failed session"
     }
   ],
   "goalProgress": [
     {
       "goal": "Operational visibility",
-      "progress": 87,
+      "progress": 88,
       "status": "on_track"
     },
     {
@@ -51,8 +51,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Latest visible run finished with final enrichment counts",
-      "pending": "Await next Notion batch"
+      "task": "Recent run completed with final enrichment counts",
+      "pending": "Await next Notion processing batch"
     },
     {
       "agent": "linkedin",
@@ -60,7 +60,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Support LinkedIn lookup operations",
-      "task": "No active run; recent snapshot shows one failed session",
+      "task": "No active run, recent snapshot shows a failed session",
       "pending": "Await next lookup request and verify stability"
     },
     {
