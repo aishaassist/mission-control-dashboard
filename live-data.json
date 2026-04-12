@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T19:37:00Z",
+  "generatedAt": "2026-04-12T19:39:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -37,7 +37,7 @@
       "health": "ok",
       "goal": "Chief-of-staff orchestration across channels",
       "task": "Running mission-control live-data refresh cron",
-      "pending": "Continue scheduled refresh + delegate next inbound ops tasks"
+      "pending": "Continue scheduled refresh and handle next inbound ops tasks"
     },
     {
       "name": "contactenrichment",
@@ -45,8 +45,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Last run completed School DB pass",
-      "pending": "Await fresh rows / Notion-access-enabled enrichment cycle"
+      "task": "Last run completed School DB enrichment pass",
+      "pending": "Await fresh rows and next Notion-enabled enrichment cycle"
     },
     {
       "name": "linkedin",
@@ -54,7 +54,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; last group task returned zero processed",
+      "task": "No active run; latest group task processed 0 rows",
       "pending": "Start next requested lookup batch"
     },
     {
@@ -64,7 +64,7 @@
       "health": "warn",
       "goal": "Workflow automation deployment and upkeep",
       "task": "No active automation session",
-      "pending": "Queue next integration/deployment request"
+      "pending": "Queue next integration or deployment request"
     },
     {
       "name": "flowise",
