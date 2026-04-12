@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T23:17:00Z",
+  "generatedAt": "2026-04-12T23:19:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -33,37 +33,37 @@
     {
       "name": "contactenrichment",
       "displayName": "contactenrichment",
-      "status": "Standby",
+      "status": "Idle",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Most recent run finished with row processing summary",
-      "pending": "Restore/verify Notion API access and integration sharing before next batch"
+      "task": "Last run completed with 99 rows processed",
+      "pending": "Verify Notion integration access before next enrichment batch"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
-      "status": "Standby",
+      "status": "Idle",
       "health": "warn",
-      "goal": "Support LinkedIn lookup/update requests",
-      "task": "No active run; last group workflow reported no rows processed",
-      "pending": "Await next queue and validate slash-session stability"
+      "goal": "Handle LinkedIn lookup and update requests",
+      "task": "No active run; latest group workflow ended with 0 rows processed",
+      "pending": "Await next queue and monitor for session failures"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
-      "status": "Standby",
+      "status": "Idle",
       "health": "warn",
-      "goal": "Build and deploy automations",
-      "task": "No current runtime activity detected",
-      "pending": "Pick up next automation brief when assigned"
+      "goal": "Build and deploy automation workflows",
+      "task": "No current runtime activity",
+      "pending": "Await next automation brief"
     },
     {
       "name": "flowise",
       "displayName": "flowise",
-      "status": "Standby",
+      "status": "Idle",
       "health": "warn",
       "goal": "Build flow-based AI workflows",
-      "task": "Idle since last prompt",
+      "task": "No current runtime activity",
       "pending": "Await new build request"
     }
   ]
