@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-04-12T21:37:00Z",
+  "generatedAt": "2026-04-12T21:41:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main (Aisha) session responsive for active cron and inbound ops",
-    "Resume contact enrichment only when new Notion/lead tasks arrive",
-    "Standby LinkedIn, n8n, and Flowise agents for next delegated workload"
+    "Keep main (Aisha) responsive while cron refresh is running",
+    "Queue contact enrichment only when fresh Notion tasks arrive",
+    "Maintain LinkedIn, n8n, and Flowise in ready standby for delegated work"
   ],
   "goalProgress": [
     {
       "goal": "Mission control continuity",
-      "progress": "Live state refresh running on schedule"
+      "progress": "Live dashboard refresh is actively running"
     },
     {
       "goal": "Contact enrichment throughput",
-      "progress": "Last batch completed (99 rows processed)"
+      "progress": "Latest completed batch processed 99 rows"
     },
     {
       "goal": "Automation readiness",
-      "progress": "n8n and Flowise idle, awaiting new build requests"
+      "progress": "LinkedIn, n8n, and Flowise are idle and available"
     }
   ],
   "agents": [
@@ -29,8 +29,8 @@
       "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Run mission-control live data refresh and handle primary coordination",
-      "task": "Cron refresh currently running",
+      "goal": "Coordinate mission control and primary operations",
+      "task": "Cron mission-control-live-data-refresh is running",
       "pending": "Continue scheduled monitoring and dispatch"
     },
     {
@@ -38,36 +38,36 @@
       "label": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contact records from official sources",
-      "task": "Last run completed with final batch summary",
-      "pending": "Await next dataset or Notion-linked enrichment cycle"
+      "goal": "Enrich school contact records from verified official sources",
+      "task": "Last run completed with final 99-row summary",
+      "pending": "Await next Notion enrichment assignment"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Provide LinkedIn lookup support for assigned rows",
-      "task": "No active run; last bot report shows zero-row completion",
-      "pending": "Await delegated lookup instructions"
+      "goal": "Handle delegated LinkedIn lookups",
+      "task": "No current run; latest group task reported zero-row completion",
+      "pending": "Await new lookup instructions"
     },
     {
       "name": "n8n",
       "label": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Build and deploy workflow automations",
+      "goal": "Build and deploy automation workflows",
       "task": "No active execution detected",
-      "pending": "Await automation implementation requests"
+      "pending": "Await automation build requests"
     },
     {
       "name": "flowise",
       "label": "Flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Support Flowise app and pipeline builds",
+      "goal": "Support Flowise pipeline and app builds",
       "task": "No active execution detected",
-      "pending": "Await next Flowise build/debug request"
+      "pending": "Await next Flowise task"
     }
   ]
 }
