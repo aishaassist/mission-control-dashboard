@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T17:59:00Z",
+  "generatedAt": "2026-04-12T18:03:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -15,18 +15,18 @@
     {
       "name": "contact-enrichment-ops",
       "status": "standby",
-      "note": "Latest Notion batch completed; waiting for next queue"
+      "note": "Latest Notion contact batch completed; waiting for next queue"
     },
     {
       "name": "linkedin-ops",
       "status": "monitor",
-      "note": "No active run and recent failed session detected"
+      "note": "No active run; prior slash session failed"
     }
   ],
   "goalProgress": [
     {
       "goal": "Operational visibility",
-      "progress": 93,
+      "progress": 94,
       "status": "on_track"
     },
     {
@@ -51,7 +51,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Recent batch finished with final processing counts",
+      "task": "Recent run completed with final contact report",
       "pending": "Await next Notion enrichment request"
     },
     {
@@ -60,7 +60,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup support",
-      "task": "No current run; prior slash session failed",
+      "task": "No active run; previous slash session failed",
       "pending": "Stabilize next run and process new lookup tasks"
     },
     {
