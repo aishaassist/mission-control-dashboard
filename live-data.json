@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T14:19:00Z",
+  "generatedAt": "2026-04-13T14:21:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -47,8 +47,8 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "LinkedIn lookup and profile mapping",
-      "task": "No active run; last sessions include a failure",
-      "pending": "Investigate failed slash session, then await next lookup request"
+      "task": "No active run; historical failure present",
+      "pending": "Awaiting next lookup request"
     },
     {
       "name": "n8n",
