@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T11:03:00Z",
+  "generatedAt": "2026-04-13T11:05:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -24,7 +24,7 @@
     },
     {
       "goal": "Agent readiness",
-      "progress": "Main is active; specialists are in standby until assigned"
+      "progress": "Main is active; specialists remain on standby until assigned"
     }
   ],
   "agents": [
@@ -43,7 +43,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich school contact records in Notion",
-      "task": "Last batch completed; no current session running",
+      "task": "No current session running",
       "pending": "Await next enrichment batch"
     },
     {
@@ -52,7 +52,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup and profile mapping",
-      "task": "Last run finished; no active lookup now",
+      "task": "No active lookup session",
       "pending": "Await next lookup dispatch"
     },
     {
