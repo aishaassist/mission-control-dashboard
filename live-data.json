@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T14:41:00Z",
+  "generatedAt": "2026-04-13T14:43:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -15,12 +15,12 @@
   },
   "priorities": [
     "Keep Aisha active for mission-control coordination",
-    "Maintain specialist readiness across contact, linkedin, n8n, and flowise lanes",
-    "Flag runtime health drift from session failures or inactivity"
+    "Maintain specialist readiness across contactenrichment, linkedin, n8n, and flowise",
+    "Escalate failed specialist sessions quickly to protect delivery continuity"
   ],
   "goalProgress": {
     "overall": "stable",
-    "note": "Aisha is actively running the dashboard refresh while specialist agents are on standby and ready for next tasks."
+    "note": "Aisha is active in the refresh loop, while specialist agents are in standby with linkedin carrying a recent failed session risk."
   },
   "agents": [
     {
@@ -29,8 +29,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Mission-control continuity",
-      "task": "Running live-data refresh cron",
-      "pending": "Monitor specialist queues and trigger follow-ups"
+      "task": "Executing live-data refresh cron",
+      "pending": "Keep specialist queue visibility current"
     },
     {
       "name": "contactenrichment",
@@ -38,17 +38,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last Notion enrichment batch completed",
-      "pending": "Await next records requiring verified email or phone"
+      "task": "Last Notion batch finished",
+      "pending": "Await next rows needing verified email or phone"
     },
     {
       "name": "linkedin",
       "display": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "LinkedIn lookup and mapping",
-      "task": "No active processing currently",
-      "pending": "Await next lookup run and monitor for failures"
+      "task": "No active run; recent failed slash session noted",
+      "pending": "Validate runtime path before next lookup batch"
     },
     {
       "name": "n8n",
