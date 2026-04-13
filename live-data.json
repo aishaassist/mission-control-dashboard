@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T18:25:00Z",
+  "generatedAt": "2026-04-13T18:27:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -7,14 +7,14 @@
   "priorities": [
     "Keep mission-control refresh loop healthy",
     "Unblock Notion-backed contact enrichment batches",
-    "Stabilize LinkedIn lane and prepare next execution queue"
+    "Stabilize LinkedIn lane and clear recent failure signals"
   ],
   "goalProgress": {
     "overall": "Monitoring",
     "highlights": [
       "Aisha (main) is active in the current cron run",
       "No active subagents detected in the last 24h",
-      "contactenrichment, n8n, and flowise are standby; linkedin needs failure follow-up"
+      "contactenrichment, n8n, and flowise are standby; linkedin still shows a recent failed session"
     ]
   },
   "agents": [
@@ -33,7 +33,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records in Notion",
-      "task": "Last known batch finished with FINAL summary",
+      "task": "Last known batch completed with FINAL summary",
       "pending": "Await next Notion-ready enrichment batch"
     },
     {
@@ -43,7 +43,7 @@
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment",
       "task": "No active run; recent history includes a failed session",
-      "pending": "Validate lane health and queue next LinkedIn batch"
+      "pending": "Validate lane health before next LinkedIn batch"
     },
     {
       "name": "n8n",
