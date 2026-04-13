@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-04-13T21:13:00Z",
+  "generatedAt": "2026-04-13T21:15:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
-      "fetchedAt": "2026-04-13T21:13:00Z",
+      "fetchedAt": "2026-04-13T21:15:00Z",
       "count": 12
     },
     "subagents": {
       "action": "list",
       "recentMinutes": 1440,
-      "fetchedAt": "2026-04-13T21:13:00Z",
+      "fetchedAt": "2026-04-13T21:15:00Z",
       "active": 0,
       "recent": 0
     }
   },
   "priorities": [
     "Keep mission-control snapshot refreshes reliable",
-    "Unblock Notion access for contactenrichment",
+    "Restore Notion access for contactenrichment before next run",
     "Keep linkedin, n8n, and flowise ready for dispatch"
   ],
   "goalProgress": [
