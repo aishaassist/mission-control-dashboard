@@ -1,79 +1,63 @@
 {
-  "generatedAt": "2026-04-13T21:51:00Z",
+  "generatedAt": "2026-04-13T21:53:00Z",
   "source": {
-    "sessionsList": {
-      "limit": 50,
-      "messageLimit": 1,
-      "count": 12
-    },
-    "subagents": {
-      "recentMinutes": 1440,
-      "active": 0,
-      "recent": 0
-    }
+    "sessions": "sessions_list(limit=50,messageLimit=1)",
+    "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main agent stable and responsive",
-    "Restore linkedin reliability before next delegated run",
-    "Keep specialist agents ready for queued work"
+    "Keep mission-control snapshot fresh from runtime session state",
+    "Unblock Contact Enrichment Notion access to resume row updates",
+    "Stabilize LinkedIn agent run quality after recent failed session"
   ],
-  "goalProgress": [
-    {
-      "goal": "Mission control visibility",
-      "status": "in_progress",
-      "note": "Live runtime snapshot refreshed from sessions and subagent state"
-    },
-    {
-      "goal": "Agent execution continuity",
-      "status": "partial",
-      "note": "Main is active while specialist agents are idle or standby"
-    }
-  ],
+  "goalProgress": {
+    "overall": "Monitoring mode",
+    "notes": "Main agent active; specialist agents mostly standby with no active subagent workers."
+  },
   "agents": [
     {
-      "agent": "main",
-      "name": "Aisha",
+      "name": "main",
+      "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission control and cross-agent orchestration",
-      "task": "Running mission-control live-data refresh cron",
-      "pending": "Continue monitoring specialist readiness and error recovery"
+      "goal": "Coordinate mission-control and operator requests across channels",
+      "task": "Running cron refresh: mission-control-live-data-refresh",
+      "pending": "Continue periodic dashboard/state refresh and orchestration"
     },
     {
-      "agent": "contactenrichment",
       "name": "contactenrichment",
-      "status": "Idle",
+      "displayName": "Contact Enrichment",
+      "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school contacts from verified official sources",
-      "task": "No active enrichment run; last Notion batch completed",
-      "pending": "Await next enrichment queue with integration access ready"
+      "goal": "Enrich school contact records with verified email/phone",
+      "task": "Last run returned FINAL with rows processed and not_found tracking",
+      "pending": "Reconnect/verify Notion integration access for next enrichment pass"
     },
     {
-      "agent": "linkedin",
       "name": "linkedin",
-      "status": "Idle",
+      "displayName": "LinkedIn",
+      "status": "Standby",
       "health": "bad",
-      "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; most recent context includes a failed session",
-      "pending": "Re-run next queue and validate session stability"
+      "goal": "Find and update LinkedIn profile data for contact ops",
+      "task": "Most recent group run completed with 0 rows; another recent session failed",
+      "pending": "Recover from failed state and resume row-level LinkedIn updates"
     },
     {
-      "agent": "n8n",
       "name": "n8n",
+      "displayName": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Automation workflow build and deployment",
-      "task": "No current execution detected",
-      "pending": "Await automation requests"
+      "goal": "Automation build/deploy support",
+      "task": "No active runtime session detected",
+      "pending": "Await automation tasks and deployment requests"
     },
     {
-      "agent": "flowise",
       "name": "flowise",
+      "displayName": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise build and support",
-      "task": "No current execution detected",
-      "pending": "Await flow-build tasks"
+      "goal": "Flowise build/support assistance",
+      "task": "No active runtime session detected",
+      "pending": "Await next build or troubleshooting request"
     }
   ]
 }
