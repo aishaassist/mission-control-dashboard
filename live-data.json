@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T05:41:00Z",
+  "generatedAt": "2026-04-13T05:43:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -35,7 +35,7 @@
       "goal": "Mission control and user orchestration",
       "task": "Running cron mission-control-live-data-refresh",
       "pending": "Continue monitoring and dispatch specialist work when needed",
-      "lastUpdatedAt": 1776058905347
+      "lastUpdatedAt": 1776059026843
     },
     {
       "agent": "contactenrichment",
