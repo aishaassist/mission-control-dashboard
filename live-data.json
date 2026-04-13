@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T20:23:00Z",
+  "generatedAt": "2026-04-13T20:25:00Z",
   "source": {
     "sessions_list": {
       "limit": 50,
@@ -27,7 +27,7 @@
     {
       "goal": "Contact enrichment operations",
       "status": "waiting",
-      "progress": "Last enrichment batch completed, waiting for next run"
+      "progress": "Last enrichment batch completed; awaiting next Notion run"
     },
     {
       "goal": "LinkedIn research operations",
@@ -51,7 +51,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact data from official sources",
-      "task": "Latest enrichment run completed successfully",
+      "task": "Latest enrichment batch completed successfully",
       "pending": "Await next Notion-backed enrichment batch"
     },
     {
