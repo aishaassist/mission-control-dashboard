@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T14:25:00Z",
+  "generatedAt": "2026-04-13T14:29:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -20,7 +20,7 @@
   ],
   "goalProgress": {
     "overall": "stable",
-    "note": "Main is active; specialist agents are on standby with no active runs."
+    "note": "Main is active; specialist agents are idle with no active runs."
   },
   "agents": [
     {
@@ -29,7 +29,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Mission control continuity",
-      "task": "Executing current live-data refresh cron run",
+      "task": "Running mission-control live-data refresh",
       "pending": "None"
     },
     {
@@ -38,8 +38,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last batch completed with final report posted",
-      "pending": "Awaiting next enrichment request"
+      "task": "Last run completed and posted final enrichment report",
+      "pending": "Awaiting next enrichment batch"
     },
     {
       "name": "linkedin",
@@ -47,7 +47,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and mapping",
-      "task": "No active run; latest run completed",
+      "task": "No active run; latest known run completed",
       "pending": "Awaiting next lookup request"
     },
     {
