@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T17:19:00Z",
+  "generatedAt": "2026-04-13T17:21:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -18,11 +18,11 @@
     },
     {
       "goal": "Contact operations",
-      "progress": "Contactenrichment and linkedin are on standby awaiting new tasks"
+      "progress": "Contactenrichment and linkedin are in standby awaiting the next queue"
     },
     {
       "goal": "Automation readiness",
-      "progress": "n8n and flowise remain idle-ready for immediate execution"
+      "progress": "n8n and flowise are idle-ready for immediate execution"
     }
   ],
   "agents": [
@@ -41,7 +41,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Last batch completed (99 rows processed)",
+      "task": "Last run completed with 99 rows processed",
       "pending": "Await next enrichment trigger"
     },
     {
