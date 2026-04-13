@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T06:21:00Z",
+  "generatedAt": "2026-04-13T06:23:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -45,7 +45,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last run completed row processing with final summary",
+      "task": "Last run completed contact enrichment batch",
       "pending": "Await next enrichment batch or Notion-access-ready job"
     },
     {
@@ -54,7 +54,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; last grouped task closed with zero processed",
+      "task": "No active run; latest group task closed",
       "pending": "Await next lookup list to process"
     },
     {
@@ -71,7 +71,7 @@
       "displayName": "flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Flowise build/support operations",
+      "goal": "Flowise build and support operations",
       "task": "No active session currently running",
       "pending": "Await next Flowise implementation request"
     }
