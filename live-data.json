@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T18:57:00Z",
+  "generatedAt": "2026-04-13T18:59:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -14,7 +14,7 @@
     "highlights": [
       "Aisha main lane is actively running this cron refresh",
       "No active subagents in the last 24 hours",
-      "Specialist lanes are idle and standing by for new tasks"
+      "Most specialist lanes are idle and awaiting new tasks"
     ]
   },
   "agents": [
@@ -33,17 +33,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contacts in Notion",
-      "task": "Last completed batch processed 99 rows with no new email or phone fills",
+      "task": "Last run completed: 99 rows processed with no new email or phone fills",
       "pending": "Await next Notion-ready enrichment batch"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment",
-      "task": "No active run, latest visible group run completed with zero rows processed",
-      "pending": "Await next LinkedIn lookup batch"
+      "task": "No active run; one recent slash session is marked failed",
+      "pending": "Stabilize session and await next LinkedIn lookup batch"
     },
     {
       "name": "n8n",
@@ -51,7 +51,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and deploy automation workflows",
-      "task": "No active run, last visible state returned ANNOUNCE_SKIP",
+      "task": "No active run; last visible state returned ANNOUNCE_SKIP",
       "pending": "Await workflow brief or deployment request"
     },
     {
@@ -60,7 +60,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise implementation work",
-      "task": "No active run, last visible update was a readiness check-in",
+      "task": "No active run; last visible update was a readiness check-in",
       "pending": "Await next build or integration task"
     }
   ]
