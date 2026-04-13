@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T20:27:00Z",
+  "generatedAt": "2026-04-13T20:29:00Z",
   "source": {
     "sessions_list": {
       "limit": 50,
@@ -42,7 +42,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission-control and multi-agent operations",
-      "task": "Running with active main runtime session(s)",
+      "task": "Main runtime has active running sessions",
       "pending": "Continue cron refresh cycles and surface exceptions"
     },
     {
