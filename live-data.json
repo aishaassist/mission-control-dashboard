@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T01:37:00Z",
+  "generatedAt": "2026-04-13T01:39:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -30,7 +30,7 @@
     },
     {
       "agent": "linkedin",
-      "progress": "No active lookup run; latest group run reported zero rows",
+      "progress": "Latest group run reported zero rows; no active lookup run",
       "pending": "Await next lookup request"
     },
     {
