@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T11:27:00Z",
+  "generatedAt": "2026-04-13T11:29:00Z",
   "source": {
     "type": "openclaw-runtime",
     "sessionsListCount": 12,
@@ -7,25 +7,25 @@
     "subagentsRecent": 0
   },
   "priorities": [
-    "Keep mission-control runtime snapshot current",
-    "Stabilize main-channel model configuration errors",
-    "Queue specialist agents only when fresh tasks arrive"
+    "Refresh mission-control runtime visibility continuously",
+    "Clear main-agent model mismatch failures on messaging sessions",
+    "Keep specialist agents queued for next inbound work"
   ],
   "goalProgress": [
     {
       "goal": "Mission control dashboard freshness",
       "status": "on-track",
-      "progress": "Live data refreshed from current runtime sessions"
+      "progress": "Runtime snapshot refreshed from current OpenClaw sessions"
     },
     {
       "goal": "Contact enrichment throughput",
       "status": "waiting",
-      "progress": "Last completed batch processed 99 rows; awaiting next queue"
+      "progress": "Last known run completed 99 rows; awaiting next Notion queue"
     },
     {
-      "goal": "Specialist agent readiness",
+      "goal": "Specialist readiness",
       "status": "attention",
-      "progress": "LinkedIn has recent failed session; n8n and Flowise are on standby"
+      "progress": "LinkedIn shows recent failed session while n8n and Flowise remain standby"
     }
   ],
   "agents": [
@@ -35,8 +35,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control and user-facing orchestration",
-      "task": "Running live dashboard refresh cron",
-      "pending": "Resolve sporadic model mismatch errors in messaging channel"
+      "task": "Running mission-control live-data refresh cron",
+      "pending": "Address recurring model mismatch error in one messaging session"
     },
     {
       "name": "contactenrichment",
@@ -44,7 +44,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "No active run; last pass completed 99 rows",
+      "task": "No active run; latest batch reported 99 rows processed",
       "pending": "Await next Notion-backed enrichment queue"
     },
     {
@@ -54,7 +54,7 @@
       "health": "bad",
       "goal": "Run LinkedIn lookups for assigned records",
       "task": "No active run; recent slash session failed",
-      "pending": "Stabilize session path and wait for next lookup batch"
+      "pending": "Recover failed path and wait for next lookup batch"
     },
     {
       "name": "n8n",
@@ -63,7 +63,7 @@
       "health": "warn",
       "goal": "Build and deploy automation workflows",
       "task": "No active runtime session",
-      "pending": "Stand by for next automation implementation request"
+      "pending": "Stand by for next automation request"
     },
     {
       "name": "flowise",
