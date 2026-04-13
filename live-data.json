@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-04-13T05:57:00Z",
+  "generatedAt": "2026-04-13T06:01:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
-      "capturedAt": "2026-04-13T05:57:00Z"
+      "capturedAt": "2026-04-13T06:01:00Z"
     },
     "subagents": {
       "action": "list",
       "recentMinutes": 1440,
-      "capturedAt": "2026-04-13T05:57:00Z"
+      "capturedAt": "2026-04-13T06:01:00Z"
     }
   },
   "priorities": [
-    "Keep main (Aisha) responsive for mission-control cron and live operations",
-    "Keep contactenrichment ready for the next official-source Notion enrichment batch",
-    "Maintain linkedin, n8n, and flowise in standby readiness for fast task pickup"
+    "Keep main (Aisha) responsive for cron-driven mission control updates",
+    "Keep contactenrichment ready for next official-source Notion enrichment batch",
+    "Keep linkedin, n8n, and flowise on standby for fast task pickup"
   ],
   "goalProgress": [
     {
       "area": "mission-control-live-data-refresh",
       "status": "in_progress",
-      "note": "Current runtime snapshot regenerated from sessions_list and subagents list"
+      "note": "Live dashboard snapshot refreshed from current sessions_list and subagents state"
     },
     {
       "area": "contact enrichment ops",
       "status": "waiting",
-      "note": "Most recent contactenrichment run is complete; waiting for next queue"
+      "note": "Last contactenrichment batch completed; waiting for next queue"
     },
     {
       "area": "specialist agent readiness",
       "status": "standby",
-      "note": "linkedin, n8n, and flowise are idle and available for assignment"
+      "note": "linkedin, n8n, and flowise are currently idle"
     }
   ],
   "agents": [
@@ -41,8 +41,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Keep mission-control runtime visibility current",
-      "task": "Refresh and publish live-data.json from current OpenClaw state",
-      "pending": "Commit and push this refresh only when dashboard data changed"
+      "task": "Running cron refresh for live-data.json",
+      "pending": "Commit and push refresh if diff exists"
     },
     {
       "name": "contactenrichment",
@@ -50,7 +50,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact fields from official sources",
-      "task": "Idle after prior Notion batch completion",
+      "task": "Recent run finished with final counters reported",
       "pending": "Await next enrichment trigger"
     },
     {
@@ -58,8 +58,8 @@
       "displayName": "linkedin",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Handle LinkedIn lookup/update operations",
-      "task": "No running session detected in current runtime snapshot",
+      "goal": "Handle LinkedIn lookup and update operations",
+      "task": "No running session; latest group run reported zero processed",
       "pending": "Await next lookup queue"
     },
     {
@@ -68,7 +68,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Run and deploy automation workflows",
-      "task": "No active execution session",
+      "task": "No running session in current snapshot",
       "pending": "Await workflow request"
     },
     {
@@ -77,7 +77,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and support Flowise pipelines",
-      "task": "No running session detected",
+      "task": "No running session in current snapshot",
       "pending": "Await next build/support task"
     }
   ]
