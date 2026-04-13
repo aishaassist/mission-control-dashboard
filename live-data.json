@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T17:49:00Z",
+  "generatedAt": "2026-04-13T17:51:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -8,21 +8,21 @@
   },
   "priorities": [
     "Keep main (Aisha) focused on mission-control continuity",
-    "Prepare next contact-ops intake for contactenrichment and linkedin",
-    "Keep n8n and flowise ready for on-demand automation delivery"
+    "Stage next contact-ops batch for contactenrichment and linkedin",
+    "Maintain n8n and flowise as on-demand automation capacity"
   ],
   "goalProgress": [
     {
       "goal": "Mission control uptime",
-      "progress": "Main (Aisha) is active with the live-data refresh cron run"
+      "progress": "Main (Aisha) is actively running the live refresh cron"
     },
     {
       "goal": "Contact operations",
-      "progress": "contactenrichment and linkedin are on standby after prior runs; next intake pending"
+      "progress": "contactenrichment and linkedin are idle after prior completed runs; next intake pending"
     },
     {
       "goal": "Automation readiness",
-      "progress": "n8n and flowise are idle-ready for immediate execution"
+      "progress": "n8n and flowise remain standby-ready for execution"
     }
   ],
   "agents": [
@@ -32,44 +32,44 @@
       "status": "Active",
       "health": "ok",
       "goal": "Orchestrate Kumar operations and mission control",
-      "task": "Cron live-data refresh is currently running",
-      "pending": "Continue specialist orchestration and queue monitoring"
+      "task": "Running mission-control live-data refresh",
+      "pending": "Continue orchestration and monitor incoming work"
     },
     {
       "name": "contactenrichment",
       "displayName": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school contact fields from official sources",
-      "task": "Last visible run completed with 99 rows processed",
-      "pending": "Await next enrichment trigger"
+      "goal": "Complete school contact enrichment from official sources",
+      "task": "Last visible run completed (99 rows processed)",
+      "pending": "Await next enrichment batch"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Standby",
       "health": "warn",
-      "goal": "Run LinkedIn lookup support for contact operations",
-      "task": "No current run; latest visible group run is complete",
-      "pending": "Await next lookup instruction"
+      "goal": "Support LinkedIn lookup for contact ops",
+      "task": "No current run; most recent visible run completed",
+      "pending": "Await next lookup trigger"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Deploy and run automation workflows",
+      "goal": "Deliver workflow automation execution",
       "task": "No active workflow session visible",
-      "pending": "Execute automation runs when requested"
+      "pending": "Run automation jobs on request"
     },
     {
       "name": "flowise",
       "displayName": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Build and support Flowise pipelines",
+      "goal": "Build and maintain Flowise pipelines",
       "task": "No active pipeline session visible",
-      "pending": "Await next flow build request"
+      "pending": "Await next flow build task"
     }
   ]
 }
