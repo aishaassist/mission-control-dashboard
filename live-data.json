@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T09:23:00Z",
+  "generatedAt": "2026-04-13T09:25:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -52,8 +52,8 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile mapping",
-      "task": "No running session, last run state includes a failed session",
-      "pending": "Stabilize session health on next LinkedIn request"
+      "task": "No running session, latest known state includes a failed session",
+      "pending": "Recheck stability when next LinkedIn task starts"
     },
     {
       "name": "n8n",
