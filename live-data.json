@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T14:29:00Z",
+  "generatedAt": "2026-04-13T14:31:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -38,7 +38,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last run completed and posted final enrichment report",
+      "task": "Last run completed with final enrichment report",
       "pending": "Awaiting next enrichment batch"
     },
     {
@@ -47,7 +47,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and mapping",
-      "task": "No active run; latest known run completed",
+      "task": "Last run completed with no active processing",
       "pending": "Awaiting next lookup request"
     },
     {
