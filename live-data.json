@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T00:03:00Z",
+  "generatedAt": "2026-04-13T00:05:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,15 +14,15 @@
   },
   "priorities": [
     "Keep main coordination session responsive",
-    "Prepare next contactenrichment batch with Notion access in place",
+    "Prepare next contactenrichment batch with Notion access ready",
     "Queue concrete execution tasks for linkedin, n8n, and flowise"
   ],
   "goalProgress": {
-    "summary": "Main cron orchestration is active; specialist agents are mostly on standby awaiting fresh assignments.",
+    "summary": "Main cron orchestration is active, specialist agents are on standby awaiting fresh assignments.",
     "completion": {
       "active": 1,
-      "standby": 3,
-      "failed": 1
+      "standby": 4,
+      "failed": 0
     }
   },
   "agents": [
@@ -48,10 +48,10 @@
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "Run LinkedIn lookup coverage tasks",
-      "task": "No active run; recent session history includes failed state",
-      "pending": "Stabilize next run and await new lookup list"
+      "task": "No active run, recent activity shows completed standby state",
+      "pending": "Await next lookup list"
     },
     {
       "name": "n8n",
