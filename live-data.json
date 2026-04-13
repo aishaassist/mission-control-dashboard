@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T22:13:00Z",
+  "generatedAt": "2026-04-13T22:15:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,15 +13,15 @@
     }
   },
   "priorities": [
-    "Keep main agent stable across cron and user-facing sessions",
-    "Bring specialist agents online only when fresh queues arrive",
-    "Address recent failed runs before next LinkedIn-heavy workload"
+    "Keep main (Aisha) stable across cron and user-facing channels",
+    "Keep specialist agents warm, activate only on fresh demand",
+    "Investigate historical LinkedIn failures before next heavy run"
   ],
   "goalProgress": [
     {
       "name": "Mission control live runtime visibility",
       "status": "on-track",
-      "note": "Snapshot refreshed from current sessions and subagent state"
+      "note": "Snapshot rebuilt from sessions_list and subagents list"
     }
   ],
   "agents": [
@@ -30,41 +30,41 @@
       "alias": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission control and user-facing channels",
-      "task": "Cron refresh running while another main chat session is active",
-      "pending": "Watch runtime/model stability during parallel workloads"
+      "goal": "Run mission control and assist user-facing channels",
+      "task": "Cron refresh running; separate main WhatsApp session also running",
+      "pending": "Monitor model/runtime errors and keep parallel sessions healthy"
     },
     {
       "name": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich missing school contact fields from official sources",
-      "task": "Last run completed with FINAL summary and no active session",
-      "pending": "Await next Notion-enabled enrichment batch"
+      "goal": "Fill missing school contact fields from official sources",
+      "task": "Last activity finished with FINAL summary, no running session now",
+      "pending": "Wait for next Notion-enabled enrichment batch"
     },
     {
       "name": "linkedin",
       "status": "Idle/Standby",
       "health": "bad",
-      "goal": "Handle LinkedIn lookup and profile enrichment requests",
-      "task": "No active session; recent session history includes a failed run",
-      "pending": "Stabilize failures, then resume lookup queue"
+      "goal": "Handle LinkedIn lookup and profile enrichment tasks",
+      "task": "No running session; history includes a failed slash session",
+      "pending": "Resolve failure mode before the next lookup queue"
     },
     {
       "name": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and deploy n8n automations",
-      "task": "No active n8n execution in current runtime snapshot",
-      "pending": "Await next workflow build/deploy request"
+      "task": "No active n8n run visible in current runtime snapshot",
+      "pending": "Stand by for workflow build/deploy requests"
     },
     {
       "name": "flowise",
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise chatbot and flow operations",
-      "task": "No active flowise session in current runtime snapshot",
-      "pending": "Await next flow/chatbot implementation task"
+      "task": "No active flowise run visible in current runtime snapshot",
+      "pending": "Stand by for next flow/chatbot task"
     }
   ]
 }
