@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T02:29:00Z",
+  "generatedAt": "2026-04-13T02:31:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -20,12 +20,12 @@
     {
       "goal": "Mission control observability",
       "status": "On track",
-      "progress": "Live data refresh snapshot regenerated from current runtime"
+      "progress": "Live runtime snapshot regenerated from sessions + subagents state"
     },
     {
       "goal": "Contact enrichment execution",
       "status": "Standby",
-      "progress": "No active run; last known batch completed earlier"
+      "progress": "No active run; last known batch completed with final summary"
     },
     {
       "goal": "Automation throughput",
@@ -39,9 +39,9 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate operations and keep mission-control visibility current",
-      "task": "Running mission-control-live-data-refresh cron job",
-      "pending": "Commit and push dashboard data update if changed"
+      "goal": "Coordinate operations and keep mission control visibility current",
+      "task": "Running mission-control-live-data-refresh cron session",
+      "pending": "Commit and push dashboard update if file changed"
     },
     {
       "name": "contactenrichment",
@@ -49,7 +49,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "No running session; last known run returned final processing summary",
+      "task": "No running session; last known run completed and reported final counts",
       "pending": "Await next enrichment batch"
     },
     {
@@ -58,8 +58,8 @@
       "status": "Standby",
       "health": "bad",
       "goal": "LinkedIn lookup and profile enrichment support",
-      "task": "No running session; recent context includes a failed slash session",
-      "pending": "Run a validation task before next production batch"
+      "task": "No running session; recent history includes a failed slash session",
+      "pending": "Run a validation check before next production batch"
     },
     {
       "name": "n8n",
@@ -67,7 +67,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Build and deploy automations",
-      "task": "Idle with no current session running",
+      "task": "No active run in current runtime snapshot",
       "pending": "Queue next automation request"
     },
     {
@@ -76,7 +76,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Flowise assistant and builder support",
-      "task": "Idle with no current session running",
+      "task": "No active run in current runtime snapshot",
       "pending": "Await next build or debug request"
     }
   ]
