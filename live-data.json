@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T19:53:00Z",
+  "generatedAt": "2026-04-13T19:55:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -37,10 +37,10 @@
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "LinkedIn lookup support",
-      "task": "No active run; recent history includes a failed session",
-      "pending": "Stabilize failed path and wait for next lookup batch"
+      "task": "No active run; latest recent run completed",
+      "pending": "Await next lookup batch and monitor for failures"
     },
     {
       "name": "n8n",
