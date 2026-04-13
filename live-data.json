@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T21:45:00Z",
+  "generatedAt": "2026-04-13T21:47:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,8 +14,8 @@
   },
   "priorities": [
     "Keep main agent stable and responsive",
-    "Resolve linkedin failed state before next delegated run",
-    "Bring specialist agents online only when queued work exists"
+    "Recover linkedin reliability before next delegated run",
+    "Keep specialist agents warm and ready for queued work"
   ],
   "goalProgress": [
     {
@@ -26,7 +26,7 @@
     {
       "goal": "Agent execution continuity",
       "status": "partial",
-      "note": "Main active; specialists mostly idle or standby"
+      "note": "Main active; specialists are idle or standby"
     }
   ],
   "agents": [
@@ -37,7 +37,7 @@
       "health": "ok",
       "goal": "Coordinate mission control and cross-agent orchestration",
       "task": "Running mission-control live data refresh cron",
-      "pending": "Monitor specialist readiness and failed-session cleanup"
+      "pending": "Continue monitoring specialist readiness and errors"
     },
     {
       "agent": "contactenrichment",
@@ -45,8 +45,8 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Fill missing school contacts from verified official sources",
-      "task": "No active enrichment run; last batch completed",
-      "pending": "Await next Notion-ready enrichment queue"
+      "task": "No active enrichment run; last Notion batch completed",
+      "pending": "Await next enrichment queue with integration access ready"
     },
     {
       "agent": "linkedin",
@@ -54,8 +54,8 @@
       "status": "Idle",
       "health": "bad",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; historical failure present in recent sessions",
-      "pending": "Retry on next queue and validate session stability"
+      "task": "No active run; recent session history includes a failed run",
+      "pending": "Re-run on next queue and verify session stability"
     },
     {
       "agent": "n8n",
