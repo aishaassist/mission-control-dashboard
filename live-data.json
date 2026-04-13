@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T13:33:00Z",
+  "generatedAt": "2026-04-13T13:35:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -7,9 +7,9 @@
     "activeSubagents": 0
   },
   "priorities": [
-    "Keep main agent runtime healthy while cron refresh jobs are active",
-    "Unblock contactenrichment by confirming Notion integration access before rerun",
-    "Recover linkedin reliability after latest failed slash session"
+    "Keep main agent runtime healthy while cron refresh is running",
+    "Unblock contactenrichment by restoring Notion API access before next run",
+    "Stabilize linkedin task intake and start next lookup in a clean session"
   ],
   "goalProgress": [
     {
@@ -19,7 +19,7 @@
     },
     {
       "goal": "Contact ops enrichment",
-      "progress": "Latest contactenrichment run is idle after completion and still blocked on Notion access",
+      "progress": "Latest contactenrichment cycle completed and is now waiting on Notion connectivity",
       "health": "warn"
     }
   ],
@@ -31,7 +31,7 @@
       "health": "ok",
       "goal": "Mission-control orchestration",
       "task": "Running scheduled live dashboard refresh",
-      "pending": "Resolve unsupported spark-model path in WhatsApp runtime"
+      "pending": "Resolve unsupported spark-model path seen in WhatsApp runtime"
     },
     {
       "name": "contactenrichment",
@@ -46,10 +46,10 @@
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "LinkedIn profile lookup support",
-      "task": "No active run; latest slash session failed",
-      "pending": "Start next lookup in a clean session"
+      "task": "No active run; latest group session completed",
+      "pending": "Validate slash-session reliability before next batch"
     },
     {
       "name": "n8n",
