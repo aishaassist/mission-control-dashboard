@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T16:53:00Z",
+  "generatedAt": "2026-04-13T16:55:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -18,11 +18,11 @@
     },
     {
       "goal": "Contact ops execution",
-      "progress": "Contactenrichment completed last batch, awaiting next trigger"
+      "progress": "Contactenrichment completed last batch and is awaiting next trigger"
     },
     {
       "goal": "Automation readiness",
-      "progress": "n8n and flowise are idle and available on demand"
+      "progress": "n8n and flowise are on standby for on-demand runs"
     }
   ],
   "agents": [
@@ -40,9 +40,9 @@
       "displayName": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school email and phone from official sources",
-      "task": "Last run completed with mostly not_found outcomes",
-      "pending": "Await next Notion-linked enrichment batch"
+      "goal": "Fill missing school contact fields from official sources",
+      "task": "Last enrichment batch completed",
+      "pending": "Await next Notion-linked enrichment run"
     },
     {
       "name": "linkedin",
@@ -50,7 +50,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Support LinkedIn lookup for contact operations",
-      "task": "No active run; last visible execution completed",
+      "task": "No active run, latest visible run completed",
       "pending": "Start on next lookup instruction"
     },
     {
