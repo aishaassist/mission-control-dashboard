@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T02:35:00Z",
+  "generatedAt": "2026-04-13T02:37:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -12,25 +12,25 @@
     }
   },
   "priorities": [
-    "Keep main (Aisha) stable while cron refresh is running",
-    "Re-arm contactenrichment when a fresh Notion-backed batch is ready",
-    "Keep linkedin, n8n, and flowise warm for next queued tasks"
+    "Keep main (Aisha) stable while cron refresh is active",
+    "Re-arm contactenrichment when the next Notion-backed batch is queued",
+    "Keep linkedin, n8n, and flowise warm for incoming tasks"
   ],
   "goalProgress": [
     {
       "goal": "Mission control observability",
       "status": "On track",
-      "progress": "Live runtime snapshot regenerated from sessions_list and subagents state"
+      "progress": "Runtime snapshot regenerated from sessions_list + subagents"
     },
     {
       "goal": "Contact enrichment execution",
       "status": "Standby",
-      "progress": "No active run; last known batch reported FINAL with 99 rows processed"
+      "progress": "No active run; last known batch completed with FINAL counts"
     },
     {
       "goal": "Automation throughput",
       "status": "Standby",
-      "progress": "n8n and flowise are idle awaiting new requests"
+      "progress": "n8n and flowise are idle awaiting next requests"
     }
   ],
   "agents": [
@@ -39,17 +39,17 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate runtime operations and mission control visibility",
+      "goal": "Coordinate mission control and runtime operations",
       "task": "Running mission-control-live-data-refresh cron session",
-      "pending": "Commit and push dashboard update if file changed"
+      "pending": "Commit and push dashboard refresh if changed"
     },
     {
       "name": "contactenrichment",
       "displayName": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school email and phone fields from official sources",
-      "task": "No running session; last known execution completed with final counts",
+      "goal": "Fill missing school email/phone from official sources",
+      "task": "No running session; last known run finished with FINAL report",
       "pending": "Await next enrichment batch"
     },
     {
@@ -58,7 +58,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment support",
-      "task": "No running session; most recent visible session is completed",
+      "task": "No running session; latest visible run is completed",
       "pending": "Run next lookup batch when requested"
     },
     {
@@ -77,7 +77,7 @@
       "health": "warn",
       "goal": "Flowise builder and assistant support",
       "task": "No active run in current snapshot",
-      "pending": "Await next build or debugging request"
+      "pending": "Await next build/debug task"
     }
   ]
 }
