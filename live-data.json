@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T01:43:00Z",
+  "generatedAt": "2026-04-13T01:45:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -14,23 +14,23 @@
   },
   "priorities": [
     "Keep main (Aisha) stable during active cron refresh",
-    "Keep contactenrichment ready for next Notion batch",
+    "Keep contactenrichment ready for next Notion enrichment batch",
     "Keep linkedin, n8n, and flowise on standby for inbound tasks"
   ],
   "goalProgress": [
     {
       "agent": "main",
       "progress": "Cron live-data refresh is running",
-      "pending": "Finalize write and push only if diff exists"
+      "pending": "Finalize dashboard write and conditional git push"
     },
     {
       "agent": "contactenrichment",
-      "progress": "Last enrichment run completed; no active session",
+      "progress": "Latest Notion enrichment batch completed",
       "pending": "Await next enrichment queue"
     },
     {
       "agent": "linkedin",
-      "progress": "Latest lookup run finished; no active session",
+      "progress": "Latest LinkedIn lookup run completed",
       "pending": "Await next lookup request"
     },
     {
@@ -40,7 +40,7 @@
     },
     {
       "agent": "flowise",
-      "progress": "No active flow build run",
+      "progress": "No active Flowise build run",
       "pending": "Await next Flowise request"
     }
   ],
@@ -51,8 +51,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control live dashboard refresh",
-      "task": "Collect sessions and subagent state",
-      "pending": "Commit and push updated live-data.json if changed"
+      "task": "Collect current sessions and runtime state",
+      "pending": "Commit and push live-data.json only if diff exists"
     },
     {
       "name": "contactenrichment",
@@ -60,7 +60,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Maintain contact data completeness",
-      "task": "Latest batch completed; no running session",
+      "task": "No running session; latest batch completed",
       "pending": "Await next enrichment trigger"
     },
     {
@@ -69,7 +69,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Handle LinkedIn lookup requests",
-      "task": "Latest run completed; no running session",
+      "task": "No running session; latest lookup completed",
       "pending": "Await next lookup list"
     },
     {
