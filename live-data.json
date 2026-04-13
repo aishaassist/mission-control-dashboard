@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T23:19:00Z",
+  "generatedAt": "2026-04-13T23:21:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -23,13 +23,13 @@
   "goalProgress": [
     {
       "goal": "Mission control visibility",
-      "progress": 0.93,
+      "progress": 0.94,
       "note": "Telemetry refreshed from current runtime sessions"
     },
     {
       "goal": "Agent utilization",
-      "progress": 0.45,
-      "note": "Main active, specialist agents mostly on standby"
+      "progress": 0.42,
+      "note": "Main active, specialist agents on standby"
     }
   ],
   "agents": [
@@ -55,10 +55,10 @@
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
       "task": "No active run; latest group run processed 0 rows",
-      "pending": "Investigate prior failed slash session and await next batch"
+      "pending": "Awaiting next lookup batch; monitor prior failed slash session"
     },
     {
       "name": "n8n",
