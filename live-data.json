@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T19:01:00Z",
+  "generatedAt": "2026-04-13T19:03:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -11,31 +11,31 @@
   },
   "priorities": [
     "main active in cron refresh loop",
-    "contactenrichment idle after Notion enrichment run",
-    "linkedin idle with prior failed slash session",
-    "n8n standby",
-    "flowise standby"
+    "contactenrichment idle after enrichment completion",
+    "linkedin idle with failed prior slash session",
+    "n8n standby awaiting automation brief",
+    "flowise standby awaiting flow build brief"
   ],
   "goalProgress": [
     {
       "agent": "main",
-      "progress": "Operating mission-control refresh and orchestration"
+      "progress": "Running mission-control refresh and coordination"
     },
     {
       "agent": "contactenrichment",
-      "progress": "Completed row enrichment batch; currently waiting for next dataset"
+      "progress": "Last Notion enrichment batch completed; waiting next input"
     },
     {
       "agent": "linkedin",
-      "progress": "No active lookup batch; last group run processed 0 rows"
+      "progress": "No active lookup batch; last slash session failed"
     },
     {
       "agent": "n8n",
-      "progress": "Automation arm online, awaiting deployment task"
+      "progress": "Automation arm idle, ready for deployment tasks"
     },
     {
       "agent": "flowise",
-      "progress": "Flow builder idle, awaiting build request"
+      "progress": "Flow builder idle, waiting next request"
     }
   ],
   "agents": [
@@ -44,7 +44,7 @@
       "display": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Run mission-control and coordination tasks",
+      "goal": "Run mission-control and orchestration tasks",
       "task": "Cron mission-control-live-data-refresh is running",
       "pending": "Continue periodic refresh and monitor specialist queues"
     },
@@ -62,9 +62,9 @@
       "display": "LinkedIn",
       "status": "Idle/Standby",
       "health": "bad",
-      "goal": "Handle LinkedIn profile lookup/update batches",
+      "goal": "Handle LinkedIn lookup/update batches",
       "task": "No active session; prior slash session failed",
-      "pending": "Need next runnable input batch and healthy session start"
+      "pending": "Await next runnable batch and clean session start"
     },
     {
       "name": "n8n",
