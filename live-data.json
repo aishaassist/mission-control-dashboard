@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T18:09:00Z",
+  "generatedAt": "2026-04-13T18:11:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -7,13 +7,13 @@
   "priorities": [
     "Keep mission-control cron sync running",
     "Unblock Notion-connected enrichment workflows",
-    "Prepare next execution batches for LinkedIn and automation agents"
+    "Queue next actionable batches for LinkedIn and automation agents"
   ],
   "goalProgress": {
     "overall": "Monitoring",
     "highlights": [
       "Main (Aisha) runtime is active",
-      "No active subagents in last 24h",
+      "No active subagents in the last 24h",
       "contactenrichment, linkedin, n8n, and flowise are on standby"
     ]
   },
@@ -23,7 +23,7 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission-control oversight and live status refresh",
+      "goal": "Coordinate mission-control operations and live status refresh",
       "task": "Cron mission-control-live-data-refresh is currently running",
       "pending": "Continue periodic snapshot updates and dashboard publishing"
     },
@@ -33,7 +33,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Complete school contact enrichment in Notion from official sources",
-      "task": "Last known run finished processing; unresolved fields marked not_found",
+      "task": "Last known run completed and returned FINAL summary",
       "pending": "Await next Notion-accessible enrichment batch"
     },
     {
