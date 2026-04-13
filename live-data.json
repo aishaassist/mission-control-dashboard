@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T04:07:00Z",
+  "generatedAt": "2026-04-13T04:09:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,7 +13,7 @@
     }
   },
   "priorities": [
-    "Keep mission-control dashboard synced to live runtime state",
+    "Keep mission-control dashboard synced to current runtime state",
     "Prepare next contact enrichment batch with verified-source workflow",
     "Re-activate linkedin, n8n, and flowise queues on next trigger"
   ],
