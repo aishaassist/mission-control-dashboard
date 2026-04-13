@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T19:05:00Z",
+  "generatedAt": "2026-04-13T19:07:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -11,8 +11,8 @@
   },
   "priorities": [
     "main active in cron refresh loop",
-    "contactenrichment idle after last enrichment completion",
-    "linkedin idle with prior failed slash session",
+    "contactenrichment idle after enrichment completion",
+    "linkedin idle, ready for next lookup batch",
     "n8n standby awaiting automation brief",
     "flowise standby awaiting flow build brief"
   ],
@@ -27,7 +27,7 @@
     },
     {
       "agent": "linkedin",
-      "progress": "No active lookup batch; prior slash session failed"
+      "progress": "No active lookup batch; waiting next runnable task"
     },
     {
       "agent": "n8n",
@@ -61,10 +61,10 @@
       "name": "linkedin",
       "display": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "Handle LinkedIn lookup/update batches",
-      "task": "No active session; prior slash session failed",
-      "pending": "Await next runnable batch and clean session start"
+      "task": "No active session; latest runs are completed",
+      "pending": "Await next runnable lookup batch"
     },
     {
       "name": "n8n",
