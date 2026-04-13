@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T19:15:00Z",
+  "generatedAt": "2026-04-13T19:19:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -11,23 +11,23 @@
   },
   "priorities": [
     "main active in mission-control cron run",
-    "contactenrichment idle, waiting next Notion batch",
-    "linkedin idle, waiting next lookup batch",
+    "contactenrichment standby for next Notion enrichment batch",
+    "linkedin standby for next lookup batch",
     "n8n standby for automation deployment requests",
     "flowise standby for next flow build request"
   ],
   "goalProgress": [
     {
       "agent": "main",
-      "progress": "Running mission-control refresh and orchestration"
+      "progress": "Running mission-control refresh and orchestrating specialist readiness"
     },
     {
       "agent": "contactenrichment",
-      "progress": "Last enrichment batch completed; awaiting new queue"
+      "progress": "Last contact enrichment run completed; awaiting new queue"
     },
     {
       "agent": "linkedin",
-      "progress": "No active lookup run; last visible runs completed"
+      "progress": "Last lookup context completed; awaiting next assignment"
     },
     {
       "agent": "n8n",
@@ -45,7 +45,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Keep mission-control and coordination live",
-      "task": "Cron mission-control-live-data-refresh is running",
+      "task": "mission-control-live-data-refresh cron is running",
       "pending": "Continue periodic refresh and monitor specialist queues"
     },
     {
@@ -54,7 +54,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich missing school contact fields from official sources",
-      "task": "Last visible session finished with FINAL contact summary",
+      "task": "No active run; last enrichment batch finished",
       "pending": "Await next Notion-connected enrichment batch"
     },
     {
@@ -63,7 +63,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup/update batches",
-      "task": "No currently running LinkedIn session",
+      "task": "No active run; last visible lookup cycle completed",
       "pending": "Await next lookup batch assignment"
     },
     {
