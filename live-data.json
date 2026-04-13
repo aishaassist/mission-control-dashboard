@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T19:13:00Z",
+  "generatedAt": "2026-04-13T19:15:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -10,32 +10,32 @@
     }
   },
   "priorities": [
-    "main active in cron refresh loop",
-    "contactenrichment idle after last Notion enrichment batch",
-    "linkedin idle after last batch completion",
-    "n8n standby awaiting automation brief",
-    "flowise standby awaiting flow build brief"
+    "main active in mission-control cron run",
+    "contactenrichment idle, waiting next Notion batch",
+    "linkedin idle, waiting next lookup batch",
+    "n8n standby for automation deployment requests",
+    "flowise standby for next flow build request"
   ],
   "goalProgress": [
     {
       "agent": "main",
-      "progress": "Running mission-control refresh and coordination"
+      "progress": "Running mission-control refresh and orchestration"
     },
     {
       "agent": "contactenrichment",
-      "progress": "Last Notion enrichment batch completed; waiting next input"
+      "progress": "Last enrichment batch completed; awaiting new queue"
     },
     {
       "agent": "linkedin",
-      "progress": "No active lookup batch; prior batch finished"
+      "progress": "No active lookup run; last visible runs completed"
     },
     {
       "agent": "n8n",
-      "progress": "Automation arm idle, ready for deployment tasks"
+      "progress": "Automation builder idle and ready"
     },
     {
       "agent": "flowise",
-      "progress": "Flow builder idle, waiting next request"
+      "progress": "Flow builder idle and ready"
     }
   ],
   "agents": [
@@ -44,7 +44,7 @@
       "display": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Run mission-control and orchestration tasks",
+      "goal": "Keep mission-control and coordination live",
       "task": "Cron mission-control-live-data-refresh is running",
       "pending": "Continue periodic refresh and monitor specialist queues"
     },
@@ -53,8 +53,8 @@
       "display": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Fill missing school contact fields from official sources",
-      "task": "Last run completed with FINAL contact summary",
+      "goal": "Enrich missing school contact fields from official sources",
+      "task": "Last visible session finished with FINAL contact summary",
       "pending": "Await next Notion-connected enrichment batch"
     },
     {
@@ -62,9 +62,9 @@
       "display": "linkedin",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Handle LinkedIn lookup/update batches",
-      "task": "No active session currently running",
-      "pending": "Await next lookup batch"
+      "goal": "Run LinkedIn lookup/update batches",
+      "task": "No currently running LinkedIn session",
+      "pending": "Await next lookup batch assignment"
     },
     {
       "name": "n8n",
@@ -72,16 +72,16 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and deploy automations",
-      "task": "No currently running session",
-      "pending": "Await automation request"
+      "task": "No currently running n8n session",
+      "pending": "Await automation brief"
     },
     {
       "name": "flowise",
       "display": "flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Build Flowise pipelines",
-      "task": "No currently running session",
+      "goal": "Build and maintain Flowise pipelines",
+      "task": "No currently running flowise session",
       "pending": "Await next flow build brief"
     }
   ]
