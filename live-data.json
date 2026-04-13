@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T18:37:00Z",
+  "generatedAt": "2026-04-13T18:41:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -14,7 +14,7 @@
     "highlights": [
       "Aisha (main) is active in the current cron run",
       "No active subagents detected in the last 24h",
-      "contactenrichment is idle after last 99-row batch; n8n and flowise remain standby"
+      "contactenrichment, n8n, and flowise are currently on standby"
     ]
   },
   "agents": [
@@ -33,7 +33,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records in Notion",
-      "task": "Last known run processed 99 rows (no new contacts found)",
+      "task": "Last known run processed 99 rows with no new contacts found",
       "pending": "Await next Notion-ready enrichment batch"
     },
     {
@@ -42,7 +42,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment",
-      "task": "No active run; recent history includes a failed lane session",
+      "task": "No active run; recent lane history includes a failed session",
       "pending": "Validate lane health before next LinkedIn batch"
     },
     {
@@ -60,7 +60,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise implementation work",
-      "task": "No active run; last update was readiness check-in",
+      "task": "No active run; last update was a readiness check-in",
       "pending": "Await next build or integration task"
     }
   ]
