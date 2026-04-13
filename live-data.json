@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T20:35:00Z",
+  "generatedAt": "2026-04-13T20:37:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -15,23 +15,23 @@
   "priorities": [
     "Keep main mission-control cron healthy and current",
     "Unblock contactenrichment Notion integration for row updates",
-    "Investigate linkedin agent failed slash-session stability"
+    "Stabilize linkedin slash-session reliability"
   ],
   "goalProgress": [
     {
       "name": "Mission control data freshness",
       "progress": "on_track",
-      "note": "Cron refresh running in current window"
+      "note": "Cron refresh currently running"
     },
     {
       "name": "Contact enrichment execution",
       "progress": "waiting",
-      "note": "Awaiting Notion API key/share access"
+      "note": "Waiting on Notion integration access"
     },
     {
       "name": "LinkedIn ops reliability",
       "progress": "needs_attention",
-      "note": "Recent failed session observed; no active run"
+      "note": "Recent failed session, no active run"
     }
   ],
   "agents": [
@@ -41,8 +41,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Operate central assistant and mission-control refresh",
-      "task": "Running cron: mission-control-live-data-refresh",
-      "pending": "Monitor model compatibility issues on whatsapp session"
+      "task": "Running cron mission-control-live-data-refresh",
+      "pending": "Watch whatsapp model compatibility issue"
     },
     {
       "name": "contactenrichment",
@@ -50,8 +50,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Update school contacts in Notion from official sources",
-      "task": "Last run completed; row processing workflow defined",
-      "pending": "Notion integration access required before next write run"
+      "task": "Last run completed with workflow in place",
+      "pending": "Need Notion API key/share access before next write run"
     },
     {
       "name": "linkedin",
@@ -59,8 +59,8 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "LinkedIn lookup and profile enrichment support",
-      "task": "No current run; last group run reported zero rows processed",
-      "pending": "Resolve recent failed slash session and await new queue"
+      "task": "No current run; last group run processed zero rows",
+      "pending": "Resolve recent failed slash session and await queue"
     },
     {
       "name": "n8n",
@@ -69,16 +69,16 @@
       "health": "warn",
       "goal": "Automation workflow build and deployment",
       "task": "No active session detected",
-      "pending": "Await workflow requests for n8n API deployment"
+      "pending": "Await workflow requests"
     },
     {
       "name": "flowise",
       "displayName": "Flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Flowise agent/build support",
+      "goal": "Flowise build and integration support",
       "task": "No active session detected",
-      "pending": "Await new build/integration tasks"
+      "pending": "Await new build tasks"
     }
   ]
 }
