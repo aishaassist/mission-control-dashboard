@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T01:39:00Z",
+  "generatedAt": "2026-04-13T01:41:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -15,7 +15,7 @@
   "priorities": [
     "Keep main (Aisha) stable during active cron refresh",
     "Keep contactenrichment ready for next Notion batch",
-    "Keep linkedin, n8n, and flowise in standby for inbound tasks"
+    "Keep linkedin, n8n, and flowise on standby for inbound tasks"
   ],
   "goalProgress": [
     {
@@ -25,12 +25,12 @@
     },
     {
       "agent": "contactenrichment",
-      "progress": "Last run completed contact update batch",
+      "progress": "Last run completed contact enrichment batch",
       "pending": "Await next enrichment queue"
     },
     {
       "agent": "linkedin",
-      "progress": "Latest group run reported zero rows; no active lookup run",
+      "progress": "No active lookup run; latest group run finished",
       "pending": "Await next lookup request"
     },
     {
@@ -51,7 +51,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control live dashboard refresh",
-      "task": "Collect current sessions and subagent state",
+      "task": "Collect sessions and subagent state",
       "pending": "Commit and push updated live-data.json if changed"
     },
     {
@@ -60,7 +60,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Maintain contact data completeness",
-      "task": "Latest batch completed; no current running session",
+      "task": "Latest batch completed; no running session",
       "pending": "Await next enrichment trigger"
     },
     {
