@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T05:35:00Z",
+  "generatedAt": "2026-04-13T05:37:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -35,7 +35,7 @@
       "goal": "Mission control and user orchestration",
       "task": "Running cron mission-control-live-data-refresh",
       "pending": "Continue monitoring and dispatch specialist work when needed",
-      "lastUpdatedAt": 1776058548037
+      "lastUpdatedAt": 1776058666930
     },
     {
       "agent": "contactenrichment",
@@ -72,7 +72,7 @@
       "name": "flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise app/agent build support",
+      "goal": "Flowise app and agent build support",
       "task": "No active session",
       "pending": "Await new Flowise build/debug tasks",
       "lastUpdatedAt": 1774193518403
