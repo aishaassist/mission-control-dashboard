@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T08:17:00Z",
+  "generatedAt": "2026-04-13T08:21:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -15,23 +15,23 @@
   "priorities": [
     "Keep mission-control snapshot aligned with current runtime sessions",
     "Maintain readiness for contact and LinkedIn enrichment queues",
-    "Keep n8n and flowise ready for the next automation or build request"
+    "Keep n8n and flowise ready for next automation/build requests"
   ],
   "goalProgress": [
     {
       "goal": "Mission control live visibility",
       "progress": "running",
-      "note": "Main cron refresh session is currently running"
+      "note": "Main cron refresh session is running"
     },
     {
       "goal": "Contact enrichment execution",
       "progress": "standby",
-      "note": "Last contact batch completed; awaiting next dataset"
+      "note": "Last contact batch completed, awaiting next queue"
     },
     {
       "goal": "LinkedIn enrichment support",
       "progress": "standby",
-      "note": "No active LinkedIn processing right now"
+      "note": "No active LinkedIn processing session"
     },
     {
       "goal": "Automation delivery (n8n/flowise)",
@@ -55,8 +55,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last run completed; no current execution",
-      "pending": "Await next enrichment queue"
+      "task": "Latest run completed with final summary",
+      "pending": "Await next enrichment dataset"
     },
     {
       "name": "linkedin",
@@ -64,7 +64,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Support LinkedIn lookup and enrichment",
-      "task": "Latest known run is complete; no current execution",
+      "task": "Latest run completed, no active execution",
       "pending": "Await fresh lookup tasks"
     },
     {
@@ -74,7 +74,7 @@
       "health": "warn",
       "goal": "Automation workflow execution",
       "task": "No active session currently",
-      "pending": "Await deployment or workflow request"
+      "pending": "Await deployment/workflow request"
     },
     {
       "name": "flowise",
