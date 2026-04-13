@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T17:41:00Z",
+  "generatedAt": "2026-04-13T17:43:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -18,11 +18,11 @@
     },
     {
       "goal": "Contact operations",
-      "progress": "Contactenrichment and linkedin are standby after prior runs; next intake is pending"
+      "progress": "Contactenrichment and linkedin are standby after completed runs; next intake is pending"
     },
     {
       "goal": "Automation readiness",
-      "progress": "n8n and flowise are idle-ready for immediate execution"
+      "progress": "n8n and flowise remain idle-ready for immediate execution"
     }
   ],
   "agents": [
@@ -32,7 +32,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Orchestrate Kumar operations and mission control",
-      "task": "Cron live-data refresh run is active",
+      "task": "Cron live-data refresh run is running",
       "pending": "Continue orchestration and monitor specialist queues"
     },
     {
@@ -41,7 +41,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Last run completed with school-row processing summary",
+      "task": "Last visible run completed with 99 rows processed",
       "pending": "Await next enrichment trigger"
     },
     {
@@ -50,7 +50,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup support for contact operations",
-      "task": "No active lookup run; last visible task ended complete",
+      "task": "No active lookup run; latest visible run is complete",
       "pending": "Await next lookup instruction"
     },
     {
