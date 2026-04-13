@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-04-13T13:11:00Z",
+  "generatedAt": "2026-04-13T13:13:00Z",
   "source": {
-    "sessions_list": {
+    "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
       "count": 12
@@ -13,61 +13,67 @@
     }
   },
   "priorities": [
-    "Keep main (Aisha) runtime healthy and clear model/config errors",
-    "Resume contact enrichment queue when new Notion-ready rows arrive",
-    "Keep specialist agents on standby for delegated bursts"
+    "Keep main agent stable (one active cron run)",
+    "Unblock contactenrichment Notion integration access",
+    "Queue next actionable tasks for linkedin, n8n, and flowise"
   ],
-  "goalProgress": {
-    "operations": "Main control loop active",
-    "contactEnrichment": "Last run processed 99 rows; no new updates currently queued",
-    "linkedin": "Bot idle after last zero-row completion",
-    "automation": "n8n and Flowise idle, ready for next deployment tasks"
-  },
+  "goalProgress": [
+    {
+      "goal": "Ops visibility",
+      "progress": "Live snapshot refreshed from runtime sessions",
+      "status": "on_track"
+    },
+    {
+      "goal": "Contact enrichment pipeline",
+      "progress": "Last run processed 99 rows; many fields unresolved/not_found",
+      "status": "needs_attention"
+    }
+  ],
   "agents": [
     {
       "name": "main",
-      "label": "Aisha",
+      "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission control and delegated specialist execution",
-      "task": "Running cron live-data refresh and maintaining active chat sessions",
-      "pending": "Investigate unsupported model error seen in one WhatsApp thread"
+      "goal": "Mission-control orchestration and runtime refresh",
+      "task": "Executing cron live-data refresh",
+      "pending": "Monitor active sessions and publish dashboard updates"
     },
     {
       "name": "contactenrichment",
-      "label": "Contact Enrichment",
-      "status": "Idle/Standby",
+      "displayName": "Contact Enrichment",
+      "status": "Idle",
       "health": "warn",
-      "goal": "Fill missing school contact email/phone fields from verifiable sources",
-      "task": "Last completed run returned FINAL rows_processed=99",
-      "pending": "Await next Notion-accessible batch"
+      "goal": "Fill missing school email/phone fields from official sources",
+      "task": "Last completed run: 99 rows processed",
+      "pending": "Restore/verify Notion integration access to continue updates"
     },
     {
       "name": "linkedin",
-      "label": "LinkedIn",
-      "status": "Idle/Standby",
+      "displayName": "LinkedIn",
+      "status": "Standby",
       "health": "warn",
-      "goal": "Handle LinkedIn profile discovery/update tasks",
-      "task": "Last group execution completed with rows_processed=0",
-      "pending": "Await new lookup requests"
+      "goal": "LinkedIn lookup support for delegated research",
+      "task": "No active run; last group run ended with 0 updates",
+      "pending": "Await new lookup batch with clear target list"
     },
     {
       "name": "n8n",
-      "label": "n8n",
-      "status": "Idle/Standby",
+      "displayName": "n8n",
+      "status": "Standby",
       "health": "warn",
-      "goal": "Build and deploy workflow automations",
-      "task": "No active session currently running",
-      "pending": "Await automation backlog from mission control"
+      "goal": "Automation workflow build/deploy support",
+      "task": "No active sessions in current window",
+      "pending": "Await next automation request and deployment scope"
     },
     {
       "name": "flowise",
-      "label": "Flowise",
-      "status": "Idle/Standby",
+      "displayName": "Flowise",
+      "status": "Standby",
       "health": "warn",
-      "goal": "Support Flowise/chatflow build and maintenance",
-      "task": "No active session currently running",
-      "pending": "Await new flow build requests"
+      "goal": "Flowise build support",
+      "task": "No active sessions in current window",
+      "pending": "Await next build request"
     }
   ]
 }
