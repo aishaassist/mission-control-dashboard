@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T20:29:00Z",
+  "generatedAt": "2026-04-13T20:31:00Z",
   "source": {
     "sessions_list": {
       "limit": 50,
@@ -42,7 +42,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission-control and multi-agent operations",
-      "task": "Main runtime has active running sessions",
+      "task": "Main runtime has running sessions including this refresh",
       "pending": "Continue cron refresh cycles and surface exceptions"
     },
     {
@@ -60,7 +60,7 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and enrichment support",
-      "task": "No active run; recent history includes a failed session",
+      "task": "No active run; recent session history includes failure",
       "pending": "Start next lookup run to restore healthy state"
     },
     {
@@ -69,7 +69,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Build and deploy workflow automations",
-      "task": "No active runtime session",
+      "task": "No currently running n8n session",
       "pending": "Await new automation brief or deployment trigger"
     },
     {
@@ -78,7 +78,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Support Flowise build and integration tasks",
-      "task": "No active runtime session",
+      "task": "No currently running Flowise session",
       "pending": "Await next Flowise implementation request"
     }
   ]
