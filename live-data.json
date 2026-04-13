@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T08:31:00Z",
+  "generatedAt": "2026-04-13T08:33:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -42,8 +42,8 @@
       "title": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Enrich school contact fields in Notion",
-      "task": "Last run completed with verified/not_found updates",
+      "goal": "Enrich school contact data in Notion",
+      "task": "Last run completed a school contact enrichment batch",
       "pending": "Awaiting next enrichment batch"
     },
     {
@@ -52,8 +52,8 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Handle LinkedIn profile lookup tasks",
-      "task": "No active run; latest activity includes failed session state",
-      "pending": "Needs retry check before next lookup batch"
+      "task": "No active run; recent known state includes failed session",
+      "pending": "Run a quick health check before next lookup batch"
     },
     {
       "name": "n8n",
