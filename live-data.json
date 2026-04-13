@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T11:59:00Z",
+  "generatedAt": "2026-04-13T12:01:00Z",
   "source": {
     "type": "openclaw-runtime",
     "cron": "mission-control-live-data-refresh",
@@ -10,7 +10,7 @@
   "priorities": [
     "Keep mission-control runtime snapshot current",
     "Resolve main-agent WhatsApp model mismatch errors",
-    "Keep specialist agents ready for next execution queues"
+    "Stabilize LinkedIn failed routes before next queue"
   ],
   "goalProgress": [
     {
@@ -26,7 +26,7 @@
     {
       "goal": "Specialist reliability",
       "status": "attention",
-      "progress": "LinkedIn has recent failed session history; n8n and Flowise remain on standby"
+      "progress": "LinkedIn has failed session history; n8n and Flowise remain on standby"
     }
   ],
   "agents": [
@@ -55,7 +55,7 @@
       "health": "bad",
       "goal": "Run LinkedIn lookups for assigned records",
       "task": "No active run; recent history includes failed session",
-      "pending": "Stabilize failed route, then wait for next lookup queue"
+      "pending": "Stabilize failed route, then await next lookup queue"
     },
     {
       "name": "n8n",
