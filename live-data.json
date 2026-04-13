@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T13:13:00Z",
+  "generatedAt": "2026-04-13T13:15:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -52,10 +52,10 @@
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "LinkedIn lookup support for delegated research",
-      "task": "No active run; last group run ended with 0 updates",
-      "pending": "Await new lookup batch with clear target list"
+      "task": "No active run; recent sessions include a failed slash session",
+      "pending": "Run next lookup batch and clear failed-session drift"
     },
     {
       "name": "n8n",
