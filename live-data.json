@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T01:25:00Z",
+  "generatedAt": "2026-04-13T01:27:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -13,9 +13,9 @@
     }
   },
   "priorities": [
-    "Keep main (Aisha) stable while cron refresh is running",
-    "Resume contactenrichment when fresh rows are queued",
-    "Keep linkedin, n8n, and flowise on standby for new tasks"
+    "Keep main (Aisha) stable while this refresh run is active",
+    "Resume contactenrichment when new rows are queued",
+    "Keep linkedin, n8n, and flowise on standby for incoming tasks"
   ],
   "goalProgress": [
     {
@@ -31,7 +31,7 @@
     {
       "agent": "linkedin",
       "progress": "No active lookup run; latest group run reported rows_processed=0",
-      "pending": "Await next lookup request and watch prior failed session"
+      "pending": "Await next lookup request"
     },
     {
       "agent": "n8n",
@@ -67,10 +67,10 @@
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "Support LinkedIn lookup requests",
-      "task": "No active run; prior session shows failed state",
-      "pending": "Await fresh lookup list and monitor repeat failures"
+      "task": "No active run detected",
+      "pending": "Await fresh lookup list"
     },
     {
       "name": "n8n",
