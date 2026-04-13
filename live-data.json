@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T17:25:00Z",
+  "generatedAt": "2026-04-13T17:27:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -18,7 +18,7 @@
     },
     {
       "goal": "Contact operations",
-      "progress": "Contactenrichment and linkedin are in standby awaiting the next queue"
+      "progress": "Contactenrichment is on standby after recent completion; linkedin awaits next queue"
     },
     {
       "goal": "Automation readiness",
@@ -48,10 +48,10 @@
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Run LinkedIn lookup support for contact operations",
-      "task": "No active lookup session visible",
-      "pending": "Await next lookup instruction"
+      "task": "No active lookup session; prior slash session failed",
+      "pending": "Await next lookup instruction and recover on next run"
     },
     {
       "name": "n8n",
