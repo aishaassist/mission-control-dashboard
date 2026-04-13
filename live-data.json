@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T23:03:00Z",
+  "generatedAt": "2026-04-13T23:05:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -23,12 +23,12 @@
   "goalProgress": [
     {
       "goal": "Mission control visibility",
-      "progress": 0.86,
+      "progress": 0.87,
       "note": "Telemetry refreshed from current runtime sessions"
     },
     {
       "goal": "Agent utilization",
-      "progress": 0.44,
+      "progress": 0.45,
       "note": "Main active; specialist agents mostly on standby"
     }
   ],
