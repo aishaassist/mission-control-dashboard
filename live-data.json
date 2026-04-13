@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-04-13T05:49:00Z",
+  "generatedAt": "2026-04-13T05:51:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
-      "capturedAt": "2026-04-13T05:49:00Z"
+      "capturedAt": "2026-04-13T05:51:00Z"
     },
     "subagents": {
       "action": "list",
       "recentMinutes": 1440,
-      "capturedAt": "2026-04-13T05:49:00Z"
+      "capturedAt": "2026-04-13T05:51:00Z"
     }
   },
   "priorities": [
     "Keep main (Aisha) responsive for active cron and live operations",
-    "Unblock contactenrichment for next Notion/official-source enrichment cycle",
+    "Unblock contactenrichment for next Notion and official-source enrichment cycle",
     "Keep linkedin, n8n, and flowise in ready standby for on-demand tasks"
   ],
   "goalProgress": [
@@ -31,7 +31,7 @@
     {
       "area": "specialist agent readiness",
       "status": "standby",
-      "note": "linkedin, n8n, flowise are idle and ready for assignment"
+      "note": "linkedin, n8n, and flowise are idle and ready for assignment"
     }
   ],
   "agents": [
@@ -41,7 +41,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control dashboard refresh reliably",
-      "task": "Collect live session/subagent state and publish live-data.json",
+      "task": "Collect live session and subagent state and publish live-data.json",
       "pending": "Commit and push if this refresh changed dashboard data"
     },
     {
@@ -58,7 +58,7 @@
       "displayName": "linkedin",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Handle LinkedIn lookup/update requests",
+      "goal": "Handle LinkedIn lookup and update requests",
       "task": "No running session detected; recent runs completed",
       "pending": "Await new lookup queue"
     },
@@ -69,7 +69,7 @@
       "health": "warn",
       "goal": "Execute and deploy automations",
       "task": "No active workflow execution session",
-      "pending": "Await automation/deployment task"
+      "pending": "Await automation or deployment task"
     },
     {
       "name": "flowise",
@@ -78,7 +78,7 @@
       "health": "warn",
       "goal": "Build and support Flowise pipelines",
       "task": "No running session detected",
-      "pending": "Await next build/support request"
+      "pending": "Await next build or support request"
     }
   ]
 }
