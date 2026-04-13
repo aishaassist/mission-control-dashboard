@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T21:31:00Z",
+  "generatedAt": "2026-04-13T21:33:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,19 +14,19 @@
   },
   "priorities": [
     "Keep main agent stable and responsive",
-    "Unblock contact enrichment data access for reliable updates",
-    "Re-activate specialist agents only when queued work exists"
+    "Resolve specialist runtime errors and restart readiness",
+    "Activate specialist agents only for queued work"
   ],
   "goalProgress": [
     {
       "goal": "Mission control visibility",
       "status": "in_progress",
-      "note": "Live runtime snapshot refreshed from sessions and subagent state"
+      "note": "Runtime snapshot refreshed from sessions and subagent state"
     },
     {
       "goal": "Agent execution continuity",
       "status": "partial",
-      "note": "Main active; specialist agents mostly idle or standby"
+      "note": "Main active; specialists currently idle or standby"
     }
   ],
   "agents": [
@@ -37,7 +37,7 @@
       "health": "ok",
       "goal": "Coordinate mission control and cross-agent orchestration",
       "task": "Running cron refresh for live dashboard data",
-      "pending": "Monitor specialist queue and failures"
+      "pending": "Track specialist queue and failed sessions"
     },
     {
       "agent": "contactenrichment",
@@ -45,8 +45,8 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Last run completed with mostly not_found outcomes",
-      "pending": "Awaiting next dataset or Notion access updates"
+      "task": "Last run finished; many rows marked not_found",
+      "pending": "Await next dataset and Notion-access-ready run"
     },
     {
       "agent": "linkedin",
@@ -54,8 +54,8 @@
       "status": "Idle",
       "health": "bad",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; recent history includes a failed session",
-      "pending": "Queue next lookup batch and verify stable runtime"
+      "task": "No active execution; recent session history includes failure",
+      "pending": "Queue next lookup batch and verify runtime stability"
     },
     {
       "agent": "n8n",
@@ -64,7 +64,7 @@
       "health": "warn",
       "goal": "Automation workflow build and deployment",
       "task": "No current execution detected",
-      "pending": "Awaiting automation requests"
+      "pending": "Await automation requests"
     },
     {
       "agent": "flowise",
@@ -73,7 +73,7 @@
       "health": "warn",
       "goal": "Flowise build and support",
       "task": "No current execution detected",
-      "pending": "Awaiting flow build tasks"
+      "pending": "Await flow build tasks"
     }
   ]
 }
