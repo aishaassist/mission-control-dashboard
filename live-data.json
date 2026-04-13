@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T13:31:00Z",
+  "generatedAt": "2026-04-13T13:33:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -9,7 +9,7 @@
   "priorities": [
     "Keep main agent runtime healthy while cron refresh jobs are active",
     "Unblock contactenrichment by confirming Notion integration access before rerun",
-    "Recover linkedin from last failed slash session before next lookup batch"
+    "Recover linkedin reliability after latest failed slash session"
   ],
   "goalProgress": [
     {
@@ -19,7 +19,7 @@
     },
     {
       "goal": "Contact ops enrichment",
-      "progress": "Latest contactenrichment run completed with no new email or phone updates",
+      "progress": "Latest contactenrichment run is idle after completion and still blocked on Notion access",
       "health": "warn"
     }
   ],
@@ -48,7 +48,7 @@
       "status": "Standby",
       "health": "bad",
       "goal": "LinkedIn profile lookup support",
-      "task": "No active run; recent slash session failed",
+      "task": "No active run; latest slash session failed",
       "pending": "Start next lookup in a clean session"
     },
     {
