@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-04-13T06:13:00Z",
+  "generatedAt": "2026-04-13T06:15:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
-      "capturedAt": "2026-04-13T06:13:00Z"
+      "capturedAt": "2026-04-13T06:15:00Z"
     },
     "subagents": {
       "action": "list",
       "recentMinutes": 1440,
-      "capturedAt": "2026-04-13T06:13:00Z"
+      "capturedAt": "2026-04-13T06:15:00Z"
     }
   },
   "priorities": [
@@ -21,7 +21,7 @@
     {
       "area": "mission-control-live-data-refresh",
       "status": "in_progress",
-      "note": "Cron refresh is currently running and snapshot was regenerated"
+      "note": "Cron refresh is running and dashboard snapshot has been regenerated"
     },
     {
       "area": "contact enrichment ops",
