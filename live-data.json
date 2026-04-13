@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T14:55:00Z",
+  "generatedAt": "2026-04-13T14:57:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -20,7 +20,7 @@
   ],
   "goalProgress": {
     "overall": "stable",
-    "note": "Main is active in cron orchestration; specialists are on standby, with linkedin carrying a prior failure signal to resolve."
+    "note": "Main is active in cron orchestration; specialists are standby, with linkedin showing a prior failure signal to resolve."
   },
   "agents": [
     {
@@ -38,7 +38,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last Notion batch completed",
+      "task": "Last Notion contact batch completed",
       "pending": "Await next verified email or phone updates"
     },
     {
