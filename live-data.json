@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-04-13T19:41:00Z",
+  "generatedAt": "2026-04-13T19:43:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep Aisha main session stable while cron orchestration is active",
-    "Restore Notion access for contactenrichment to reduce not_found outcomes",
-    "Prepare fresh workload for linkedin, n8n, and flowise specialist queues"
+    "Keep Aisha main runtime stable while active cron and chat sessions are running",
+    "Restore Notion integration access for contactenrichment to improve contact fill rates",
+    "Queue next task batches for linkedin, n8n, and flowise to avoid specialist idle time"
   ],
   "goalProgress": {
-    "operations": "Main is actively running mission-control refresh; specialists are on standby",
-    "automation": "No active or recent subagents in the last 24h",
-    "dataPipelines": "Contact enrichment remains constrained by Notion integration/token prerequisites"
+    "operations": "Main (Aisha) is active and currently executing the live dashboard refresh",
+    "automation": "No active or recent subagents detected in the last 24 hours",
+    "dataPipelines": "Contact enrichment remains blocked on Notion API key and database share prerequisites"
   },
   "agents": [
     {
@@ -20,18 +20,18 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Mission-control orchestration and channel responsiveness",
-      "task": "Executing cron live-data refresh and supervising runtime sessions",
-      "pending": "Continue monitoring and dispatch specialist tasks as work arrives"
+      "goal": "Mission control operations and orchestration",
+      "task": "Running cron-based live data refresh while keeping channels responsive",
+      "pending": "Continue monitoring sessions and route specialist work as new requests arrive"
     },
     {
       "name": "contactenrichment",
       "displayName": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contact records in Notion",
-      "task": "Last completed run processed rows but returned many not_found values",
-      "pending": "Await valid NOTION_API_KEY and integration share on the target Notion database"
+      "goal": "Enrich school contact data in Notion",
+      "task": "Last run completed but produced many not_found values",
+      "pending": "Await valid NOTION_API_KEY plus Notion integration access to the target database"
     },
     {
       "name": "linkedin",
@@ -39,7 +39,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn profile lookup and enrichment support",
-      "task": "No running session; latest run finished with zero rows processed",
+      "task": "No active run; latest completed run processed zero rows",
       "pending": "Await next lookup batch from operations"
     },
     {
@@ -48,7 +48,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Automation workflow build and deployment",
-      "task": "No running session currently",
+      "task": "No active session currently",
       "pending": "Await workflow implementation requests"
     },
     {
@@ -57,7 +57,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Flowise app and flow support",
-      "task": "No running session currently",
+      "task": "No active session currently",
       "pending": "Await new flow build requests"
     }
   ]
