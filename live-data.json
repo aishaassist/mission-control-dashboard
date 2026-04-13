@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T20:19:00Z",
+  "generatedAt": "2026-04-13T20:21:00Z",
   "source": {
     "sessions_list": {
       "limit": 50,
@@ -15,19 +15,19 @@
   },
   "priorities": [
     "Keep mission-control dashboard synced to live OpenClaw runtime",
-    "Flag running specialist sessions quickly",
-    "Highlight failed or stalled agent states"
+    "Flag active specialist sessions quickly",
+    "Surface idle and failed agent states for follow-up"
   ],
   "goalProgress": [
     {
       "goal": "Mission control live refresh automation",
       "status": "on_track",
-      "progress": "Live snapshot refreshed from sessions and subagent state"
+      "progress": "Snapshot refreshed from current sessions and subagent state"
     },
     {
       "goal": "Contact enrichment operations",
       "status": "waiting",
-      "progress": "Last batch completed, awaiting next Notion-backed run"
+      "progress": "Last enrichment batch completed, waiting for next run"
     },
     {
       "goal": "LinkedIn research operations",
@@ -41,9 +41,9 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission-control and multi-agent orchestration",
-      "task": "Running mission-control refresh with active main runtime sessions",
-      "pending": "Commit and push live-data update when changed"
+      "goal": "Coordinate mission-control and multi-agent operations",
+      "task": "Running with active main runtime session(s)",
+      "pending": "Commit and push refreshed live-data snapshot if changed"
     },
     {
       "name": "contactenrichment",
@@ -51,17 +51,17 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact data from official sources",
-      "task": "Last enrichment run finished and returned final metrics",
-      "pending": "Await next enrichment batch and Notion-ready input"
+      "task": "Latest enrichment run completed successfully",
+      "pending": "Await next Notion-backed enrichment batch"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Standby",
       "health": "bad",
-      "goal": "Run profile lookup and enrichment support",
-      "task": "No current run; recent context shows a failed slash session",
-      "pending": "Start next lookup run to recover healthy status"
+      "goal": "Run LinkedIn lookup and enrichment support",
+      "task": "No active run; recent history includes a failed session",
+      "pending": "Start next lookup run to restore healthy state"
     },
     {
       "name": "n8n",
@@ -70,7 +70,7 @@
       "health": "warn",
       "goal": "Build and deploy workflow automations",
       "task": "No active runtime session",
-      "pending": "Await automation brief or deployment trigger"
+      "pending": "Await new automation brief or deployment trigger"
     },
     {
       "name": "flowise",
