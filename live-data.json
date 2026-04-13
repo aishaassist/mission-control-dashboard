@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T03:47:00Z",
+  "generatedAt": "2026-04-13T03:49:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -47,7 +47,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment batches",
-      "task": "Latest group run processed 0 rows; recent slash session failed",
+      "task": "Latest group run processed 0 rows; last slash session failed",
       "pending": "Await next payload and validate run stability"
     },
     {
