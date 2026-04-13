@@ -1,81 +1,84 @@
 {
-  "generatedAt": "2026-04-13T05:43:00Z",
+  "generatedAt": "2026-04-13T05:45:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
-      "count": 12
+      "capturedAt": "2026-04-13T05:45:00Z"
     },
     "subagents": {
+      "action": "list",
       "recentMinutes": 1440,
-      "active": 0,
-      "recent": 0
+      "capturedAt": "2026-04-13T05:45:00Z"
     }
   },
   "priorities": [
-    "Keep main (Aisha) responsive for active cron and user operations",
-    "Keep specialist lanes warm and launch on demand (contactenrichment, linkedin, n8n, flowise)",
-    "Watch for new enrichment, LinkedIn, automation, or Flowise build triggers"
+    "Keep main (Aisha) responsive for active cron and live operations",
+    "Unblock contactenrichment for next Notion/official-source enrichment cycle",
+    "Prepare linkedin, n8n, and flowise for on-demand execution"
   ],
-  "goalProgress": {
-    "overall": "Monitoring mode",
-    "summary": "Main is actively running live-data refresh; specialist agents are idle/standby with no active subagents.",
-    "pending": [
-      "Next contact enrichment batch",
-      "Next LinkedIn lookup request",
-      "Next n8n/Flowise build request"
-    ]
-  },
+  "goalProgress": [
+    {
+      "area": "mission-control-live-data-refresh",
+      "status": "in_progress",
+      "note": "Runtime snapshot generated from live OpenClaw session/subagent state"
+    },
+    {
+      "area": "contact enrichment ops",
+      "status": "waiting",
+      "note": "Last run completed; awaiting next batch/instructions"
+    },
+    {
+      "area": "automation agents readiness",
+      "status": "standby",
+      "note": "linkedin, n8n, flowise are idle and ready for assignment"
+    }
+  ],
   "agents": [
     {
-      "agent": "main",
-      "name": "Aisha",
+      "name": "main",
+      "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Mission control and user orchestration",
-      "task": "Running cron mission-control-live-data-refresh",
-      "pending": "Continue monitoring and dispatch specialist work when needed",
-      "lastUpdatedAt": 1776059026843
+      "goal": "Execute mission-control live data refresh cron",
+      "task": "Collect runtime sessions/subagents and publish dashboard JSON",
+      "pending": "Commit and push only if data changed"
     },
     {
-      "agent": "contactenrichment",
       "name": "contactenrichment",
-      "status": "Standby",
+      "displayName": "contactenrichment",
+      "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich missing school contact data",
-      "task": "Last run completed (99 rows processed, 0 updates)",
-      "pending": "Await new rows or Notion integration changes",
-      "lastUpdatedAt": 1775398198839
+      "goal": "Enrich contact records from official sources",
+      "task": "Await next Notion row-processing batch",
+      "pending": "Needs new trigger/work items"
     },
     {
-      "agent": "linkedin",
       "name": "linkedin",
-      "status": "Standby",
+      "displayName": "linkedin",
+      "status": "Idle/Standby",
       "health": "warn",
-      "goal": "LinkedIn profile lookup and mapping",
-      "task": "No active run; last batch finished with 0 rows processed",
-      "pending": "Await fresh LinkedIn lookup tasks",
-      "lastUpdatedAt": 1775302155385
+      "goal": "LinkedIn lookup support",
+      "task": "Standby after latest completed group response",
+      "pending": "Await fresh lookup requests"
     },
     {
-      "agent": "n8n",
       "name": "n8n",
-      "status": "Standby",
+      "displayName": "n8n",
+      "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Automation workflow build and deployment",
-      "task": "No active session",
-      "pending": "Await workflow build/deploy requests",
-      "lastUpdatedAt": 1774354459888
+      "goal": "Automation workflow execution",
+      "task": "No active run detected",
+      "pending": "Await deployment/automation task"
     },
     {
-      "agent": "flowise",
       "name": "flowise",
-      "status": "Standby",
+      "displayName": "flowise",
+      "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Flowise app and agent build support",
-      "task": "No active session",
-      "pending": "Await new Flowise build/debug tasks",
-      "lastUpdatedAt": 1774193518403
+      "goal": "Flowise build/support",
+      "task": "No active run detected",
+      "pending": "Await next build request"
     }
   ]
 }
