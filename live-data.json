@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T01:47:00Z",
+  "generatedAt": "2026-04-13T01:51:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -15,13 +15,13 @@
   "priorities": [
     "Keep main (Aisha) stable while cron refresh is active",
     "Keep contactenrichment ready for next Notion enrichment batch",
-    "Keep linkedin, n8n, and flowise in standby for inbound work"
+    "Keep linkedin, n8n, and flowise on standby for inbound work"
   ],
   "goalProgress": [
     {
       "agent": "main",
-      "progress": "Cron live-data refresh is running",
-      "pending": "Finalize dashboard write and conditional git push"
+      "progress": "Cron live-data refresh is currently running",
+      "pending": "Finalize dashboard update and conditional git push"
     },
     {
       "agent": "contactenrichment",
@@ -30,8 +30,8 @@
     },
     {
       "agent": "linkedin",
-      "progress": "Recent lookup run completed; older failure noted",
-      "pending": "Await next lookup request"
+      "progress": "Most recent LinkedIn run completed",
+      "pending": "Investigate prior failed slash session if failures repeat"
     },
     {
       "agent": "n8n",
@@ -60,7 +60,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Maintain contact data completeness",
-      "task": "No running session; latest batch completed",
+      "task": "No running session; latest batch finished",
       "pending": "Await next enrichment trigger"
     },
     {
@@ -69,8 +69,8 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Handle LinkedIn lookup requests",
-      "task": "No running session; recent run completed, older failed session present",
-      "pending": "Stabilize slash-session reliability and await next lookup list"
+      "task": "No running session; prior slash session shows failed state",
+      "pending": "Await next lookup request and monitor stability"
     },
     {
       "name": "n8n",
