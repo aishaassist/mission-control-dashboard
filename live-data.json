@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T13:17:00Z",
+  "generatedAt": "2026-04-13T13:19:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -25,7 +25,7 @@
     },
     {
       "goal": "Contact enrichment pipeline",
-      "progress": "Latest completed run processed 99 rows with many unresolved fields",
+      "progress": "Latest completed run processed 99 rows with unresolved fields marked not_found",
       "status": "needs_attention"
     }
   ],
@@ -54,7 +54,7 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Support delegated LinkedIn lookup requests",
-      "task": "No running session; recent history includes failed session",
+      "task": "No active run; recent sessions include a failed slash session",
       "pending": "Start next lookup assignment and clear failed-session drift"
     },
     {
