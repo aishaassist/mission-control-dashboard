@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T06:23:00Z",
+  "generatedAt": "2026-04-13T06:25:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -54,7 +54,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; latest group task closed",
+      "task": "Latest visible run finished; no current execution",
       "pending": "Await next lookup list to process"
     },
     {
@@ -64,7 +64,7 @@
       "health": "warn",
       "goal": "Automation workflow execution and deployment",
       "task": "No current runtime activity detected",
-      "pending": "Await automation build/deploy requests"
+      "pending": "Await automation build and deploy requests"
     },
     {
       "name": "flowise",
