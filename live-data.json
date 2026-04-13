@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T15:43:00Z",
+  "generatedAt": "2026-04-13T15:45:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -31,7 +31,7 @@
     {
       "goal": "LinkedIn enrichment workflow",
       "status": "at_risk",
-      "note": "No active run; prior history includes a failed slash session"
+      "note": "Idle now; failed slash session still needs triage"
     }
   ],
   "agents": [
@@ -49,18 +49,18 @@
       "displayName": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Fill missing school contact records from official sources",
-      "task": "Last run complete with 99 rows processed",
-      "pending": "Awaiting next Notion-backed batch"
+      "goal": "Fill missing school contacts from official sources",
+      "task": "Last run finished; 99 rows processed",
+      "pending": "Awaiting next Notion batch"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No current run; last group run finished with 0 rows processed",
-      "pending": "Triage prior failed slash run before next batch"
+      "task": "No active run; latest group run ended with 0 rows",
+      "pending": "Investigate prior failed slash session"
     },
     {
       "name": "n8n",
