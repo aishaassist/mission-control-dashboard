@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T19:07:00Z",
+  "generatedAt": "2026-04-13T19:11:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -12,7 +12,7 @@
   "priorities": [
     "main active in cron refresh loop",
     "contactenrichment idle after enrichment completion",
-    "linkedin idle, ready for next lookup batch",
+    "linkedin standby with prior failed slash session",
     "n8n standby awaiting automation brief",
     "flowise standby awaiting flow build brief"
   ],
@@ -27,7 +27,7 @@
     },
     {
       "agent": "linkedin",
-      "progress": "No active lookup batch; waiting next runnable task"
+      "progress": "No active lookup batch; prior slash session marked failed"
     },
     {
       "agent": "n8n",
@@ -50,7 +50,7 @@
     },
     {
       "name": "contactenrichment",
-      "display": "ContactEnrichment",
+      "display": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
@@ -59,12 +59,12 @@
     },
     {
       "name": "linkedin",
-      "display": "LinkedIn",
+      "display": "linkedin",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Handle LinkedIn lookup/update batches",
-      "task": "No active session; latest runs are completed",
-      "pending": "Await next runnable lookup batch"
+      "task": "No active session; prior slash session is marked failed",
+      "pending": "Stabilize slash path and await next lookup batch"
     },
     {
       "name": "n8n",
@@ -77,7 +77,7 @@
     },
     {
       "name": "flowise",
-      "display": "Flowise",
+      "display": "flowise",
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build Flowise pipelines",
