@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T02:59:00Z",
+  "generatedAt": "2026-04-13T03:01:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -12,25 +12,25 @@
     }
   },
   "priorities": [
-    "Keep main (Aisha) stable while cron refresh runs",
-    "Prepare contactenrichment for the next Notion-backed contact batch",
-    "Keep linkedin, n8n, and flowise ready for on-demand execution"
+    "Keep main (Aisha) stable while cron refresh is active",
+    "Prime contactenrichment for the next Notion contact batch",
+    "Maintain linkedin, n8n, and flowise in ready standby"
   ],
   "goalProgress": [
     {
       "goal": "Mission control observability",
       "status": "On track",
-      "progress": "Live runtime snapshot refreshed from sessions_list and subagents"
+      "progress": "Runtime snapshot refreshed from sessions_list and subagents"
     },
     {
       "goal": "Contact enrichment continuity",
       "status": "Standby",
-      "progress": "Latest known contactenrichment batch completed; no active run"
+      "progress": "Last contactenrichment run completed; no active execution"
     },
     {
       "goal": "Auxiliary agent readiness",
       "status": "Standby",
-      "progress": "linkedin, n8n, and flowise are idle and available"
+      "progress": "linkedin, n8n, and flowise are idle and ready"
     }
   ],
   "agents": [
@@ -41,7 +41,7 @@
       "health": "ok",
       "goal": "Coordinate mission control and orchestrate agent operations",
       "task": "Running mission-control-live-data-refresh cron",
-      "pending": "Continue scheduled dashboard refresh cycles"
+      "pending": "Continue scheduled live-data refresh cycles"
     },
     {
       "name": "contactenrichment",
