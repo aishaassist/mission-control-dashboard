@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T03:27:00Z",
+  "generatedAt": "2026-04-13T03:29:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -8,31 +8,31 @@
     {
       "name": "Mission control freshness",
       "status": "active",
-      "note": "Main (Aisha) is currently running the scheduled dashboard refresh."
+      "note": "Main (Aisha) is actively running this scheduled dashboard refresh."
     },
     {
       "name": "Contact enrichment throughput",
       "status": "waiting",
-      "note": "Contactenrichment is idle after the last run processed 99 rows with no field updates."
+      "note": "Contactenrichment is idle after its last batch completed with no field updates."
     },
     {
-      "name": "LinkedIn stability",
+      "name": "LinkedIn runtime reliability",
       "status": "monitor",
-      "note": "LinkedIn is idle; recent history includes both a failed run and a zero-update completion."
+      "note": "LinkedIn is idle, with recent history showing a failed run and a zero-update completion."
     }
   ],
   "goalProgress": [
     {
       "goal": "Keep core agents operational",
-      "progress": 0.66,
+      "progress": 0.64,
       "status": "at-risk",
-      "note": "Only main is active right now, while specialist agents are idle or standby."
+      "note": "Only main is currently active while specialist agents remain idle or standby."
     },
     {
       "goal": "Sustain enrichment and profile pipelines",
-      "progress": 0.5,
+      "progress": 0.48,
       "status": "blocked",
-      "note": "Pipelines remain defined, but no specialist pipeline is currently running."
+      "note": "No specialist pipeline is currently running."
     }
   ],
   "agents": [
@@ -41,9 +41,9 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate operations and keep dashboard state current",
+      "goal": "Coordinate operations and keep mission-control state current",
       "task": "Running cron mission-control-live-data-refresh",
-      "pending": "Write snapshot and push only if file changed"
+      "pending": "Write snapshot and push only when file diff exists"
     },
     {
       "name": "contactenrichment",
@@ -58,10 +58,10 @@
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Idle",
-      "health": "warn",
+      "health": "bad",
       "goal": "Populate LinkedIn profile fields for target records",
       "task": "Recent context includes one failed session and one zero-update completion",
-      "pending": "Run next controlled batch and verify runtime stability"
+      "pending": "Run next batch and confirm runtime stability"
     },
     {
       "name": "n8n",
