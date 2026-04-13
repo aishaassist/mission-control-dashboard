@@ -1,35 +1,35 @@
 {
-  "generatedAt": "2026-04-13T20:45:00Z",
+  "generatedAt": "2026-04-13T20:47:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
-      "fetchedAt": "2026-04-13T20:45:00Z"
+      "fetchedAt": "2026-04-13T20:47:00Z"
     },
     "subagents": {
       "action": "list",
       "recentMinutes": 1440,
-      "fetchedAt": "2026-04-13T20:45:00Z",
+      "fetchedAt": "2026-04-13T20:47:00Z",
       "active": 0
     }
   },
   "priorities": [
-    "Keep main mission-control cron healthy and publishing fresh runtime snapshot",
-    "Unblock contact enrichment Notion access to resume row updates",
-    "Queue next LinkedIn enrichment batch once source rows are ready"
+    "Keep mission-control cron healthy and publishing fresh runtime snapshots",
+    "Unblock Notion integration access for contactenrichment to resume contact updates",
+    "Prepare next LinkedIn enrichment batch once source rows are available"
   ],
   "goalProgress": [
     {
       "goal": "Mission-control visibility",
-      "progress": "Live snapshot refreshed from runtime sessions and subagent state"
+      "progress": "Live runtime snapshot refreshed from sessions and subagent state"
     },
     {
       "goal": "Contact enrichment execution",
-      "progress": "Last run processed 99 rows; recent context indicates Notion access dependency"
+      "progress": "Last completed run processed 99 rows with no verified email/phone additions"
     },
     {
       "goal": "Automation readiness",
-      "progress": "n8n and Flowise currently on standby with no active runtime jobs"
+      "progress": "n8n and Flowise remain on standby with no active runtime jobs"
     }
   ],
   "agents": [
@@ -39,7 +39,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control and orchestrate assistant operations",
-      "task": "mission-control-live-data-refresh cron running",
+      "task": "mission-control-live-data-refresh cron is running",
       "pending": "Continue periodic refresh and monitor specialist activation"
     },
     {
@@ -47,36 +47,36 @@
       "displayName": "contactenrichment",
       "status": "Idle",
       "health": "warn",
-      "goal": "Fill missing school contact fields with verified sources",
-      "task": "Last completed run: 99 rows processed; 0 email/phone updates",
-      "pending": "Resolve Notion integration/share access and resume updates"
+      "goal": "Fill missing school contact fields using verified official sources",
+      "task": "Last completed run: 99 rows processed, no contact fields updated",
+      "pending": "Restore Notion integration/share access, then resume row updates"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Standby",
       "health": "warn",
-      "goal": "Provide LinkedIn lookup/enrichment support",
-      "task": "No current running session; latest batch returned zero rows processed",
-      "pending": "Await next explicit lookup batch"
+      "goal": "Handle LinkedIn lookup and enrichment support",
+      "task": "No currently running session; latest batch reported zero rows processed",
+      "pending": "Await next lookup/enrichment request"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Deploy and maintain workflow automations",
-      "task": "No current running session",
-      "pending": "Await automation build/deploy request"
+      "goal": "Build and deploy workflow automations",
+      "task": "No currently running session",
+      "pending": "Await next automation implementation request"
     },
     {
       "name": "flowise",
       "displayName": "flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Support Flowise build and agent workflow tasks",
-      "task": "No current running session",
-      "pending": "Await next Flowise implementation request"
+      "goal": "Support Flowise agent and workflow operations",
+      "task": "No currently running session",
+      "pending": "Await next Flowise task"
     }
   ]
 }
