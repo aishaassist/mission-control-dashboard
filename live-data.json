@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T08:27:00Z",
+  "generatedAt": "2026-04-13T08:29:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -43,7 +43,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich school contact fields in Notion",
-      "task": "Last run completed with verified or not_found outcomes",
+      "task": "Last batch completed with verified or not_found updates",
       "pending": "Awaiting next enrichment batch"
     },
     {
