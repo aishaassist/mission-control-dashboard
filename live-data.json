@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T12:21:00Z",
+  "generatedAt": "2026-04-13T12:23:00Z",
   "source": {
     "type": "openclaw-runtime",
     "cron": "mission-control-live-data-refresh",
