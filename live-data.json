@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T16:31:00Z",
+  "generatedAt": "2026-04-13T16:33:00Z",
   "source": {
     "type": "openclaw-runtime",
     "sessionsList": {
@@ -15,22 +15,22 @@
   },
   "priorities": [
     "Keep Aisha mission-control loop active and error-free",
-    "Resume contact enrichment once Notion access and sharing are confirmed",
-    "Queue next LinkedIn and n8n automation workloads for execution"
+    "Unblock contact enrichment by confirming Notion integration sharing",
+    "Queue next LinkedIn, n8n, and Flowise execution tasks"
   ],
   "goalProgress": [
     {
       "goal": "Mission control continuity",
       "status": "on-track",
-      "progress": "Aisha main session is running"
+      "progress": "Aisha main runtime is currently running"
     },
     {
       "goal": "Contact data enrichment",
       "status": "waiting",
-      "progress": "Last run processed 99 rows; official-source updates pending next trigger"
+      "progress": "Last completed run processed 99 rows; awaiting next trigger"
     },
     {
-      "goal": "LinkedIn + automation pipeline",
+      "goal": "LinkedIn and automation pipeline",
       "status": "standby",
       "progress": "LinkedIn, n8n, and Flowise are idle awaiting new tasks"
     }
@@ -42,7 +42,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Operate mission control and coordinate specialist agents",
-      "task": "Refreshing live dashboard data",
+      "task": "Refreshing mission-control live dashboard data",
       "pending": "Continue scheduled runtime snapshots"
     },
     {
@@ -50,35 +50,35 @@
       "name": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Fill missing school contact data with verifiable sources",
-      "task": "Last completed batch updated Notion rows",
-      "pending": "Await next batch trigger and confirmed Notion integration access"
+      "goal": "Fill missing school contact fields from verifiable official sources",
+      "task": "Last batch completed with final summary posted",
+      "pending": "Await next batch and confirmed Notion access/share"
     },
     {
       "agent": "linkedin",
       "name": "linkedin",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Find and update LinkedIn profile coverage",
-      "task": "Most recent run ended with zero rows processed",
-      "pending": "Await input list and next lookup instruction"
+      "goal": "Run LinkedIn lookup and profile update workflows",
+      "task": "Most recent run completed with no rows processed",
+      "pending": "Await next input list and lookup command"
     },
     {
       "agent": "n8n",
       "name": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Build and deploy automations",
-      "task": "No active runtime session",
-      "pending": "Await workflow build/deploy requests"
+      "goal": "Build and deploy automation workflows",
+      "task": "No currently running session",
+      "pending": "Await workflow implementation requests"
     },
     {
       "agent": "flowise",
       "name": "flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Support flow orchestration and bot build tasks",
-      "task": "No active runtime session",
+      "goal": "Support flow orchestration and bot-build tasks",
+      "task": "No currently running session",
       "pending": "Await new flow requirements"
     }
   ]
