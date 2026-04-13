@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T04:57:00Z",
+  "generatedAt": "2026-04-13T04:59:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,7 +14,7 @@
   },
   "priorities": [
     "Keep mission-control dashboard synced to current runtime state",
-    "Refresh and publish only when live-data.json actually changes",
+    "Refresh and publish only when live-data.json changes",
     "Keep specialist agents ready for incoming work"
   ],
   "goalProgress": [
@@ -25,7 +25,7 @@
     },
     {
       "goal": "Agent readiness",
-      "progress": "Main active; specialist agents standby with linkedin flagged for recent failure",
+      "progress": "Main is active; specialist agents are standby, with linkedin showing a recent failed session",
       "status": "watch"
     }
   ],
@@ -54,7 +54,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "No active job; recent slash session ended failed",
+      "task": "No active job; recent slash session failed",
       "pending": "Stabilize slash flow and await next lookup request"
     },
     {
