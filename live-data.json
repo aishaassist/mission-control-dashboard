@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T15:11:00Z",
+  "generatedAt": "2026-04-13T15:13:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,8 +13,8 @@
   },
   "priorities": [
     "Keep main (Aisha) responsive for active cron and chat sessions",
-    "Restore model routing stability for main session (spark model mismatch seen)",
-    "Unblock Notion integration access for contactenrichment workflow"
+    "Stabilize main model routing due to spark-model compatibility error",
+    "Prepare next enrichment runs for contactenrichment and linkedin"
   ],
   "goalProgress": [
     {
@@ -37,8 +37,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission-control operations and user-facing responses",
-      "task": "Running cron refresh and maintaining active sessions",
-      "pending": "Investigate spark model support mismatch in one running chat context"
+      "task": "Running cron refresh with another main session active",
+      "pending": "Resolve spark-model unsupported error in WhatsApp session"
     },
     {
       "name": "contactenrichment",
@@ -47,7 +47,7 @@
       "health": "warn",
       "goal": "Enrich school contact records in Notion",
       "task": "Last run completed with 99 rows processed",
-      "pending": "Awaiting/validating Notion integration access for next batch"
+      "pending": "Awaiting next batch trigger"
     },
     {
       "name": "linkedin",
@@ -55,8 +55,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Populate LinkedIn data for enrichment tasks",
-      "task": "No current run; last group run returned 0 rows updated",
-      "pending": "Needs fresh input batch or trigger"
+      "task": "No current run; latest group run updated 0 rows",
+      "pending": "Needs fresh task input"
     },
     {
       "name": "n8n",
