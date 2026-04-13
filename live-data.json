@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T23:47:00Z",
+  "generatedAt": "2026-04-13T23:49:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -40,7 +40,7 @@
       "health": "ok",
       "goal": "Coordinate operations and keep mission control current",
       "task": "Running mission-control live-data refresh cron",
-      "pending": "Fix WhatsApp spark-model compatibility issue"
+      "pending": "Resolve WhatsApp spark-model compatibility issue"
     },
     {
       "name": "contactenrichment",
@@ -48,16 +48,16 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contacts from official sources",
-      "task": "Last Notion pass finished with most unresolved fields as not_found",
-      "pending": "Await next batch and confirmed Notion access"
+      "task": "Latest Notion batch completed; most unresolved values marked not_found",
+      "pending": "Await next queue and verified Notion access"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Standby",
       "health": "warn",
-      "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run, latest group bot pass completed",
+      "goal": "Run LinkedIn lookup and profile enrichment",
+      "task": "No active run; latest group pass completed",
       "pending": "Await next lookup request"
     },
     {
@@ -65,18 +65,18 @@
       "displayName": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Build and deploy automation workflows",
+      "goal": "Build and deploy workflow automations",
       "task": "No active run detected",
-      "pending": "Await next automation request"
+      "pending": "Await next automation build request"
     },
     {
       "name": "flowise",
       "displayName": "flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise implementation support",
+      "goal": "Support Flowise implementation tasks",
       "task": "No active run detected",
-      "pending": "Await next Flowise build request"
+      "pending": "Await next Flowise request"
     }
   ]
 }
