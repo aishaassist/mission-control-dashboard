@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T15:19:00Z",
+  "generatedAt": "2026-04-13T15:21:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,24 +14,24 @@
   },
   "priorities": [
     "Keep main agent stable during cron operations",
-    "Resume contact/LinkedIn pipelines only on explicit intake",
-    "Monitor and reduce failed-session/model-compatibility errors"
+    "Resume contact and LinkedIn pipelines only on explicit intake",
+    "Monitor and reduce model-compatibility and failed-session errors"
   ],
   "goalProgress": [
     {
       "goal": "Mission control live dashboard freshness",
       "status": "on_track",
-      "note": "Runtime snapshot refreshed from sessions_list + subagents"
+      "note": "Runtime snapshot refreshed from sessions_list and subagents"
     },
     {
       "goal": "Contact enrichment pipeline",
       "status": "paused",
-      "note": "Last completed run: rows_processed=99, no new email/phone updates"
+      "note": "Last completed run processed 99 rows with no new email or phone updates"
     },
     {
       "goal": "LinkedIn enrichment workflow",
       "status": "standby",
-      "note": "No active run; last group execution reported 0 updates"
+      "note": "No active run; latest group execution completed with 0 updates"
     }
   ],
   "agents": [
@@ -57,9 +57,9 @@
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No current run; mixed recent history with prior failed slash session",
+      "task": "No current run; recent batch completed with 0 updates",
       "pending": "Awaiting next lookup instructions"
     },
     {
