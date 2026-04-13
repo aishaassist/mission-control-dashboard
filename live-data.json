@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T08:15:00Z",
+  "generatedAt": "2026-04-13T08:17:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -15,7 +15,7 @@
   "priorities": [
     "Keep mission-control snapshot aligned with current runtime sessions",
     "Maintain readiness for contact and LinkedIn enrichment queues",
-    "Keep n8n and flowise ready for next automation or build request"
+    "Keep n8n and flowise ready for the next automation or build request"
   ],
   "goalProgress": [
     {
@@ -55,7 +55,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last run completed successfully",
+      "task": "Last run completed; no current execution",
       "pending": "Await next enrichment queue"
     },
     {
@@ -64,7 +64,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Support LinkedIn lookup and enrichment",
-      "task": "Latest run completed; no active session",
+      "task": "Latest known run is complete; no current execution",
       "pending": "Await fresh lookup tasks"
     },
     {
