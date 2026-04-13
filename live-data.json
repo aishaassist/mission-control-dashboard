@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T13:15:00Z",
+  "generatedAt": "2026-04-13T13:17:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,19 +13,19 @@
     }
   },
   "priorities": [
-    "Keep main agent stable (one active cron run)",
-    "Unblock contactenrichment Notion integration access",
-    "Queue next actionable tasks for linkedin, n8n, and flowise"
+    "Keep main agent stable during active cron/runtime work",
+    "Unblock contactenrichment Notion integration to resume updates",
+    "Prepare next actionable workloads for linkedin, n8n, and flowise"
   ],
   "goalProgress": [
     {
       "goal": "Ops visibility",
-      "progress": "Live snapshot refreshed from runtime sessions",
+      "progress": "Runtime snapshot refreshed from current OpenClaw session state",
       "status": "on_track"
     },
     {
       "goal": "Contact enrichment pipeline",
-      "progress": "Last run processed 99 rows; many fields unresolved/not_found",
+      "progress": "Latest completed run processed 99 rows with many unresolved fields",
       "status": "needs_attention"
     }
   ],
@@ -35,44 +35,44 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Mission-control orchestration and runtime refresh",
-      "task": "Executing cron live-data refresh",
-      "pending": "Monitor active sessions and publish dashboard updates"
+      "goal": "Mission-control orchestration and live runtime monitoring",
+      "task": "Running cron live-data refresh",
+      "pending": "Publish fresh dashboard state and continue oversight"
     },
     {
       "name": "contactenrichment",
       "displayName": "Contact Enrichment",
       "status": "Idle",
       "health": "warn",
-      "goal": "Fill missing school email/phone fields from official sources",
-      "task": "Last completed run: 99 rows processed",
-      "pending": "Restore/verify Notion integration access to continue updates"
+      "goal": "Complete missing school email/phone enrichment from official sources",
+      "task": "Last run finished: 99 rows processed",
+      "pending": "Re-enable Notion integration/database access for next batch"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Standby",
       "health": "bad",
-      "goal": "LinkedIn lookup support for delegated research",
-      "task": "No active run; recent sessions include a failed slash session",
-      "pending": "Run next lookup batch and clear failed-session drift"
+      "goal": "Support delegated LinkedIn lookup requests",
+      "task": "No running session; recent history includes failed session",
+      "pending": "Start next lookup assignment and clear failed-session drift"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Automation workflow build/deploy support",
-      "task": "No active sessions in current window",
-      "pending": "Await next automation request and deployment scope"
+      "goal": "Automation workflow build and deployment support",
+      "task": "No currently running sessions",
+      "pending": "Await next automation brief"
     },
     {
       "name": "flowise",
       "displayName": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise build support",
-      "task": "No active sessions in current window",
+      "goal": "Flowise assistant/workflow implementation support",
+      "task": "No currently running sessions",
       "pending": "Await next build request"
     }
   ]
