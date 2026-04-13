@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T17:51:00Z",
+  "generatedAt": "2026-04-13T17:53:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -8,21 +8,21 @@
   },
   "priorities": [
     "Keep main (Aisha) focused on mission-control continuity",
-    "Stage next contact-ops batch for contactenrichment and linkedin",
+    "Queue next contact-ops batch for contactenrichment and linkedin",
     "Maintain n8n and flowise as on-demand automation capacity"
   ],
   "goalProgress": [
     {
       "goal": "Mission control uptime",
-      "progress": "Main (Aisha) is actively running the live refresh cron"
+      "progress": "Main (Aisha) is actively running the live dashboard refresh"
     },
     {
       "goal": "Contact operations",
-      "progress": "contactenrichment and linkedin are idle after prior completed runs; next intake pending"
+      "progress": "contactenrichment and linkedin are standby after prior completed runs; next intake pending"
     },
     {
       "goal": "Automation readiness",
-      "progress": "n8n and flowise remain standby-ready for execution"
+      "progress": "n8n and flowise are idle/standby and ready for new execution requests"
     }
   ],
   "agents": [
@@ -32,7 +32,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Orchestrate Kumar operations and mission control",
-      "task": "Running mission-control live-data refresh",
+      "task": "Running mission-control live-data refresh cron",
       "pending": "Continue orchestration and monitor incoming work"
     },
     {
