@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T15:49:00Z",
+  "generatedAt": "2026-04-13T15:51:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,25 +13,25 @@
     }
   },
   "priorities": [
-    "Keep main agent stable during cron operations",
-    "Resume enrichment pipelines only on explicit intake",
-    "Triage failed sessions before relaunching paused bots"
+    "Keep mission-control cron updates flowing without interrupting main operations",
+    "Resume contact enrichment only when a fresh Notion batch is assigned",
+    "Triage LinkedIn failed slash-session before next outreach run"
   ],
   "goalProgress": [
     {
       "goal": "Mission control live dashboard freshness",
       "status": "on_track",
-      "note": "Runtime snapshot refreshed from sessions_list and subagents"
+      "note": "Snapshot refreshed from current sessions and subagent state"
     },
     {
       "goal": "Contact enrichment pipeline",
       "status": "paused",
-      "note": "Last completed run processed 99 rows; awaiting next batch"
+      "note": "Last completed run processed 99 rows; waiting for next intake"
     },
     {
       "goal": "LinkedIn enrichment workflow",
       "status": "at_risk",
-      "note": "Idle now; failed slash session still needs triage"
+      "note": "No active run and a prior slash session remains failed"
     }
   ],
   "agents": [
@@ -50,17 +50,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school contacts from official sources",
-      "task": "Last run finished; 99 rows processed",
+      "task": "Latest run completed with 99 rows processed",
       "pending": "Awaiting next Notion batch"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; latest group run ended with 0 rows",
-      "pending": "Investigate prior failed slash session"
+      "task": "No active run; recent slash session failed",
+      "pending": "Failure triage before relaunch"
     },
     {
       "name": "n8n",
