@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T22:19:00Z",
+  "generatedAt": "2026-04-13T22:21:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -15,7 +15,7 @@
   "priorities": [
     "Keep main (Aisha) stable across cron and user-facing channels",
     "Keep specialist agents ready and activate only on fresh demand",
-    "Resolve LinkedIn session failure context before the next heavy lookup run"
+    "Resolve LinkedIn failure context before the next lookup run"
   ],
   "goalProgress": [
     {
@@ -31,23 +31,23 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control refreshes and primary user assistance",
-      "task": "Cron refresh and one user-facing main session are currently running",
-      "pending": "Monitor runtime/model stability and keep channels responsive"
+      "task": "Cron refresh is running and a user-facing main session is also active",
+      "pending": "Watch model/session stability and keep channels responsive"
     },
     {
       "name": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich missing school contacts from official sources",
-      "task": "No running session; last run completed with FINAL enrichment summary",
-      "pending": "Await next Notion-enabled enrichment batch"
+      "task": "No running session; last enrichment batch completed with final summary",
+      "pending": "Await next Notion-enabled enrichment request"
     },
     {
       "name": "linkedin",
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Handle LinkedIn lookup and profile enrichment tasks",
-      "task": "No running session; recent snapshot includes a failed slash session",
+      "task": "No running session; recent context includes a failed slash session",
       "pending": "Stabilize failure path before next lookup queue"
     },
     {
