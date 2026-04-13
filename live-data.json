@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T18:03:00Z",
+  "generatedAt": "2026-04-13T18:05:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -24,7 +24,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission-control refresh and oversight",
-      "task": "Cron-driven live dashboard refresh in progress",
+      "task": "Cron-driven live dashboard refresh is running",
       "pending": "Continue periodic state snapshots and publish updates"
     },
     {
@@ -32,9 +32,9 @@
       "displayName": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Fill missing school contact email/phone from official sources",
-      "task": "Last run processed rows and wrote not_found where unverifiable",
-      "pending": "Await next Notion-ready batch or new enrichment trigger"
+      "goal": "Fill missing school email/phone from official sources",
+      "task": "Last run completed row processing with not_found on unverifiable fields",
+      "pending": "Await next Notion-ready enrichment batch"
     },
     {
       "name": "linkedin",
@@ -42,8 +42,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment support",
-      "task": "No active run; last activity completed with zero processed in latest group run",
-      "pending": "Await fresh lookup list/input to execute"
+      "task": "No active run; latest group run completed with zero processed",
+      "pending": "Await fresh lookup input list"
     },
     {
       "name": "n8n",
