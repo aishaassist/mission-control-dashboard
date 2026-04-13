@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T04:55:00Z",
+  "generatedAt": "2026-04-13T04:57:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -25,7 +25,7 @@
     },
     {
       "goal": "Agent readiness",
-      "progress": "Main active; specialist agents are on standby for incoming work",
+      "progress": "Main active; specialist agents standby with linkedin flagged for recent failure",
       "status": "watch"
     }
   ],
@@ -45,17 +45,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich contact records from official sources",
-      "task": "Last run completed 99-row contact enrichment batch",
+      "task": "Last run completed a 99-row contact enrichment batch",
       "pending": "Await next Notion enrichment batch"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "No active job; last known job finished in contact-ops thread",
-      "pending": "Await next lookup request"
+      "task": "No active job; recent slash session ended failed",
+      "pending": "Stabilize slash flow and await next lookup request"
     },
     {
       "name": "n8n",
