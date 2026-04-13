@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T00:35:00Z",
+  "generatedAt": "2026-04-13T00:37:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -25,12 +25,12 @@
     },
     {
       "agent": "contactenrichment",
-      "progress": "Last run completed contact enrichment batch",
+      "progress": "Last batch completed with contact enrichment output",
       "pending": "Await next Notion/contact ops assignment"
     },
     {
       "agent": "linkedin",
-      "progress": "LinkedIn bot available, no active processing",
+      "progress": "No active LinkedIn processing",
       "pending": "Await next lookup batch"
     },
     {
@@ -60,16 +60,16 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Maintain contact data completeness",
-      "task": "Last known: processed enrichment rows and finalized batch output",
+      "task": "Last known: enrichment batch processed and finalized",
       "pending": "Await next data enrichment trigger"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Support LinkedIn lookups and profile mapping",
-      "task": "Last known: no active rows processed in latest group command",
+      "task": "Last known: standby, prior slash session failed",
       "pending": "Await new lookup list"
     },
     {
