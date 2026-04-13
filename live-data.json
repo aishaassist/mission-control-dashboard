@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-13T22:49:00Z",
+  "generatedAt": "2026-04-13T22:51:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main (Aisha) stable while cron refresh runs",
-    "Restore/verify spark model routing for main WhatsApp session failures",
+    "Restore and verify spark model routing for main WhatsApp session failures",
     "Unblock contactenrichment Notion access before next email/phone pass"
   ],
   "goalProgress": [
@@ -24,14 +24,14 @@
       "health": "ok",
       "goal": "Core assistant and mission-control orchestration",
       "task": "Cron refresh session is running; primary channels remain online",
-      "pending": "Continue periodic refresh and watch for model configuration errors"
+      "pending": "Continue periodic refresh and monitor model configuration errors"
     },
     {
       "name": "contactenrichment",
       "label": "contactenrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school Email/Phone fields",
+      "goal": "Fill missing school Email and Phone fields",
       "task": "Latest run completed with final contact update summary",
       "pending": "Await Notion integration token and database share before next pass"
     },
@@ -41,8 +41,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "LinkedIn profile enrichment support",
-      "task": "No currently running session; latest visible executions are completed",
-      "pending": "Await next lookup batch; monitor for renewed slash-session failures"
+      "task": "No currently running session; latest executions are completed",
+      "pending": "Await next lookup batch; keep watch on prior slash-session failures"
     },
     {
       "name": "n8n",
@@ -51,7 +51,7 @@
       "health": "warn",
       "goal": "Automation workflow deployment",
       "task": "No running session in current snapshot",
-      "pending": "Await next automation build/deploy trigger"
+      "pending": "Await next automation build or deploy trigger"
     },
     {
       "name": "flowise",
