@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-04-13T21:07:00Z",
+  "generatedAt": "2026-04-13T21:09:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
-      "fetchedAt": "2026-04-13T21:07:00Z",
+      "fetchedAt": "2026-04-13T21:09:00Z",
       "count": 12
     },
     "subagents": {
       "action": "list",
       "recentMinutes": 1440,
-      "fetchedAt": "2026-04-13T21:07:00Z",
+      "fetchedAt": "2026-04-13T21:09:00Z",
       "active": 0,
       "recent": 0
     }
@@ -59,8 +59,8 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Support LinkedIn lookup and profile enrichment tasks",
-      "task": "No running session; recent history includes a failed session",
-      "pending": "Stabilize session path and await next LinkedIn batch"
+      "task": "No running session; last active work is complete, with one failed session in history",
+      "pending": "Verify stability and await the next LinkedIn batch"
     },
     {
       "name": "n8n",
