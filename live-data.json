@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T23:45:00Z",
+  "generatedAt": "2026-04-13T23:47:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -12,24 +12,24 @@
       "status": "on-track"
     },
     {
-      "name": "Resume contact enrichment when data queue arrives",
+      "name": "Resume contact enrichment when new queue arrives",
       "status": "queued"
     },
     {
-      "name": "Maintain specialist agent readiness",
+      "name": "Keep specialist agents ready for dispatch",
       "status": "watch"
     }
   ],
   "goalProgress": [
     {
       "goal": "Mission control visibility",
-      "progress": 0.97,
-      "note": "Live telemetry refreshed from current runtime sessions"
+      "progress": 0.98,
+      "note": "Live runtime snapshot refreshed"
     },
     {
       "goal": "Agent utilization",
-      "progress": 0.44,
-      "note": "Main active; specialist agents on standby"
+      "progress": 0.45,
+      "note": "Main active, specialists on standby"
     }
   ],
   "agents": [
@@ -40,7 +40,7 @@
       "health": "ok",
       "goal": "Coordinate operations and keep mission control current",
       "task": "Running mission-control live-data refresh cron",
-      "pending": "Resolve WhatsApp spark-model compatibility error"
+      "pending": "Fix WhatsApp spark-model compatibility issue"
     },
     {
       "name": "contactenrichment",
@@ -48,8 +48,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contacts from official sources",
-      "task": "Last Notion pass completed; most unresolved values marked not_found",
-      "pending": "Await next batch and verified integration access"
+      "task": "Last Notion pass finished with most unresolved fields as not_found",
+      "pending": "Await next batch and confirmed Notion access"
     },
     {
       "name": "linkedin",
@@ -57,7 +57,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; latest bot run completed with zero rows processed",
+      "task": "No active run, latest group bot pass completed",
       "pending": "Await next lookup request"
     },
     {
@@ -66,8 +66,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Build and deploy automation workflows",
-      "task": "No current run detected",
-      "pending": "Await next automation deployment request"
+      "task": "No active run detected",
+      "pending": "Await next automation request"
     },
     {
       "name": "flowise",
@@ -75,7 +75,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Flowise implementation support",
-      "task": "No current run detected",
+      "task": "No active run detected",
       "pending": "Await next Flowise build request"
     }
   ]
