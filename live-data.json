@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T22:05:00Z",
+  "generatedAt": "2026-04-13T22:07:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -15,7 +15,7 @@
   "priorities": [
     "Keep main agent stable during active cron and chat workloads",
     "Re-engage specialist agents only when new queues arrive",
-    "Watch recent runtime/model failures and recover quickly"
+    "Investigate recent failed sessions and model/runtime mismatches"
   ],
   "goalProgress": [
     {
@@ -31,8 +31,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control and user-facing channels",
-      "task": "Running cron refresh with another active main session",
-      "pending": "Continue request routing and monitor runtime stability"
+      "task": "Running cron refresh with another main session marked running",
+      "pending": "Monitor model mismatch errors while handling active workloads"
     },
     {
       "name": "contactenrichment",
@@ -45,10 +45,10 @@
     {
       "name": "linkedin",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "No running session; latest completed run processed 0 rows",
-      "pending": "Await next LinkedIn lookup queue"
+      "task": "No running session; recent history includes failed slash session",
+      "pending": "Stabilize slash runtime then resume lookup queue"
     },
     {
       "name": "n8n",
