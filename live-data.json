@@ -1,63 +1,70 @@
 {
-  "generatedAt": "2026-04-13T21:55:00Z",
+  "generatedAt": "2026-04-13T21:59:00Z",
   "source": {
-    "sessions": "sessions_list(limit=50,messageLimit=1)",
-    "subagents": "subagents(action=list,recentMinutes=1440)"
+    "sessionsList": {
+      "limit": 50,
+      "messageLimit": 1,
+      "count": 12
+    },
+    "subagents": {
+      "recentMinutes": 1440,
+      "active": 0,
+      "recent": 0
+    }
   },
   "priorities": [
-    "Keep mission-control snapshot fresh from runtime session state",
-    "Unblock Contact Enrichment Notion access to resume row updates",
-    "Stabilize LinkedIn agent run quality after recent failed session"
+    "Keep main agent stable during active cron and chat sessions",
+    "Re-activate specialist agents based on pending task queue",
+    "Track model/support errors in non-main sessions"
   ],
-  "goalProgress": {
-    "overall": "Monitoring mode",
-    "notes": "Main agent active; specialist agents are in standby with no active subagent workers."
-  },
+  "goalProgress": [
+    {
+      "name": "Mission control live runtime visibility",
+      "status": "on-track",
+      "note": "Snapshot refreshed from current session and subagent state"
+    }
+  ],
   "agents": [
     {
       "name": "main",
-      "displayName": "Aisha",
+      "alias": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission control across channels and specialist agents",
-      "task": "Running cron refresh: mission-control-live-data-refresh",
-      "pending": "Continue periodic runtime snapshot updates"
+      "goal": "Coordinate mission-control automation and user channels",
+      "task": "Running cron refresh and active WhatsApp session",
+      "pending": "Monitor for new delegations and route specialist work"
     },
     {
       "name": "contactenrichment",
-      "displayName": "Contact Enrichment",
-      "status": "Standby",
+      "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contact records with verified email and phone data",
-      "task": "Last run completed enrichment summary output",
-      "pending": "Verify Notion integration access, then resume row updates"
+      "goal": "Fill missing school contact fields from official sources",
+      "task": "Last run completed with FINAL summary output",
+      "pending": "Await next Notion-connected enrichment batch"
     },
     {
       "name": "linkedin",
-      "displayName": "LinkedIn",
-      "status": "Standby",
-      "health": "bad",
-      "goal": "Find and update LinkedIn profile data for contact ops",
-      "task": "Recent run returned 0-row update; one recent session failed",
-      "pending": "Recover run stability and resume LinkedIn updates"
+      "status": "Idle/Standby",
+      "health": "warn",
+      "goal": "LinkedIn lookup and profile enrichment support",
+      "task": "No running session; last group run returned 0 processed",
+      "pending": "Await new LinkedIn lookup queue"
     },
     {
       "name": "n8n",
-      "displayName": "n8n",
-      "status": "Standby",
+      "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Build and deploy automation workflows",
-      "task": "No current running session",
-      "pending": "Await next automation build request"
+      "goal": "Build/deploy workflow automations",
+      "task": "No active session detected",
+      "pending": "Await automation build or API workflow request"
     },
     {
       "name": "flowise",
-      "displayName": "Flowise",
-      "status": "Standby",
+      "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Support Flowise builds and troubleshooting",
-      "task": "No current running session",
-      "pending": "Await next Flowise task"
+      "goal": "Flowise bot/build support",
+      "task": "No active session detected",
+      "pending": "Await next chatbot/flow build request"
     }
   ]
 }
