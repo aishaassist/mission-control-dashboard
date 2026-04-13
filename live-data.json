@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T19:51:00Z",
+  "generatedAt": "2026-04-13T19:53:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -10,9 +10,9 @@
     "Queue scoped work for linkedin, n8n, and flowise to keep specialist throughput active"
   ],
   "goalProgress": {
-    "operations": "Main is active and currently executing mission-control live-data refresh",
+    "operations": "Main is active and executing mission-control live-data refresh",
     "automation": "No active or recent subagents in the last 24 hours",
-    "dataPipelines": "Contact enrichment is on standby until Notion integration access is restored"
+    "dataPipelines": "Contact enrichment is on standby pending Notion integration access"
   },
   "agents": [
     {
@@ -30,7 +30,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contacts in Notion",
-      "task": "Last run finished; no active session",
+      "task": "No active session; last runs completed",
       "pending": "Await valid NOTION_API_KEY and shared database integration"
     },
     {
@@ -39,8 +39,8 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "LinkedIn lookup support",
-      "task": "No active run; recent history includes a failed slash session",
-      "pending": "Stabilize session path and wait for next lookup batch"
+      "task": "No active run; recent history includes a failed session",
+      "pending": "Stabilize failed path and wait for next lookup batch"
     },
     {
       "name": "n8n",
