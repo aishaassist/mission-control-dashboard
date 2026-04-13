@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T13:45:00Z",
+  "generatedAt": "2026-04-13T13:47:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -7,19 +7,19 @@
     "activeSubagents": 0
   },
   "priorities": [
-    "Keep Aisha main sessions stable while cron refreshes dashboard state",
-    "Restore contactenrichment Notion access before the next enrichment run",
-    "Clear linkedin slash-session failure path before next intake"
+    "Keep main agent stable while cron refreshes mission-control snapshot",
+    "Reconnect contactenrichment Notion integration before next enrichment run",
+    "Resolve linkedin failed slash-session path before next intake"
   ],
   "goalProgress": [
     {
       "goal": "Mission-control visibility",
-      "progress": "Live runtime snapshot refreshed from current sessions and subagent state",
+      "progress": "Live runtime state refreshed from active sessions and subagent list",
       "health": "ok"
     },
     {
       "goal": "Specialist readiness",
-      "progress": "Specialist agents are on standby; linkedin still carries a recent failed session",
+      "progress": "Specialists are mostly standby; linkedin has a recent failed path to clear",
       "health": "warn"
     }
   ],
@@ -30,8 +30,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Mission-control orchestration",
-      "task": "Running cron-driven live dashboard refresh",
-      "pending": "Resolve unsupported spark-model path in WhatsApp session"
+      "task": "Running live-data refresh cron session",
+      "pending": "Triage unsupported spark-model error seen in WhatsApp session"
     },
     {
       "name": "contactenrichment",
@@ -39,8 +39,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "School contact enrichment",
-      "task": "Idle after latest run completed",
-      "pending": "Await Notion token and integration share verification"
+      "task": "Idle after latest enrichment run completed",
+      "pending": "Await valid Notion API token and integration share access"
     },
     {
       "name": "linkedin",
@@ -48,8 +48,8 @@
       "status": "Standby",
       "health": "bad",
       "goal": "LinkedIn profile lookup support",
-      "task": "No active run; last burst finished with zero processed rows",
-      "pending": "Fix recent failed slash-session route before next request"
+      "task": "Idle; latest group run finished with zero processed rows",
+      "pending": "Fix failed slash-session route before next request"
     },
     {
       "name": "n8n",
@@ -67,7 +67,7 @@
       "health": "warn",
       "goal": "Flowise build and support",
       "task": "Idle",
-      "pending": "Await next Flowise task"
+      "pending": "Await next Flowise implementation request"
     }
   ]
 }
