@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-04-13T20:59:00Z",
+  "generatedAt": "2026-04-13T21:01:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
-      "fetchedAt": "2026-04-13T20:59:00Z",
+      "fetchedAt": "2026-04-13T21:01:00Z",
       "count": 12
     },
     "subagents": {
       "action": "list",
       "recentMinutes": 1440,
-      "fetchedAt": "2026-04-13T20:59:00Z",
+      "fetchedAt": "2026-04-13T21:01:00Z",
       "active": 0,
       "recent": 0
     }
   },
   "priorities": [
     "Keep mission-control cron healthy and publishing fresh runtime snapshots",
-    "Unblock Notion integration access for contactenrichment to resume contact updates",
-    "Queue the next LinkedIn enrichment batch once new source rows arrive"
+    "Restore Notion integration access so contactenrichment can resume verified contact updates",
+    "Keep linkedin, n8n, and flowise ready for next queued operations"
   ],
   "goalProgress": [
     {
       "goal": "Mission-control visibility",
-      "progress": "Runtime snapshot refreshed from current session and subagent state"
+      "progress": "Runtime snapshot refreshed from current OpenClaw sessions and subagent state"
     },
     {
-      "goal": "Contact enrichment execution",
-      "progress": "Last completed run processed 99 rows with no verified email or phone additions"
+      "goal": "Contact enrichment throughput",
+      "progress": "Most recent contactenrichment run completed 99 rows with no verified email/phone additions"
     },
     {
       "goal": "Specialist readiness",
-      "progress": "linkedin, n8n, and flowise are on standby for new work"
+      "progress": "linkedin, n8n, and flowise remain on standby with no active runs"
     }
   ],
   "agents": [
@@ -41,17 +41,17 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control and orchestrate assistant operations",
-      "task": "mission-control-live-data-refresh cron is currently running",
-      "pending": "Continue periodic refresh and monitor specialist activation"
+      "task": "mission-control-live-data-refresh cron session is currently running",
+      "pending": "Continue periodic live-data refresh and monitor specialist activation"
     },
     {
       "name": "contactenrichment",
       "displayName": "contactenrichment",
       "status": "Idle",
       "health": "warn",
-      "goal": "Fill missing school contact fields from verified official sources",
-      "task": "Last run completed with 99 rows processed, 0 email updates, 0 phone updates",
-      "pending": "Restore Notion integration/share access, then resume row updates"
+      "goal": "Fill missing contact data from verified official school sources",
+      "task": "Latest run: 99 rows processed, 0 email updates, 0 phone updates",
+      "pending": "Re-enable Notion integration/database sharing and resume row updates"
     },
     {
       "name": "linkedin",
@@ -59,8 +59,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Handle LinkedIn lookup and enrichment support",
-      "task": "No running session; latest run reported 0 rows processed",
-      "pending": "Await next lookup or enrichment request"
+      "task": "No running session; latest completed run reported 0 rows processed",
+      "pending": "Await next LinkedIn lookup or enrichment batch"
     },
     {
       "name": "n8n",
