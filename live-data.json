@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T18:47:00Z",
+  "generatedAt": "2026-04-13T18:49:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -12,7 +12,7 @@
   "goalProgress": {
     "overall": "Monitoring",
     "highlights": [
-      "Aisha (main) is active in current cron refresh",
+      "Aisha (main) is active in the current cron refresh",
       "No active subagents detected in the last 24h",
       "Specialist agents are idle and awaiting next tasks"
     ]
