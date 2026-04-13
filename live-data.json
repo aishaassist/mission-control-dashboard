@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T23:53:00Z",
+  "generatedAt": "2026-04-13T23:57:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -23,12 +23,12 @@
   "goalProgress": [
     {
       "goal": "Mission control visibility",
-      "progress": 0.98,
+      "progress": 0.99,
       "note": "Live runtime snapshot refreshed"
     },
     {
       "goal": "Agent utilization",
-      "progress": 0.45,
+      "progress": 0.44,
       "note": "Main active, specialists on standby"
     }
   ],
@@ -40,7 +40,7 @@
       "health": "ok",
       "goal": "Coordinate operations and keep mission control current",
       "task": "Running mission-control live-data refresh cron",
-      "pending": "Resolve WhatsApp spark-model compatibility issue"
+      "pending": "Fix WhatsApp spark-model compatibility issue"
     },
     {
       "name": "contactenrichment",
@@ -48,7 +48,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contacts from official sources",
-      "task": "Last Notion batch finished with high not_found count",
+      "task": "Last Notion batch completed (99 rows processed)",
       "pending": "Await next queue and verified Notion access"
     },
     {
@@ -57,7 +57,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup and profile enrichment",
-      "task": "No active run; latest group pass completed",
+      "task": "No active run; last group pass returned zero updates",
       "pending": "Await next lookup request"
     },
     {
