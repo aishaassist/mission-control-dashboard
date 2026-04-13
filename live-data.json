@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T05:55:00+05:30",
+  "generatedAt": "2026-04-13T05:57:00+05:30",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -30,17 +30,17 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich contact records from Notion queue",
-      "task": "Last known batch completed (rows_processed=99)",
+      "task": "Last batch finished (rows_processed=99)",
       "pending": "Waiting for next enrichment rows"
     },
     {
       "name": "linkedin",
       "label": "linkedin",
       "status": "Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "LinkedIn lookup and profile updates",
-      "task": "No active run; recent known session includes failure",
-      "pending": "Stabilize next lookup run when queue resumes"
+      "task": "Last bot run completed with zero rows",
+      "pending": "Await next lookup queue"
     },
     {
       "name": "n8n",
@@ -48,7 +48,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Deploy and run automation workflows",
-      "task": "No active session",
+      "task": "No active automation run",
       "pending": "Await automation execution request"
     },
     {
