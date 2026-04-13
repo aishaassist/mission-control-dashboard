@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T22:01:00Z",
+  "generatedAt": "2026-04-13T22:03:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -15,7 +15,7 @@
   "priorities": [
     "Keep main agent stable during active cron/chat workloads",
     "Re-engage specialist agents only when new queue arrives",
-    "Track model/support errors surfaced in session history"
+    "Watch for model/runtime errors in recent session history"
   ],
   "goalProgress": [
     {
@@ -32,22 +32,22 @@
       "health": "ok",
       "goal": "Coordinate mission control and user-facing channels",
       "task": "Running cron refresh with another active main session",
-      "pending": "Route incoming requests and monitor runtime stability"
+      "pending": "Continue routing requests and monitor runtime stability"
     },
     {
       "name": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school contacts from official sources",
-      "task": "Last run completed with FINAL contact enrichment summary",
-      "pending": "Await next Notion-enabled enrichment batch"
+      "task": "Last known run completed with FINAL enrichment summary",
+      "pending": "Await next Notion-enabled contact enrichment batch"
     },
     {
       "name": "linkedin",
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "No running session; latest task run reported 0 processed",
+      "task": "No running session; latest run reported 0 rows processed",
       "pending": "Await next LinkedIn lookup queue"
     },
     {
@@ -56,15 +56,15 @@
       "health": "warn",
       "goal": "Build and deploy automation workflows",
       "task": "No currently running n8n agent session",
-      "pending": "Await workflow build/deploy requests"
+      "pending": "Await workflow build or deploy requests"
     },
     {
       "name": "flowise",
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise bot and flow development",
-      "task": "No currently running flowise session",
-      "pending": "Await next chatbot/flow implementation request"
+      "task": "No currently running flowise agent session",
+      "pending": "Await next chatbot or flow implementation request"
     }
   ]
 }
