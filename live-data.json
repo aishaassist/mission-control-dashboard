@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T03:43:00Z",
+  "generatedAt": "2026-04-13T03:45:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -15,12 +15,12 @@
   "priorities": [
     "Keep mission-control visibility current across core agents",
     "Maintain readiness for contact and LinkedIn enrichment bursts",
-    "Queue automation work when n8n and Flowise requests arrive"
+    "Queue automation work quickly when n8n or Flowise requests arrive"
   ],
   "goalProgress": {
     "operations": "Main cron orchestration is active; no subagents running",
-    "contactPipeline": "Last contact run processed 99 rows; waiting for next batch",
-    "automation": "n8n and Flowise remain on standby with no active sessions"
+    "contactPipeline": "Last contact run processed 99 rows; awaiting next batch",
+    "automation": "n8n and Flowise are on standby with no active sessions"
   },
   "agents": [
     {
@@ -30,7 +30,7 @@
       "health": "ok",
       "goal": "Coordinate mission control and specialist execution",
       "task": "Live-data refresh cron is currently running",
-      "pending": "Continue periodic refresh and trigger specialists on demand"
+      "pending": "Continue periodic refresh and dispatch specialists on demand"
     },
     {
       "name": "contactenrichment",
@@ -47,7 +47,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment batches",
-      "task": "Latest group run processed 0 rows; prior slash session failed",
+      "task": "Latest group run processed 0 rows; recent slash session failed",
       "pending": "Await next payload and validate run stability"
     },
     {
