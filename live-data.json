@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-04-13T19:37:00Z",
+  "generatedAt": "2026-04-13T19:39:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main orchestration stable and responsive",
-    "Unblock Notion integration access for contactenrichment runs",
-    "Queue fresh execution tasks for linkedin, n8n, and flowise"
+    "Keep Aisha main session stable while cron orchestration is active",
+    "Restore Notion access for contactenrichment to reduce not_found outcomes",
+    "Prepare fresh workload for linkedin, n8n, and flowise specialist queues"
   ],
   "goalProgress": {
-    "operations": "Main is active; specialist agents are currently on standby",
+    "operations": "Main is actively running mission-control refresh; specialists are on standby",
     "automation": "No active or recent subagents in the last 24h",
-    "dataPipelines": "Contact enrichment remains blocked on Notion integration access"
+    "dataPipelines": "Contact enrichment pipeline is blocked by Notion integration/token prerequisites"
   },
   "agents": [
     {
@@ -20,9 +20,9 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Mission control orchestration and platform responsiveness",
-      "task": "Running cron live-data refresh and handling active channels",
-      "pending": "Continue monitoring sessions and dispatch specialist work"
+      "goal": "Mission-control orchestration and channel responsiveness",
+      "task": "Executing cron live-data refresh and supervising runtime sessions",
+      "pending": "Continue monitoring and dispatch specialist tasks as work arrives"
     },
     {
       "name": "contactenrichment",
@@ -30,8 +30,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records in Notion",
-      "task": "Last run completed with high not_found outcomes",
-      "pending": "Await valid NOTION_API_KEY and integration share to target database"
+      "task": "Last completed run processed rows but returned many not_found values",
+      "pending": "Await valid NOTION_API_KEY and integration share on the target Notion database"
     },
     {
       "name": "linkedin",
@@ -39,7 +39,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn profile lookup and enrichment support",
-      "task": "No running session; last execution reported zero rows processed",
+      "task": "No running session; latest run finished with zero rows processed",
       "pending": "Await next lookup batch from operations"
     },
     {
@@ -49,7 +49,7 @@
       "health": "warn",
       "goal": "Automation workflow build and deployment",
       "task": "No running session currently",
-      "pending": "Await new workflow implementation requests"
+      "pending": "Await workflow implementation requests"
     },
     {
       "name": "flowise",
