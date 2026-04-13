@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-04-13T22:47:00Z",
+  "generatedAt": "2026-04-13T22:49:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main (Aisha) stable while cron refresh runs",
-    "Unblock contactenrichment Notion access before next email/phone pass",
-    "Queue next linkedin enrichment batch when new lookup tasks arrive"
+    "Restore/verify spark model routing for main WhatsApp session failures",
+    "Unblock contactenrichment Notion access before next email/phone pass"
   ],
   "goalProgress": [
     {
       "goal": "Mission control runtime visibility",
       "status": "on_track",
-      "progress": "Live snapshot refreshed from current OpenClaw session and subagent state"
+      "progress": "Live dashboard snapshot refreshed from active OpenClaw sessions and subagent state"
     }
   ],
   "agents": [
@@ -22,9 +22,9 @@
       "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Core assistant and cron orchestration",
-      "task": "mission-control-live-data-refresh is currently running",
-      "pending": "Continue periodic dashboard refresh and oversight"
+      "goal": "Core assistant and mission-control orchestration",
+      "task": "Cron refresh session is running; primary channels remain online",
+      "pending": "Continue periodic refresh and watch for model configuration errors"
     },
     {
       "name": "contactenrichment",
@@ -32,8 +32,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school Email/Phone fields",
-      "task": "Last run completed with final contact update summary",
-      "pending": "Await Notion integration token and DB share to resume enrichment"
+      "task": "Latest run completed with final contact update summary",
+      "pending": "Await Notion integration token and database share before next pass"
     },
     {
       "name": "linkedin",
@@ -41,8 +41,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "LinkedIn profile enrichment support",
-      "task": "No active session; latest visible run finished without updates",
-      "pending": "Await next lookup batch; monitor prior slash-session failure recurrence"
+      "task": "No currently running session; latest visible executions are completed",
+      "pending": "Await next lookup batch; monitor for renewed slash-session failures"
     },
     {
       "name": "n8n",
@@ -50,7 +50,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Automation workflow deployment",
-      "task": "No active session in current snapshot",
+      "task": "No running session in current snapshot",
       "pending": "Await next automation build/deploy trigger"
     },
     {
@@ -59,7 +59,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Flowise build and maintenance",
-      "task": "No active session in current snapshot",
+      "task": "No running session in current snapshot",
       "pending": "Await next Flowise task"
     }
   ]
