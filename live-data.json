@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T00:47:00Z",
+  "generatedAt": "2026-04-13T00:49:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -13,19 +13,19 @@
     }
   },
   "priorities": [
-    "Keep main (Aisha) stable during active cron refresh runs",
-    "Resume contactenrichment when new enrichment rows are queued",
-    "Keep linkedin, n8n, and flowise ready for next tasks"
+    "Keep main (Aisha) stable while cron refresh is running",
+    "Resume contactenrichment when new rows are queued",
+    "Keep linkedin, n8n, and flowise ready for incoming tasks"
   ],
   "goalProgress": [
     {
       "agent": "main",
-      "progress": "Cron refresh is actively running",
+      "progress": "Cron refresh is running now",
       "pending": "Write, commit, and push live-data.json if changed"
     },
     {
       "agent": "contactenrichment",
-      "progress": "Last batch completed (rows_processed=99)",
+      "progress": "Last enrichment batch completed (rows_processed=99)",
       "pending": "Await next enrichment trigger"
     },
     {
@@ -36,7 +36,7 @@
     {
       "agent": "n8n",
       "progress": "No active automation run",
-      "pending": "Await workflow build or deploy request"
+      "pending": "Await workflow build/deploy request"
     },
     {
       "agent": "flowise",
@@ -60,7 +60,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Maintain contact data completeness",
-      "task": "No active run; last enrichment batch completed",
+      "task": "No active run; latest batch completed",
       "pending": "Await next enrichment batch"
     },
     {
@@ -69,7 +69,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Support LinkedIn lookup requests",
-      "task": "No active run; recent group run completed",
+      "task": "No active run; latest group execution completed",
       "pending": "Await fresh lookup list"
     },
     {
