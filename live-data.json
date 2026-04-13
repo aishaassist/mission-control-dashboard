@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T02:03:00Z",
+  "generatedAt": "2026-04-13T02:05:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -18,11 +18,12 @@
     "Hold LinkedIn, n8n, and Flowise ready for next assigned tasks"
   ],
   "goalProgress": {
-    "overall": "Main active, specialist agents on standby",
+    "overall": "Main active, specialists mostly on standby",
     "notes": [
-      "Main is running mission-control-live-data-refresh",
+      "Main is currently running mission-control-live-data-refresh",
       "Contact enrichment last run completed with FINAL counters",
-      "LinkedIn, n8n, and Flowise are awaiting fresh workload"
+      "LinkedIn has no active run and last known timeline includes a failed slash session",
+      "n8n and Flowise are idle and ready for new assignments"
     ]
   },
   "agents": [
@@ -48,10 +49,10 @@
       "name": "linkedin",
       "label": "linkedin",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Handle LinkedIn lookup and profile enrichment tasks",
-      "task": "No current running session; latest work is complete",
-      "pending": "Await new LinkedIn search assignments"
+      "task": "No active run; latest recent work is complete with an older failed slash session in history",
+      "pending": "Await new LinkedIn lookup assignments"
     },
     {
       "name": "n8n",
@@ -69,7 +70,7 @@
       "health": "warn",
       "goal": "Support Flowise build and troubleshooting tasks",
       "task": "No current running session",
-      "pending": "Await next flow build/debug request"
+      "pending": "Await next flow build or debug request"
     }
   ]
 }
