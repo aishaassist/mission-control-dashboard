@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T07:11:00Z",
+  "generatedAt": "2026-04-13T07:13:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -26,7 +26,7 @@
     {
       "goal": "Agent execution continuity",
       "status": "mixed",
-      "progress": "Aisha active; specialist agents are currently on standby"
+      "progress": "Aisha active; specialist agents remain on standby"
     }
   ],
   "agents": [
@@ -45,7 +45,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last batch completed with not_found-heavy output",
+      "task": "Last batch completed; output was not_found-heavy",
       "pending": "Await next enrichment queue or source-access update"
     },
     {
@@ -54,7 +54,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; last group run reported zero rows",
+      "task": "No active run; latest group run finished with zero rows",
       "pending": "Await next LinkedIn lookup batch"
     },
     {
@@ -64,7 +64,7 @@
       "health": "warn",
       "goal": "Automation workflow execution and deployment",
       "task": "No active automation session",
-      "pending": "Await new automation build/deploy requests"
+      "pending": "Await new automation build or deploy requests"
     },
     {
       "name": "flowise",
