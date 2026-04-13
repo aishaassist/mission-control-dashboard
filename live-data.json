@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T17:33:00Z",
+  "generatedAt": "2026-04-13T17:35:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -18,7 +18,7 @@
     },
     {
       "goal": "Contact operations",
-      "progress": "Contactenrichment and linkedin are standby after recent completed runs"
+      "progress": "Contactenrichment and linkedin are in standby after recent completed runs"
     },
     {
       "goal": "Automation readiness",
@@ -32,7 +32,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Orchestrate Kumar operations and mission control",
-      "task": "Cron live-data refresh is running",
+      "task": "Cron live-data refresh run is active",
       "pending": "Continue orchestration and monitor specialist queues"
     },
     {
