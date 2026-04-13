@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T02:53:00Z",
+  "generatedAt": "2026-04-13T02:55:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,24 +13,24 @@
   },
   "priorities": [
     "Keep main (Aisha) stable while cron refresh is running",
-    "Keep contactenrichment ready for the next Notion-backed enrichment batch",
-    "Maintain linkedin, n8n, and flowise in standby for on-demand execution"
+    "Keep contactenrichment prepared for the next Notion-backed contact batch",
+    "Maintain linkedin, n8n, and flowise in standby for on-demand work"
   ],
   "goalProgress": [
     {
       "goal": "Mission control observability",
       "status": "On track",
-      "progress": "Live runtime snapshot refreshed from sessions and subagent state"
+      "progress": "Runtime snapshot refreshed from sessions_list and subagents"
     },
     {
       "goal": "Contact enrichment continuity",
       "status": "Standby",
-      "progress": "No active contactenrichment session; last run completed"
+      "progress": "No active contactenrichment run; latest batch previously completed"
     },
     {
       "goal": "Auxiliary agent readiness",
       "status": "Standby",
-      "progress": "linkedin, n8n, and flowise are idle and ready"
+      "progress": "linkedin, n8n, and flowise are idle and available"
     }
   ],
   "agents": [
@@ -39,27 +39,27 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission control and runtime operations",
+      "goal": "Coordinate mission control and orchestrate agent operations",
       "task": "Running mission-control-live-data-refresh cron",
-      "pending": "Continue scheduled live-data refresh cycles"
+      "pending": "Continue scheduled dashboard refresh cycles"
     },
     {
       "name": "contactenrichment",
       "displayName": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school contacts from official sources",
+      "goal": "Fill missing school email and phone data from official sources",
       "task": "No current running session",
-      "pending": "Await next enrichment queue"
+      "pending": "Await next Notion enrichment queue"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Standby",
       "health": "warn",
-      "goal": "Provide LinkedIn lookup and profile enrichment support",
+      "goal": "Provide LinkedIn profile lookup and enrichment support",
       "task": "No current running session",
-      "pending": "Run next lookup batch on request"
+      "pending": "Await next lookup request"
     },
     {
       "name": "n8n",
@@ -75,9 +75,9 @@
       "displayName": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Support flow design and bot tooling tasks",
+      "goal": "Support flow design and bot tooling",
       "task": "No current running session",
-      "pending": "Await next build/debug request"
+      "pending": "Await next flow build or debug request"
     }
   ]
 }
