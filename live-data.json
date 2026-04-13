@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-13T06:01:00+05:30",
+  "generatedAt": "2026-04-13T06:03:00+05:30",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main orchestration responsive",
-    "Clear new enrichment or LinkedIn queues quickly",
+    "Clear enrichment and LinkedIn queues quickly",
     "Route repetitive operations through n8n"
   ],
   "goalProgress": {
@@ -21,8 +21,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Mission-control orchestration",
-      "task": "Cron refresh of live dashboard data is running",
-      "pending": "Stage, commit, and push refresh if changed"
+      "task": "Cron live-data refresh is running",
+      "pending": "Commit and push refresh if file changed"
     },
     {
       "name": "contactenrichment",
@@ -30,7 +30,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich Notion contact records",
-      "task": "Last batch completed (rows_processed=99)",
+      "task": "Last run completed contact enrichment batch",
       "pending": "Waiting for next enrichment queue"
     },
     {
@@ -39,8 +39,8 @@
       "status": "Standby",
       "health": "bad",
       "goal": "LinkedIn lookup and update queue",
-      "task": "No active run; prior slash session failed",
-      "pending": "Await next lookup task and verify session stability"
+      "task": "No active run; recent slash session failed",
+      "pending": "Await next lookup task and check stability"
     },
     {
       "name": "n8n",
