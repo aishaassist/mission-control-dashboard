@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T14:21:00Z",
+  "generatedAt": "2026-04-13T14:23:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -16,11 +16,11 @@
   "priorities": [
     "Keep main agent responsive for live operations",
     "Route incoming work to the correct specialist lane",
-    "Keep specialist agents warm and ready for activation"
+    "Keep specialist agents ready for quick reactivation"
   ],
   "goalProgress": {
     "overall": "stable",
-    "note": "Main is active; specialist lanes are standby with no active runs."
+    "note": "Main is active; specialist agents are on standby with no active runs."
   },
   "agents": [
     {
@@ -29,7 +29,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Mission control continuity",
-      "task": "Running the live dashboard refresh cron cycle",
+      "task": "Executing current live-data refresh cron run",
       "pending": "None"
     },
     {
@@ -38,16 +38,16 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last batch completed; no run in progress",
-      "pending": "Awaiting next enrichment batch"
+      "task": "Last enrichment batch completed",
+      "pending": "Awaiting next enrichment request"
     },
     {
       "name": "linkedin",
       "display": "LinkedIn",
       "status": "Idle/Standby",
       "health": "bad",
-      "goal": "LinkedIn lookup and profile mapping",
-      "task": "No active run; historical failure present",
+      "goal": "LinkedIn lookup and mapping",
+      "task": "No active run; last known failed session exists",
       "pending": "Awaiting next lookup request"
     },
     {
@@ -57,14 +57,14 @@
       "health": "warn",
       "goal": "Automation workflow support",
       "task": "No active execution detected",
-      "pending": "Awaiting workflow build/deploy request"
+      "pending": "Awaiting workflow build or deploy task"
     },
     {
       "name": "flowise",
       "display": "Flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Flowise bot and flow support",
+      "goal": "Flow and bot support",
       "task": "No active execution detected",
       "pending": "Awaiting next Flowise assignment"
     }
