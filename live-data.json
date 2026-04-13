@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T02:47:00Z",
+  "generatedAt": "2026-04-13T02:49:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -12,25 +12,25 @@
     }
   },
   "priorities": [
-    "Keep main (Aisha) stable while cron refresh is active",
-    "Prepare contactenrichment for the next data-ready batch",
-    "Keep linkedin, n8n, and flowise on standby for on-demand runs"
+    "Keep main (Aisha) stable while cron refresh is running",
+    "Keep contactenrichment ready for the next Notion-backed enrichment batch",
+    "Maintain linkedin, n8n, and flowise in standby for on-demand execution"
   ],
   "goalProgress": [
     {
       "goal": "Mission control observability",
       "status": "On track",
-      "progress": "Live snapshot refreshed from current sessions and subagent state"
+      "progress": "Live runtime snapshot refreshed from sessions and subagent state"
     },
     {
-      "goal": "Contact enrichment execution",
+      "goal": "Contact enrichment continuity",
       "status": "Standby",
-      "progress": "Last known contactenrichment run completed; waiting for next queue"
+      "progress": "No active contactenrichment session; last run completed"
     },
     {
-      "goal": "Automation throughput",
+      "goal": "Auxiliary agent readiness",
       "status": "Standby",
-      "progress": "n8n and flowise remain idle and ready"
+      "progress": "linkedin, n8n, and flowise are idle and ready"
     }
   ],
   "agents": [
@@ -40,7 +40,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control and runtime operations",
-      "task": "Running mission-control-live-data-refresh cron session",
+      "task": "Running mission-control-live-data-refresh cron",
       "pending": "Continue scheduled live-data refresh cycles"
     },
     {
@@ -49,17 +49,17 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contacts from official sources",
-      "task": "No running session; last run completed with FINAL output",
-      "pending": "Await next enrichment batch"
+      "task": "No current running session",
+      "pending": "Await next enrichment queue"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Standby",
       "health": "warn",
-      "goal": "LinkedIn lookup and profile enrichment support",
-      "task": "No running session; last activity completed",
-      "pending": "Run next lookup batch when requested"
+      "goal": "Provide LinkedIn lookup and profile enrichment support",
+      "task": "No current running session",
+      "pending": "Run next lookup batch on request"
     },
     {
       "name": "n8n",
@@ -67,17 +67,17 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Build and deploy automation workflows",
-      "task": "No active run in current snapshot",
-      "pending": "Queue next automation request"
+      "task": "No current running session",
+      "pending": "Await next automation brief"
     },
     {
       "name": "flowise",
       "displayName": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise builder and assistant support",
-      "task": "No active run in current snapshot",
-      "pending": "Await next build or debug task"
+      "goal": "Support flow design and bot tooling tasks",
+      "task": "No current running session",
+      "pending": "Await next build/debug request"
     }
   ]
 }
