@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T16:37:00Z",
+  "generatedAt": "2026-04-13T16:39:00Z",
   "source": {
     "type": "openclaw-runtime",
     "sessionsList": {
@@ -31,8 +31,8 @@
     },
     {
       "goal": "LinkedIn and automation pipeline",
-      "status": "standby",
-      "progress": "LinkedIn, n8n, and Flowise are idle and awaiting tasks"
+      "status": "at-risk",
+      "progress": "LinkedIn has an unresolved failed session; n8n and Flowise are on standby"
     }
   ],
   "agents": [
@@ -51,17 +51,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Last batch completed with final summary posted",
+      "task": "Last run completed: rows_processed=99, email_updated=0, phone_updated=0",
       "pending": "Await next batch and confirmed Notion share"
     },
     {
       "agent": "linkedin",
       "name": "linkedin",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Run LinkedIn lookup and profile update workflows",
-      "task": "Most recent run completed with no rows processed",
-      "pending": "Await next input list and lookup command"
+      "task": "Last group run completed with no rows; separate slash session recently failed",
+      "pending": "Stabilize session reliability and await next lookup list"
     },
     {
       "agent": "n8n",
