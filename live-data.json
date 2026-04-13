@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T17:17:00Z",
+  "generatedAt": "2026-04-13T17:19:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -14,7 +14,7 @@
   "goalProgress": [
     {
       "goal": "Mission control uptime",
-      "progress": "Main is active with this live-data refresh run"
+      "progress": "Main (Aisha) is active with this live-data refresh run"
     },
     {
       "goal": "Contact operations",
