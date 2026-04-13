@@ -1,78 +1,73 @@
 {
-  "generatedAt": "2026-04-13T13:09:00Z",
+  "generatedAt": "2026-04-13T13:11:00Z",
   "source": {
-    "sessions": "sessions_list(limit=50,messageLimit=1)",
-    "subagents": "subagents(action=list,recentMinutes=1440)",
-    "snapshotSessionCount": 12,
-    "subagentActiveCount": 0
+    "sessions_list": {
+      "limit": 50,
+      "messageLimit": 1,
+      "count": 12
+    },
+    "subagents": {
+      "recentMinutes": 1440,
+      "active": 0,
+      "recent": 0
+    }
   },
   "priorities": [
-    "Resolve unsupported model error on the main WhatsApp session.",
-    "Confirm Notion integration access before the next contactenrichment batch.",
-    "Queue actionable work for linkedin, n8n, and flowise to improve utilization."
+    "Keep main (Aisha) runtime healthy and clear model/config errors",
+    "Resume contact enrichment queue when new Notion-ready rows arrive",
+    "Keep specialist agents on standby for delegated bursts"
   ],
-  "goalProgress": [
-    {
-      "goal": "Mission control runtime visibility",
-      "progress": "Live dashboard snapshot refreshed from current OpenClaw runtime state.",
-      "status": "on_track"
-    },
-    {
-      "goal": "Contact enrichment operations",
-      "progress": "Latest contactenrichment run is complete; no active run right now.",
-      "status": "watch"
-    },
-    {
-      "goal": "Specialist agent utilization",
-      "progress": "linkedin, n8n, and flowise currently have no running sessions.",
-      "status": "watch"
-    }
-  ],
+  "goalProgress": {
+    "operations": "Main control loop active",
+    "contactEnrichment": "Last run processed 99 rows; no new updates currently queued",
+    "linkedin": "Bot idle after last zero-row completion",
+    "automation": "n8n and Flowise idle, ready for next deployment tasks"
+  },
   "agents": [
     {
       "name": "main",
-      "displayName": "Aisha",
+      "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission-control operations across agents.",
-      "task": "Running the live-data refresh cron; another main session is running but hit an unsupported model error.",
-      "pending": "Update WhatsApp main-session model configuration to a supported model."
+      "goal": "Coordinate mission control and delegated specialist execution",
+      "task": "Running cron live-data refresh and maintaining active chat sessions",
+      "pending": "Investigate unsupported model error seen in one WhatsApp thread"
     },
     {
       "name": "contactenrichment",
-      "displayName": "contactenrichment",
+      "label": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Fill missing school email and phone from official sources.",
-      "task": "No running session; latest run completed with zero new email or phone updates.",
-      "pending": "Wait for next batch after Notion integration access is confirmed."
+      "goal": "Fill missing school contact email/phone fields from verifiable sources",
+      "task": "Last completed run returned FINAL rows_processed=99",
+      "pending": "Await next Notion-accessible batch"
     },
     {
       "name": "linkedin",
-      "displayName": "linkedin",
+      "label": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "bad",
-      "goal": "Deliver LinkedIn lookup and enrichment tasks.",
-      "task": "No running session; recent activity includes a failed session and a zero-row run.",
-      "pending": "Start a fresh job and verify stability before scaling."
+      "health": "warn",
+      "goal": "Handle LinkedIn profile discovery/update tasks",
+      "task": "Last group execution completed with rows_processed=0",
+      "pending": "Await new lookup requests"
     },
     {
       "name": "n8n",
-      "displayName": "n8n",
+      "label": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Build and deploy automations via n8n APIs.",
-      "task": "No running n8n session in the current snapshot.",
-      "pending": "Queue the next automation implementation task."
+      "goal": "Build and deploy workflow automations",
+      "task": "No active session currently running",
+      "pending": "Await automation backlog from mission control"
     },
     {
       "name": "flowise",
-      "displayName": "flowise",
+      "label": "Flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Support Flowise workflow and bot builds.",
-      "task": "No running flowise session in the current snapshot.",
-      "pending": "Await the next Flowise build request."
+      "goal": "Support Flowise/chatflow build and maintenance",
+      "task": "No active session currently running",
+      "pending": "Await new flow build requests"
     }
   ]
 }
