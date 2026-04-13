@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T13:39:00Z",
+  "generatedAt": "2026-04-13T13:41:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -46,10 +46,10 @@
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "LinkedIn profile lookup support",
-      "task": "No active run; latest sessions completed with prior slash-session failure",
-      "pending": "Start next lookup in a clean session after reliability check"
+      "task": "No active run; latest task completed",
+      "pending": "Address prior slash-session failure before next intake burst"
     },
     {
       "name": "n8n",
