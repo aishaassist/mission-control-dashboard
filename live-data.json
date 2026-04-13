@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T00:13:00Z",
+  "generatedAt": "2026-04-13T00:15:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -33,7 +33,7 @@
       "health": "ok",
       "goal": "Coordinate mission-control operations",
       "task": "Running mission-control live-data refresh cron",
-      "pending": "Finish git sync for live-data.json if changed"
+      "pending": "Complete git sync for live-data.json if changed"
     },
     {
       "name": "contactenrichment",
@@ -41,8 +41,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Complete missing school contact enrichment",
-      "task": "Last run completed with 99 rows processed",
-      "pending": "Await next Notion-ready enrichment batch"
+      "task": "Last run processed 99 rows, missing values marked not_found",
+      "pending": "Await Notion-ready enrichment batch"
     },
     {
       "name": "linkedin",
@@ -50,7 +50,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Handle LinkedIn lookup assignments",
-      "task": "No active run, most recent execution finished",
+      "task": "No active run, most recent bot run completed",
       "pending": "Await next lookup list"
     },
     {
