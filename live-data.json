@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-04-13T05:57:00+05:30",
+  "generatedAt": "2026-04-13T05:59:00+05:30",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main orchestration responsive",
-    "Restart paused data pipelines only on new input",
+    "Monitor enrichment and LinkedIn queues for new work",
     "Automate repeatable ops through n8n"
   ],
   "goalProgress": {
@@ -39,7 +39,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile updates",
-      "task": "Last bot run completed with zero rows",
+      "task": "Last run completed with zero rows",
       "pending": "Await next lookup queue"
     },
     {
