@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T04:29:00Z",
+  "generatedAt": "2026-04-13T04:31:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -45,7 +45,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich contact records from official sources",
-      "task": "Last run completed: 99 rows processed",
+      "task": "Last run completed with 99 rows processed",
       "pending": "Await next Notion enrichment batch"
     },
     {
@@ -54,7 +54,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "No active run; latest known run completed",
+      "task": "No active run; latest known run returned no processed rows",
       "pending": "Await next lookup request"
     },
     {
