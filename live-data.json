@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T17:37:00Z",
+  "generatedAt": "2026-04-13T17:39:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -18,7 +18,7 @@
     },
     {
       "goal": "Contact operations",
-      "progress": "Contactenrichment is standby after completion; linkedin needs review after recent failed session"
+      "progress": "Contactenrichment and linkedin are standby after prior runs; next intake is pending"
     },
     {
       "goal": "Automation readiness",
@@ -41,17 +41,17 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Last run completed with 99 rows processed",
+      "task": "Last run completed after processing school rows",
       "pending": "Await next enrichment trigger"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "Run LinkedIn lookup support for contact operations",
-      "task": "No active lookup session; recent slash session failed",
-      "pending": "Verify routing and await next lookup instruction"
+      "task": "No active lookup session; last visible run is complete",
+      "pending": "Await next lookup instruction"
     },
     {
       "name": "n8n",
