@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T05:53:00+05:30",
+  "generatedAt": "2026-04-13T05:55:00+05:30",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -39,7 +39,7 @@
       "status": "Standby",
       "health": "bad",
       "goal": "LinkedIn lookup and profile updates",
-      "task": "No current run; recent session history includes failures",
+      "task": "No active run; recent known session includes failure",
       "pending": "Stabilize next lookup run when queue resumes"
     },
     {
