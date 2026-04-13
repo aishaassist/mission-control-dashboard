@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T00:49:00Z",
+  "generatedAt": "2026-04-13T00:51:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -69,7 +69,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Support LinkedIn lookup requests",
-      "task": "No active run; latest group execution completed",
+      "task": "No active run; latest execution completed",
       "pending": "Await fresh lookup list"
     },
     {
