@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T14:33:00Z",
+  "generatedAt": "2026-04-13T14:35:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -14,13 +14,13 @@
     }
   },
   "priorities": [
-    "Keep Aisha active for live mission-control coordination",
-    "Maintain specialist readiness across contact, linkedin, automation, and flow lanes",
-    "Surface fresh runtime status quickly for operator decisions"
+    "Keep Aisha active for mission-control coordination",
+    "Maintain specialist readiness across contact, linkedin, n8n, and flowise lanes",
+    "Flag agent health drift early from runtime status changes"
   ],
   "goalProgress": {
-    "overall": "stable",
-    "note": "Main is active on cron refresh; specialist agents are on standby with no active subagent runs."
+    "overall": "stable-with-risk",
+    "note": "Aisha is active on cron refresh, while specialist agents are mostly standby; linkedin has a recent failed session in history."
   },
   "agents": [
     {
@@ -30,7 +30,7 @@
       "health": "ok",
       "goal": "Mission-control continuity",
       "task": "Running live-data refresh cron",
-      "pending": "Monitor specialist queues"
+      "pending": "Monitor specialist queues and trigger follow-ups"
     },
     {
       "name": "contactenrichment",
@@ -38,17 +38,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last enrichment batch completed",
-      "pending": "Await next records needing official email or phone validation"
+      "task": "Last Notion enrichment batch completed",
+      "pending": "Await next records requiring verified email or phone"
     },
     {
       "name": "linkedin",
       "display": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "LinkedIn lookup and mapping",
-      "task": "No active processing in current runtime",
-      "pending": "Await next lookup request"
+      "task": "No active processing currently",
+      "pending": "Investigate failed session and await next lookup run"
     },
     {
       "name": "n8n",
@@ -57,7 +57,7 @@
       "health": "warn",
       "goal": "Automation workflow support",
       "task": "No active execution detected",
-      "pending": "Await workflow build or deploy task"
+      "pending": "Await workflow build/deploy requests"
     },
     {
       "name": "flowise",
