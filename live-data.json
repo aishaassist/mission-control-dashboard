@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T02:05:00Z",
+  "generatedAt": "2026-04-13T02:07:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -22,7 +22,7 @@
     "notes": [
       "Main is currently running mission-control-live-data-refresh",
       "Contact enrichment last run completed with FINAL counters",
-      "LinkedIn has no active run and last known timeline includes a failed slash session",
+      "LinkedIn is on standby with a prior failed session in recent history",
       "n8n and Flowise are idle and ready for new assignments"
     ]
   },
@@ -51,7 +51,7 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Handle LinkedIn lookup and profile enrichment tasks",
-      "task": "No active run; latest recent work is complete with an older failed slash session in history",
+      "task": "No active run; most recent timeline includes a failed slash session",
       "pending": "Await new LinkedIn lookup assignments"
     },
     {
