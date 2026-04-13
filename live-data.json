@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T08:49:00Z",
+  "generatedAt": "2026-04-13T08:51:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,17 +14,17 @@
   },
   "priorities": [
     "Keep mission-control visibility current across core agents",
-    "Maintain specialist readiness for contact and LinkedIn handoffs",
-    "Reduce specialist idle drift before next coordinated run"
+    "Keep specialists warm for contact enrichment and LinkedIn execution",
+    "Trigger automation specialists only when workload lands"
   ],
   "goalProgress": [
     {
       "goal": "Mission control visibility",
-      "progress": "Runtime snapshot refreshed from current OpenClaw telemetry"
+      "progress": "Live runtime snapshot refreshed from sessions and subagent telemetry"
     },
     {
       "goal": "Specialist readiness",
-      "progress": "Main active, specialists standing by for new workload"
+      "progress": "Main active, specialist agents currently on standby"
     }
   ],
   "agents": [
@@ -34,8 +34,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control and cross-agent execution",
-      "task": "Running mission-control live data refresh",
-      "pending": "Continue specialist monitoring and handoff readiness"
+      "task": "Running scheduled live-data refresh",
+      "pending": "Continue monitoring and dispatching specialists"
     },
     {
       "name": "contactenrichment",
@@ -43,16 +43,16 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich school contact records in Notion",
-      "task": "Last batch completed, no current running session",
-      "pending": "Await next enrichment batch"
+      "task": "No running session; last run completed batch processing",
+      "pending": "Await next enrichment queue"
     },
     {
       "name": "linkedin",
       "title": "LinkedIn",
       "status": "Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "Run LinkedIn lookup and profile mapping",
-      "task": "No active run; recent slash session failed",
+      "task": "No running session; ready for targeted lookup tasks",
       "pending": "Await next LinkedIn lookup request"
     },
     {
@@ -61,8 +61,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Build and deploy workflow automations",
-      "task": "No active automation session",
-      "pending": "Await deployment or workflow build request"
+      "task": "No running automation session",
+      "pending": "Await workflow build or deploy request"
     },
     {
       "name": "flowise",
@@ -70,8 +70,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Support Flowise builds and integrations",
-      "task": "No active Flowise session",
-      "pending": "Await next implementation task"
+      "task": "No running Flowise session",
+      "pending": "Await next implementation request"
     }
   ]
 }
