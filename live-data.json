@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T17:01:00Z",
+  "generatedAt": "2026-04-13T17:03:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -14,11 +14,11 @@
   "goalProgress": [
     {
       "goal": "Mission control uptime",
-      "progress": "Main is active with the live dashboard refresh cron running"
+      "progress": "Main is active with mission-control live refresh running"
     },
     {
       "goal": "Contact ops execution",
-      "progress": "Contactenrichment and linkedin are standby after prior completions"
+      "progress": "Contactenrichment and linkedin are standby after prior batches"
     },
     {
       "goal": "Automation readiness",
@@ -32,8 +32,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Orchestrate Kumar operations and mission control",
-      "task": "Cron live-data refresh is running",
-      "pending": "Continue orchestration and monitor downstream agents"
+      "task": "Cron live-data refresh is currently running",
+      "pending": "Continue orchestration and monitor specialist queues"
     },
     {
       "name": "contactenrichment",
@@ -41,7 +41,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Last visible enrichment batch completed",
+      "task": "Latest enrichment batch completed",
       "pending": "Await next enrichment trigger"
     },
     {
@@ -50,7 +50,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup support for contact operations",
-      "task": "No currently running lookup session",
+      "task": "No active lookup session running",
       "pending": "Start on next lookup instruction"
     },
     {
@@ -60,7 +60,7 @@
       "health": "warn",
       "goal": "Deploy and run automation workflows",
       "task": "No active workflow session visible",
-      "pending": "Run automations when requested"
+      "pending": "Execute automation runs when requested"
     },
     {
       "name": "flowise",
