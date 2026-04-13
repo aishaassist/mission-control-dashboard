@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T08:25:00Z",
+  "generatedAt": "2026-04-13T08:27:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,7 +14,7 @@
   },
   "priorities": [
     "Keep mission-control agent sessions healthy and monitored",
-    "Resume stalled specialist workflows only when new tasks arrive",
+    "Resume specialist workflows when new tasks arrive",
     "Track failed sessions for manual retry when needed"
   ],
   "goalProgress": [
@@ -24,7 +24,7 @@
     },
     {
       "goal": "Specialist readiness",
-      "progress": "All tracked specialists are in standby, no active subagents"
+      "progress": "Main is active; specialist agents are on standby"
     }
   ],
   "agents": [
@@ -43,7 +43,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich school contact fields in Notion",
-      "task": "Last run completed with not_found outputs where unverifiable",
+      "task": "Last run completed with verified or not_found outcomes",
       "pending": "Awaiting next enrichment batch"
     },
     {
@@ -52,7 +52,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Handle LinkedIn profile lookup tasks",
-      "task": "No active lookup run; last group response completed",
+      "task": "No active lookup run; recent run completed",
       "pending": "Awaiting new LinkedIn search input"
     },
     {
