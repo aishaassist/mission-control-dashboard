@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T12:19:00Z",
+  "generatedAt": "2026-04-13T12:21:00Z",
   "source": {
     "type": "openclaw-runtime",
     "cron": "mission-control-live-data-refresh",
@@ -54,7 +54,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookups for assigned records",
-      "task": "No active run; latest group run finished with older failed session",
+      "task": "No active run; latest group run completed with older failed session",
       "pending": "Stabilize failed session path and await next lookup queue"
     },
     {
