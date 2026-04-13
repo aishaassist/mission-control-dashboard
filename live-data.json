@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T02:57:00Z",
+  "generatedAt": "2026-04-13T02:59:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -12,7 +12,7 @@
     }
   },
   "priorities": [
-    "Keep main (Aisha) stable while cron refresh is running",
+    "Keep main (Aisha) stable while cron refresh runs",
     "Prepare contactenrichment for the next Notion-backed contact batch",
     "Keep linkedin, n8n, and flowise ready for on-demand execution"
   ],
