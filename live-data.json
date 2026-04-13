@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T02:27:00Z",
+  "generatedAt": "2026-04-13T02:29:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -12,25 +12,25 @@
     }
   },
   "priorities": [
-    "Keep main (Aisha) session stable during cron and operator traffic",
-    "Resume contact enrichment backlog when Notion access is confirmed",
-    "Re-validate linkedin agent after prior failed slash session"
+    "Keep main (Aisha) stable while cron refresh is running",
+    "Resume contactenrichment backlog when next Notion-backed batch is ready",
+    "Re-validate linkedin agent after the previously failed slash session"
   ],
   "goalProgress": [
     {
       "goal": "Mission control observability",
       "status": "On track",
-      "progress": "Live data refresh running and snapshot updated"
+      "progress": "Live data refresh snapshot regenerated from current runtime"
     },
     {
       "goal": "Contact enrichment execution",
-      "status": "Waiting",
-      "progress": "Last run completed earlier; currently standby"
+      "status": "Standby",
+      "progress": "No active run; last known batch completed earlier"
     },
     {
       "goal": "Automation throughput",
       "status": "Standby",
-      "progress": "n8n and flowise are idle pending new tasks"
+      "progress": "n8n and flowise are idle pending new requests"
     }
   ],
   "agents": [
@@ -39,9 +39,9 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate operations and keep mission control current",
-      "task": "Running cron refresh for live dashboard data",
-      "pending": "Publish refreshed snapshot and sync git if changed"
+      "goal": "Coordinate operations and keep mission-control visibility current",
+      "task": "Running mission-control-live-data-refresh cron job",
+      "pending": "Commit and push dashboard data update if changed"
     },
     {
       "name": "contactenrichment",
@@ -49,8 +49,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "No running session now; last run reported final row processing",
-      "pending": "Await next Notion-backed enrichment batch"
+      "task": "No running session; last known run returned final processing summary",
+      "pending": "Await next enrichment batch"
     },
     {
       "name": "linkedin",
@@ -58,17 +58,17 @@
       "status": "Standby",
       "health": "bad",
       "goal": "LinkedIn lookup and profile enrichment support",
-      "task": "No running session; recent history includes a failed slash session",
-      "pending": "Run a small validation task to confirm healthy execution"
+      "task": "No running session; recent context includes a failed slash session",
+      "pending": "Run a validation task before next production batch"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Automation workflow build and deployment",
-      "task": "Idle with no active run",
-      "pending": "Queue next automation request when available"
+      "goal": "Build and deploy automations",
+      "task": "Idle with no current session running",
+      "pending": "Queue next automation request"
     },
     {
       "name": "flowise",
@@ -76,8 +76,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Flowise assistant and builder support",
-      "task": "Idle with no active run",
-      "pending": "Await new build or debug request"
+      "task": "Idle with no current session running",
+      "pending": "Await next build or debug request"
     }
   ]
 }
