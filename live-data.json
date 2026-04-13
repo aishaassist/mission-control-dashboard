@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T08:47:00Z",
+  "generatedAt": "2026-04-13T08:49:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,7 +13,7 @@
     }
   },
   "priorities": [
-    "Keep mission-control visibility current across all core agents",
+    "Keep mission-control visibility current across core agents",
     "Maintain specialist readiness for contact and LinkedIn handoffs",
     "Reduce specialist idle drift before next coordinated run"
   ],
@@ -24,7 +24,7 @@
     },
     {
       "goal": "Specialist readiness",
-      "progress": "Main is active; specialists are standing by for new workload"
+      "progress": "Main active, specialists standing by for new workload"
     }
   ],
   "agents": [
@@ -43,16 +43,16 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich school contact records in Notion",
-      "task": "Last batch completed; no current running session",
+      "task": "Last batch completed, no current running session",
       "pending": "Await next enrichment batch"
     },
     {
       "name": "linkedin",
       "title": "LinkedIn",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Run LinkedIn lookup and profile mapping",
-      "task": "No active run; latest known task is complete",
+      "task": "No active run; recent slash session failed",
       "pending": "Await next LinkedIn lookup request"
     },
     {
