@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T07:29:00Z",
+  "generatedAt": "2026-04-13T07:31:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -21,12 +21,12 @@
     {
       "goal": "Mission control visibility",
       "status": "on_track",
-      "progress": "Live status refreshed from current runtime state"
+      "progress": "Live runtime snapshot refreshed from current sessions"
     },
     {
       "goal": "Agent execution continuity",
       "status": "mixed",
-      "progress": "Aisha active; specialist agents on standby"
+      "progress": "Aisha active; specialist agents idle/on standby"
     }
   ],
   "agents": [
@@ -54,7 +54,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; latest completed with 0 rows",
+      "task": "No active run; latest batch completed with 0 rows",
       "pending": "Await next lookup batch"
     },
     {
