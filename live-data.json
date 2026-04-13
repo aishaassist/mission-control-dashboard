@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T08:41:00Z",
+  "generatedAt": "2026-04-13T08:43:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,7 +14,7 @@
   },
   "priorities": [
     "Keep mission-control agent sessions healthy and monitored",
-    "Resolve specialist failures before next task burst",
+    "Stabilize LinkedIn specialist before next lookup workload",
     "Keep specialist agents ready for rapid handoff"
   ],
   "goalProgress": [
@@ -24,7 +24,7 @@
     },
     {
       "goal": "Specialist readiness",
-      "progress": "Main active; specialists mostly on standby"
+      "progress": "Main active; specialists mostly idle/standby"
     }
   ],
   "agents": [
@@ -34,8 +34,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control and cross-agent operations",
-      "task": "Running cron refresh for live dashboard data",
-      "pending": "None immediate"
+      "task": "Running live dashboard refresh cron",
+      "pending": "Monitor specialist health"
     },
     {
       "name": "contactenrichment",
@@ -52,8 +52,8 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Handle LinkedIn profile lookup tasks",
-      "task": "No active run; recent session includes failed state",
-      "pending": "Run quick health check before next lookup batch"
+      "task": "No active run; most recent slash session failed",
+      "pending": "Run health check before next lookup batch"
     },
     {
       "name": "n8n",
