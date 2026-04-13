@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T23:51:00Z",
+  "generatedAt": "2026-04-12T23:59:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,11 +14,11 @@
   },
   "priorities": [
     "Keep main coordination session responsive",
-    "Unblock contactenrichment Notion-connected runs",
-    "Queue next actionable workloads for linkedin, n8n, and flowise"
+    "Prepare next contactenrichment batch after latest 99-row completion",
+    "Queue actionable workloads for linkedin, n8n, and flowise"
   ],
   "goalProgress": {
-    "summary": "Main orchestration active; specialist agents mostly on standby awaiting new assignments.",
+    "summary": "Main cron orchestration is active; specialist agents are on standby awaiting new tasks.",
     "completion": {
       "active": 1,
       "standby": 4,
@@ -31,17 +31,17 @@
       "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Orchestrate mission-control operations across agents",
-      "task": "Running cron live-data refresh",
-      "pending": "Commit and publish refreshed dashboard data"
+      "goal": "Coordinate mission-control operations",
+      "task": "Executing live dashboard refresh cron",
+      "pending": "Commit and push updated live-data.json"
     },
     {
       "name": "contactenrichment",
       "label": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school contact email/phone fields",
-      "task": "Last enrichment run completed with final row metrics",
+      "goal": "Fill missing school contact details",
+      "task": "Last run completed: 99 rows processed",
       "pending": "Await next Notion-connected enrichment batch"
     },
     {
@@ -49,9 +49,9 @@
       "label": "LinkedIn",
       "status": "Standby",
       "health": "warn",
-      "goal": "Support LinkedIn lookup and profile coverage",
-      "task": "No active run; latest group task closed",
-      "pending": "Await new lookup list or outreach batch"
+      "goal": "Run LinkedIn lookup coverage tasks",
+      "task": "No active run; latest bot run closed",
+      "pending": "Await next lookup or outreach list"
     },
     {
       "name": "n8n",
@@ -68,7 +68,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Implement Flowise agent workflows",
-      "task": "Idle, waiting for build instructions",
+      "task": "Idle with no active run",
       "pending": "Await new Flowise build task"
     }
   ]
