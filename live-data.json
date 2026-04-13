@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T02:13:00Z",
+  "generatedAt": "2026-04-13T02:15:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -22,7 +22,7 @@
     "notes": [
       "Main is running mission-control-live-data-refresh",
       "Contact enrichment last completed with FINAL counters",
-      "LinkedIn is standby with a failed session in recent history",
+      "LinkedIn is standby with prior failed session signal",
       "n8n and Flowise are idle and ready for assignments"
     ]
   },
