@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T22:29:00Z",
+  "generatedAt": "2026-04-13T22:31:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -31,7 +31,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control refreshes and primary user assistance",
-      "task": "Cron refresh and a user-facing main session are currently running",
+      "task": "Cron refresh and main user session are currently running",
       "pending": "Monitor model/session stability and keep channels responsive"
     },
     {
@@ -55,7 +55,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and deploy automation workflows",
-      "task": "No active n8n run in the current runtime snapshot",
+      "task": "No active n8n run in current runtime snapshot",
       "pending": "Stand by for workflow build/deploy requests"
     },
     {
@@ -63,7 +63,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise chatbot and flow operations",
-      "task": "No active flowise run in the current runtime snapshot",
+      "task": "No active flowise run in current runtime snapshot",
       "pending": "Stand by for next flow/chatbot task"
     }
   ]
