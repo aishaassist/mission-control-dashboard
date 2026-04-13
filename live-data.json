@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T18:43:00Z",
+  "generatedAt": "2026-04-13T18:47:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -7,14 +7,14 @@
   "priorities": [
     "Keep mission-control refresh loop healthy",
     "Unblock Notion-backed contact enrichment batches",
-    "Stabilize LinkedIn lane and clear recent failure signals"
+    "Maintain LinkedIn, n8n, and Flowise lanes in ready state"
   ],
   "goalProgress": {
     "overall": "Monitoring",
     "highlights": [
-      "Aisha (main) is active in the current cron run",
+      "Aisha (main) is active in current cron refresh",
       "No active subagents detected in the last 24h",
-      "contactenrichment, n8n, and flowise are currently on standby"
+      "Specialist agents are idle and awaiting next tasks"
     ]
   },
   "agents": [
@@ -33,17 +33,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records in Notion",
-      "task": "Last known run processed 99 rows with no new contacts found",
+      "task": "Last run processed 99 rows with no new email/phone updates",
       "pending": "Await next Notion-ready enrichment batch"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "Run LinkedIn lookup and profile enrichment",
-      "task": "No active run; recent lane history includes a failed session",
-      "pending": "Validate lane health before next LinkedIn batch"
+      "task": "No active run; latest visible runs are completed",
+      "pending": "Await next LinkedIn lookup batch"
     },
     {
       "name": "n8n",
@@ -51,7 +51,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and deploy automation workflows",
-      "task": "No active run; last known state was ANNOUNCE_SKIP",
+      "task": "No active run; last visible state ANNOUNCE_SKIP",
       "pending": "Await workflow brief or deployment request"
     },
     {
@@ -60,7 +60,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise implementation work",
-      "task": "No active run; last update was a readiness check-in",
+      "task": "No active run; last visible update was readiness check-in",
       "pending": "Await next build or integration task"
     }
   ]
