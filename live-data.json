@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T07:47:00Z",
+  "generatedAt": "2026-04-13T07:49:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,20 +13,20 @@
     }
   },
   "priorities": [
-    "Keep mission-control snapshot in sync with active runtime sessions",
-    "Watch contact operations handoff between main, linkedin, and contactenrichment",
-    "Track automation readiness for n8n and flowise"
+    "Keep mission-control snapshot aligned with live runtime sessions",
+    "Prepare contact and LinkedIn agents for next enrichment queue",
+    "Maintain n8n and flowise automation readiness"
   ],
   "goalProgress": [
     {
       "goal": "Mission control live visibility",
       "progress": "running",
-      "note": "Cron refresh session is active"
+      "note": "Cron refresh session is currently running"
     },
     {
       "goal": "Contact enrichment execution",
       "progress": "standby",
-      "note": "Latest run completed with no field updates"
+      "note": "Last run processed 99 rows with not_found fallback"
     },
     {
       "goal": "LinkedIn enrichment support",
@@ -36,7 +36,7 @@
     {
       "goal": "Automation delivery (n8n/flowise)",
       "progress": "standby",
-      "note": "No active sessions detected"
+      "note": "No active runtime sessions detected"
     }
   ],
   "agents": [
@@ -46,8 +46,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control live data refresh",
-      "task": "Cron session currently running",
-      "pending": "Publish updated dashboard snapshot"
+      "task": "Cron refresh session is running",
+      "pending": "Write and publish latest dashboard snapshot"
     },
     {
       "name": "contactenrichment",
@@ -55,8 +55,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last batch closed with rows processed and not_found fallback",
-      "pending": "Await next dataset or run trigger"
+      "task": "Latest batch finished: 99 rows, no new email/phone updates",
+      "pending": "Await next Notion dataset trigger"
     },
     {
       "name": "linkedin",
@@ -64,8 +64,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Support LinkedIn lookup and enrichment",
-      "task": "No active run; latest group execution reported zero processed",
-      "pending": "Await new lookup queue"
+      "task": "Last execution reported zero rows processed",
+      "pending": "Await next lookup queue"
     },
     {
       "name": "n8n",
@@ -73,7 +73,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Automation workflow execution",
-      "task": "No current session marked running",
+      "task": "No session currently running",
       "pending": "Await deployment or workflow request"
     },
     {
@@ -82,7 +82,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Flowise build and support",
-      "task": "No current session marked running",
+      "task": "No session currently running",
       "pending": "Await new build task"
     }
   ]
