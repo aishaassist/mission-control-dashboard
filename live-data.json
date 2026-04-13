@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T02:11:00Z",
+  "generatedAt": "2026-04-13T02:13:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -18,12 +18,12 @@
     "Keep LinkedIn, n8n, and Flowise on warm standby"
   ],
   "goalProgress": {
-    "overall": "Main active, specialist agents mostly standby",
+    "overall": "Main active, specialists mostly standby",
     "notes": [
-      "Main is currently running mission-control-live-data-refresh",
+      "Main is running mission-control-live-data-refresh",
       "Contact enrichment last completed with FINAL counters",
-      "LinkedIn is not active and has a failed recent session in history",
-      "n8n and Flowise are idle and ready for new assignments"
+      "LinkedIn is standby with a failed session in recent history",
+      "n8n and Flowise are idle and ready for assignments"
     ]
   },
   "agents": [
@@ -32,7 +32,7 @@
       "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate operations and keep mission control data current",
+      "goal": "Coordinate operations and keep mission control current",
       "task": "Running cron: mission-control-live-data-refresh",
       "pending": "Continue periodic runtime snapshot refresh"
     },
@@ -42,7 +42,7 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Enrich missing school contact details from official sources",
-      "task": "Last run completed with FINAL summary output",
+      "task": "Last run completed with FINAL summary",
       "pending": "Await next Notion batch for email or phone updates"
     },
     {
@@ -51,7 +51,7 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "No active run; recent history includes a failed slash session",
+      "task": "No active run; recent history includes a failed session",
       "pending": "Await next LinkedIn lookup assignment"
     },
     {
