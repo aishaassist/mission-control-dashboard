@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T11:29:00Z",
+  "generatedAt": "2026-04-13T11:31:00Z",
   "source": {
     "type": "openclaw-runtime",
     "sessionsListCount": 12,
@@ -7,25 +7,25 @@
     "subagentsRecent": 0
   },
   "priorities": [
-    "Refresh mission-control runtime visibility continuously",
-    "Clear main-agent model mismatch failures on messaging sessions",
-    "Keep specialist agents queued for next inbound work"
+    "Keep mission-control runtime snapshot current",
+    "Resolve main-agent chat model mismatch errors",
+    "Keep specialist agents warm for incoming queues"
   ],
   "goalProgress": [
     {
-      "goal": "Mission control dashboard freshness",
+      "goal": "Mission control freshness",
       "status": "on-track",
-      "progress": "Runtime snapshot refreshed from current OpenClaw sessions"
+      "progress": "Runtime snapshot refreshed from current sessions"
     },
     {
-      "goal": "Contact enrichment throughput",
+      "goal": "Contact enrichment operations",
       "status": "waiting",
-      "progress": "Last known run completed 99 rows; awaiting next Notion queue"
+      "progress": "Latest run processed 99 rows; awaiting next Notion queue"
     },
     {
-      "goal": "Specialist readiness",
+      "goal": "Specialist reliability",
       "status": "attention",
-      "progress": "LinkedIn shows recent failed session while n8n and Flowise remain standby"
+      "progress": "LinkedIn has recent failed session; n8n and Flowise are standby"
     }
   ],
   "agents": [
@@ -34,9 +34,9 @@
       "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission control and user-facing orchestration",
+      "goal": "Coordinate mission control and user orchestration",
       "task": "Running mission-control live-data refresh cron",
-      "pending": "Address recurring model mismatch error in one messaging session"
+      "pending": "Fix recurring model mismatch on WhatsApp session"
     },
     {
       "name": "contactenrichment",
@@ -44,8 +44,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "No active run; latest batch reported 99 rows processed",
-      "pending": "Await next Notion-backed enrichment queue"
+      "task": "No active run; latest batch completed 99 rows",
+      "pending": "Await next Notion-backed enrichment batch"
     },
     {
       "name": "linkedin",
@@ -54,7 +54,7 @@
       "health": "bad",
       "goal": "Run LinkedIn lookups for assigned records",
       "task": "No active run; recent slash session failed",
-      "pending": "Recover failed path and wait for next lookup batch"
+      "pending": "Recover failed route and wait for next lookup queue"
     },
     {
       "name": "n8n",
@@ -72,7 +72,7 @@
       "health": "warn",
       "goal": "Support Flowise build and deployment tasks",
       "task": "No active runtime session",
-      "pending": "Stand by for next Flowise intake"
+      "pending": "Stand by for next Flowise request"
     }
   ]
 }
