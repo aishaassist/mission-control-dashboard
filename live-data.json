@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T16:55:00Z",
+  "generatedAt": "2026-04-13T16:57:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -8,21 +8,21 @@
   },
   "priorities": [
     "Keep main (Aisha) focused on live orchestration and cron continuity",
-    "Re-activate contactenrichment/linkedin pipelines when new rows arrive",
+    "Queue contactenrichment and linkedin for immediate restart on fresh intake",
     "Keep n8n and flowise warm for automation and flow delivery"
   ],
   "goalProgress": [
     {
       "goal": "Mission control uptime",
-      "progress": "Main is active with cron refresh running"
+      "progress": "Main is active with live dashboard cron refresh running"
     },
     {
       "goal": "Contact ops execution",
-      "progress": "Contactenrichment completed last batch and is awaiting next trigger"
+      "progress": "Contactenrichment/linkedin are on standby after previous runs"
     },
     {
       "goal": "Automation readiness",
-      "progress": "n8n and flowise are on standby for on-demand runs"
+      "progress": "n8n and flowise remain idle-ready for on-demand execution"
     }
   ],
   "agents": [
@@ -32,8 +32,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Orchestrate Kumar operations and mission control",
-      "task": "Live dashboard cron refresh in progress",
-      "pending": "Continue monitoring and delegation"
+      "task": "Cron-driven live data refresh is running",
+      "pending": "Continue orchestration and monitor downstream agents"
     },
     {
       "name": "contactenrichment",
@@ -41,8 +41,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Last enrichment batch completed",
-      "pending": "Await next Notion-linked enrichment run"
+      "task": "Last visible batch completed",
+      "pending": "Await next enrichment trigger"
     },
     {
       "name": "linkedin",
@@ -50,7 +50,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Support LinkedIn lookup for contact operations",
-      "task": "No active run, latest visible run completed",
+      "task": "No currently running lookup session",
       "pending": "Start on next lookup instruction"
     },
     {
@@ -59,8 +59,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Deploy and run automation workflows",
-      "task": "No active session currently",
-      "pending": "Trigger automation jobs when requested"
+      "task": "No active workflow session visible",
+      "pending": "Run automations when requested"
     },
     {
       "name": "flowise",
@@ -68,7 +68,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Build and support Flowise pipelines",
-      "task": "No active session currently",
+      "task": "No active pipeline session visible",
       "pending": "Await next flow build request"
     }
   ]
