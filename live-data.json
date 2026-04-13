@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T12:29:00Z",
+  "generatedAt": "2026-04-13T12:31:00Z",
   "source": {
     "type": "openclaw-runtime",
     "cron": "mission-control-live-data-refresh",
@@ -10,7 +10,7 @@
   "priorities": [
     "Keep mission-control runtime snapshot current",
     "Fix main-agent WhatsApp model mismatch to prevent run errors",
-    "Queue next Notion-backed contact enrichment batch"
+    "Prepare next contact enrichment queue"
   ],
   "goalProgress": [
     {
@@ -21,12 +21,12 @@
     {
       "goal": "Contact enrichment throughput",
       "status": "waiting",
-      "progress": "Latest completed run processed 99 rows; waiting on next batch"
+      "progress": "Latest completed run processed 99 rows; awaiting next batch"
     },
     {
       "goal": "Specialist runtime reliability",
       "status": "attention",
-      "progress": "LinkedIn has prior failed session path; n8n and Flowise remain standby"
+      "progress": "LinkedIn has a failed recent session; n8n and Flowise remain standby"
     }
   ],
   "agents": [
@@ -54,7 +54,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookups for assigned records",
-      "task": "No active run; latest context includes a failed session",
+      "task": "No active run; recent context includes a failed session",
       "pending": "Stabilize failed session path and wait for next lookup batch"
     },
     {
