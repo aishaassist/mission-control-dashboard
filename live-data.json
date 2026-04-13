@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T15:07:00Z",
+  "generatedAt": "2026-04-13T15:09:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -16,11 +16,11 @@
   "priorities": [
     "Keep Aisha active for mission-control coordination",
     "Maintain specialist readiness across contactenrichment, linkedin, n8n, and flowise",
-    "Stabilize linkedin agent before the next specialist dispatch"
+    "Resolve linkedin failure signal before next specialist dispatch"
   ],
   "goalProgress": {
     "overall": "stable",
-    "note": "Main is actively running mission-control refresh while specialists are on standby; linkedin has a recent failed session signal."
+    "note": "Main is actively running mission-control refresh; specialist agents are standby with linkedin showing a recent failed session."
   },
   "agents": [
     {
