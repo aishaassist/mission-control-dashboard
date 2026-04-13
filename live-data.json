@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T00:17:00Z",
+  "generatedAt": "2026-04-13T00:19:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,16 +13,16 @@
     }
   },
   "priorities": [
-    "Keep main mission-control loop running cleanly",
-    "Queue contactenrichment only when Notion access is confirmed",
-    "Keep linkedin, n8n, and flowise ready for queued assignments"
+    "Keep main mission-control refresh loop healthy",
+    "Resume contactenrichment when Notion access and queue are ready",
+    "Keep linkedin, n8n, and flowise on ready standby for assignments"
   ],
   "goalProgress": {
-    "summary": "Main orchestration is active; specialist agents are currently on standby.",
+    "summary": "Main orchestration is active, specialist agents are mostly standby.",
     "completion": {
       "active": 1,
       "standby": 4,
-      "failed": 0
+      "failed": 1
     }
   },
   "agents": [
@@ -40,25 +40,25 @@
       "label": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school contact fields",
-      "task": "Last known run processed 99 rows and marked unresolved as not_found",
-      "pending": "Await next Notion-enabled enrichment batch"
+      "goal": "Fill missing school contact fields from official sources",
+      "task": "Last batch processed rows and marked unresolved contacts as not_found",
+      "pending": "Await next Notion-enabled enrichment run"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Execute LinkedIn lookup assignments",
-      "task": "No running session; latest group run completed with no rows processed",
-      "pending": "Await next lookup queue"
+      "task": "No running session, recent history includes a failed slash session",
+      "pending": "Await next lookup queue and healthy rerun"
     },
     {
       "name": "n8n",
       "label": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Build and deploy automations",
+      "goal": "Build and deploy automation workflows",
       "task": "No active run in current runtime snapshot",
       "pending": "Await next automation request"
     },
