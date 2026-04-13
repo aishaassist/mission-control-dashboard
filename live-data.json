@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T03:09:00Z",
+  "generatedAt": "2026-04-13T03:11:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -8,17 +8,17 @@
     {
       "name": "Mission control freshness",
       "status": "active",
-      "note": "Cron refresh is currently running under main (Aisha)."
+      "note": "Cron refresh is running under main (Aisha)."
     },
     {
       "name": "Contact enrichment pipeline",
       "status": "waiting",
-      "note": "Workflow is defined; sustained updates depend on Notion access and verifiable official sources."
+      "note": "Last run completed but meaningful updates remain gated by Notion access and source verification."
     },
     {
       "name": "LinkedIn enrichment reliability",
       "status": "monitor",
-      "note": "Latest run ended with zero rows; prior slash session shows a failed state."
+      "note": "Recent run had zero updates; prior failed slash session still warrants monitoring."
     }
   ],
   "goalProgress": [
@@ -26,13 +26,13 @@
       "goal": "Keep specialist agents operational",
       "progress": 0.62,
       "status": "at-risk",
-      "note": "Main is active; specialist agents are mostly idle/standby."
+      "note": "Main is active while specialist agents are idle/standby."
     },
     {
       "goal": "Close contact and profile data gaps",
       "progress": 0.47,
       "status": "blocked",
-      "note": "Execution cadence exists, but dependencies are still gating meaningful field updates."
+      "note": "Execution path exists, but dependencies are still limiting field updates."
     }
   ],
   "agents": [
@@ -51,8 +51,8 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Fill missing school Email/Phone from official sources",
-      "task": "Last known run processed 99 rows with no email/phone updates",
-      "pending": "Resume once Notion integration access is confirmed for sustained updates"
+      "task": "Last run processed 99 rows with no email/phone updates",
+      "pending": "Resume after Notion integration access and source coverage are confirmed"
     },
     {
       "name": "linkedin",
@@ -60,8 +60,8 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Populate LinkedIn profile fields for records",
-      "task": "Most recent group run reported zero rows updated",
-      "pending": "Rerun targeted batch and verify stability after earlier failed slash session"
+      "task": "Most recent run reported zero rows updated",
+      "pending": "Rerun targeted batch and verify stability"
     },
     {
       "name": "n8n",
