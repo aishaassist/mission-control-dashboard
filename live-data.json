@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T11:51:00Z",
+  "generatedAt": "2026-04-13T11:53:00Z",
   "source": {
     "type": "openclaw-runtime",
     "cron": "mission-control-live-data-refresh",
@@ -9,7 +9,7 @@
   },
   "priorities": [
     "Keep mission-control runtime snapshot current",
-    "Clear main-agent model mismatch errors on WhatsApp",
+    "Resolve main-agent WhatsApp model mismatch errors",
     "Keep specialist agents ready for next execution queues"
   ],
   "goalProgress": [
@@ -21,12 +21,12 @@
     {
       "goal": "Contact enrichment operations",
       "status": "waiting",
-      "progress": "Latest completed batch processed 99 rows; waiting for next Notion queue"
+      "progress": "Latest completed batch processed 99 rows; awaiting next Notion queue"
     },
     {
       "goal": "Specialist reliability",
       "status": "attention",
-      "progress": "LinkedIn has failed session history; n8n and Flowise are on standby"
+      "progress": "LinkedIn has recent failed session history; n8n and Flowise remain on standby"
     }
   ],
   "agents": [
@@ -37,7 +37,7 @@
       "health": "ok",
       "goal": "Coordinate mission control and specialist orchestration",
       "task": "Running mission-control live-data refresh cron",
-      "pending": "Resolve recurring model mismatch in WhatsApp session"
+      "pending": "Clear recurring WhatsApp model mismatch failure"
     },
     {
       "name": "contactenrichment",
@@ -54,8 +54,8 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookups for assigned records",
-      "task": "No active run; recent history includes failed route",
-      "pending": "Recover failed route and wait for next lookup queue"
+      "task": "No active run; recent history includes failed session",
+      "pending": "Stabilize failed route, then wait for next lookup queue"
     },
     {
       "name": "n8n",
