@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T01:16:00Z",
+  "generatedAt": "2026-04-13T01:19:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -31,7 +31,7 @@
     {
       "agent": "linkedin",
       "progress": "No active lookup run; latest group run reported rows_processed=0",
-      "pending": "Await fresh lookup request and watch for repeat failures"
+      "pending": "Await fresh lookup request and monitor failed sessions"
     },
     {
       "agent": "n8n",
@@ -69,8 +69,8 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Support LinkedIn lookup requests",
-      "task": "No active run; recent slash session has failed state",
-      "pending": "Await fresh lookup list and monitor for repeat failures"
+      "task": "No active run; recent session includes failed state",
+      "pending": "Await fresh lookup list and monitor repeat failures"
     },
     {
       "name": "n8n",
