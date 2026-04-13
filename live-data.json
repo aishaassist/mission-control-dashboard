@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T00:43:00Z",
+  "generatedAt": "2026-04-13T00:45:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -25,7 +25,7 @@
     },
     {
       "agent": "contactenrichment",
-      "progress": "Last batch finalized (rows_processed=99)",
+      "progress": "Last known batch finished (rows_processed=99)",
       "pending": "Await next enrichment trigger"
     },
     {
@@ -60,16 +60,16 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Maintain contact data completeness",
-      "task": "Last known final run completed; no active session",
+      "task": "No active run; last known enrichment batch completed",
       "pending": "Await next enrichment batch"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "Support LinkedIn lookup requests",
-      "task": "No active run; recent known slash session failed",
+      "task": "No active run; last known group run completed",
       "pending": "Await fresh lookup list"
     },
     {
