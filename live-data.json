@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T09:13:00Z",
+  "generatedAt": "2026-04-13T09:15:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -15,7 +15,7 @@
   "priorities": [
     "Keep mission-control visibility current across core agents",
     "Keep contact enrichment and LinkedIn specialists ready for dispatch",
-    "Trigger n8n and Flowise only when concrete execution requests land"
+    "Trigger n8n and Flowise when concrete execution requests land"
   ],
   "goalProgress": [
     {
