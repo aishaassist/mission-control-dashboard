@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T16:45:00Z",
+  "generatedAt": "2026-04-13T16:47:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -14,15 +14,15 @@
   "goalProgress": [
     {
       "goal": "Mission control uptime",
-      "progress": "Main session running"
+      "progress": "Main sessions are active; cron refresh is running"
     },
     {
       "goal": "Contact ops execution",
-      "progress": "Last contactenrichment run completed; waiting next batch"
+      "progress": "Contactenrichment completed last batch; waiting next trigger"
     },
     {
       "goal": "Automation readiness",
-      "progress": "n8n and flowise idle, ready on demand"
+      "progress": "n8n and flowise are idle but available on demand"
     }
   ],
   "agents": [
@@ -31,8 +31,8 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Orchestrate Kumar ops and live mission-control refresh",
-      "task": "Cron refresh currently running",
+      "goal": "Orchestrate Kumar ops and mission-control execution",
+      "task": "Cron-driven live dashboard refresh in progress",
       "pending": "Continue live monitoring and delegation"
     },
     {
@@ -40,35 +40,35 @@
       "displayName": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school contact email/phone from official sources",
-      "task": "Last run finished with not_found-heavy results",
-      "pending": "Await Notion-connected batch trigger"
+      "goal": "Fill missing school contact email and phone from official sources",
+      "task": "Last run completed; outcome was mostly not_found",
+      "pending": "Await next Notion-linked enrichment batch"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Standby",
       "health": "warn",
-      "goal": "LinkedIn lookup support for contact ops",
-      "task": "No active run; recent quick complete with 0 rows",
-      "pending": "Start when new lookup instructions land"
+      "goal": "LinkedIn lookup support for contact operations",
+      "task": "No active run; last visible execution completed",
+      "pending": "Start on next lookup instruction"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Workflow automation deployment and execution",
-      "task": "No current running session",
-      "pending": "Trigger automation jobs as requested"
+      "goal": "Automation workflow deployment and execution",
+      "task": "No active session currently",
+      "pending": "Trigger automation jobs when requested"
     },
     {
       "name": "flowise",
       "displayName": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise build/support tasks",
-      "task": "No current running session",
+      "goal": "Flowise build and support operations",
+      "task": "No active session currently",
       "pending": "Await next flow build request"
     }
   ]
