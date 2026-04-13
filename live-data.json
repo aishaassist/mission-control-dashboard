@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T07:59:00Z",
+  "generatedAt": "2026-04-13T08:01:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -62,10 +62,10 @@
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Support LinkedIn lookup and enrichment",
-      "task": "Latest execution reported zero rows processed",
-      "pending": "Await next lookup queue"
+      "task": "Recent session history includes a failed slash-session run",
+      "pending": "Stabilize next run and await fresh lookup queue"
     },
     {
       "name": "n8n",
