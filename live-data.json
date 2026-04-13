@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T20:15:00Z",
+  "generatedAt": "2026-04-13T20:17:00Z",
   "source": {
     "sessions_list": {
       "limit": 50,
@@ -27,12 +27,12 @@
     {
       "goal": "Contact enrichment operations",
       "status": "waiting",
-      "progress": "Latest batch completed, waiting for next Notion-backed run"
+      "progress": "Latest batch completed, awaiting next Notion-backed run"
     },
     {
       "goal": "LinkedIn research operations",
       "status": "at_risk",
-      "progress": "No active run; recent session history includes a failed status"
+      "progress": "No active run and recent history contains a failed session"
     }
   ],
   "agents": [
@@ -42,8 +42,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission-control and multi-agent orchestration",
-      "task": "Running cron refresh and maintaining active chat sessions",
-      "pending": "Complete dashboard git sync when file changes"
+      "task": "Running cron refresh while maintaining active main sessions",
+      "pending": "Complete dashboard git sync if file changed"
     },
     {
       "name": "contactenrichment",
@@ -51,8 +51,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact data from official sources",
-      "task": "Last batch finished successfully with final metrics",
-      "pending": "Await next enrichment batch and Notion-ready context"
+      "task": "Last enrichment batch completed with final metrics",
+      "pending": "Await next enrichment run and Notion-ready input"
     },
     {
       "name": "linkedin",
@@ -60,8 +60,8 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Run profile lookup and enrichment support",
-      "task": "No active run; recent session list includes a failed run",
-      "pending": "Await next lookup task and recover with a clean run"
+      "task": "No current run; recent known context includes a failed session",
+      "pending": "Start next lookup task with a clean recovery run"
     },
     {
       "name": "n8n",
