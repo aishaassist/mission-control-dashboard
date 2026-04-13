@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T09:07:00Z",
+  "generatedAt": "2026-04-13T09:09:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -24,7 +24,7 @@
     },
     {
       "goal": "Specialist readiness",
-      "progress": "Main running, specialist agents currently idle/standby"
+      "progress": "Main running, specialist agents currently idle or standby"
     }
   ],
   "agents": [
