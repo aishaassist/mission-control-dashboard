@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T17:11:00Z",
+  "generatedAt": "2026-04-13T17:13:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -41,7 +41,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Latest enrichment batch completed",
+      "task": "Last batch completed (99 rows processed)",
       "pending": "Await next enrichment trigger"
     },
     {
