@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T04:37:00Z",
+  "generatedAt": "2026-04-13T04:39:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -37,7 +37,7 @@
       "health": "ok",
       "goal": "Coordinate mission control and cross-agent execution",
       "task": "Running mission-control live-data refresh cron",
-      "pending": "Commit and push live-data.json only if diff exists"
+      "pending": "Commit and push live-data.json only if staged diff exists"
     },
     {
       "name": "contactenrichment",
