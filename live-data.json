@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T05:29:00Z",
+  "generatedAt": "2026-04-13T05:31:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -19,7 +19,7 @@
   ],
   "goalProgress": {
     "overall": "Monitoring mode",
-    "summary": "Main is active on live-data refresh; specialist lanes are currently standby with no active subagent workload.",
+    "summary": "Main is active on live-data refresh; specialist lanes are in standby with no active subagent workload.",
     "pending": [
       "Await next contact enrichment batch",
       "Await next LinkedIn lookup run",
@@ -35,7 +35,7 @@
       "goal": "Mission control and user orchestration",
       "task": "Running cron mission-control-live-data-refresh",
       "pending": "Continue monitoring and dispatch specialist work as needed",
-      "lastUpdatedAt": 1776058187208
+      "lastUpdatedAt": 1776058309086
     },
     {
       "agent": "contactenrichment",
@@ -43,7 +43,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich missing school contact data",
-      "task": "Last run completed (99 rows, no new email/phone updates)",
+      "task": "Last run completed (99 rows, no email or phone updates)",
       "pending": "Wait for new database rows or integration updates",
       "lastUpdatedAt": 1775398198839
     },
@@ -53,7 +53,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "LinkedIn profile lookup and mapping",
-      "task": "No active run; latest operational run processed zero rows",
+      "task": "No active run; latest operational batch processed zero rows",
       "pending": "Start when fresh LinkedIn lookup tasks arrive",
       "lastUpdatedAt": 1775302155385
     },
@@ -64,7 +64,7 @@
       "health": "warn",
       "goal": "Automation workflow build and deployment",
       "task": "No active session",
-      "pending": "Await automation requests for office/personal n8n",
+      "pending": "Await automation requests for office or personal n8n",
       "lastUpdatedAt": 1774354459888
     },
     {
@@ -72,7 +72,7 @@
       "name": "flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise agent/app build support",
+      "goal": "Flowise agent and app build support",
       "task": "No active session",
       "pending": "Await new Flowise build or debug requests",
       "lastUpdatedAt": 1774193518403
