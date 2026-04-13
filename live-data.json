@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-04-13T22:45:00Z",
+  "generatedAt": "2026-04-13T22:47:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main (Aisha) stable while cron refresh runs",
-    "Restore contactenrichment Notion access before next email/phone pass",
-    "Stabilize linkedin runtime after recent failed slash session"
+    "Unblock contactenrichment Notion access before next email/phone pass",
+    "Queue next linkedin enrichment batch when new lookup tasks arrive"
   ],
   "goalProgress": [
     {
       "goal": "Mission control runtime visibility",
       "status": "on_track",
-      "progress": "Live snapshot refreshed from current OpenClaw session state"
+      "progress": "Live snapshot refreshed from current OpenClaw session and subagent state"
     }
   ],
   "agents": [
@@ -23,7 +23,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Core assistant and cron orchestration",
-      "task": "mission-control-live-data-refresh is running",
+      "task": "mission-control-live-data-refresh is currently running",
       "pending": "Continue periodic dashboard refresh and oversight"
     },
     {
@@ -32,17 +32,17 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school Email/Phone fields",
-      "task": "Last run completed; no active session",
-      "pending": "Await Notion integration token + shared database access"
+      "task": "Last run completed with final contact update summary",
+      "pending": "Await Notion integration token and DB share to resume enrichment"
     },
     {
       "name": "linkedin",
       "label": "linkedin",
       "status": "Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "LinkedIn profile enrichment support",
-      "task": "No active session; recent slash session failed",
-      "pending": "Run next lookup after runtime/error check"
+      "task": "No active session; latest visible run finished without updates",
+      "pending": "Await next lookup batch; monitor prior slash-session failure recurrence"
     },
     {
       "name": "n8n",
