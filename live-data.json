@@ -1,16 +1,18 @@
 {
-  "generatedAt": "2026-04-13T20:55:00Z",
+  "generatedAt": "2026-04-13T20:57:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
-      "fetchedAt": "2026-04-13T20:55:00Z"
+      "fetchedAt": "2026-04-13T20:57:00Z",
+      "count": 12
     },
     "subagents": {
       "action": "list",
       "recentMinutes": 1440,
-      "fetchedAt": "2026-04-13T20:55:00Z",
-      "active": 0
+      "fetchedAt": "2026-04-13T20:57:00Z",
+      "active": 0,
+      "recent": 0
     }
   },
   "priorities": [
@@ -29,7 +31,7 @@
     },
     {
       "goal": "Specialist readiness",
-      "progress": "linkedin, n8n, and flowise are waiting for new tasks"
+      "progress": "linkedin, n8n, and flowise are on standby for new work"
     }
   ],
   "agents": [
@@ -39,7 +41,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control and orchestrate assistant operations",
-      "task": "mission-control-live-data-refresh cron is running",
+      "task": "mission-control-live-data-refresh cron is currently running",
       "pending": "Continue periodic refresh and monitor specialist activation"
     },
     {
@@ -48,7 +50,7 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Fill missing school contact fields from verified official sources",
-      "task": "Last run: 99 rows processed, 0 email updates, 0 phone updates",
+      "task": "Last run completed with 99 rows processed, 0 email updates, 0 phone updates",
       "pending": "Restore Notion integration/share access, then resume row updates"
     },
     {
@@ -57,7 +59,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Handle LinkedIn lookup and enrichment support",
-      "task": "No running session; latest group run returned 0 rows processed",
+      "task": "No running session; latest run reported 0 rows processed",
       "pending": "Await next lookup or enrichment request"
     },
     {
