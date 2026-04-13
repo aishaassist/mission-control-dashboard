@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T15:37:00Z",
+  "generatedAt": "2026-04-13T15:39:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -31,7 +31,7 @@
     {
       "goal": "LinkedIn enrichment workflow",
       "status": "at_risk",
-      "note": "No active run and prior slash session shows failed state"
+      "note": "No active run; prior session history includes a failed slash run"
     }
   ],
   "agents": [
@@ -57,10 +57,10 @@
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No current run; last slash session state is failed",
-      "pending": "Failure triage then next lookup batch"
+      "task": "No current run; last group run finished with 0 rows processed",
+      "pending": "Triage prior failed slash run before next batch"
     },
     {
       "name": "n8n",
