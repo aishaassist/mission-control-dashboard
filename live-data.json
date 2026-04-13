@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-04-13T20:47:00Z",
+  "generatedAt": "2026-04-13T20:49:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
-      "fetchedAt": "2026-04-13T20:47:00Z"
+      "fetchedAt": "2026-04-13T20:49:00Z"
     },
     "subagents": {
       "action": "list",
       "recentMinutes": 1440,
-      "fetchedAt": "2026-04-13T20:47:00Z",
+      "fetchedAt": "2026-04-13T20:49:00Z",
       "active": 0
     }
   },
