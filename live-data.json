@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T06:27:00Z",
+  "generatedAt": "2026-04-13T06:31:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -26,7 +26,7 @@
     {
       "goal": "Agent execution continuity",
       "status": "mixed",
-      "progress": "Aisha active; specialists mostly standby with one recent failure signal"
+      "progress": "Aisha active; specialist agents mostly standby and LinkedIn needs recovery"
     }
   ],
   "agents": [
@@ -37,7 +37,7 @@
       "health": "ok",
       "goal": "Coordinate operations and keep dashboard synced",
       "task": "Running mission-control live data refresh",
-      "pending": "Continue monitoring and handoff orchestration"
+      "pending": "Continue monitoring and cross-agent orchestration"
     },
     {
       "name": "contactenrichment",
@@ -45,8 +45,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last batch completed with not_found-heavy outcomes",
-      "pending": "Await next enrichment batch or Notion-ready run"
+      "task": "Last enrichment run completed; currently idle",
+      "pending": "Await next enrichment batch"
     },
     {
       "name": "linkedin",
@@ -54,8 +54,8 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No current execution; recent visible session includes failure",
-      "pending": "Validate stability, then resume next lookup queue"
+      "task": "No active run; recent session includes a failed execution",
+      "pending": "Investigate failure and resume next lookup queue"
     },
     {
       "name": "n8n",
@@ -63,8 +63,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Automation workflow execution and deployment",
-      "task": "No active session currently running",
-      "pending": "Await automation build/deploy requests"
+      "task": "No active workflow support session",
+      "pending": "Await automation build and deploy requests"
     },
     {
       "name": "flowise",
@@ -72,7 +72,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Flowise build and support operations",
-      "task": "No active session currently running",
+      "task": "No active Flowise session",
       "pending": "Await next Flowise implementation request"
     }
   ]
