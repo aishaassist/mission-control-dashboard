@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T00:11:00Z",
+  "generatedAt": "2026-04-13T00:13:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -15,7 +15,7 @@
   "priorities": [
     "Keep main mission-control loop running cleanly",
     "Queue next contactenrichment run once Notion access is confirmed",
-    "Prepare actionable task queues for linkedin, n8n, and flowise"
+    "Prepare actionable queues for linkedin, n8n, and flowise"
   ],
   "goalProgress": {
     "summary": "Main orchestration is active, specialist agents are on standby awaiting new tasks.",
