@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T07:25:00Z",
+  "generatedAt": "2026-04-13T07:27:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -45,7 +45,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last run completed, 99 rows processed with mostly not_found",
+      "task": "Last run completed, 99 rows processed",
       "pending": "Await next enrichment queue or source-access update"
     },
     {
@@ -54,8 +54,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; recent sessions completed without active workload",
-      "pending": "Await next lookup batch; monitor for recurrence of failed session paths"
+      "task": "No active run; latest sessions are completed",
+      "pending": "Await next lookup batch"
     },
     {
       "name": "n8n",
