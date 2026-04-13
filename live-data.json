@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T00:01:00Z",
+  "generatedAt": "2026-04-13T00:03:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,15 +14,15 @@
   },
   "priorities": [
     "Keep main coordination session responsive",
-    "Start next contactenrichment run when new Notion-ready batch is assigned",
-    "Queue actionable workloads for linkedin, n8n, and flowise"
+    "Prepare next contactenrichment batch with Notion access in place",
+    "Queue concrete execution tasks for linkedin, n8n, and flowise"
   ],
   "goalProgress": {
-    "summary": "Main cron orchestration is active; specialist agents are idle and waiting for new tasks.",
+    "summary": "Main cron orchestration is active; specialist agents are mostly on standby awaiting fresh assignments.",
     "completion": {
       "active": 1,
-      "standby": 4,
-      "failed": 0
+      "standby": 3,
+      "failed": 1
     }
   },
   "agents": [
@@ -32,8 +32,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission-control operations",
-      "task": "Executing live dashboard refresh cron",
-      "pending": "Finalize git sync for refreshed live-data.json"
+      "task": "Running mission-control live data refresh cron",
+      "pending": "Complete commit/push if dashboard data changed"
     },
     {
       "name": "contactenrichment",
@@ -41,17 +41,17 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact details",
-      "task": "Last completion reported 99 rows processed",
-      "pending": "Await next Notion-connected enrichment batch"
+      "task": "Last run completed with 99 rows processed",
+      "pending": "Await next Notion-ready enrichment batch"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Run LinkedIn lookup coverage tasks",
-      "task": "No active run; latest group run closed",
-      "pending": "Await next lookup or outreach list"
+      "task": "No active run; recent session history includes failed state",
+      "pending": "Stabilize next run and await new lookup list"
     },
     {
       "name": "n8n",
@@ -60,7 +60,7 @@
       "health": "warn",
       "goal": "Build and deploy automation workflows",
       "task": "No active execution detected",
-      "pending": "Await next automation request"
+      "pending": "Await next automation implementation request"
     },
     {
       "name": "flowise",
