@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T14:59:00Z",
+  "generatedAt": "2026-04-13T15:01:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -16,11 +16,11 @@
   "priorities": [
     "Keep Aisha active for mission-control coordination",
     "Maintain specialist readiness across contactenrichment, linkedin, n8n, and flowise",
-    "Resolve linkedin failed-session risk before next specialist dispatch"
+    "Clear linkedin failure signal before next specialist dispatch"
   ],
   "goalProgress": {
     "overall": "stable",
-    "note": "Main is active in cron orchestration; specialists are on standby, with linkedin carrying a prior failure signal to clear."
+    "note": "Main is actively running mission-control refresh; specialists are on standby, with linkedin carrying a recent failure flag."
   },
   "agents": [
     {
@@ -39,7 +39,7 @@
       "health": "warn",
       "goal": "Enrich school contact records",
       "task": "Last Notion contact batch completed",
-      "pending": "Await next verified email or phone updates"
+      "pending": "Await next verified email/phone update batch"
     },
     {
       "name": "linkedin",
@@ -47,7 +47,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "LinkedIn lookup and mapping",
-      "task": "No active run; prior slash session failed",
+      "task": "No active run; recent slash session failed",
       "pending": "Validate runtime path before next lookup batch"
     },
     {
@@ -57,7 +57,7 @@
       "health": "warn",
       "goal": "Automation workflow support",
       "task": "No active execution detected",
-      "pending": "Await workflow build or deploy requests"
+      "pending": "Await workflow build/deploy requests"
     },
     {
       "name": "flowise",
