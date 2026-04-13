@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T11:33:00Z",
+  "generatedAt": "2026-04-13T11:37:00Z",
   "source": {
     "type": "openclaw-runtime",
     "sessionsListCount": 12,
@@ -25,7 +25,7 @@
     {
       "goal": "Specialist reliability",
       "status": "attention",
-      "progress": "LinkedIn shows recent failed route; n8n and Flowise are standby"
+      "progress": "LinkedIn has a recent failed session; n8n and Flowise are standby"
     }
   ],
   "agents": [
@@ -53,7 +53,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookups for assigned records",
-      "task": "No active run; most recent slash route shows failed session",
+      "task": "No active run; recent route includes a failed session",
       "pending": "Recover failed route and wait for next lookup queue"
     },
     {
