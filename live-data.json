@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T03:19:00Z",
+  "generatedAt": "2026-04-13T03:21:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -8,31 +8,31 @@
     {
       "name": "Mission control freshness",
       "status": "active",
-      "note": "Main (Aisha) is actively running this cron refresh."
+      "note": "Main (Aisha) is currently running this scheduled refresh."
     },
     {
-      "name": "Contact enrichment unblock",
+      "name": "Contact enrichment restart readiness",
       "status": "waiting",
-      "note": "Last pass completed 99 rows with zero updates; Notion access and verifiable source coverage remain constraints."
+      "note": "Last run processed 99 rows with no field updates; next run depends on data-access readiness."
     },
     {
-      "name": "LinkedIn runtime reliability",
+      "name": "LinkedIn stability watch",
       "status": "monitor",
-      "note": "Agent is idle with mixed recent outcomes, including a failed session and zero-update completion."
+      "note": "Agent is idle now, with mixed recent outcomes including one failed session."
     }
   ],
   "goalProgress": [
     {
       "goal": "Keep core agents operational",
-      "progress": 0.64,
+      "progress": 0.66,
       "status": "at-risk",
-      "note": "Only main is currently running; specialist agents are idle or standby."
+      "note": "Only main is actively running; specialist agents are idle/standby."
     },
     {
-      "goal": "Close enrichment and profile data gaps",
-      "progress": 0.47,
+      "goal": "Maintain enrichment + profile data pipelines",
+      "progress": 0.5,
       "status": "blocked",
-      "note": "Execution paths exist but data updates depend on access and high-confidence source validation."
+      "note": "Execution paths exist, but specialist throughput is currently paused."
     }
   ],
   "agents": [
@@ -43,16 +43,16 @@
       "health": "ok",
       "goal": "Coordinate operations and keep dashboard state current",
       "task": "Running cron mission-control-live-data-refresh",
-      "pending": "Write snapshot and push only if diff exists"
+      "pending": "Write snapshot and push only if file changed"
     },
     {
       "name": "contactenrichment",
       "displayName": "Contact Enrichment",
       "status": "Idle",
       "health": "warn",
-      "goal": "Fill missing school Email and Phone from official sources",
-      "task": "Last known run processed 99 rows with zero email/phone updates",
-      "pending": "Resume once Notion integration access and verified sources are ready"
+      "goal": "Fill missing school email/phone from official sources",
+      "task": "Last known run processed 99 rows, 0 email updates, 0 phone updates",
+      "pending": "Resume next batch when source/access constraints are cleared"
     },
     {
       "name": "linkedin",
@@ -60,8 +60,8 @@
       "status": "Idle",
       "health": "bad",
       "goal": "Populate LinkedIn profile fields for target records",
-      "task": "Recent context shows a failed session and a later zero-update completion",
-      "pending": "Run a controlled next batch and verify runtime stability"
+      "task": "Recent context includes one failed session and one zero-update completion",
+      "pending": "Run controlled next batch and validate runtime reliability"
     },
     {
       "name": "n8n",
@@ -77,9 +77,9 @@
       "displayName": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Build and maintain Flowise workflow implementations",
+      "goal": "Build and maintain Flowise workflows",
       "task": "No currently running session",
-      "pending": "Await next Flowise build task"
+      "pending": "Await next Flowise implementation task"
     }
   ]
 }
