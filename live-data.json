@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T09:19:00Z",
+  "generatedAt": "2026-04-13T09:21:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -50,10 +50,10 @@
       "name": "linkedin",
       "title": "LinkedIn",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Run LinkedIn lookup and profile mapping",
-      "task": "No running session, last completion reported 0 rows processed",
-      "pending": "Await next LinkedIn lookup request"
+      "task": "No running session, last run state includes a failed session",
+      "pending": "Stabilize session health on next LinkedIn request"
     },
     {
       "name": "n8n",
@@ -62,7 +62,7 @@
       "health": "warn",
       "goal": "Build and deploy workflow automations",
       "task": "No running automation session",
-      "pending": "Await workflow build/deploy request"
+      "pending": "Await workflow build or deploy request"
     },
     {
       "name": "flowise",
