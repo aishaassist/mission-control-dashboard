@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T20:07:00Z",
+  "generatedAt": "2026-04-13T20:09:39Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -7,7 +7,7 @@
   "priorities": [
     "Keep main (Aisha) stable while mission-control cron refresh is running",
     "Unblock contactenrichment by restoring Notion API key and integration share access",
-    "Recover specialist throughput for linkedin and keep n8n/flowise ready"
+    "Keep linkedin, n8n, and flowise ready for next execution wave"
   ],
   "goalProgress": {
     "operations": "Main is active and currently running the live-data refresh cron",
@@ -30,17 +30,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "No running session; last batch completed with not_found outcomes",
-      "pending": "Await valid NOTION_API_KEY and integration share on target Notion DB"
+      "task": "No running session; last run completed with high not_found outcomes",
+      "pending": "Await valid NOTION_API_KEY and Notion integration share on target DB"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "LinkedIn lookup and enrichment support",
-      "task": "No running session; recent history includes a failed run",
-      "pending": "Stabilize runtime and trigger next lookup batch"
+      "task": "No running session; last run completed with zero rows processed",
+      "pending": "Queue next lookup batch when new targets arrive"
     },
     {
       "name": "n8n",
@@ -49,7 +49,7 @@
       "health": "warn",
       "goal": "Automation workflow delivery",
       "task": "No running session",
-      "pending": "Await next build/deploy request"
+      "pending": "Await next workflow build or deployment request"
     },
     {
       "name": "flowise",
