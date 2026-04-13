@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T03:21:00Z",
+  "generatedAt": "2026-04-13T03:23:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -8,17 +8,17 @@
     {
       "name": "Mission control freshness",
       "status": "active",
-      "note": "Main (Aisha) is currently running this scheduled refresh."
+      "note": "Main (Aisha) is currently running the scheduled dashboard refresh."
     },
     {
-      "name": "Contact enrichment restart readiness",
+      "name": "Contact enrichment readiness",
       "status": "waiting",
-      "note": "Last run processed 99 rows with no field updates; next run depends on data-access readiness."
+      "note": "Last known batch processed records with no field updates; next run is pending readiness."
     },
     {
-      "name": "LinkedIn stability watch",
+      "name": "LinkedIn reliability",
       "status": "monitor",
-      "note": "Agent is idle now, with mixed recent outcomes including one failed session."
+      "note": "Agent is idle now, with mixed recent outcomes including a failed session."
     }
   ],
   "goalProgress": [
@@ -26,13 +26,13 @@
       "goal": "Keep core agents operational",
       "progress": 0.66,
       "status": "at-risk",
-      "note": "Only main is actively running; specialist agents are idle/standby."
+      "note": "Only main is active; specialist agents are currently idle or standby."
     },
     {
-      "goal": "Maintain enrichment + profile data pipelines",
+      "goal": "Sustain enrichment and profile pipelines",
       "progress": 0.5,
       "status": "blocked",
-      "note": "Execution paths exist, but specialist throughput is currently paused."
+      "note": "Pipelines are defined, but specialist throughput is presently paused."
     }
   ],
   "agents": [
@@ -50,9 +50,9 @@
       "displayName": "Contact Enrichment",
       "status": "Idle",
       "health": "warn",
-      "goal": "Fill missing school email/phone from official sources",
-      "task": "Last known run processed 99 rows, 0 email updates, 0 phone updates",
-      "pending": "Resume next batch when source/access constraints are cleared"
+      "goal": "Fill missing school email and phone from official sources",
+      "task": "Last known run processed 99 rows with zero email and phone updates",
+      "pending": "Resume next batch when data-access constraints are resolved"
     },
     {
       "name": "linkedin",
@@ -60,8 +60,8 @@
       "status": "Idle",
       "health": "bad",
       "goal": "Populate LinkedIn profile fields for target records",
-      "task": "Recent context includes one failed session and one zero-update completion",
-      "pending": "Run controlled next batch and validate runtime reliability"
+      "task": "Recent context shows one failed session and one zero-update completion",
+      "pending": "Run next controlled batch and validate session stability"
     },
     {
       "name": "n8n",
