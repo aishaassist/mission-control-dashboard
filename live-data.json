@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T06:43:00Z",
+  "generatedAt": "2026-04-13T06:45:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -26,7 +26,7 @@
     {
       "goal": "Agent execution continuity",
       "status": "mixed",
-      "progress": "Aisha active; LinkedIn still carries failed history while specialist queues remain standby"
+      "progress": "Aisha is active; specialist agents are standby with LinkedIn carrying failed history"
     }
   ],
   "agents": [
@@ -45,8 +45,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last run completed with final counts, currently idle",
-      "pending": "Await next contact enrichment batch"
+      "task": "Last batch completed with final counts",
+      "pending": "Await next contact enrichment queue"
     },
     {
       "name": "linkedin",
@@ -54,8 +54,8 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run, recent history includes a failed session",
-      "pending": "Review failure context before next lookup queue"
+      "task": "No active run; recent session history includes failure",
+      "pending": "Review failure context before next lookup batch"
     },
     {
       "name": "n8n",
@@ -64,7 +64,7 @@
       "health": "warn",
       "goal": "Automation workflow execution and deployment",
       "task": "No active automation support session",
-      "pending": "Await new automation build or deploy requests"
+      "pending": "Await new automation build/deploy requests"
     },
     {
       "name": "flowise",
