@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T04:25:00Z",
+  "generatedAt": "2026-04-13T04:27:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -45,7 +45,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich contact records from official sources",
-      "task": "Last known run completed (99 rows processed)",
+      "task": "Last run completed: 99 rows processed",
       "pending": "Await next Notion enrichment batch"
     },
     {
@@ -54,7 +54,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "No active run; latest execution finished",
+      "task": "No active run; latest known run completed",
       "pending": "Await next lookup request"
     },
     {
@@ -63,7 +63,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and deploy automation workflows",
-      "task": "No current execution detected",
+      "task": "No active run detected",
       "pending": "Start next workflow when triggered"
     },
     {
@@ -72,7 +72,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise integration operations",
-      "task": "No current execution detected",
+      "task": "No active run detected",
       "pending": "Await next integration request"
     }
   ]
