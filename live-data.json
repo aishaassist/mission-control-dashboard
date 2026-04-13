@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T05:17:00Z",
+  "generatedAt": "2026-04-13T05:19:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -25,7 +25,7 @@
     },
     {
       "goal": "Agent readiness",
-      "progress": "Main is active; specialist agents are on standby, with linkedin carrying recent failed-session risk",
+      "progress": "Main is active; specialist agents are on standby, with linkedin carrying a known failed-session risk",
       "status": "watch"
     }
   ],
@@ -54,8 +54,8 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "No active job; latest known slash session is failed",
-      "pending": "Await next lookup request and monitor failed path recurrence"
+      "task": "No active job; latest known slash session status is failed",
+      "pending": "Await next lookup request and monitor failed-path recurrence"
     },
     {
       "name": "n8n",
