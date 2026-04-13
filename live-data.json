@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T17:03:00Z",
+  "generatedAt": "2026-04-13T17:05:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -7,22 +7,22 @@
     "snapshotSubagentCount": 0
   },
   "priorities": [
-    "Keep main (Aisha) focused on live orchestration and cron continuity",
-    "Queue contactenrichment and linkedin for next intake batch",
-    "Keep n8n and flowise warm for automation and flow delivery"
+    "Keep main (Aisha) focused on mission-control continuity",
+    "Prepare contactenrichment and linkedin for the next intake batch",
+    "Keep n8n and flowise ready for on-demand automation delivery"
   ],
   "goalProgress": [
     {
       "goal": "Mission control uptime",
-      "progress": "Main is active with mission-control live refresh running"
+      "progress": "Main is active with this live-data refresh run"
     },
     {
-      "goal": "Contact ops execution",
-      "progress": "Contactenrichment and linkedin are standby after prior batches"
+      "goal": "Contact operations",
+      "progress": "Contactenrichment completed its last batch and is awaiting new work"
     },
     {
       "goal": "Automation readiness",
-      "progress": "n8n and flowise are idle-ready for on-demand work"
+      "progress": "n8n and flowise remain idle-ready for immediate execution"
     }
   ],
   "agents": [
@@ -32,8 +32,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Orchestrate Kumar operations and mission control",
-      "task": "Cron live-data refresh is currently running",
-      "pending": "Continue orchestration and monitor specialist queues"
+      "task": "Cron live-data refresh is running",
+      "pending": "Continue orchestration and watch specialist queues"
     },
     {
       "name": "contactenrichment",
@@ -48,10 +48,10 @@
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Run LinkedIn lookup support for contact operations",
-      "task": "No active lookup session running",
-      "pending": "Start on next lookup instruction"
+      "task": "No active lookup session; recent slash session showed failed status",
+      "pending": "Stabilize on next lookup instruction"
     },
     {
       "name": "n8n",
