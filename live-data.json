@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T14:11:00Z",
+  "generatedAt": "2026-04-13T14:13:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -15,12 +15,12 @@
   },
   "priorities": [
     "Keep main agent responsive for live operations",
-    "Route new work to specialist agents on explicit intake",
-    "Monitor idle specialist lanes for reactivation readiness"
+    "Route incoming work to the correct specialist lane",
+    "Keep specialist agents warm and ready for activation"
   ],
   "goalProgress": {
     "overall": "stable",
-    "note": "Main is active; specialist agents are idle and ready for next assignments."
+    "note": "Main is active now; specialist lanes are idle and ready for next tasks."
   },
   "agents": [
     {
@@ -29,7 +29,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Mission control continuity",
-      "task": "Refreshing mission-control live data in current cron run",
+      "task": "Executing live dashboard refresh cron run",
       "pending": "None"
     },
     {
@@ -38,8 +38,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last batch completed; no running session",
-      "pending": "Await next enrichment request"
+      "task": "No running session; last run completed successfully",
+      "pending": "Awaiting next enrichment batch"
     },
     {
       "name": "linkedin",
@@ -47,8 +47,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile mapping",
-      "task": "Last run done; no current execution",
-      "pending": "Await next lookup request"
+      "task": "No active run; recent workflow finished",
+      "pending": "Awaiting next lookup request"
     },
     {
       "name": "n8n",
@@ -56,8 +56,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Automation workflow support",
-      "task": "No currently running session",
-      "pending": "Await workflow build or deploy request"
+      "task": "No running session at this time",
+      "pending": "Awaiting workflow build/deploy request"
     },
     {
       "name": "flowise",
@@ -65,8 +65,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Flowise bot and flow support",
-      "task": "No currently running session",
-      "pending": "Await next Flowise request"
+      "task": "No running session at this time",
+      "pending": "Awaiting next Flowise assignment"
     }
   ]
 }
