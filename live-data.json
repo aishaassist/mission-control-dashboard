@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T04:11:00Z",
+  "generatedAt": "2026-04-13T04:13:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,8 +14,8 @@
   },
   "priorities": [
     "Keep mission-control dashboard synced to current runtime state",
-    "Complete git refresh cycle only when live-data.json changes",
-    "Re-activate idle specialist queues on next trigger"
+    "Refresh and publish only when live-data.json actually changes",
+    "Bring specialist queues online as new tasks arrive"
   ],
   "goalProgress": [
     {
@@ -25,7 +25,7 @@
     },
     {
       "goal": "Contact enrichment throughput",
-      "progress": "Last contactenrichment run processed 99 rows with unresolved fields set to not_found",
+      "progress": "Last contactenrichment run completed 99 rows with unresolved fields marked not_found",
       "status": "watch"
     }
   ],
@@ -36,16 +36,16 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control and cross-agent execution",
-      "task": "Running mission-control-live-data-refresh cron",
-      "pending": "Commit and push refreshed live-data.json if diff exists"
+      "task": "Running cron refresh for mission-control live data",
+      "pending": "Stage, commit, and push live-data.json only if changed"
     },
     {
       "name": "contactenrichment",
       "displayName": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich contacts from official verifiable sources",
-      "task": "Latest completed run processed 99 rows",
+      "goal": "Enrich contacts from official, verifiable sources",
+      "task": "Latest run completed with 99 rows processed",
       "pending": "Await next Notion enrichment batch"
     },
     {
@@ -53,25 +53,25 @@
       "displayName": "linkedin",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Run LinkedIn lookup and profile enrichment",
-      "task": "No active run; latest group pass returned zero rows",
-      "pending": "Resume lookups when next request arrives"
+      "goal": "Handle LinkedIn lookup and profile enrichment tasks",
+      "task": "No active execution; latest group run returned zero rows",
+      "pending": "Resume on next lookup request"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Maintain automation build and deployment workflows",
+      "goal": "Build and deploy automation workflows",
       "task": "No current execution detected",
-      "pending": "Start next automation workflow when triggered"
+      "pending": "Start next workflow when triggered"
     },
     {
       "name": "flowise",
       "displayName": "flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Support Flowise workflow integrations",
+      "goal": "Support Flowise integration operations",
       "task": "No current execution detected",
       "pending": "Await next integration request"
     }
