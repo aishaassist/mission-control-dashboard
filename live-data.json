@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T22:57:00Z",
+  "generatedAt": "2026-04-13T23:03:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -16,20 +16,20 @@
       "status": "queued"
     },
     {
-      "name": "Queue next LinkedIn enrichment batch",
-      "status": "queued"
+      "name": "Maintain specialist agent readiness",
+      "status": "watch"
     }
   ],
   "goalProgress": [
     {
       "goal": "Mission control visibility",
-      "progress": 0.83,
+      "progress": 0.86,
       "note": "Telemetry refreshed from current runtime sessions"
     },
     {
       "goal": "Agent utilization",
-      "progress": 0.37,
-      "note": "Main active; specialist agents on standby"
+      "progress": 0.44,
+      "note": "Main active; specialist agents mostly on standby"
     }
   ],
   "agents": [
@@ -40,7 +40,7 @@
       "health": "ok",
       "goal": "Coordinate operations and keep mission control current",
       "task": "Running mission-control live data refresh cron",
-      "pending": "No blocker"
+      "pending": "Monitor spark-model compatibility errors"
     },
     {
       "name": "contactenrichment",
@@ -48,17 +48,17 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Last run completed with contact update summary",
-      "pending": "Awaiting next data batch"
+      "task": "Last run completed with FINAL summary",
+      "pending": "Awaiting next Notion batch"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; recent slash session failed",
-      "pending": "Needs fresh instructed batch"
+      "task": "No active run; latest group task finished",
+      "pending": "Awaiting next instructed lookup batch"
     },
     {
       "name": "n8n",
