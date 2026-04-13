@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T17:45:00Z",
+  "generatedAt": "2026-04-13T17:47:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -8,21 +8,21 @@
   },
   "priorities": [
     "Keep main (Aisha) focused on mission-control continuity",
-    "Queue next contact intake for contactenrichment and linkedin",
+    "Prepare next contact-ops intake for contactenrichment and linkedin",
     "Keep n8n and flowise ready for on-demand automation delivery"
   ],
   "goalProgress": [
     {
       "goal": "Mission control uptime",
-      "progress": "Main (Aisha) is active with this live-data refresh run"
+      "progress": "Main (Aisha) is active with the live-data refresh cron run"
     },
     {
       "goal": "Contact operations",
-      "progress": "Contactenrichment and linkedin are standby after completed runs; next intake is pending"
+      "progress": "contactenrichment and linkedin are on standby after prior runs; next intake pending"
     },
     {
       "goal": "Automation readiness",
-      "progress": "n8n and flowise remain idle-ready for immediate execution"
+      "progress": "n8n and flowise are idle-ready for immediate execution"
     }
   ],
   "agents": [
@@ -32,8 +32,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Orchestrate Kumar operations and mission control",
-      "task": "Cron live-data refresh run is running",
-      "pending": "Continue orchestration and monitor specialist queues"
+      "task": "Cron live-data refresh is currently running",
+      "pending": "Continue specialist orchestration and queue monitoring"
     },
     {
       "name": "contactenrichment",
@@ -50,7 +50,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup support for contact operations",
-      "task": "No active lookup run; latest visible run is complete",
+      "task": "No current run; latest visible group run is complete",
       "pending": "Await next lookup instruction"
     },
     {
