@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T02:31:00Z",
+  "generatedAt": "2026-04-13T02:33:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,24 +13,24 @@
   },
   "priorities": [
     "Keep main (Aisha) stable while cron refresh is running",
-    "Resume contactenrichment backlog when next Notion-backed batch is ready",
-    "Re-validate linkedin agent after the previously failed slash session"
+    "Restart contactenrichment when a fresh Notion-backed batch is ready",
+    "Keep linkedin, n8n, and flowise warm for next queued tasks"
   ],
   "goalProgress": [
     {
       "goal": "Mission control observability",
       "status": "On track",
-      "progress": "Live runtime snapshot regenerated from sessions + subagents state"
+      "progress": "Live runtime snapshot regenerated from sessions_list and subagents state"
     },
     {
       "goal": "Contact enrichment execution",
       "status": "Standby",
-      "progress": "No active run; last known batch completed with final summary"
+      "progress": "No active run; last known batch reported FINAL with 99 rows processed"
     },
     {
       "goal": "Automation throughput",
       "status": "Standby",
-      "progress": "n8n and flowise are idle pending new requests"
+      "progress": "n8n and flowise are idle awaiting new requests"
     }
   ],
   "agents": [
@@ -39,7 +39,7 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate operations and keep mission control visibility current",
+      "goal": "Coordinate runtime operations and mission control visibility",
       "task": "Running mission-control-live-data-refresh cron session",
       "pending": "Commit and push dashboard update if file changed"
     },
@@ -48,26 +48,26 @@
       "displayName": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school contact fields from official sources",
-      "task": "No running session; last known run completed and reported final counts",
+      "goal": "Fill missing school email and phone fields from official sources",
+      "task": "No running session; last known execution completed with final counts",
       "pending": "Await next enrichment batch"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment support",
-      "task": "No running session; recent history includes a failed slash session",
-      "pending": "Run a validation check before next production batch"
+      "task": "No running session; most recent visible session is completed",
+      "pending": "Run next lookup batch when requested"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Build and deploy automations",
-      "task": "No active run in current runtime snapshot",
+      "goal": "Build and deploy automation workflows",
+      "task": "No active run in current snapshot",
       "pending": "Queue next automation request"
     },
     {
@@ -75,9 +75,9 @@
       "displayName": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise assistant and builder support",
-      "task": "No active run in current runtime snapshot",
-      "pending": "Await next build or debug request"
+      "goal": "Flowise builder and assistant support",
+      "task": "No active run in current snapshot",
+      "pending": "Await next build or debugging request"
     }
   ]
 }
