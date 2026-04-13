@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T15:17:00Z",
+  "generatedAt": "2026-04-13T15:19:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,24 +14,24 @@
   },
   "priorities": [
     "Keep main agent stable during cron operations",
-    "Trigger specialist agents only on explicit task intake",
-    "Track failed-session patterns and model compatibility issues"
+    "Resume contact/LinkedIn pipelines only on explicit intake",
+    "Monitor and reduce failed-session/model-compatibility errors"
   ],
   "goalProgress": [
     {
       "goal": "Mission control live dashboard freshness",
       "status": "on_track",
-      "note": "Cron refresh executed from current runtime snapshot"
+      "note": "Runtime snapshot refreshed from sessions_list + subagents"
     },
     {
       "goal": "Contact enrichment pipeline",
       "status": "paused",
-      "note": "Last completed run processed 99 rows with no new updates"
+      "note": "Last completed run: rows_processed=99, no new email/phone updates"
     },
     {
       "goal": "LinkedIn enrichment workflow",
       "status": "standby",
-      "note": "No active run; awaiting next lookup batch"
+      "note": "No active run; last group execution reported 0 updates"
     }
   ],
   "agents": [
@@ -41,7 +41,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Orchestrate mission control and assistant routing",
-      "task": "Executing mission-control-live-data-refresh cron",
+      "task": "Running mission-control-live-data-refresh cron",
       "pending": "None"
     },
     {
@@ -50,16 +50,16 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school contact records from official sources",
-      "task": "Last run completed: rows_processed=99, email_updated=0, phone_updated=0",
+      "task": "Last run complete; 99 rows processed with no new updates",
       "pending": "Awaiting next Notion-backed batch"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active execution; last group run returned 0 updates",
+      "task": "No current run; mixed recent history with prior failed slash session",
       "pending": "Awaiting next lookup instructions"
     },
     {
