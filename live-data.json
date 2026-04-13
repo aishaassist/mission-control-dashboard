@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T03:13:00Z",
+  "generatedAt": "2026-04-13T03:15:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -8,17 +8,17 @@
     {
       "name": "Mission control freshness",
       "status": "active",
-      "note": "Cron refresh is running under main (Aisha)."
+      "note": "Cron refresh is currently running under main (Aisha)."
     },
     {
       "name": "Contact enrichment pipeline",
       "status": "waiting",
-      "note": "Last run completed with zero field updates and follow-up depends on Notion access plus verifiable sources."
+      "note": "Last contact enrichment run finished with no field updates; next pass depends on Notion access and verifiable data sources."
     },
     {
       "name": "LinkedIn enrichment reliability",
       "status": "monitor",
-      "note": "Most recent LinkedIn run returned zero updates; keep reliability watch on next targeted batch."
+      "note": "Latest LinkedIn run reported zero updates; monitor next targeted batch for output quality."
     }
   ],
   "goalProgress": [
@@ -32,7 +32,7 @@
       "goal": "Close contact and profile data gaps",
       "progress": 0.48,
       "status": "blocked",
-      "note": "Execution flow exists, but dependency and data-quality constraints are limiting updates."
+      "note": "Workflow exists, but dependency and data quality constraints are limiting updates."
     }
   ],
   "agents": [
