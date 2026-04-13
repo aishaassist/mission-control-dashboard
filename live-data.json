@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T08:59:00Z",
+  "generatedAt": "2026-04-13T09:01:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -43,7 +43,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich school contact records in Notion",
-      "task": "No running session; last run completed enrichment batch",
+      "task": "No running session, last run completed enrichment batch",
       "pending": "Await next enrichment queue"
     },
     {
@@ -52,7 +52,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup and profile mapping",
-      "task": "No running session; last run returned no rows processed",
+      "task": "No running session, last run returned no rows processed",
       "pending": "Await next LinkedIn lookup request"
     },
     {
