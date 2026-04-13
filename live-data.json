@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T14:49:00Z",
+  "generatedAt": "2026-04-13T14:51:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -20,7 +20,7 @@
   ],
   "goalProgress": {
     "overall": "stable",
-    "note": "Aisha is active in the refresh loop, while specialist agents are in standby with linkedin carrying a recent failed session risk."
+    "note": "Aisha is active in the refresh loop; specialist agents remain standby, with linkedin carrying a failed-session risk to clear before next run."
   },
   "agents": [
     {
@@ -38,7 +38,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last Notion batch finished",
+      "task": "Last Notion enrichment batch completed",
       "pending": "Await next rows needing verified email or phone"
     },
     {
@@ -47,7 +47,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "LinkedIn lookup and mapping",
-      "task": "No active run; recent failed slash session noted",
+      "task": "No active run; prior slash session failed",
       "pending": "Validate runtime path before next lookup batch"
     },
     {
