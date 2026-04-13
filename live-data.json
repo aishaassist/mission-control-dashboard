@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T07:51:00Z",
+  "generatedAt": "2026-04-13T07:53:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -21,17 +21,17 @@
     {
       "goal": "Mission control live visibility",
       "progress": "running",
-      "note": "Cron refresh session is currently running"
+      "note": "Main cron refresh session is currently running"
     },
     {
       "goal": "Contact enrichment execution",
       "progress": "standby",
-      "note": "Last run processed 99 rows with not_found fallback"
+      "note": "Latest run processed 99 rows with not_found fallback"
     },
     {
       "goal": "LinkedIn enrichment support",
       "progress": "standby",
-      "note": "No active processing in current window"
+      "note": "No active processing in the current runtime window"
     },
     {
       "goal": "Automation delivery (n8n/flowise)",
@@ -64,7 +64,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Support LinkedIn lookup and enrichment",
-      "task": "Last execution reported zero rows processed",
+      "task": "Latest execution reported zero rows processed",
       "pending": "Await next lookup queue"
     },
     {
