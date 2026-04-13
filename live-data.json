@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-04-13T20:49:00Z",
+  "generatedAt": "2026-04-13T20:51:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
-      "fetchedAt": "2026-04-13T20:49:00Z"
+      "fetchedAt": "2026-04-13T20:51:00Z"
     },
     "subagents": {
       "action": "list",
       "recentMinutes": 1440,
-      "fetchedAt": "2026-04-13T20:49:00Z",
+      "fetchedAt": "2026-04-13T20:51:00Z",
       "active": 0
     }
   },
@@ -48,7 +48,7 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Fill missing school contact fields using verified official sources",
-      "task": "Last completed run: 99 rows processed, no contact fields updated",
+      "task": "Last completed run: 99 rows processed, 0 email/phone updates",
       "pending": "Restore Notion integration/share access, then resume row updates"
     },
     {
@@ -57,8 +57,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Handle LinkedIn lookup and enrichment support",
-      "task": "No currently running session; latest batch reported zero rows processed",
-      "pending": "Await next lookup/enrichment request"
+      "task": "No active session; latest run reported zero rows processed",
+      "pending": "Await next lookup or enrichment request"
     },
     {
       "name": "n8n",
