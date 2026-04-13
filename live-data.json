@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T03:57:00Z",
+  "generatedAt": "2026-04-13T03:59:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,19 +13,19 @@
     }
   },
   "priorities": [
-    "Complete cron-based dashboard refresh without drift",
-    "Stabilize contact enrichment handoff for next verified-source batch",
-    "Bring linkedin and n8n back to active queue execution"
+    "Keep mission-control dashboard synced to live runtime state",
+    "Prepare next contact enrichment batch with verified-source workflow",
+    "Re-activate linkedin, n8n, and flowise queues on next trigger"
   ],
   "goalProgress": [
     {
       "goal": "Mission control visibility",
-      "progress": "Live runtime snapshot refreshed from current session/subagent state",
+      "progress": "Runtime snapshot refreshed from current sessions and subagent state",
       "status": "on_track"
     },
     {
       "goal": "Contact data completion",
-      "progress": "Last run processed 99 rows; unresolved fields set to not_found",
+      "progress": "Latest contactenrichment run processed 99 rows with unresolved values marked not_found",
       "status": "watch"
     }
   ],
@@ -35,34 +35,34 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission control and cross-agent operations",
+      "goal": "Coordinate mission control and cross-agent execution",
       "task": "Running mission-control-live-data-refresh cron",
-      "pending": "Stage/commit/push refreshed live-data.json if changed"
+      "pending": "Commit and push refreshed live-data.json if diff exists"
     },
     {
       "name": "contactenrichment",
       "displayName": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Complete school contact enrichment from official sources",
-      "task": "Last completed pass: 99 rows processed",
-      "pending": "Await next batch and Notion-backed verification cycle"
+      "goal": "Enrich school contacts using official, verifiable sources",
+      "task": "Last completed pass processed 99 rows",
+      "pending": "Await next Notion batch and verification cycle"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Idle/Standby",
-      "health": "bad",
-      "goal": "Run LinkedIn lookup and profile enrichment",
-      "task": "No active run; recent slash session shows failed status",
-      "pending": "Recover queue health and resume pending lookups"
+      "health": "warn",
+      "goal": "Deliver LinkedIn lookup and profile enrichment",
+      "task": "No active run; most recent run completed with zero rows processed",
+      "pending": "Resume queued lookups on next instruction"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Maintain automation deployment workflows",
+      "goal": "Maintain automation build and deployment workflows",
       "task": "No current execution detected",
       "pending": "Start next automation job when triggered"
     },
@@ -71,9 +71,9 @@
       "displayName": "flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Support Flowise workflow builds and integrations",
+      "goal": "Support Flowise workflow integrations",
       "task": "No current execution detected",
-      "pending": "Await next build/integration request"
+      "pending": "Await next build or integration request"
     }
   ]
 }
