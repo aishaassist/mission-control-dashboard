@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T07:43:00Z",
+  "generatedAt": "2026-04-13T07:45:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -54,7 +54,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; recent history includes failed slash sessions",
+      "task": "No active run; recent history includes failed slash session",
       "pending": "Stabilize next lookup run and process next batch"
     },
     {
