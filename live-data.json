@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T23:51:00Z",
+  "generatedAt": "2026-04-13T23:53:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -48,7 +48,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contacts from official sources",
-      "task": "Latest Notion batch completed; most unresolved values marked not_found",
+      "task": "Last Notion batch finished with high not_found count",
       "pending": "Await next queue and verified Notion access"
     },
     {
