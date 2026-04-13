@@ -1,73 +1,69 @@
 {
-  "generatedAt": "2026-04-13T14:01:00Z",
+  "generatedAt": "2026-04-13T14:03:00Z",
   "source": {
-    "sessionsList": "sessions_list(limit=50,messageLimit=1)",
-    "subagents": "subagents(action=list,recentMinutes=1440)",
-    "sessionCount": 12,
-    "activeSubagents": 0
+    "cron": "mission-control-live-data-refresh",
+    "sessionsList": {
+      "limit": 50,
+      "messageLimit": 1
+    },
+    "subagents": {
+      "recentMinutes": 1440
+    }
   },
   "priorities": [
-    "Keep main agent stable while cron refreshes mission-control snapshot",
-    "Reconnect contactenrichment Notion integration before next enrichment run",
-    "Stabilize linkedin slash-session path to avoid failed intake sessions"
+    "Keep main agent responsive for live ops",
+    "Re-activate specialist agents only on new task intake",
+    "Track failed sessions and rerun only when requested"
   ],
-  "goalProgress": [
-    {
-      "goal": "Mission-control visibility",
-      "progress": "Live runtime state refreshed from sessions and subagent state",
-      "health": "ok"
-    },
-    {
-      "goal": "Specialist readiness",
-      "progress": "Specialists are mostly standby; linkedin still has recent failed session history",
-      "health": "warn"
-    }
-  ],
+  "goalProgress": {
+    "overall": "stable",
+    "note": "Core operations are running, specialists are mostly in standby awaiting tasks."
+  },
   "agents": [
     {
       "name": "main",
-      "label": "Aisha",
+      "display": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Mission-control orchestration",
-      "task": "Running live-data refresh cron session",
-      "pending": "Triage unsupported spark-model error seen in WhatsApp session"
+      "goal": "Mission control continuity",
+      "task": "Refreshing live dashboard data from runtime state",
+      "pending": "None"
     },
     {
       "name": "contactenrichment",
-      "label": "ContactEnrichment",
-      "status": "Standby",
+      "display": "Contact Enrichment",
+      "status": "Idle/Standby",
       "health": "warn",
-      "goal": "School contact enrichment",
-      "task": "Idle after completed enrichment run",
-      "pending": "Await valid Notion API token and shared integration access"
+      "goal": "Enrich school contact records",
+      "task": "Last batch completed (99 rows processed)",
+      "pending": "Await next enrichment request"
     },
     {
       "name": "linkedin",
-      "label": "LinkedIn",
-      "status": "Standby",
-      "health": "bad",
-      "goal": "LinkedIn lookup support",
-      "task": "Idle; no active run",
-      "pending": "Resolve recent failed slash-session path before next intake"
+      "display": "LinkedIn",
+      "status": "Idle/Standby",
+      "health": "warn",
+      "goal": "LinkedIn lookup and profile mapping",
+      "task": "No active run, last reported rows_processed=0",
+      "pending": "Await next lookup task"
     },
     {
       "name": "n8n",
-      "label": "n8n",
-      "status": "Standby",
+      "display": "n8n",
+      "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Automation workflow delivery",
-      "task": "Idle",
-      "pending": "Await next workflow build or deployment request"
+      "goal": "Automation workflow support",
+      "task": "No active automation run",
+      "pending": "Await workflow build/deploy request"
     },
     {
       "name": "flowise",
-      "label": "Flowise",
-      "status": "Standby",
+      "display": "Flowise",
+      "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Flowise build and support",
-      "task": "Idle",
-      "pending": "Await next Flowise implementation request"
+      "goal": "Flowise bot/build support",
+      "task": "No active run",
+      "pending": "Await next build request"
     }
   ]
 }
