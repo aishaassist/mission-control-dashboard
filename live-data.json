@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T22:17:00Z",
+  "generatedAt": "2026-04-13T22:19:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -15,7 +15,7 @@
   "priorities": [
     "Keep main (Aisha) stable across cron and user-facing channels",
     "Keep specialist agents ready and activate only on fresh demand",
-    "Address LinkedIn failure context before the next heavy lookup run"
+    "Resolve LinkedIn session failure context before the next heavy lookup run"
   ],
   "goalProgress": [
     {
@@ -31,15 +31,15 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control refreshes and primary user assistance",
-      "task": "Cron refresh is running; another main user session is also running",
-      "pending": "Watch model/runtime errors and keep active channels stable"
+      "task": "Cron refresh and one user-facing main session are currently running",
+      "pending": "Monitor runtime/model stability and keep channels responsive"
     },
     {
       "name": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich missing school contacts from official sources",
-      "task": "No running session; last run ended with FINAL enrichment summary",
+      "task": "No running session; last run completed with FINAL enrichment summary",
       "pending": "Await next Notion-enabled enrichment batch"
     },
     {
@@ -47,7 +47,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Handle LinkedIn lookup and profile enrichment tasks",
-      "task": "No running session; recent history includes a failed slash session",
+      "task": "No running session; recent snapshot includes a failed slash session",
       "pending": "Stabilize failure path before next lookup queue"
     },
     {
@@ -55,15 +55,15 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and deploy automation workflows",
-      "task": "No active n8n run visible in current runtime snapshot",
-      "pending": "Stand by for workflow build/deploy requests"
+      "task": "No active n8n run in the current runtime snapshot",
+      "pending": "Stand by for workflow build and deploy requests"
     },
     {
       "name": "flowise",
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise chatbot and flow operations",
-      "task": "No active flowise run visible in current runtime snapshot",
+      "task": "No active flowise run in the current runtime snapshot",
       "pending": "Stand by for next flow/chatbot task"
     }
   ]
