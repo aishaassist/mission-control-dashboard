@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T13:43:00Z",
+  "generatedAt": "2026-04-13T13:45:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -7,9 +7,9 @@
     "activeSubagents": 0
   },
   "priorities": [
-    "Keep main agent runtime healthy while cron refresh is running",
-    "Restore contactenrichment Notion API access before next enrichment cycle",
-    "Stabilize linkedin intake by addressing recent slash-session failures"
+    "Keep Aisha main sessions stable while cron refreshes dashboard state",
+    "Restore contactenrichment Notion access before the next enrichment run",
+    "Clear linkedin slash-session failure path before next intake"
   ],
   "goalProgress": [
     {
@@ -18,8 +18,8 @@
       "health": "ok"
     },
     {
-      "goal": "Contact operations continuity",
-      "progress": "contactenrichment is idle after completed run and waiting on Notion connectivity",
+      "goal": "Specialist readiness",
+      "progress": "Specialist agents are on standby; linkedin still carries a recent failed session",
       "health": "warn"
     }
   ],
@@ -30,8 +30,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Mission-control orchestration",
-      "task": "Running scheduled live dashboard refresh",
-      "pending": "Resolve unsupported spark-model path observed in WhatsApp session"
+      "task": "Running cron-driven live dashboard refresh",
+      "pending": "Resolve unsupported spark-model path in WhatsApp session"
     },
     {
       "name": "contactenrichment",
@@ -39,17 +39,17 @@
       "status": "Standby",
       "health": "warn",
       "goal": "School contact enrichment",
-      "task": "Idle after latest enrichment cycle completed",
-      "pending": "Await Notion API token + integration share verification"
+      "task": "Idle after latest run completed",
+      "pending": "Await Notion token and integration share verification"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "LinkedIn profile lookup support",
-      "task": "No active run; latest task completed",
-      "pending": "Address prior slash-session failure before next intake burst"
+      "task": "No active run; last burst finished with zero processed rows",
+      "pending": "Fix recent failed slash-session route before next request"
     },
     {
       "name": "n8n",
