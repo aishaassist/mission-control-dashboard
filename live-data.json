@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T21:33:00Z",
+  "generatedAt": "2026-04-13T21:35:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,14 +14,14 @@
   },
   "priorities": [
     "Keep main agent stable and responsive",
-    "Resolve specialist runtime errors and restart readiness",
-    "Activate specialist agents only for queued work"
+    "Clear specialist failure state before next delegated runs",
+    "Bring specialist agents online only when new tasks are queued"
   ],
   "goalProgress": [
     {
       "goal": "Mission control visibility",
       "status": "in_progress",
-      "note": "Runtime snapshot refreshed from sessions and subagent state"
+      "note": "Live runtime snapshot refreshed from sessions and subagent state"
     },
     {
       "goal": "Agent execution continuity",
@@ -36,26 +36,26 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control and cross-agent orchestration",
-      "task": "Running cron refresh for live dashboard data",
-      "pending": "Track specialist queue and failed sessions"
+      "task": "Running mission-control live data refresh cron",
+      "pending": "Monitor specialist readiness and failed-session cleanup"
     },
     {
       "agent": "contactenrichment",
       "name": "contactenrichment",
       "status": "Idle",
       "health": "warn",
-      "goal": "Fill missing school contact fields from official sources",
-      "task": "Last run finished; many rows marked not_found",
-      "pending": "Await next dataset and Notion-access-ready run"
+      "goal": "Fill missing school contact fields from verified official sources",
+      "task": "Last run completed with rows processed and high not_found count",
+      "pending": "Await next Notion-ready enrichment batch"
     },
     {
       "agent": "linkedin",
       "name": "linkedin",
       "status": "Idle",
-      "health": "bad",
+      "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active execution; recent session history includes failure",
-      "pending": "Queue next lookup batch and verify runtime stability"
+      "task": "No active run; recent work finished, older session failure exists",
+      "pending": "Start next lookup queue and validate runtime stability"
     },
     {
       "agent": "n8n",
