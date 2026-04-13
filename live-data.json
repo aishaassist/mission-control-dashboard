@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T14:31:00Z",
+  "generatedAt": "2026-04-13T14:33:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -14,13 +14,13 @@
     }
   },
   "priorities": [
-    "Keep main agent responsive for live operations",
-    "Route incoming work to the correct specialist lane",
-    "Keep specialist agents ready for quick reactivation"
+    "Keep Aisha active for live mission-control coordination",
+    "Maintain specialist readiness across contact, linkedin, automation, and flow lanes",
+    "Surface fresh runtime status quickly for operator decisions"
   ],
   "goalProgress": {
     "overall": "stable",
-    "note": "Main is active; specialist agents are idle with no active runs."
+    "note": "Main is active on cron refresh; specialist agents are on standby with no active subagent runs."
   },
   "agents": [
     {
@@ -28,9 +28,9 @@
       "display": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Mission control continuity",
-      "task": "Running mission-control live-data refresh",
-      "pending": "None"
+      "goal": "Mission-control continuity",
+      "task": "Running live-data refresh cron",
+      "pending": "Monitor specialist queues"
     },
     {
       "name": "contactenrichment",
@@ -38,8 +38,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last run completed with final enrichment report",
-      "pending": "Awaiting next enrichment batch"
+      "task": "Last enrichment batch completed",
+      "pending": "Await next records needing official email or phone validation"
     },
     {
       "name": "linkedin",
@@ -47,8 +47,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and mapping",
-      "task": "Last run completed with no active processing",
-      "pending": "Awaiting next lookup request"
+      "task": "No active processing in current runtime",
+      "pending": "Await next lookup request"
     },
     {
       "name": "n8n",
@@ -57,7 +57,7 @@
       "health": "warn",
       "goal": "Automation workflow support",
       "task": "No active execution detected",
-      "pending": "Awaiting workflow build or deploy task"
+      "pending": "Await workflow build or deploy task"
     },
     {
       "name": "flowise",
@@ -66,7 +66,7 @@
       "health": "warn",
       "goal": "Flow and bot support",
       "task": "No active execution detected",
-      "pending": "Awaiting next Flowise assignment"
+      "pending": "Await next Flowise assignment"
     }
   ]
 }
