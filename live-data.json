@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T11:31:00Z",
+  "generatedAt": "2026-04-13T11:33:00Z",
   "source": {
     "type": "openclaw-runtime",
     "sessionsListCount": 12,
@@ -8,24 +8,24 @@
   },
   "priorities": [
     "Keep mission-control runtime snapshot current",
-    "Resolve main-agent chat model mismatch errors",
-    "Keep specialist agents warm for incoming queues"
+    "Clear main-agent model mismatch errors on WhatsApp",
+    "Keep specialist agents ready for next queues"
   ],
   "goalProgress": [
     {
       "goal": "Mission control freshness",
       "status": "on-track",
-      "progress": "Runtime snapshot refreshed from current sessions"
+      "progress": "Live snapshot refreshed from current runtime sessions"
     },
     {
       "goal": "Contact enrichment operations",
       "status": "waiting",
-      "progress": "Latest run processed 99 rows; awaiting next Notion queue"
+      "progress": "Latest completed batch processed 99 rows; waiting for next Notion queue"
     },
     {
       "goal": "Specialist reliability",
       "status": "attention",
-      "progress": "LinkedIn has recent failed session; n8n and Flowise are standby"
+      "progress": "LinkedIn shows recent failed route; n8n and Flowise are standby"
     }
   ],
   "agents": [
@@ -34,16 +34,16 @@
       "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission control and user orchestration",
+      "goal": "Coordinate mission control and agent orchestration",
       "task": "Running mission-control live-data refresh cron",
-      "pending": "Fix recurring model mismatch on WhatsApp session"
+      "pending": "Resolve recurring model mismatch in WhatsApp session"
     },
     {
       "name": "contactenrichment",
       "label": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Fill missing school contact fields from official sources",
+      "goal": "Fill missing school contact details from official sources",
       "task": "No active run; latest batch completed 99 rows",
       "pending": "Await next Notion-backed enrichment batch"
     },
@@ -53,7 +53,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookups for assigned records",
-      "task": "No active run; recent slash session failed",
+      "task": "No active run; most recent slash route shows failed session",
       "pending": "Recover failed route and wait for next lookup queue"
     },
     {
