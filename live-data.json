@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T18:21:00Z",
+  "generatedAt": "2026-04-13T18:23:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -7,14 +7,14 @@
   "priorities": [
     "Keep mission-control refresh loop healthy",
     "Unblock Notion-backed contact enrichment batches",
-    "Prepare next LinkedIn and automation execution queues"
+    "Stabilize LinkedIn lane and prepare next execution queue"
   ],
   "goalProgress": {
     "overall": "Monitoring",
     "highlights": [
-      "Aisha (main) is currently active",
-      "No active subagents in the last 24h",
-      "contactenrichment, linkedin, n8n, and flowise are on standby"
+      "Aisha (main) is active in the current cron run",
+      "No active subagents detected in the last 24h",
+      "contactenrichment, n8n, and flowise are standby; linkedin needs failure follow-up"
     ]
   },
   "agents": [
@@ -32,26 +32,26 @@
       "displayName": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contact data in Notion",
-      "task": "Last run completed with FINAL row summary",
-      "pending": "Await next accessible enrichment batch"
+      "goal": "Enrich school contact records in Notion",
+      "task": "Last known batch finished with FINAL summary",
+      "pending": "Await next Notion-ready enrichment batch"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "warn",
-      "goal": "Handle LinkedIn lookup and profile enrichment",
-      "task": "No active run; last run finished with zero processed",
-      "pending": "Queue next LinkedIn batch when inputs arrive"
+      "health": "bad",
+      "goal": "Run LinkedIn lookup and profile enrichment",
+      "task": "No active run; recent history includes a failed session",
+      "pending": "Validate lane health and queue next LinkedIn batch"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Build and deploy automations",
-      "task": "No active run; last state was ANNOUNCE_SKIP",
+      "goal": "Build and deploy automation workflows",
+      "task": "No active run; last known state was ANNOUNCE_SKIP",
       "pending": "Await workflow brief or deployment request"
     },
     {
@@ -61,7 +61,7 @@
       "health": "warn",
       "goal": "Support Flowise implementation work",
       "task": "No active run; last update was readiness check-in",
-      "pending": "Await next Flowise task"
+      "pending": "Await next build/integration task"
     }
   ]
 }
