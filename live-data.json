@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T22:31:00Z",
+  "generatedAt": "2026-04-13T22:33:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,7 +14,7 @@
   },
   "priorities": [
     "Keep main (Aisha) stable across cron and user-facing channels",
-    "Keep specialist agents ready and activate only on fresh demand",
+    "Keep specialist agents warm and activate on fresh demand",
     "Resolve LinkedIn failure context before the next lookup run"
   ],
   "goalProgress": [
