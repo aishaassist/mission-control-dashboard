@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T02:43:00Z",
+  "generatedAt": "2026-04-13T02:47:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,24 +13,24 @@
   },
   "priorities": [
     "Keep main (Aisha) stable while cron refresh is active",
-    "Queue next contactenrichment batch when data source is ready",
-    "Keep linkedin, n8n, and flowise ready for on-demand runs"
+    "Prepare contactenrichment for the next data-ready batch",
+    "Keep linkedin, n8n, and flowise on standby for on-demand runs"
   ],
   "goalProgress": [
     {
       "goal": "Mission control observability",
       "status": "On track",
-      "progress": "Live snapshot regenerated from sessions_list and subagents"
+      "progress": "Live snapshot refreshed from current sessions and subagent state"
     },
     {
       "goal": "Contact enrichment execution",
       "status": "Standby",
-      "progress": "Last known run completed; waiting for next queue"
+      "progress": "Last known contactenrichment run completed; waiting for next queue"
     },
     {
       "goal": "Automation throughput",
       "status": "Standby",
-      "progress": "n8n and flowise idle, ready for next request"
+      "progress": "n8n and flowise remain idle and ready"
     }
   ],
   "agents": [
@@ -48,8 +48,8 @@
       "displayName": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school contact fields from official sources",
-      "task": "No running session; last run completed with FINAL counts",
+      "goal": "Fill missing school contacts from official sources",
+      "task": "No running session; last run completed with FINAL output",
       "pending": "Await next enrichment batch"
     },
     {
@@ -58,7 +58,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment support",
-      "task": "No running session; last batch shows completed and ready",
+      "task": "No running session; last activity completed",
       "pending": "Run next lookup batch when requested"
     },
     {
