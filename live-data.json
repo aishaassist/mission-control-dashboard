@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T10:57:00Z",
+  "generatedAt": "2026-04-13T10:59:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -43,7 +43,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich school contact records in Notion",
-      "task": "No running session; last run processed 99 rows",
+      "task": "Last known run processed 99 rows; no session running",
       "pending": "Await next enrichment batch"
     },
     {
@@ -52,7 +52,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup and profile mapping",
-      "task": "No running session; most recent run finished with no rows processed",
+      "task": "Most recent run ended; no current lookup session",
       "pending": "Await next lookup dispatch"
     },
     {
@@ -61,7 +61,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Build and deploy workflow automations",
-      "task": "No running automation session",
+      "task": "No active automation session",
       "pending": "Await workflow implementation request"
     },
     {
@@ -70,7 +70,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Support Flowise builds and integrations",
-      "task": "No running Flowise session",
+      "task": "No active Flowise session",
       "pending": "Await next build request"
     }
   ]
