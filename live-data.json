@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T00:15:00Z",
+  "generatedAt": "2026-04-13T00:17:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,11 +14,11 @@
   },
   "priorities": [
     "Keep main mission-control loop running cleanly",
-    "Queue next contactenrichment run once Notion access is confirmed",
-    "Prepare actionable queues for linkedin, n8n, and flowise"
+    "Queue contactenrichment only when Notion access is confirmed",
+    "Keep linkedin, n8n, and flowise ready for queued assignments"
   ],
   "goalProgress": {
-    "summary": "Main orchestration is active, specialist agents are on standby awaiting new tasks.",
+    "summary": "Main orchestration is active; specialist agents are currently on standby.",
     "completion": {
       "active": 1,
       "standby": 4,
@@ -33,34 +33,34 @@
       "health": "ok",
       "goal": "Coordinate mission-control operations",
       "task": "Running mission-control live-data refresh cron",
-      "pending": "Complete git sync for live-data.json if changed"
+      "pending": "Commit and push dashboard refresh only if diff exists"
     },
     {
       "name": "contactenrichment",
       "label": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Complete missing school contact enrichment",
-      "task": "Last run processed 99 rows, missing values marked not_found",
-      "pending": "Await Notion-ready enrichment batch"
+      "goal": "Fill missing school contact fields",
+      "task": "Last known run processed 99 rows and marked unresolved as not_found",
+      "pending": "Await next Notion-enabled enrichment batch"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Standby",
       "health": "warn",
-      "goal": "Handle LinkedIn lookup assignments",
-      "task": "No active run, most recent bot run completed",
-      "pending": "Await next lookup list"
+      "goal": "Execute LinkedIn lookup assignments",
+      "task": "No running session; latest group run completed with no rows processed",
+      "pending": "Await next lookup queue"
     },
     {
       "name": "n8n",
       "label": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Build and deploy automation workflows",
-      "task": "Idle with no running session",
-      "pending": "Await next automation build request"
+      "goal": "Build and deploy automations",
+      "task": "No active run in current runtime snapshot",
+      "pending": "Await next automation request"
     },
     {
       "name": "flowise",
@@ -68,8 +68,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Implement Flowise workflows",
-      "task": "Idle with no running session",
-      "pending": "Await next Flowise implementation task"
+      "task": "No active run in current runtime snapshot",
+      "pending": "Await next Flowise build task"
     }
   ]
 }
