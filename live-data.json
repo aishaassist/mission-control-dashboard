@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T23:23:00Z",
+  "generatedAt": "2026-04-13T23:27:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -23,13 +23,13 @@
   "goalProgress": [
     {
       "goal": "Mission control visibility",
-      "progress": 0.94,
-      "note": "Telemetry refreshed from current runtime sessions"
+      "progress": 0.95,
+      "note": "Live telemetry refreshed from current runtime sessions"
     },
     {
       "goal": "Agent utilization",
-      "progress": 0.42,
-      "note": "Main active, specialist agents on standby"
+      "progress": 0.44,
+      "note": "Main active, specialist agents mostly on standby"
     }
   ],
   "agents": [
@@ -39,8 +39,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate operations and keep mission control current",
-      "task": "Running mission-control live data refresh cron",
-      "pending": "Resolve spark-model compatibility issue in WhatsApp session"
+      "task": "Running mission-control live-data refresh cron",
+      "pending": "Investigate spark-model compatibility error in WhatsApp session"
     },
     {
       "name": "contactenrichment",
@@ -48,17 +48,17 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact data from official sources",
-      "task": "Last batch completed with no new email/phone updates",
-      "pending": "Awaiting next Notion batch and access confirmation"
+      "task": "Latest batch finished; rows processed with no email/phone gains",
+      "pending": "Await next Notion batch and access-ready signal"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; latest group run processed 0 rows",
-      "pending": "Awaiting next lookup batch; monitor prior failed slash session"
+      "task": "No active run; latest group run returned 0 rows",
+      "pending": "Review prior failed slash session, then wait for next lookup batch"
     },
     {
       "name": "n8n",
@@ -67,7 +67,7 @@
       "health": "warn",
       "goal": "Build and deploy automation workflows",
       "task": "No current run detected",
-      "pending": "Awaiting next automation request"
+      "pending": "Await next automation deployment request"
     },
     {
       "name": "flowise",
@@ -76,7 +76,7 @@
       "health": "warn",
       "goal": "Flowise implementation support",
       "task": "No current run detected",
-      "pending": "Awaiting next Flowise task"
+      "pending": "Await next Flowise build request"
     }
   ]
 }
