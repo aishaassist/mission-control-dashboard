@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T03:33:00Z",
+  "generatedAt": "2026-04-13T03:35:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -15,11 +15,11 @@
   "priorities": [
     "Keep mission-control visibility current across core agents",
     "Maintain readiness for next contact and LinkedIn enrichment bursts",
-    "Queue automation work when n8n/Flowise requests arrive"
+    "Queue automation work when n8n and Flowise requests arrive"
   ],
   "goalProgress": {
     "operations": "Main cron orchestration is active; no subagents running",
-    "contactPipeline": "Last contact run processed 99 rows; currently waiting for next batch",
+    "contactPipeline": "Last contact run processed 99 rows; waiting for next batch",
     "automation": "n8n and Flowise are on standby with no active runtime sessions"
   },
   "agents": [
@@ -47,7 +47,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup and profile enrichment batches",
-      "task": "No active run; latest group task completed with zero processed",
+      "task": "Latest run completed with rows_processed=0",
       "pending": "Await next LinkedIn task payload"
     },
     {
@@ -56,8 +56,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and deploy workflow automations",
-      "task": "No runtime session currently active",
-      "pending": "Await automation build/deploy request"
+      "task": "No active runtime session",
+      "pending": "Await automation build and deploy request"
     },
     {
       "name": "flowise",
@@ -65,7 +65,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise integrations and build tasks",
-      "task": "No runtime session currently active",
+      "task": "No active runtime session",
       "pending": "Await next Flowise implementation request"
     }
   ]
