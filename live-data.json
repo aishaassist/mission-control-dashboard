@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T03:31:00Z",
+  "generatedAt": "2026-04-13T03:33:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,13 +14,13 @@
   },
   "priorities": [
     "Keep mission-control visibility current across core agents",
-    "Resume contact enrichment only when fresh input queue is available",
-    "Stand by for next LinkedIn and automation execution batch"
+    "Maintain readiness for next contact and LinkedIn enrichment bursts",
+    "Queue automation work when n8n/Flowise requests arrive"
   ],
   "goalProgress": {
-    "operations": "Main scheduler active; specialist agents mostly on standby",
-    "contactPipeline": "Last run processed 99 rows; no new updates currently running",
-    "automation": "No active n8n/flowise jobs detected in the last snapshot"
+    "operations": "Main cron orchestration is active; no subagents running",
+    "contactPipeline": "Last contact run processed 99 rows; currently waiting for next batch",
+    "automation": "n8n and Flowise are on standby with no active runtime sessions"
   },
   "agents": [
     {
@@ -28,18 +28,18 @@
       "display": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Orchestrate mission control and delegate specialist work",
-      "task": "Cron live-data refresh is running",
-      "pending": "Continue periodic dashboard refresh and coordination"
+      "goal": "Coordinate mission control and specialist execution",
+      "task": "Live-data refresh cron is currently running",
+      "pending": "Continue periodic refresh and trigger specialists on demand"
     },
     {
       "name": "contactenrichment",
       "display": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contact records with verified email/phone",
-      "task": "Last completed batch reported rows_processed=99",
-      "pending": "Await next records or source access updates"
+      "goal": "Enrich verified school contact records",
+      "task": "Most recent completed run: rows_processed=99",
+      "pending": "Await new records and source-ready queue"
     },
     {
       "name": "linkedin",
@@ -47,26 +47,26 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup and profile enrichment batches",
-      "task": "No active run; last group run completed with zero processed",
-      "pending": "Await new lookup task payload"
+      "task": "No active run; latest group task completed with zero processed",
+      "pending": "Await next LinkedIn task payload"
     },
     {
       "name": "n8n",
       "display": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Deploy and run workflow automations",
-      "task": "No active session currently running",
-      "pending": "Await automation build or deployment request"
+      "goal": "Build and deploy workflow automations",
+      "task": "No runtime session currently active",
+      "pending": "Await automation build/deploy request"
     },
     {
       "name": "flowise",
       "display": "Flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Support Flowise build and integration tasks",
-      "task": "No active session currently running",
-      "pending": "Await next Flowise build request"
+      "goal": "Support Flowise integrations and build tasks",
+      "task": "No runtime session currently active",
+      "pending": "Await next Flowise implementation request"
     }
   ]
 }
