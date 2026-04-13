@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T14:35:00Z",
+  "generatedAt": "2026-04-13T14:37:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -20,7 +20,7 @@
   ],
   "goalProgress": {
     "overall": "stable-with-risk",
-    "note": "Aisha is active on cron refresh, while specialist agents are mostly standby; linkedin has a recent failed session in history."
+    "note": "Aisha is active on cron refresh. Specialist agents are standby, and linkedin has a failed session in recent history."
   },
   "agents": [
     {
