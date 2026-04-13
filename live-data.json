@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T03:11:00Z",
+  "generatedAt": "2026-04-13T03:13:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -13,26 +13,26 @@
     {
       "name": "Contact enrichment pipeline",
       "status": "waiting",
-      "note": "Last run completed but meaningful updates remain gated by Notion access and source verification."
+      "note": "Last run completed with zero field updates and follow-up depends on Notion access plus verifiable sources."
     },
     {
       "name": "LinkedIn enrichment reliability",
       "status": "monitor",
-      "note": "Recent run had zero updates; prior failed slash session still warrants monitoring."
+      "note": "Most recent LinkedIn run returned zero updates; keep reliability watch on next targeted batch."
     }
   ],
   "goalProgress": [
     {
       "goal": "Keep specialist agents operational",
-      "progress": 0.62,
+      "progress": 0.64,
       "status": "at-risk",
-      "note": "Main is active while specialist agents are idle/standby."
+      "note": "Main is active while specialist agents are currently idle or standby."
     },
     {
       "goal": "Close contact and profile data gaps",
-      "progress": 0.47,
+      "progress": 0.48,
       "status": "blocked",
-      "note": "Execution path exists, but dependencies are still limiting field updates."
+      "note": "Execution flow exists, but dependency and data-quality constraints are limiting updates."
     }
   ],
   "agents": [
@@ -42,17 +42,17 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate operations and keep dashboard state fresh",
-      "task": "Running cron: mission-control-live-data-refresh",
-      "pending": "Write and publish current live-data snapshot"
+      "task": "Running cron mission-control-live-data-refresh",
+      "pending": "Write snapshot and publish if changed"
     },
     {
       "name": "contactenrichment",
       "displayName": "Contact Enrichment",
       "status": "Idle",
       "health": "warn",
-      "goal": "Fill missing school Email/Phone from official sources",
-      "task": "Last run processed 99 rows with no email/phone updates",
-      "pending": "Resume after Notion integration access and source coverage are confirmed"
+      "goal": "Fill missing school Email and Phone from official sources",
+      "task": "Last run processed 99 rows with zero email or phone updates",
+      "pending": "Resume once Notion integration access and source coverage are confirmed"
     },
     {
       "name": "linkedin",
@@ -61,7 +61,7 @@
       "health": "warn",
       "goal": "Populate LinkedIn profile fields for records",
       "task": "Most recent run reported zero rows updated",
-      "pending": "Rerun targeted batch and verify stability"
+      "pending": "Rerun a targeted batch and verify runtime stability"
     },
     {
       "name": "n8n",
