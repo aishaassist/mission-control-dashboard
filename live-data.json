@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T23:59:00Z",
+  "generatedAt": "2026-04-13T00:01:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,11 +14,11 @@
   },
   "priorities": [
     "Keep main coordination session responsive",
-    "Prepare next contactenrichment batch after latest 99-row completion",
+    "Start next contactenrichment run when new Notion-ready batch is assigned",
     "Queue actionable workloads for linkedin, n8n, and flowise"
   ],
   "goalProgress": {
-    "summary": "Main cron orchestration is active; specialist agents are on standby awaiting new tasks.",
+    "summary": "Main cron orchestration is active; specialist agents are idle and waiting for new tasks.",
     "completion": {
       "active": 1,
       "standby": 4,
@@ -33,7 +33,7 @@
       "health": "ok",
       "goal": "Coordinate mission-control operations",
       "task": "Executing live dashboard refresh cron",
-      "pending": "Commit and push updated live-data.json"
+      "pending": "Finalize git sync for refreshed live-data.json"
     },
     {
       "name": "contactenrichment",
@@ -41,7 +41,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact details",
-      "task": "Last run completed: 99 rows processed",
+      "task": "Last completion reported 99 rows processed",
       "pending": "Await next Notion-connected enrichment batch"
     },
     {
@@ -50,7 +50,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup coverage tasks",
-      "task": "No active run; latest bot run closed",
+      "task": "No active run; latest group run closed",
       "pending": "Await next lookup or outreach list"
     },
     {
