@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-04-13T06:07:00Z",
+  "generatedAt": "2026-04-13T06:09:47Z",
   "source": {
     "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
-      "capturedAt": "2026-04-13T06:07:00Z"
+      "capturedAt": "2026-04-13T06:09:47Z"
     },
     "subagents": {
       "action": "list",
       "recentMinutes": 1440,
-      "capturedAt": "2026-04-13T06:07:00Z"
+      "capturedAt": "2026-04-13T06:09:47Z"
     }
   },
   "priorities": [
@@ -59,7 +59,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Handle LinkedIn lookup and profile update workflows",
-      "task": "No running session; recent history includes a failed session",
+      "task": "No running session; recent history includes a failed run",
       "pending": "Stabilize next run and await next lookup queue"
     },
     {
