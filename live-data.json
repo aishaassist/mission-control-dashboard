@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T20:21:00Z",
+  "generatedAt": "2026-04-13T20:23:00Z",
   "source": {
     "sessions_list": {
       "limit": 50,
@@ -15,8 +15,8 @@
   },
   "priorities": [
     "Keep mission-control dashboard synced to live OpenClaw runtime",
-    "Flag active specialist sessions quickly",
-    "Surface idle and failed agent states for follow-up"
+    "Track active specialist sessions and idle coverage gaps",
+    "Escalate failed agent states for quick recovery"
   ],
   "goalProgress": [
     {
@@ -43,7 +43,7 @@
       "health": "ok",
       "goal": "Coordinate mission-control and multi-agent operations",
       "task": "Running with active main runtime session(s)",
-      "pending": "Commit and push refreshed live-data snapshot if changed"
+      "pending": "Continue cron refresh cycles and surface exceptions"
     },
     {
       "name": "contactenrichment",
