@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T16:33:00Z",
+  "generatedAt": "2026-04-13T16:35:00Z",
   "source": {
     "type": "openclaw-runtime",
     "sessionsList": {
@@ -14,8 +14,8 @@
     }
   },
   "priorities": [
-    "Keep Aisha mission-control loop active and error-free",
-    "Unblock contact enrichment by confirming Notion integration sharing",
+    "Keep Aisha mission-control loop active and healthy",
+    "Unblock contact enrichment by confirming Notion integration access",
     "Queue next LinkedIn, n8n, and Flowise execution tasks"
   ],
   "goalProgress": [
@@ -27,12 +27,12 @@
     {
       "goal": "Contact data enrichment",
       "status": "waiting",
-      "progress": "Last completed run processed 99 rows; awaiting next trigger"
+      "progress": "Last completed run processed 99 rows; waiting for next trigger"
     },
     {
       "goal": "LinkedIn and automation pipeline",
       "status": "standby",
-      "progress": "LinkedIn, n8n, and Flowise are idle awaiting new tasks"
+      "progress": "LinkedIn, n8n, and Flowise are idle and awaiting tasks"
     }
   ],
   "agents": [
@@ -50,9 +50,9 @@
       "name": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Fill missing school contact fields from verifiable official sources",
+      "goal": "Fill missing school contact fields from official sources",
       "task": "Last batch completed with final summary posted",
-      "pending": "Await next batch and confirmed Notion access/share"
+      "pending": "Await next batch and confirmed Notion share"
     },
     {
       "agent": "linkedin",
