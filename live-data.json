@@ -1,23 +1,26 @@
 {
-  "generatedAt": "2026-04-13T14:03:00Z",
+  "generatedAt": "2026-04-13T14:05:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
       "limit": 50,
-      "messageLimit": 1
+      "messageLimit": 1,
+      "count": 12
     },
     "subagents": {
-      "recentMinutes": 1440
+      "recentMinutes": 1440,
+      "active": 0,
+      "recent": 0
     }
   },
   "priorities": [
-    "Keep main agent responsive for live ops",
-    "Re-activate specialist agents only on new task intake",
-    "Track failed sessions and rerun only when requested"
+    "Keep main agent responsive for live operations",
+    "Trigger specialist agents only on explicit task intake",
+    "Watch stale or failed sessions before reactivation"
   ],
   "goalProgress": {
     "overall": "stable",
-    "note": "Core operations are running, specialists are mostly in standby awaiting tasks."
+    "note": "Main is active, specialist lanes are on standby awaiting new assignments."
   },
   "agents": [
     {
@@ -26,7 +29,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Mission control continuity",
-      "task": "Refreshing live dashboard data from runtime state",
+      "task": "Refreshing mission-control live data",
       "pending": "None"
     },
     {
@@ -35,7 +38,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last batch completed (99 rows processed)",
+      "task": "Last run completed batch update (99 rows processed)",
       "pending": "Await next enrichment request"
     },
     {
@@ -44,7 +47,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile mapping",
-      "task": "No active run, last reported rows_processed=0",
+      "task": "No active run, latest group execution completed",
       "pending": "Await next lookup task"
     },
     {
@@ -53,7 +56,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Automation workflow support",
-      "task": "No active automation run",
+      "task": "No active workflow session",
       "pending": "Await workflow build/deploy request"
     },
     {
@@ -63,7 +66,7 @@
       "health": "warn",
       "goal": "Flowise bot/build support",
       "task": "No active run",
-      "pending": "Await next build request"
+      "pending": "Await next Flowise task"
     }
   ]
 }
