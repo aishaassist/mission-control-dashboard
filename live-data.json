@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T03:15:00Z",
+  "generatedAt": "2026-04-13T03:17:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -11,28 +11,28 @@
       "note": "Cron refresh is currently running under main (Aisha)."
     },
     {
-      "name": "Contact enrichment pipeline",
+      "name": "Contact enrichment unblock",
       "status": "waiting",
-      "note": "Last contact enrichment run finished with no field updates; next pass depends on Notion access and verifiable data sources."
+      "note": "Pipeline is idle after a 99-row pass with zero field updates; dependency on Notion access and source verifiability remains."
     },
     {
-      "name": "LinkedIn enrichment reliability",
+      "name": "LinkedIn runtime stability",
       "status": "monitor",
-      "note": "Latest LinkedIn run reported zero updates; monitor next targeted batch for output quality."
+      "note": "LinkedIn is idle with recent failed runtime history; monitor next execution quality."
     }
   ],
   "goalProgress": [
     {
       "goal": "Keep specialist agents operational",
-      "progress": 0.64,
+      "progress": 0.62,
       "status": "at-risk",
-      "note": "Main is active while specialist agents are currently idle or standby."
+      "note": "Main is active while specialists are idle or standby."
     },
     {
       "goal": "Close contact and profile data gaps",
-      "progress": 0.48,
+      "progress": 0.46,
       "status": "blocked",
-      "note": "Workflow exists, but dependency and data quality constraints are limiting updates."
+      "note": "Execution paths exist but updates are constrained by access and validation dependencies."
     }
   ],
   "agents": [
@@ -58,10 +58,10 @@
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Idle",
-      "health": "warn",
+      "health": "bad",
       "goal": "Populate LinkedIn profile fields for records",
-      "task": "Most recent run reported zero rows updated",
-      "pending": "Rerun a targeted batch and verify runtime stability"
+      "task": "Recent history includes failed runtime and a zero-update run",
+      "pending": "Run a targeted batch and validate runtime reliability"
     },
     {
       "name": "n8n",
