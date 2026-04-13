@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T13:03:00Z",
+  "generatedAt": "2026-04-13T13:05:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -8,7 +8,7 @@
   },
   "priorities": [
     "Resolve unsupported model error on the main WhatsApp session.",
-    "Confirm Notion integration access before next contactenrichment batch.",
+    "Confirm Notion integration access before the next contactenrichment batch.",
     "Queue actionable work for linkedin, n8n, and flowise to improve utilization."
   ],
   "goalProgress": [
