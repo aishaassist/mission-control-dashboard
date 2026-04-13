@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-04-13T21:01:00Z",
+  "generatedAt": "2026-04-13T21:03:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
-      "fetchedAt": "2026-04-13T21:01:00Z",
+      "fetchedAt": "2026-04-13T21:03:00Z",
       "count": 12
     },
     "subagents": {
       "action": "list",
       "recentMinutes": 1440,
-      "fetchedAt": "2026-04-13T21:01:00Z",
+      "fetchedAt": "2026-04-13T21:03:00Z",
       "active": 0,
       "recent": 0
     }
@@ -27,11 +27,11 @@
     },
     {
       "goal": "Contact enrichment throughput",
-      "progress": "Most recent contactenrichment run completed 99 rows with no verified email/phone additions"
+      "progress": "Latest contactenrichment run completed 99 rows, with 0 email and 0 phone updates"
     },
     {
       "goal": "Specialist readiness",
-      "progress": "linkedin, n8n, and flowise remain on standby with no active runs"
+      "progress": "linkedin, n8n, and flowise are on standby with no active runs"
     }
   ],
   "agents": [
@@ -41,7 +41,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control and orchestrate assistant operations",
-      "task": "mission-control-live-data-refresh cron session is currently running",
+      "task": "mission-control-live-data-refresh cron session is running",
       "pending": "Continue periodic live-data refresh and monitor specialist activation"
     },
     {
@@ -50,17 +50,17 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Fill missing contact data from verified official school sources",
-      "task": "Latest run: 99 rows processed, 0 email updates, 0 phone updates",
+      "task": "Latest run processed 99 rows with no verified email/phone additions",
       "pending": "Re-enable Notion integration/database sharing and resume row updates"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Handle LinkedIn lookup and enrichment support",
-      "task": "No running session; latest completed run reported 0 rows processed",
-      "pending": "Await next LinkedIn lookup or enrichment batch"
+      "task": "No running session; latest run reported 0 rows processed",
+      "pending": "Investigate recent failed session and await next LinkedIn batch"
     },
     {
       "name": "n8n",
