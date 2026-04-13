@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T03:05:00Z",
+  "generatedAt": "2026-04-13T03:07:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -51,7 +51,7 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Fill missing school Email/Phone from official sources",
-      "task": "Last batch run reported rows processed with no new contact updates",
+      "task": "Last batch reported 99 rows processed with no new contact updates",
       "pending": "Resume once Notion access and verifiable sources are available"
     },
     {
