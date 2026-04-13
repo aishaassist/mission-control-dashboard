@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T04:15:00Z",
+  "generatedAt": "2026-04-13T04:17:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -20,12 +20,12 @@
   "goalProgress": [
     {
       "goal": "Mission control visibility",
-      "progress": "Runtime snapshot refreshed from sessions and subagent state",
+      "progress": "Live runtime snapshot refreshed from sessions_list and subagents",
       "status": "on_track"
     },
     {
       "goal": "Contact enrichment throughput",
-      "progress": "Last contactenrichment run completed 99 rows with unresolved fields marked not_found",
+      "progress": "Latest contactenrichment run processed 99 rows; unresolved fields marked not_found",
       "status": "watch"
     }
   ],
@@ -36,8 +36,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control and cross-agent execution",
-      "task": "Running cron refresh for mission-control live data",
-      "pending": "Stage, commit, and push live-data.json only if changed"
+      "task": "Running mission-control live-data refresh cron",
+      "pending": "Commit and push live-data.json only if diff exists"
     },
     {
       "name": "contactenrichment",
@@ -45,7 +45,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich contacts from official, verifiable sources",
-      "task": "Latest run completed with 99 rows processed",
+      "task": "Last run completed with 99 rows processed",
       "pending": "Await next Notion enrichment batch"
     },
     {
@@ -54,8 +54,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Handle LinkedIn lookup and profile enrichment tasks",
-      "task": "No active execution; latest group run returned zero rows",
-      "pending": "Resume on next lookup request"
+      "task": "No active run; latest execution finished",
+      "pending": "Await next lookup request"
     },
     {
       "name": "n8n",
