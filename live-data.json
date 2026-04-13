@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T08:05:00Z",
+  "generatedAt": "2026-04-13T08:07:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -26,7 +26,7 @@
     {
       "goal": "Contact enrichment execution",
       "progress": "standby",
-      "note": "Last run completed and is waiting for the next dataset"
+      "note": "Latest contact batch completed; awaiting next dataset"
     },
     {
       "goal": "LinkedIn enrichment support",
@@ -55,7 +55,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Latest batch completed",
+      "task": "Last run completed successfully",
       "pending": "Await next enrichment queue"
     },
     {
@@ -64,7 +64,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Support LinkedIn lookup and enrichment",
-      "task": "No active run in current window",
+      "task": "Latest group run completed; no active session",
       "pending": "Await fresh lookup tasks"
     },
     {
@@ -74,7 +74,7 @@
       "health": "warn",
       "goal": "Automation workflow execution",
       "task": "No active session currently",
-      "pending": "Await deployment/workflow request"
+      "pending": "Await deployment or workflow request"
     },
     {
       "name": "flowise",
