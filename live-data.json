@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T07:03:00Z",
+  "generatedAt": "2026-04-13T07:05:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -45,17 +45,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last batch processed and closed",
+      "task": "Last enrichment batch completed",
       "pending": "Await next contact enrichment queue"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Idle/Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; recent session failure in history",
-      "pending": "Review failed run context before next lookup batch"
+      "task": "No active run; last known run completed",
+      "pending": "Await next LinkedIn lookup batch"
     },
     {
       "name": "n8n",
