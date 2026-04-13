@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T20:17:00Z",
+  "generatedAt": "2026-04-13T20:19:00Z",
   "source": {
     "sessions_list": {
       "limit": 50,
@@ -27,12 +27,12 @@
     {
       "goal": "Contact enrichment operations",
       "status": "waiting",
-      "progress": "Latest batch completed, awaiting next Notion-backed run"
+      "progress": "Last batch completed, awaiting next Notion-backed run"
     },
     {
       "goal": "LinkedIn research operations",
       "status": "at_risk",
-      "progress": "No active run and recent history contains a failed session"
+      "progress": "No active run and recent history includes a failed session"
     }
   ],
   "agents": [
@@ -42,8 +42,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission-control and multi-agent orchestration",
-      "task": "Running cron refresh while maintaining active main sessions",
-      "pending": "Complete dashboard git sync if file changed"
+      "task": "Running mission-control refresh with active main runtime sessions",
+      "pending": "Commit and push live-data update when changed"
     },
     {
       "name": "contactenrichment",
@@ -51,8 +51,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact data from official sources",
-      "task": "Last enrichment batch completed with final metrics",
-      "pending": "Await next enrichment run and Notion-ready input"
+      "task": "Last enrichment run finished and returned final metrics",
+      "pending": "Await next enrichment batch and Notion-ready input"
     },
     {
       "name": "linkedin",
@@ -60,8 +60,8 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Run profile lookup and enrichment support",
-      "task": "No current run; recent known context includes a failed session",
-      "pending": "Start next lookup task with a clean recovery run"
+      "task": "No current run; recent context shows a failed slash session",
+      "pending": "Start next lookup run to recover healthy status"
     },
     {
       "name": "n8n",
