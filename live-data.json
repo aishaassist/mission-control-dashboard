@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T01:31:00Z",
+  "generatedAt": "2026-04-13T01:33:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -13,14 +13,14 @@
     }
   },
   "priorities": [
-    "Keep main (Aisha) stable while this refresh run is active",
+    "Keep main (Aisha) stable while cron refresh is active",
     "Resume contactenrichment when new rows are queued",
     "Keep linkedin, n8n, and flowise on standby for incoming tasks"
   ],
   "goalProgress": [
     {
       "agent": "main",
-      "progress": "Cron refresh is running now",
+      "progress": "Cron refresh run is active",
       "pending": "Write, commit, and push live-data.json only if changed"
     },
     {
@@ -67,9 +67,9 @@
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Support LinkedIn lookup requests",
-      "task": "No active run detected",
+      "task": "No active run; one recent session failed",
       "pending": "Await fresh lookup list"
     },
     {
