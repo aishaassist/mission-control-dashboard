@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-04-13T19:59:00Z",
+  "generatedAt": "2026-04-13T20:01:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main (Aisha) stable while mission-control cron refresh is running",
-    "Restore Notion integration access so contactenrichment can resume updates",
-    "Activate linkedin, n8n, and flowise with scoped queued work to improve specialist utilization"
+    "Unblock contactenrichment by restoring Notion integration access",
+    "Re-activate linkedin, n8n, and flowise with queued specialist work"
   ],
   "goalProgress": {
-    "operations": "Main is active and currently running mission-control live data refresh",
+    "operations": "Main is active and running this live-data refresh cron",
     "automation": "No active or recent spawned subagents in the last 24 hours",
-    "dataPipelines": "Contact enrichment is on standby pending valid NOTION_API_KEY and shared Notion DB access"
+    "dataPipelines": "Contact enrichment is paused pending valid NOTION_API_KEY and Notion share access"
   },
   "agents": [
     {
@@ -21,8 +21,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Mission control orchestration",
-      "task": "Executing cron live-data refresh",
-      "pending": "Keep runtime stable and route next actions"
+      "task": "Running cron live-data refresh",
+      "pending": "Stabilize runtime and route next operations"
     },
     {
       "name": "contactenrichment",
@@ -30,17 +30,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contacts in Notion",
-      "task": "No running session; recent runs are completed",
-      "pending": "Wait for valid NOTION_API_KEY and integration share to target database"
+      "task": "No running session; latest runs are completed",
+      "pending": "Wait for NOTION_API_KEY and integration share to target DB"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "LinkedIn lookup support",
-      "task": "No running session; latest visible run is complete",
-      "pending": "Await next lookup batch and watch for runtime regressions"
+      "task": "No running session; recent history includes failed run",
+      "pending": "Validate runtime and queue next lookup batch"
     },
     {
       "name": "n8n",
@@ -49,7 +49,7 @@
       "health": "warn",
       "goal": "Workflow automation delivery",
       "task": "No running session",
-      "pending": "Await new automation build/deploy requests"
+      "pending": "Await next automation build/deploy request"
     },
     {
       "name": "flowise",
