@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T03:49:00Z",
+  "generatedAt": "2026-04-13T03:55:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,60 +13,67 @@
     }
   },
   "priorities": [
-    "Keep mission-control visibility current across core agents",
-    "Maintain readiness for contact and LinkedIn enrichment bursts",
-    "Queue automation work quickly when n8n or Flowise requests arrive"
+    "Complete cron-based dashboard refresh without drift",
+    "Stabilize contact enrichment handoff for next verified-source batch",
+    "Bring linkedin and n8n back to active queue execution"
   ],
-  "goalProgress": {
-    "operations": "Main cron orchestration is active; no subagents running",
-    "contactPipeline": "Last contact run processed 99 rows; awaiting next batch",
-    "automation": "n8n and Flowise are on standby with no active sessions"
-  },
+  "goalProgress": [
+    {
+      "goal": "Mission control visibility",
+      "progress": "Live runtime snapshot refreshed from current session/subagent state",
+      "status": "on_track"
+    },
+    {
+      "goal": "Contact data completion",
+      "progress": "Last run processed 99 rows; unresolved fields set to not_found",
+      "status": "watch"
+    }
+  ],
   "agents": [
     {
       "name": "main",
-      "display": "Aisha",
+      "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission control and specialist execution",
-      "task": "Live-data refresh cron is currently running",
-      "pending": "Continue periodic refresh and dispatch specialists on demand"
+      "goal": "Coordinate mission control and cross-agent operations",
+      "task": "Running mission-control-live-data-refresh cron",
+      "pending": "Stage/commit/push refreshed live-data.json if changed"
     },
     {
       "name": "contactenrichment",
-      "display": "Contact Enrichment",
+      "displayName": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich verified school contact records",
-      "task": "Most recent completed run: rows_processed=99",
-      "pending": "Await new records and source-ready queue"
+      "goal": "Complete school contact enrichment from official sources",
+      "task": "Last completed pass: 99 rows processed",
+      "pending": "Await next batch and Notion-backed verification cycle"
     },
     {
       "name": "linkedin",
-      "display": "LinkedIn",
+      "displayName": "linkedin",
       "status": "Idle/Standby",
       "health": "bad",
-      "goal": "Run LinkedIn lookup and profile enrichment batches",
-      "task": "Latest group run processed 0 rows; last slash session failed",
-      "pending": "Await next payload and validate run stability"
+      "goal": "Run LinkedIn lookup and profile enrichment",
+      "task": "No active run; recent slash session shows failed status",
+      "pending": "Recover queue health and resume pending lookups"
     },
     {
       "name": "n8n",
-      "display": "n8n",
+      "displayName": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Build and deploy workflow automations",
-      "task": "No active runtime session",
-      "pending": "Await automation build and deploy request"
+      "goal": "Maintain automation deployment workflows",
+      "task": "No current execution detected",
+      "pending": "Start next automation job when triggered"
     },
     {
       "name": "flowise",
-      "display": "Flowise",
+      "displayName": "flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Support Flowise integrations and build tasks",
-      "task": "No active runtime session",
-      "pending": "Await next Flowise implementation request"
+      "goal": "Support Flowise workflow builds and integrations",
+      "task": "No current execution detected",
+      "pending": "Await next build/integration request"
     }
   ]
 }
