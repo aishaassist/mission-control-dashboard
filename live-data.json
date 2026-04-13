@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T05:37:00Z",
+  "generatedAt": "2026-04-13T05:41:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -35,7 +35,7 @@
       "goal": "Mission control and user orchestration",
       "task": "Running cron mission-control-live-data-refresh",
       "pending": "Continue monitoring and dispatch specialist work when needed",
-      "lastUpdatedAt": 1776058666930
+      "lastUpdatedAt": 1776058905347
     },
     {
       "agent": "contactenrichment",
@@ -43,7 +43,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich missing school contact data",
-      "task": "Last run completed (99 rows, 0 updates)",
+      "task": "Last run completed (99 rows processed, 0 updates)",
       "pending": "Await new rows or Notion integration changes",
       "lastUpdatedAt": 1775398198839
     },
@@ -53,7 +53,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "LinkedIn profile lookup and mapping",
-      "task": "No active run; last batch ended with zero processed rows",
+      "task": "No active run; last batch finished with 0 rows processed",
       "pending": "Await fresh LinkedIn lookup tasks",
       "lastUpdatedAt": 1775302155385
     },
