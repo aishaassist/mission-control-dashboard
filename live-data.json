@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T15:29:00Z",
+  "generatedAt": "2026-04-13T15:31:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,8 +14,8 @@
   },
   "priorities": [
     "Keep main agent stable during cron operations",
-    "Resume contact and LinkedIn pipelines only on explicit intake",
-    "Triage failed/unsupported model sessions before restarting enrichment bots"
+    "Resume enrichment pipelines only on explicit intake",
+    "Clear model/runtime failures before relaunching paused bots"
   ],
   "goalProgress": [
     {
@@ -30,8 +30,8 @@
     },
     {
       "goal": "LinkedIn enrichment workflow",
-      "status": "needs_attention",
-      "note": "No active run; recent slash session failed and needs triage"
+      "status": "paused",
+      "note": "No active run; awaiting next lookup batch and failure triage if retried"
     }
   ],
   "agents": [
@@ -50,17 +50,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school contact records from official sources",
-      "task": "Last run complete; 99 rows processed with no new email/phone updates",
+      "task": "Last run complete; 99 rows processed",
       "pending": "Awaiting next Notion-backed batch"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No current run; recent slash session marked failed",
-      "pending": "Triage failed session, then await next lookup batch"
+      "task": "No current run; last activity finished with no rows processed",
+      "pending": "Awaiting next lookup batch"
     },
     {
       "name": "n8n",
