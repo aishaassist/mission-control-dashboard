@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T19:03:00Z",
+  "generatedAt": "2026-04-13T19:05:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -11,8 +11,8 @@
   },
   "priorities": [
     "main active in cron refresh loop",
-    "contactenrichment idle after enrichment completion",
-    "linkedin idle with failed prior slash session",
+    "contactenrichment idle after last enrichment completion",
+    "linkedin idle with prior failed slash session",
     "n8n standby awaiting automation brief",
     "flowise standby awaiting flow build brief"
   ],
@@ -27,7 +27,7 @@
     },
     {
       "agent": "linkedin",
-      "progress": "No active lookup batch; last slash session failed"
+      "progress": "No active lookup batch; prior slash session failed"
     },
     {
       "agent": "n8n",
