@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T17:09:00Z",
+  "generatedAt": "2026-04-13T17:11:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -8,7 +8,7 @@
   },
   "priorities": [
     "Keep main (Aisha) focused on mission-control continuity",
-    "Prepare contactenrichment and linkedin for the next intake batch",
+    "Queue next contact intake for contactenrichment and linkedin",
     "Keep n8n and flowise ready for on-demand automation delivery"
   ],
   "goalProgress": [
@@ -18,7 +18,7 @@
     },
     {
       "goal": "Contact operations",
-      "progress": "Contactenrichment completed its last batch and is awaiting new work"
+      "progress": "Contactenrichment and linkedin are on standby awaiting new tasks"
     },
     {
       "goal": "Automation readiness",
@@ -33,7 +33,7 @@
       "health": "ok",
       "goal": "Orchestrate Kumar operations and mission control",
       "task": "Cron live-data refresh is running",
-      "pending": "Continue orchestration and watch specialist queues"
+      "pending": "Continue orchestration and monitor specialist queues"
     },
     {
       "name": "contactenrichment",
@@ -48,10 +48,10 @@
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "Run LinkedIn lookup support for contact operations",
-      "task": "No active lookup session; recent slash session showed failed status",
-      "pending": "Stabilize on next lookup instruction"
+      "task": "No active lookup session visible",
+      "pending": "Await next lookup instruction"
     },
     {
       "name": "n8n",
