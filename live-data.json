@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T21:53:00Z",
+  "generatedAt": "2026-04-13T21:55:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -11,7 +11,7 @@
   ],
   "goalProgress": {
     "overall": "Monitoring mode",
-    "notes": "Main agent active; specialist agents mostly standby with no active subagent workers."
+    "notes": "Main agent active; specialist agents are in standby with no active subagent workers."
   },
   "agents": [
     {
@@ -19,18 +19,18 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission-control and operator requests across channels",
+      "goal": "Coordinate mission control across channels and specialist agents",
       "task": "Running cron refresh: mission-control-live-data-refresh",
-      "pending": "Continue periodic dashboard/state refresh and orchestration"
+      "pending": "Continue periodic runtime snapshot updates"
     },
     {
       "name": "contactenrichment",
       "displayName": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Enrich school contact records with verified email/phone",
-      "task": "Last run returned FINAL with rows processed and not_found tracking",
-      "pending": "Reconnect/verify Notion integration access for next enrichment pass"
+      "goal": "Enrich school contact records with verified email and phone data",
+      "task": "Last run completed enrichment summary output",
+      "pending": "Verify Notion integration access, then resume row updates"
     },
     {
       "name": "linkedin",
@@ -38,26 +38,26 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Find and update LinkedIn profile data for contact ops",
-      "task": "Most recent group run completed with 0 rows; another recent session failed",
-      "pending": "Recover from failed state and resume row-level LinkedIn updates"
+      "task": "Recent run returned 0-row update; one recent session failed",
+      "pending": "Recover run stability and resume LinkedIn updates"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Automation build/deploy support",
-      "task": "No active runtime session detected",
-      "pending": "Await automation tasks and deployment requests"
+      "goal": "Build and deploy automation workflows",
+      "task": "No current running session",
+      "pending": "Await next automation build request"
     },
     {
       "name": "flowise",
       "displayName": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise build/support assistance",
-      "task": "No active runtime session detected",
-      "pending": "Await next build or troubleshooting request"
+      "goal": "Support Flowise builds and troubleshooting",
+      "task": "No current running session",
+      "pending": "Await next Flowise task"
     }
   ]
 }
