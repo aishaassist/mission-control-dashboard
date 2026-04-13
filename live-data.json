@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T06:37:00Z",
+  "generatedAt": "2026-04-13T06:39:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -26,7 +26,7 @@
     {
       "goal": "Agent execution continuity",
       "status": "mixed",
-      "progress": "Aisha active; LinkedIn still carries failed history while specialist queues are mostly standby"
+      "progress": "Aisha active; LinkedIn carries failed history while specialist queues remain standby"
     }
   ],
   "agents": [
