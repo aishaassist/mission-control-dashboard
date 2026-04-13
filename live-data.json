@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T00:05:00Z",
+  "generatedAt": "2026-04-13T00:07:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,12 +13,12 @@
     }
   },
   "priorities": [
-    "Keep main coordination session responsive",
-    "Prepare next contactenrichment batch with Notion access ready",
-    "Queue concrete execution tasks for linkedin, n8n, and flowise"
+    "Keep main mission-control loop running cleanly",
+    "Queue next contactenrichment run once Notion access is confirmed",
+    "Prepare actionable task queues for linkedin, n8n, and flowise"
   ],
   "goalProgress": {
-    "summary": "Main cron orchestration is active, specialist agents are on standby awaiting fresh assignments.",
+    "summary": "Main orchestration is active, specialist agents are currently on standby awaiting new tasks.",
     "completion": {
       "active": 1,
       "standby": 4,
@@ -32,16 +32,16 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission-control operations",
-      "task": "Running mission-control live data refresh cron",
-      "pending": "Complete commit/push if dashboard data changed"
+      "task": "Running mission-control live-data refresh cron",
+      "pending": "Finish git sync for live-data.json if changed"
     },
     {
       "name": "contactenrichment",
       "label": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school contact details",
-      "task": "Last run completed with 99 rows processed",
+      "goal": "Complete missing school contact enrichment",
+      "task": "Last known run completed (99 rows processed)",
       "pending": "Await next Notion-ready enrichment batch"
     },
     {
@@ -49,8 +49,8 @@
       "label": "LinkedIn",
       "status": "Standby",
       "health": "warn",
-      "goal": "Run LinkedIn lookup coverage tasks",
-      "task": "No active run, recent activity shows completed standby state",
+      "goal": "Handle LinkedIn lookup assignments",
+      "task": "No active run, most recent execution finished",
       "pending": "Await next lookup list"
     },
     {
@@ -59,17 +59,17 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Build and deploy automation workflows",
-      "task": "No active execution detected",
-      "pending": "Await next automation implementation request"
+      "task": "Idle with no running session",
+      "pending": "Await next automation build request"
     },
     {
       "name": "flowise",
       "label": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Implement Flowise agent workflows",
-      "task": "Idle with no active run",
-      "pending": "Await new Flowise build task"
+      "goal": "Implement Flowise workflows",
+      "task": "Idle with no running session",
+      "pending": "Await next Flowise implementation task"
     }
   ]
 }
