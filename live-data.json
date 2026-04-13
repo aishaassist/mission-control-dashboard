@@ -1,84 +1,79 @@
 {
-  "generatedAt": "2026-04-13T21:21:00Z",
+  "generatedAt": "2026-04-13T21:23:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
-      "fetchedAt": "2026-04-13T21:21:00Z",
       "count": 12
     },
     "subagents": {
-      "action": "list",
       "recentMinutes": 1440,
-      "fetchedAt": "2026-04-13T21:21:00Z",
       "active": 0,
       "recent": 0
     }
   },
   "priorities": [
-    "Keep mission-control snapshot refreshes reliable",
-    "Recover contactenrichment Notion access before next data pass",
-    "Keep linkedin, n8n, and flowise warmed for dispatch"
+    "Keep main agent stable and responsive",
+    "Unblock contact enrichment data access for reliable updates",
+    "Re-activate specialist agents only when queued work exists"
   ],
   "goalProgress": [
     {
-      "goal": "Mission-control visibility",
-      "progress": "Runtime snapshot refreshed from sessions_list and subagents list"
+      "goal": "Mission control visibility",
+      "status": "in_progress",
+      "note": "Live runtime snapshot refreshed from sessions and subagent state"
     },
     {
-      "goal": "Contact enrichment throughput",
-      "progress": "Latest contactenrichment run completed 99 rows with 0 new email and 0 new phone updates"
-    },
-    {
-      "goal": "Specialist readiness",
-      "progress": "linkedin, n8n, and flowise are idle/standby and ready for next assignments"
+      "goal": "Agent execution continuity",
+      "status": "partial",
+      "note": "Main active; specialist agents currently idle/standby"
     }
   ],
   "agents": [
     {
-      "name": "main",
-      "displayName": "Aisha",
+      "agent": "main",
+      "name": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate operations and keep dashboard state current",
-      "task": "mission-control-live-data-refresh cron session is running",
-      "pending": "Continue scheduled refreshes and route incoming work"
+      "goal": "Coordinate mission control and cross-agent orchestration",
+      "task": "Running cron refresh for live dashboard data",
+      "pending": "None immediate"
     },
     {
+      "agent": "contactenrichment",
       "name": "contactenrichment",
-      "displayName": "contactenrichment",
       "status": "Idle",
       "health": "warn",
-      "goal": "Enrich school contacts from official, verifiable sources",
-      "task": "No running session; latest run completed 99 rows",
-      "pending": "Restore Notion integration/share access, then resume updates"
+      "goal": "Fill missing school contact fields from official sources",
+      "task": "Last run completed with not_found-heavy results",
+      "pending": "Awaiting next dataset/access updates"
     },
     {
+      "agent": "linkedin",
       "name": "linkedin",
-      "displayName": "linkedin",
-      "status": "Standby",
+      "status": "Idle",
       "health": "bad",
-      "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "No running session; recent history includes a failed slash session",
-      "pending": "Validate slash/session path, then process next LinkedIn batch"
+      "goal": "LinkedIn lookup and profile enrichment",
+      "task": "No active run; last notable status includes failed session",
+      "pending": "Queue next lookup batch and verify stable run"
     },
     {
+      "agent": "n8n",
       "name": "n8n",
-      "displayName": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Build and deploy automation workflows",
-      "task": "No running session",
-      "pending": "Await next automation request"
+      "goal": "Automation workflow build and deployment",
+      "task": "No current execution detected",
+      "pending": "Awaiting automation requests"
     },
     {
+      "agent": "flowise",
       "name": "flowise",
-      "displayName": "flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Support Flowise workflow and agent operations",
-      "task": "No running session",
-      "pending": "Await next Flowise task"
+      "goal": "Flowise build/support",
+      "task": "No current execution detected",
+      "pending": "Awaiting flow build tasks"
     }
   ]
 }
