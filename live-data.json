@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T04:05:00Z",
+  "generatedAt": "2026-04-13T04:07:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -54,7 +54,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Deliver LinkedIn lookup and profile enrichment",
-      "task": "No active run; most recent run completed with zero rows processed",
+      "task": "No active run; latest bot pass returned zero rows processed",
       "pending": "Resume queued lookups on next instruction"
     },
     {
