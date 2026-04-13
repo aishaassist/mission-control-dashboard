@@ -1,8 +1,9 @@
 {
-  "generatedAt": "2026-04-13T11:11:00Z",
+  "generatedAt": "2026-04-13T11:15:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
+      "messageLimit": 1,
       "count": 12
     },
     "subagents": {
@@ -12,65 +13,60 @@
     }
   },
   "priorities": [
-    "Keep main agent stable and responsive",
-    "Unblock Notion access for contactenrichment",
-    "Queue next actionable jobs for linkedin, n8n, and flowise"
+    "Keep main (Aisha) session stable and active",
+    "Re-engage contactenrichment once Notion/shared source access is confirmed",
+    "Prepare next actionable queues for linkedin, n8n, and flowise"
   ],
-  "goalProgress": [
-    {
-      "goal": "Mission control visibility",
-      "progress": "Live snapshot refreshed from runtime state"
-    },
-    {
-      "goal": "Agent execution continuity",
-      "progress": "No active subagents in last 24h"
-    }
-  ],
+  "goalProgress": {
+    "operations": "Main control loop is active; specialist agents are currently on standby.",
+    "contactPipeline": "Latest contactenrichment run completed and marked many unverifiable fields; next pass depends on source access/readiness.",
+    "automation": "n8n and flowise are idle with no active execution sessions."
+  },
   "agents": [
     {
       "name": "main",
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Primary orchestration across channels",
-      "task": "Cron dashboard refresh and active WhatsApp handling",
-      "pending": "Resolve unsupported model config on one running thread"
+      "goal": "Mission control orchestration and runtime supervision",
+      "task": "Running cron refresh and maintaining primary operations channel",
+      "pending": "Continue monitoring sessions and dispatching specialist work"
     },
     {
       "name": "contactenrichment",
       "displayName": "contactenrichment",
-      "status": "Idle/Standby",
+      "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school contact details in Notion",
-      "task": "Last run processed 99 rows; update coverage remains limited",
-      "pending": "Ensure Notion integration token and DB share are correctly configured"
+      "goal": "Enrich missing school contact records",
+      "task": "Last run completed with updates/not_found tagging",
+      "pending": "Await next dataset and confirmed Notion/integration access"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
-      "status": "Idle/Standby",
+      "status": "Standby",
       "health": "warn",
-      "goal": "LinkedIn enrichment support",
-      "task": "No active run; last grouped run returned zero processed",
-      "pending": "Await next enrichment batch"
+      "goal": "LinkedIn lookup and profile enrichment support",
+      "task": "No active run; latest group execution processed zero rows",
+      "pending": "Await next lookup batch"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
-      "status": "Idle/Standby",
+      "status": "Standby",
       "health": "warn",
-      "goal": "Automation workflow execution",
-      "task": "No recent active runtime",
-      "pending": "Await deployment or workflow trigger instructions"
+      "goal": "Workflow automation build and deployment",
+      "task": "No active execution session detected",
+      "pending": "Await new automation request"
     },
     {
       "name": "flowise",
       "displayName": "flowise",
-      "status": "Idle/Standby",
+      "status": "Standby",
       "health": "warn",
-      "goal": "Flowise build and integration support",
-      "task": "No recent active runtime",
-      "pending": "Await next build request"
+      "goal": "Flowise build/support operations",
+      "task": "No active session execution detected",
+      "pending": "Await next Flowise task"
     }
   ]
 }
