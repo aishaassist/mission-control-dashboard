@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T05:01:00Z",
+  "generatedAt": "2026-04-13T05:03:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -25,7 +25,7 @@
     },
     {
       "goal": "Agent readiness",
-      "progress": "Main is active; specialist agents are standby, with linkedin showing a recent failed session",
+      "progress": "Main is active; specialists are standby, with linkedin carrying a recent failed session",
       "status": "watch"
     }
   ],
