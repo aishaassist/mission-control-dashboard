@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T14:17:00Z",
+  "generatedAt": "2026-04-13T14:19:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -20,7 +20,7 @@
   ],
   "goalProgress": {
     "overall": "stable",
-    "note": "Main is active; specialist lanes are on standby for next queued tasks."
+    "note": "Main is active; specialist lanes are standby with no active runs."
   },
   "agents": [
     {
@@ -45,10 +45,10 @@
       "name": "linkedin",
       "display": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "LinkedIn lookup and profile mapping",
-      "task": "No active run; last group workflow closed",
-      "pending": "Awaiting next lookup request"
+      "task": "No active run; last sessions include a failure",
+      "pending": "Investigate failed slash session, then await next lookup request"
     },
     {
       "name": "n8n",
