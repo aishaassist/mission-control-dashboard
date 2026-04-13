@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T16:57:00Z",
+  "generatedAt": "2026-04-13T16:59:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -8,21 +8,21 @@
   },
   "priorities": [
     "Keep main (Aisha) focused on live orchestration and cron continuity",
-    "Queue contactenrichment and linkedin for immediate restart on fresh intake",
+    "Queue contactenrichment and linkedin for next intake batch",
     "Keep n8n and flowise warm for automation and flow delivery"
   ],
   "goalProgress": [
     {
       "goal": "Mission control uptime",
-      "progress": "Main is active with live dashboard cron refresh running"
+      "progress": "Main is active with the live dashboard refresh cron running"
     },
     {
       "goal": "Contact ops execution",
-      "progress": "Contactenrichment/linkedin are on standby after previous runs"
+      "progress": "Contactenrichment and linkedin are standby after prior completions"
     },
     {
       "goal": "Automation readiness",
-      "progress": "n8n and flowise remain idle-ready for on-demand execution"
+      "progress": "n8n and flowise are idle-ready for on-demand work"
     }
   ],
   "agents": [
@@ -32,7 +32,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Orchestrate Kumar operations and mission control",
-      "task": "Cron-driven live data refresh is running",
+      "task": "Cron live-data refresh is running",
       "pending": "Continue orchestration and monitor downstream agents"
     },
     {
@@ -41,7 +41,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Last visible batch completed",
+      "task": "Last visible enrichment batch completed",
       "pending": "Await next enrichment trigger"
     },
     {
@@ -49,7 +49,7 @@
       "displayName": "LinkedIn",
       "status": "Standby",
       "health": "warn",
-      "goal": "Support LinkedIn lookup for contact operations",
+      "goal": "Run LinkedIn lookup support for contact operations",
       "task": "No currently running lookup session",
       "pending": "Start on next lookup instruction"
     },
