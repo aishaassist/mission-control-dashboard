@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T15:15:00Z",
+  "generatedAt": "2026-04-13T15:17:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,8 +14,8 @@
   },
   "priorities": [
     "Keep main agent stable during cron operations",
-    "Re-activate specialist agents only on explicit task intake",
-    "Monitor failed session spikes and model compatibility errors"
+    "Trigger specialist agents only on explicit task intake",
+    "Track failed-session patterns and model compatibility issues"
   ],
   "goalProgress": [
     {
@@ -26,12 +26,12 @@
     {
       "goal": "Contact enrichment pipeline",
       "status": "paused",
-      "note": "Last run completed with 99 rows processed, no new updates"
+      "note": "Last completed run processed 99 rows with no new updates"
     },
     {
       "goal": "LinkedIn enrichment workflow",
       "status": "standby",
-      "note": "No active run; last meaningful run ended idle"
+      "note": "No active run; awaiting next lookup batch"
     }
   ],
   "agents": [
@@ -50,7 +50,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school contact records from official sources",
-      "task": "Last completed run: rows_processed=99, email_updated=0, phone_updated=0",
+      "task": "Last run completed: rows_processed=99, email_updated=0, phone_updated=0",
       "pending": "Awaiting next Notion-backed batch"
     },
     {
