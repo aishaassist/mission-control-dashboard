@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-04-13T21:11:00Z",
+  "generatedAt": "2026-04-13T21:13:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
-      "fetchedAt": "2026-04-13T21:11:00Z",
+      "fetchedAt": "2026-04-13T21:13:00Z",
       "count": 12
     },
     "subagents": {
       "action": "list",
       "recentMinutes": 1440,
-      "fetchedAt": "2026-04-13T21:11:00Z",
+      "fetchedAt": "2026-04-13T21:13:00Z",
       "active": 0,
       "recent": 0
     }
   },
   "priorities": [
-    "Keep mission-control snapshot refreshes running reliably",
-    "Unblock Notion access for contactenrichment to resume verified updates",
-    "Keep linkedin, n8n, and flowise ready for immediate dispatch"
+    "Keep mission-control snapshot refreshes reliable",
+    "Unblock Notion access for contactenrichment",
+    "Keep linkedin, n8n, and flowise ready for dispatch"
   ],
   "goalProgress": [
     {
@@ -42,7 +42,7 @@
       "health": "ok",
       "goal": "Orchestrate operations and keep mission-control current",
       "task": "mission-control-live-data-refresh cron session is running",
-      "pending": "Continue scheduled refresh and route next tasks to specialists"
+      "pending": "Continue scheduled refreshes and route next tasks"
     },
     {
       "name": "contactenrichment",
@@ -57,10 +57,10 @@
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Standby",
-      "health": "bad",
-      "goal": "Support LinkedIn lookup and profile enrichment tasks",
-      "task": "No running session; latest workflow complete with failed session in recent history",
-      "pending": "Confirm stability and wait for next LinkedIn batch"
+      "health": "warn",
+      "goal": "Support LinkedIn lookup and profile enrichment",
+      "task": "No running session; latest run is complete",
+      "pending": "Await next LinkedIn batch"
     },
     {
       "name": "n8n",
@@ -69,7 +69,7 @@
       "health": "warn",
       "goal": "Implement and deploy automation workflows",
       "task": "No running session",
-      "pending": "Await next automation build request"
+      "pending": "Await next automation request"
     },
     {
       "name": "flowise",
