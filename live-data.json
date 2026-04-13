@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T02:55:00Z",
+  "generatedAt": "2026-04-13T02:57:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,19 +13,19 @@
   },
   "priorities": [
     "Keep main (Aisha) stable while cron refresh is running",
-    "Keep contactenrichment prepared for the next Notion-backed contact batch",
-    "Maintain linkedin, n8n, and flowise in standby for on-demand work"
+    "Prepare contactenrichment for the next Notion-backed contact batch",
+    "Keep linkedin, n8n, and flowise ready for on-demand execution"
   ],
   "goalProgress": [
     {
       "goal": "Mission control observability",
       "status": "On track",
-      "progress": "Runtime snapshot refreshed from sessions_list and subagents"
+      "progress": "Live runtime snapshot refreshed from sessions_list and subagents"
     },
     {
       "goal": "Contact enrichment continuity",
       "status": "Standby",
-      "progress": "No active contactenrichment run; latest batch previously completed"
+      "progress": "Latest known contactenrichment batch completed; no active run"
     },
     {
       "goal": "Auxiliary agent readiness",
