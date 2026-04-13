@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T17:39:00Z",
+  "generatedAt": "2026-04-13T17:41:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -41,7 +41,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Last run completed after processing school rows",
+      "task": "Last run completed with school-row processing summary",
       "pending": "Await next enrichment trigger"
     },
     {
@@ -50,7 +50,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup support for contact operations",
-      "task": "No active lookup session; last visible run is complete",
+      "task": "No active lookup run; last visible task ended complete",
       "pending": "Await next lookup instruction"
     },
     {
