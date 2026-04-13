@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-04-13T20:05:00Z",
+  "generatedAt": "2026-04-13T20:07:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main (Aisha) stable while mission-control cron refresh is active",
-    "Restore contactenrichment Notion access (API key + integration share) to resume updates",
-    "Re-activate specialist throughput for linkedin, n8n, and flowise"
+    "Keep main (Aisha) stable while mission-control cron refresh is running",
+    "Unblock contactenrichment by restoring Notion API key and integration share access",
+    "Recover specialist throughput for linkedin and keep n8n/flowise ready"
   ],
   "goalProgress": {
-    "operations": "Main is active with this cron refresh running",
-    "automation": "No active or recent spawned subagents in the last 24 hours",
-    "dataPipelines": "Contact enrichment is blocked pending Notion credentials and page/database sharing"
+    "operations": "Main is active and currently running the live-data refresh cron",
+    "automation": "No active or recent spawned subagents found in the last 24 hours",
+    "dataPipelines": "Contact enrichment remains blocked until Notion credentials and sharing are fixed"
   },
   "agents": [
     {
@@ -21,44 +21,44 @@
       "status": "Active",
       "health": "ok",
       "goal": "Mission control orchestration",
-      "task": "Running cron live-data refresh and coordination",
-      "pending": "Finish refresh cycle and maintain stable runtime"
+      "task": "Executing this live-data refresh run",
+      "pending": "Complete refresh cycle and keep orchestration stable"
     },
     {
       "name": "contactenrichment",
       "displayName": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contact records in Notion",
-      "task": "No running session; latest batch completed",
-      "pending": "Await valid NOTION_API_KEY and integration share to target database"
+      "goal": "Enrich school contact records",
+      "task": "No running session; last batch completed with not_found outcomes",
+      "pending": "Await valid NOTION_API_KEY and integration share on target Notion DB"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Idle/Standby",
       "health": "bad",
-      "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No running session; recent session history includes a failed run",
-      "pending": "Validate runtime health and trigger next lookup batch"
+      "goal": "LinkedIn lookup and enrichment support",
+      "task": "No running session; recent history includes a failed run",
+      "pending": "Stabilize runtime and trigger next lookup batch"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Workflow automation delivery",
+      "goal": "Automation workflow delivery",
       "task": "No running session",
-      "pending": "Await next automation build/deploy request"
+      "pending": "Await next build/deploy request"
     },
     {
       "name": "flowise",
       "displayName": "Flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Flowise assistant workflow support",
+      "goal": "Flow orchestration and troubleshooting",
       "task": "No running session",
-      "pending": "Await next flow build or troubleshooting request"
+      "pending": "Await next flow build or debug task"
     }
   ]
 }
