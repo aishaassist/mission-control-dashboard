@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T07:23:00Z",
+  "generatedAt": "2026-04-13T07:25:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -54,7 +54,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; most recent runs ended without active workload",
+      "task": "No active run; recent sessions completed without active workload",
       "pending": "Await next lookup batch; monitor for recurrence of failed session paths"
     },
     {
