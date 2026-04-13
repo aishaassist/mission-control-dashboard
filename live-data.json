@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T13:51:00Z",
+  "generatedAt": "2026-04-13T13:53:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -14,12 +14,12 @@
   "goalProgress": [
     {
       "goal": "Mission-control visibility",
-      "progress": "Live runtime state refreshed from current sessions and subagent list",
+      "progress": "Live runtime state refreshed from sessions and subagent state",
       "health": "ok"
     },
     {
       "goal": "Specialist readiness",
-      "progress": "Most specialists are standby; linkedin has a failed path to clear",
+      "progress": "Most specialists are standby; linkedin failed path still needs cleanup",
       "health": "warn"
     }
   ],
@@ -31,7 +31,7 @@
       "health": "ok",
       "goal": "Mission-control orchestration",
       "task": "Running live-data refresh cron session",
-      "pending": "Triage unsupported spark-model error seen in WhatsApp session"
+      "pending": "Triage unsupported spark-model error in WhatsApp session"
     },
     {
       "name": "contactenrichment",
@@ -39,8 +39,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "School contact enrichment",
-      "task": "Idle after last enrichment completion",
-      "pending": "Await valid Notion API token and integration share access"
+      "task": "Idle after last completed run",
+      "pending": "Await valid Notion API token and shared integration access"
     },
     {
       "name": "linkedin",
@@ -48,8 +48,8 @@
       "status": "Standby",
       "health": "bad",
       "goal": "LinkedIn lookup support",
-      "task": "Idle; last group run processed zero rows",
-      "pending": "Fix failed slash-session route before next request"
+      "task": "Idle; last group run returned zero rows",
+      "pending": "Fix failed slash-session route before next intake"
     },
     {
       "name": "n8n",
