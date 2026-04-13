@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T01:45:00Z",
+  "generatedAt": "2026-04-13T01:47:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -13,9 +13,9 @@
     }
   },
   "priorities": [
-    "Keep main (Aisha) stable during active cron refresh",
+    "Keep main (Aisha) stable while cron refresh is active",
     "Keep contactenrichment ready for next Notion enrichment batch",
-    "Keep linkedin, n8n, and flowise on standby for inbound tasks"
+    "Keep linkedin, n8n, and flowise in standby for inbound work"
   ],
   "goalProgress": [
     {
@@ -30,7 +30,7 @@
     },
     {
       "agent": "linkedin",
-      "progress": "Latest LinkedIn lookup run completed",
+      "progress": "Recent lookup run completed; older failure noted",
       "pending": "Await next lookup request"
     },
     {
@@ -67,10 +67,10 @@
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Handle LinkedIn lookup requests",
-      "task": "No running session; latest lookup completed",
-      "pending": "Await next lookup list"
+      "task": "No running session; recent run completed, older failed session present",
+      "pending": "Stabilize slash-session reliability and await next lookup list"
     },
     {
       "name": "n8n",
