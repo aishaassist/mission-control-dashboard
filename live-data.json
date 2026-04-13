@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T03:23:00Z",
+  "generatedAt": "2026-04-13T03:25:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -13,12 +13,12 @@
     {
       "name": "Contact enrichment readiness",
       "status": "waiting",
-      "note": "Last known batch processed records with no field updates; next run is pending readiness."
+      "note": "Last known batch processed 99 rows with no email or phone updates."
     },
     {
       "name": "LinkedIn reliability",
       "status": "monitor",
-      "note": "Agent is idle now, with mixed recent outcomes including a failed session."
+      "note": "LinkedIn is idle now, with mixed recent outcomes including a failed session."
     }
   ],
   "goalProgress": [
@@ -51,8 +51,8 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Fill missing school email and phone from official sources",
-      "task": "Last known run processed 99 rows with zero email and phone updates",
-      "pending": "Resume next batch when data-access constraints are resolved"
+      "task": "Last run processed 99 rows with zero field updates",
+      "pending": "Resume next batch when input/readiness constraints are resolved"
     },
     {
       "name": "linkedin",
@@ -60,7 +60,7 @@
       "status": "Idle",
       "health": "bad",
       "goal": "Populate LinkedIn profile fields for target records",
-      "task": "Recent context shows one failed session and one zero-update completion",
+      "task": "Recent context includes one failed session and one zero-update completion",
       "pending": "Run next controlled batch and validate session stability"
     },
     {
