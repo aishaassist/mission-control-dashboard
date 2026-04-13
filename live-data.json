@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T08:21:00Z",
+  "generatedAt": "2026-04-13T08:23:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,9 +13,9 @@
     }
   },
   "priorities": [
-    "Keep mission-control snapshot aligned with current runtime sessions",
+    "Keep mission-control snapshot aligned with live runtime sessions",
     "Maintain readiness for contact and LinkedIn enrichment queues",
-    "Keep n8n and flowise ready for next automation/build requests"
+    "Keep n8n and flowise on standby for automation/build requests"
   ],
   "goalProgress": [
     {
