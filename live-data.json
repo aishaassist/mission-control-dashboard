@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T13:07:00Z",
+  "generatedAt": "2026-04-13T13:09:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
