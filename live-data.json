@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T19:19:00Z",
+  "generatedAt": "2026-04-13T19:23:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -19,7 +19,7 @@
   "goalProgress": [
     {
       "agent": "main",
-      "progress": "Running mission-control refresh and orchestrating specialist readiness"
+      "progress": "Running mission-control refresh and coordinating specialist readiness"
     },
     {
       "agent": "contactenrichment",
@@ -27,7 +27,7 @@
     },
     {
       "agent": "linkedin",
-      "progress": "Last lookup context completed; awaiting next assignment"
+      "progress": "Last lookup cycle completed; awaiting next assignment"
     },
     {
       "agent": "n8n",
