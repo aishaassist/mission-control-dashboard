@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-04-13T21:19:00Z",
+  "generatedAt": "2026-04-13T21:21:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
-      "fetchedAt": "2026-04-13T21:19:00Z",
+      "fetchedAt": "2026-04-13T21:21:00Z",
       "count": 12
     },
     "subagents": {
       "action": "list",
       "recentMinutes": 1440,
-      "fetchedAt": "2026-04-13T21:19:00Z",
+      "fetchedAt": "2026-04-13T21:21:00Z",
       "active": 0,
       "recent": 0
     }
   },
   "priorities": [
     "Keep mission-control snapshot refreshes reliable",
-    "Restore Notion access for contactenrichment before next run",
-    "Keep linkedin, n8n, and flowise ready for dispatch"
+    "Recover contactenrichment Notion access before next data pass",
+    "Keep linkedin, n8n, and flowise warmed for dispatch"
   ],
   "goalProgress": [
     {
       "goal": "Mission-control visibility",
-      "progress": "Live runtime snapshot refreshed from sessions and subagent state"
+      "progress": "Runtime snapshot refreshed from sessions_list and subagents list"
     },
     {
       "goal": "Contact enrichment throughput",
-      "progress": "Latest contactenrichment run completed 99 rows with no new email or phone updates"
+      "progress": "Latest contactenrichment run completed 99 rows with 0 new email and 0 new phone updates"
     },
     {
       "goal": "Specialist readiness",
-      "progress": "linkedin, n8n, and flowise are currently on standby"
+      "progress": "linkedin, n8n, and flowise are idle/standby and ready for next assignments"
     }
   ],
   "agents": [
@@ -40,34 +40,34 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Orchestrate operations and keep mission-control current",
+      "goal": "Coordinate operations and keep dashboard state current",
       "task": "mission-control-live-data-refresh cron session is running",
-      "pending": "Continue scheduled refreshes and route next tasks"
+      "pending": "Continue scheduled refreshes and route incoming work"
     },
     {
       "name": "contactenrichment",
       "displayName": "contactenrichment",
       "status": "Idle",
       "health": "warn",
-      "goal": "Complete verified contact enrichment from official sources",
+      "goal": "Enrich school contacts from official, verifiable sources",
       "task": "No running session; latest run completed 99 rows",
-      "pending": "Re-enable Notion integration/database access, then resume updates"
+      "pending": "Restore Notion integration/share access, then resume updates"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Standby",
-      "health": "warn",
-      "goal": "Support LinkedIn lookup and profile enrichment",
-      "task": "No running session; latest run is complete",
-      "pending": "Await next LinkedIn batch"
+      "health": "bad",
+      "goal": "Run LinkedIn lookup and profile enrichment tasks",
+      "task": "No running session; recent history includes a failed slash session",
+      "pending": "Validate slash/session path, then process next LinkedIn batch"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Implement and deploy automation workflows",
+      "goal": "Build and deploy automation workflows",
       "task": "No running session",
       "pending": "Await next automation request"
     },
@@ -76,7 +76,7 @@
       "displayName": "flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Handle Flowise workflow and agent operations",
+      "goal": "Support Flowise workflow and agent operations",
       "task": "No running session",
       "pending": "Await next Flowise task"
     }
