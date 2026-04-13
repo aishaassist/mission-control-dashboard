@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T18:05:00Z",
+  "generatedAt": "2026-04-13T18:07:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -7,14 +7,14 @@
   "priorities": [
     "Keep mission-control cron sync running",
     "Unblock Notion-connected enrichment workflows",
-    "Queue next LinkedIn and automation execution batches"
+    "Prepare next execution batches for LinkedIn and automation agents"
   ],
   "goalProgress": {
     "overall": "Monitoring",
     "highlights": [
       "Main (Aisha) runtime is active",
       "No active subagents in last 24h",
-      "Specialist agents are currently on standby"
+      "contactenrichment, linkedin, n8n, and flowise are on standby"
     ]
   },
   "agents": [
@@ -23,35 +23,35 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission-control refresh and oversight",
-      "task": "Cron-driven live dashboard refresh is running",
-      "pending": "Continue periodic state snapshots and publish updates"
+      "goal": "Coordinate mission-control oversight and live status refresh",
+      "task": "Cron mission-control-live-data-refresh is currently running",
+      "pending": "Continue periodic snapshot updates and dashboard publishing"
     },
     {
       "name": "contactenrichment",
       "displayName": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Fill missing school email/phone from official sources",
-      "task": "Last run completed row processing with not_found on unverifiable fields",
-      "pending": "Await next Notion-ready enrichment batch"
+      "goal": "Complete school contact enrichment in Notion from official sources",
+      "task": "Last known run finished processing; unresolved fields marked not_found",
+      "pending": "Await next Notion-accessible enrichment batch"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "LinkedIn lookup and profile enrichment support",
-      "task": "No active run; latest group run completed with zero processed",
-      "pending": "Await fresh lookup input list"
+      "goal": "Run LinkedIn lookup and profile enrichment support",
+      "task": "No active execution; latest group run ended with zero rows processed",
+      "pending": "Await fresh lookup list or outreach batch"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Build and deploy workflow automations",
-      "task": "No current execution; last known response was ANNOUNCE_SKIP",
+      "goal": "Build and deploy automation workflows",
+      "task": "No current run; last known state reported ANNOUNCE_SKIP",
       "pending": "Await automation brief or deployment request"
     },
     {
@@ -59,9 +59,9 @@
       "displayName": "Flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Support Flowise build and integration tasks",
-      "task": "No active session; waiting for build request",
-      "pending": "Await next Flowise implementation task"
+      "goal": "Support Flowise implementation and integration tasks",
+      "task": "No active session; last interaction was a readiness check-in",
+      "pending": "Await next Flowise build task"
     }
   ]
 }
