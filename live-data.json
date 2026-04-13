@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T18:49:00Z",
+  "generatedAt": "2026-04-13T18:51:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -7,14 +7,14 @@
   "priorities": [
     "Keep mission-control refresh loop healthy",
     "Unblock Notion-backed contact enrichment batches",
-    "Maintain LinkedIn, n8n, and Flowise lanes in ready state"
+    "Keep linkedin, n8n, and flowise lanes ready for activation"
   ],
   "goalProgress": {
     "overall": "Monitoring",
     "highlights": [
-      "Aisha (main) is active in the current cron refresh",
-      "No active subagents detected in the last 24h",
-      "Specialist agents are idle and awaiting next tasks"
+      "Aisha main lane is actively running this cron refresh",
+      "No active subagents in the last 24 hours",
+      "Specialist lanes are idle and standing by for new tasks"
     ]
   },
   "agents": [
@@ -24,16 +24,16 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission-control operations",
-      "task": "Running cron live-data refresh",
-      "pending": "Continue periodic dashboard snapshots"
+      "task": "Executing live dashboard refresh cron",
+      "pending": "Continue scheduled runtime snapshots"
     },
     {
       "name": "contactenrichment",
       "displayName": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contact records in Notion",
-      "task": "Last run processed 99 rows with no new email/phone updates",
+      "goal": "Enrich school contacts in Notion",
+      "task": "Last completed batch processed 99 rows with no new email/phone fills",
       "pending": "Await next Notion-ready enrichment batch"
     },
     {
@@ -42,7 +42,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup and profile enrichment",
-      "task": "No active run; latest visible runs are completed",
+      "task": "No active run; latest visible group run completed with zero rows processed",
       "pending": "Await next LinkedIn lookup batch"
     },
     {
@@ -51,7 +51,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and deploy automation workflows",
-      "task": "No active run; last visible state ANNOUNCE_SKIP",
+      "task": "No active run; last visible state returned ANNOUNCE_SKIP",
       "pending": "Await workflow brief or deployment request"
     },
     {
@@ -60,7 +60,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise implementation work",
-      "task": "No active run; last visible update was readiness check-in",
+      "task": "No active run; last visible update was a readiness check-in",
       "pending": "Await next build or integration task"
     }
   ]
