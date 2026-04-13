@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T01:55:00Z",
+  "generatedAt": "2026-04-13T01:57:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -14,34 +14,34 @@
   },
   "priorities": [
     "Keep main (Aisha) stable while mission-control refresh runs",
-    "Prepare contactenrichment and linkedin for next contact ops request",
-    "Keep n8n and flowise on standby for build and automation tasks"
+    "Queue contactenrichment and linkedin for next contact ops tasks",
+    "Hold n8n and flowise ready for incoming build requests"
   ],
   "goalProgress": [
     {
       "agent": "main",
-      "progress": "Mission-control refresh session is running",
-      "pending": "Write latest snapshot and push if changed"
+      "progress": "Refresh cron session is running",
+      "pending": "Write snapshot and push only on diff"
     },
     {
       "agent": "contactenrichment",
-      "progress": "Last enrichment batch completed (99 rows processed)",
+      "progress": "Last run completed (99 rows processed)",
       "pending": "Await next enrichment trigger"
     },
     {
       "agent": "linkedin",
-      "progress": "Last LinkedIn batch completed with no updates",
+      "progress": "Latest run completed with no updates",
       "pending": "Await next lookup queue"
     },
     {
       "agent": "n8n",
-      "progress": "No active automation run detected",
-      "pending": "Await workflow build or deployment task"
+      "progress": "No active run detected",
+      "pending": "Await workflow/deployment task"
     },
     {
       "agent": "flowise",
-      "progress": "No active Flowise run detected",
-      "pending": "Await next Flowise build request"
+      "progress": "No active run detected",
+      "pending": "Await Flowise build request"
     }
   ],
   "agents": [
@@ -51,26 +51,26 @@
       "status": "Active",
       "health": "ok",
       "goal": "Maintain mission-control runtime visibility",
-      "task": "Collect runtime sessions and refresh dashboard data",
-      "pending": "Commit and push live-data.json when diff exists"
+      "task": "Collect current sessions and refresh live dashboard data",
+      "pending": "Commit and push if live-data.json changed"
     },
     {
       "name": "contactenrichment",
       "label": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Maintain contact completeness in enrichment workflows",
-      "task": "No running session; latest Notion batch completed",
-      "pending": "Await next enrichment trigger"
+      "goal": "Keep contact enrichment workflows ready",
+      "task": "No running session; last batch completed successfully",
+      "pending": "Await next enrichment request"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Standby",
-      "health": "bad",
-      "goal": "Support LinkedIn lookup and profile enrichment",
-      "task": "No running session; recent history includes a failed session",
-      "pending": "Stabilize next run and process incoming lookup requests"
+      "health": "warn",
+      "goal": "Support LinkedIn lookup and enrichment",
+      "task": "No running session; monitor next lookup run",
+      "pending": "Await new lookup tasks"
     },
     {
       "name": "n8n",
@@ -79,16 +79,16 @@
       "health": "warn",
       "goal": "Build and deploy automation workflows",
       "task": "No running session detected",
-      "pending": "Await automation task"
+      "pending": "Await automation build/deploy task"
     },
     {
       "name": "flowise",
       "label": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Build and maintain Flowise assistants and flows",
+      "goal": "Build and maintain Flowise assistants/flows",
       "task": "No running session detected",
-      "pending": "Await next Flowise task"
+      "pending": "Await next Flowise request"
     }
   ]
 }
