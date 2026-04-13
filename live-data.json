@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T13:35:00Z",
+  "generatedAt": "2026-04-13T13:37:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -8,8 +8,8 @@
   },
   "priorities": [
     "Keep main agent runtime healthy while cron refresh is running",
-    "Unblock contactenrichment by restoring Notion API access before next run",
-    "Stabilize linkedin task intake and start next lookup in a clean session"
+    "Restore contactenrichment Notion API access before next enrichment cycle",
+    "Stabilize linkedin intake by addressing recent slash-session failures"
   ],
   "goalProgress": [
     {
@@ -18,8 +18,8 @@
       "health": "ok"
     },
     {
-      "goal": "Contact ops enrichment",
-      "progress": "Latest contactenrichment cycle completed and is now waiting on Notion connectivity",
+      "goal": "Contact operations continuity",
+      "progress": "contactenrichment is idle after completed run and waiting on Notion connectivity",
       "health": "warn"
     }
   ],
@@ -31,7 +31,7 @@
       "health": "ok",
       "goal": "Mission-control orchestration",
       "task": "Running scheduled live dashboard refresh",
-      "pending": "Resolve unsupported spark-model path seen in WhatsApp runtime"
+      "pending": "Resolve unsupported spark-model path observed in WhatsApp session"
     },
     {
       "name": "contactenrichment",
@@ -39,17 +39,17 @@
       "status": "Standby",
       "health": "warn",
       "goal": "School contact enrichment",
-      "task": "Idle after latest completed enrichment cycle",
-      "pending": "Await Notion API token and integration share confirmation"
+      "task": "Idle after latest enrichment cycle completed",
+      "pending": "Await Notion API token + integration share verification"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "LinkedIn profile lookup support",
-      "task": "No active run; latest group session completed",
-      "pending": "Validate slash-session reliability before next batch"
+      "task": "No active run; latest sessions completed with prior slash-session failure",
+      "pending": "Start next lookup in a clean session after reliability check"
     },
     {
       "name": "n8n",
