@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T15:23:00Z",
+  "generatedAt": "2026-04-13T15:25:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -15,7 +15,7 @@
   "priorities": [
     "Keep main agent stable during cron operations",
     "Resume contact and LinkedIn pipelines only on explicit intake",
-    "Monitor and reduce model-compatibility and failed-session errors"
+    "Triage failed/unsupported model sessions before restarting enrichment bots"
   ],
   "goalProgress": [
     {
@@ -26,12 +26,12 @@
     {
       "goal": "Contact enrichment pipeline",
       "status": "paused",
-      "note": "Last completed run processed 99 rows with no new email or phone updates"
+      "note": "Latest completed run processed 99 rows; no new contact fields updated"
     },
     {
       "goal": "LinkedIn enrichment workflow",
-      "status": "standby",
-      "note": "No active run; latest group execution completed with 0 updates"
+      "status": "needs_attention",
+      "note": "No active run; recent slash session failed and needs triage"
     }
   ],
   "agents": [
@@ -50,7 +50,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school contact records from official sources",
-      "task": "Last run complete; 99 rows processed with no new updates",
+      "task": "Last run complete; 99 rows processed with no new email/phone updates",
       "pending": "Awaiting next Notion-backed batch"
     },
     {
@@ -59,8 +59,8 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No current run; latest sessions include a failed slash run",
-      "pending": "Review failed session, then await next lookup instructions"
+      "task": "No current run; recent slash session marked failed",
+      "pending": "Triage failed session, then await next lookup batch"
     },
     {
       "name": "n8n",
