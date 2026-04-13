@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T15:25:00Z",
+  "generatedAt": "2026-04-13T15:27:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -26,7 +26,7 @@
     {
       "goal": "Contact enrichment pipeline",
       "status": "paused",
-      "note": "Latest completed run processed 99 rows; no new contact fields updated"
+      "note": "Last completed run processed 99 rows; awaiting next Notion-backed batch"
     },
     {
       "goal": "LinkedIn enrichment workflow",
