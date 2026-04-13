@@ -1,79 +1,73 @@
 {
-  "generatedAt": "2026-04-13T13:21:00Z",
+  "generatedAt": "2026-04-13T13:25:00Z",
   "source": {
-    "sessionsList": {
-      "limit": 50,
-      "messageLimit": 1,
-      "count": 12
-    },
-    "subagents": {
-      "recentMinutes": 1440,
-      "active": 0,
-      "recent": 0
-    }
+    "sessionsList": "sessions_list(limit=50,messageLimit=1)",
+    "subagents": "subagents(action=list,recentMinutes=1440)",
+    "sessionCount": 12,
+    "activeSubagents": 0
   },
   "priorities": [
-    "Keep main agent stable during active cron/runtime work",
-    "Unblock contactenrichment Notion integration to resume updates",
-    "Queue next actionable workloads for linkedin, n8n, and flowise"
+    "Stabilize main runtime and clear model support error on spark session",
+    "Re-run contactenrichment only after Notion integration access is confirmed",
+    "Prepare linkedin agent for next lookup batch"
   ],
   "goalProgress": [
     {
-      "goal": "Ops visibility",
-      "progress": "Runtime snapshot refreshed from current OpenClaw session state",
-      "status": "on_track"
+      "goal": "Mission-control visibility",
+      "progress": "Live snapshot refreshed from runtime sessions",
+      "health": "ok"
     },
     {
-      "goal": "Contact enrichment pipeline",
-      "progress": "Latest completed run processed 99 rows with unresolved fields marked not_found",
-      "status": "needs_attention"
+      "goal": "Contact ops enrichment",
+      "progress": "Previous run completed (99 rows) with no email/phone updates",
+      "health": "warn"
     }
   ],
   "agents": [
     {
       "name": "main",
-      "displayName": "Aisha",
+      "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Mission-control orchestration and live runtime monitoring",
-      "task": "Running cron live-data refresh",
-      "pending": "Publish fresh dashboard state and continue oversight"
+      "goal": "Mission-control orchestration",
+      "task": "Running scheduled live-data refresh",
+      "pending": "Resolve unsupported spark model path in one WhatsApp session"
     },
     {
       "name": "contactenrichment",
-      "displayName": "Contact Enrichment",
-      "status": "Idle",
+      "label": "ContactEnrichment",
+      "status": "Standby",
       "health": "warn",
-      "goal": "Complete missing school email/phone enrichment from official sources",
-      "task": "Last run finished: 99 rows processed",
-      "pending": "Re-enable Notion integration/database access for next batch"
+      "goal": "Fill missing school contact fields",
+      "task": "Last run finished with not_found-heavy output",
+      "pending": "Wait for confirmed Notion API access/share before next pass"
     },
     {
       "name": "linkedin",
-      "displayName": "LinkedIn",
+      "label": "LinkedIn",
       "status": "Standby",
       "health": "bad",
-      "goal": "Support delegated LinkedIn lookup requests",
-      "task": "No active run; recent sessions include a failed slash session",
-      "pending": "Start next lookup assignment and clear failed-session drift"
+      "goal": "LinkedIn lookup enrichment",
+      "task": "No current running session",
+      "pending": "Recent failed slash session, needs clean rerun"
     },
     {
       "name": "n8n",
-      "displayName": "n8n",
+      "label": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Automation workflow build and deployment support",
-      "task": "No currently running sessions",
-      "pending": "Await next automation brief"
+      "goal": "Workflow automation support",
+      "task": "No current running session",
+      "pending": "Await next automation deployment/request"
     },
     {
       "name": "flowise",
-      "displayName": "Flowise",
+      "label": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise assistant/workflow implementation support",
-      "task": "No currently running sessions",
-      "pending": "Await next build request"
+      "goal": "Flowise build/support",
+      "task": "No current running session",
+      "pending": "Await next build task"
     }
   ]
 }
