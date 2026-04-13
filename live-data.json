@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T23:33:00Z",
+  "generatedAt": "2026-04-13T23:35:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -23,7 +23,7 @@
   "goalProgress": [
     {
       "goal": "Mission control visibility",
-      "progress": 0.95,
+      "progress": 0.96,
       "note": "Live telemetry refreshed from current runtime sessions"
     },
     {
@@ -40,16 +40,16 @@
       "health": "ok",
       "goal": "Coordinate operations and keep mission control current",
       "task": "Running mission-control live-data refresh cron",
-      "pending": "Investigate spark-model compatibility error in WhatsApp session"
+      "pending": "Resolve spark-model compatibility issue in WhatsApp runtime"
     },
     {
       "name": "contactenrichment",
       "displayName": "contactenrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school contact data from official sources",
-      "task": "Latest batch completed with minimal enrichment",
-      "pending": "Await next Notion batch and access-ready signal"
+      "goal": "Fill missing school contacts from official sources",
+      "task": "Last batch finished; minimal email/phone updates",
+      "pending": "Await next Notion batch and verified access"
     },
     {
       "name": "linkedin",
@@ -57,8 +57,8 @@
       "status": "Standby",
       "health": "bad",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; latest group run processed 0 rows",
-      "pending": "Review prior failed slash session and await next lookup batch"
+      "task": "No active run; latest known slash session failed",
+      "pending": "Await next lookup batch and retry on demand"
     },
     {
       "name": "n8n",
