@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T00:07:00Z",
+  "generatedAt": "2026-04-13T00:09:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -18,7 +18,7 @@
     "Prepare actionable task queues for linkedin, n8n, and flowise"
   ],
   "goalProgress": {
-    "summary": "Main orchestration is active, specialist agents are currently on standby awaiting new tasks.",
+    "summary": "Main orchestration is active, specialist agents are on standby awaiting new tasks.",
     "completion": {
       "active": 1,
       "standby": 4,
@@ -41,7 +41,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Complete missing school contact enrichment",
-      "task": "Last known run completed (99 rows processed)",
+      "task": "Last run completed with 99 rows processed",
       "pending": "Await next Notion-ready enrichment batch"
     },
     {
