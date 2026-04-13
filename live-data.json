@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T16:25:00Z",
+  "generatedAt": "2026-04-13T16:27:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,15 +13,15 @@
     }
   },
   "priorities": [
-    "Maintain mission-control live-data refresh cadence",
-    "Keep contact enrichment ready for next Notion intake",
-    "Stabilize LinkedIn slash-session reliability"
+    "Keep mission-control dashboard data fresh",
+    "Prepare contact enrichment for next Notion intake",
+    "Monitor LinkedIn reliability before next run"
   ],
   "goalProgress": [
     {
       "goal": "Mission control dashboard freshness",
       "status": "on_track",
-      "note": "Cron snapshot refreshed from current runtime state"
+      "note": "Snapshot refreshed from current runtime state"
     },
     {
       "goal": "Contact enrichment pipeline",
@@ -30,8 +30,8 @@
     },
     {
       "goal": "LinkedIn enrichment workflow",
-      "status": "at_risk",
-      "note": "No active run; recent slash-session marked failed"
+      "status": "watch",
+      "note": "No active run; last completed group run returned zero updates"
     }
   ],
   "agents": [
@@ -57,10 +57,10 @@
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; recent slash-session failed",
-      "pending": "Triage failure and relaunch"
+      "task": "No active run; latest group run returned no updates",
+      "pending": "Awaiting next lookup batch"
     },
     {
       "name": "n8n",
