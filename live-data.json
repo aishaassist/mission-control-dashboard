@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T00:37:00Z",
+  "generatedAt": "2026-04-13T00:39:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -20,13 +20,13 @@
   "goalProgress": [
     {
       "agent": "main",
-      "progress": "Live operations refresh in progress",
+      "progress": "Live operations refresh is running",
       "pending": "Publish latest dashboard state"
     },
     {
       "agent": "contactenrichment",
-      "progress": "Last batch completed with contact enrichment output",
-      "pending": "Await next Notion/contact ops assignment"
+      "progress": "Last enrichment batch finalized",
+      "pending": "Await next contact data trigger"
     },
     {
       "agent": "linkedin",
@@ -36,12 +36,12 @@
     {
       "agent": "n8n",
       "progress": "Automation agent idle",
-      "pending": "Await workflow build/deploy request"
+      "pending": "Await workflow build or deploy request"
     },
     {
       "agent": "flowise",
       "progress": "Flowise assistant idle",
-      "pending": "Await flow or chatbot implementation task"
+      "pending": "Await next flow build task"
     }
   ],
   "agents": [
@@ -51,7 +51,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control live data refresh",
-      "task": "Collect sessions and subagent state",
+      "task": "Collect runtime sessions and subagent state",
       "pending": "Commit and push dashboard update if changed"
     },
     {
@@ -60,8 +60,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Maintain contact data completeness",
-      "task": "Last known: enrichment batch processed and finalized",
-      "pending": "Await next data enrichment trigger"
+      "task": "Last known: batch completed and finalized",
+      "pending": "Await next enrichment assignment"
     },
     {
       "name": "linkedin",
@@ -69,7 +69,7 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Support LinkedIn lookups and profile mapping",
-      "task": "Last known: standby, prior slash session failed",
+      "task": "No current run; recent slash session failed",
       "pending": "Await new lookup list"
     },
     {
