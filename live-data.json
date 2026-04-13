@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T08:01:00Z",
+  "generatedAt": "2026-04-13T08:03:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,8 +14,8 @@
   },
   "priorities": [
     "Keep mission-control snapshot aligned with live runtime sessions",
-    "Prepare contact and LinkedIn agents for next enrichment queue",
-    "Maintain n8n and flowise automation readiness"
+    "Maintain readiness for contact and LinkedIn enrichment queues",
+    "Keep n8n and flowise available for next automation/build request"
   ],
   "goalProgress": [
     {
@@ -26,17 +26,17 @@
     {
       "goal": "Contact enrichment execution",
       "progress": "standby",
-      "note": "Latest run processed 99 rows with not_found fallback"
+      "note": "Last run completed and is waiting for the next dataset"
     },
     {
       "goal": "LinkedIn enrichment support",
       "progress": "standby",
-      "note": "No active processing in the current runtime window"
+      "note": "No active LinkedIn processing right now"
     },
     {
       "goal": "Automation delivery (n8n/flowise)",
       "progress": "standby",
-      "note": "No active runtime sessions detected"
+      "note": "Automation agents are idle and ready"
     }
   ],
   "agents": [
@@ -46,8 +46,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control live data refresh",
-      "task": "Cron refresh session is running",
-      "pending": "Write and publish latest dashboard snapshot"
+      "task": "Cron refresh execution in progress",
+      "pending": "Write latest snapshot and sync dashboard"
     },
     {
       "name": "contactenrichment",
@@ -55,17 +55,17 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Latest batch finished: 99 rows, no new email/phone updates",
-      "pending": "Await next Notion dataset trigger"
+      "task": "Latest batch completed",
+      "pending": "Await next enrichment queue"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "Support LinkedIn lookup and enrichment",
-      "task": "Recent session history includes a failed slash-session run",
-      "pending": "Stabilize next run and await fresh lookup queue"
+      "task": "No active run in current window",
+      "pending": "Await fresh lookup tasks"
     },
     {
       "name": "n8n",
@@ -73,8 +73,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Automation workflow execution",
-      "task": "No session currently running",
-      "pending": "Await deployment or workflow request"
+      "task": "No active session currently",
+      "pending": "Await deployment/workflow request"
     },
     {
       "name": "flowise",
@@ -82,8 +82,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Flowise build and support",
-      "task": "No session currently running",
-      "pending": "Await new build task"
+      "task": "No active session currently",
+      "pending": "Await new build request"
     }
   ]
 }
