@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T13:27:00Z",
+  "generatedAt": "2026-04-13T13:29:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -7,19 +7,19 @@
     "activeSubagents": 0
   },
   "priorities": [
-    "Stabilize main runtime and clear unsupported spark-model session error",
-    "Re-run contactenrichment after Notion integration access is confirmed",
-    "Keep linkedin agent ready for the next lookup batch"
+    "Keep main agent runtime healthy while cron refresh jobs are active",
+    "Unblock contactenrichment by confirming Notion integration access before rerun",
+    "Recover linkedin from last failed slash session before next lookup batch"
   ],
   "goalProgress": [
     {
       "goal": "Mission-control visibility",
-      "progress": "Runtime snapshot refreshed from current sessions and subagent state",
+      "progress": "Live runtime snapshot refreshed from sessions and subagent state",
       "health": "ok"
     },
     {
       "goal": "Contact ops enrichment",
-      "progress": "Latest contactenrichment run completed (99 rows) with mostly not_found outcomes",
+      "progress": "Most recent contactenrichment run finished; no new email/phone updates",
       "health": "warn"
     }
   ],
@@ -30,44 +30,44 @@
       "status": "Active",
       "health": "ok",
       "goal": "Mission-control orchestration",
-      "task": "Executing scheduled live-data refresh",
-      "pending": "Clear unsupported spark model path in WhatsApp session"
+      "task": "Running scheduled live dashboard refresh",
+      "pending": "Address unsupported spark-model path in WhatsApp runtime"
     },
     {
       "name": "contactenrichment",
       "label": "ContactEnrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school contact fields",
-      "task": "Last run completed without new email/phone updates",
-      "pending": "Wait for confirmed Notion API/share access before rerun"
+      "goal": "School contact enrichment",
+      "task": "Idle after last completed enrichment cycle",
+      "pending": "Wait for Notion API token plus integration share confirmation"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Standby",
       "health": "bad",
-      "goal": "LinkedIn lookup enrichment",
-      "task": "No currently running session",
-      "pending": "Recent failed slash session, rerun cleanly on next request"
+      "goal": "LinkedIn profile lookup support",
+      "task": "No active run; last slash session failed",
+      "pending": "Start next lookup in a clean session"
     },
     {
       "name": "n8n",
       "label": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Workflow automation support",
-      "task": "No currently running session",
-      "pending": "Await next automation deployment request"
+      "goal": "Automation workflow delivery",
+      "task": "Idle",
+      "pending": "Await next workflow build or deployment request"
     },
     {
       "name": "flowise",
       "label": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise build/support",
-      "task": "No currently running session",
-      "pending": "Await next Flowise build task"
+      "goal": "Flowise build and support",
+      "task": "Idle",
+      "pending": "Await next Flowise task"
     }
   ]
 }
