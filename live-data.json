@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T05:27:00Z",
+  "generatedAt": "2026-04-13T05:29:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -15,11 +15,11 @@
   "priorities": [
     "Keep main (Aisha) responsive for active cron and user ops",
     "Re-activate specialist agents only on demand (contactenrichment, linkedin, n8n, flowise)",
-    "Track idle/failed specialist lanes and relaunch on fresh tasks"
+    "Track specialist idle lanes and relaunch on fresh tasks"
   ],
   "goalProgress": {
     "overall": "Monitoring mode",
-    "summary": "Main is active on refresh; specialist lanes are idle with no active subagent workload.",
+    "summary": "Main is active on live-data refresh; specialist lanes are currently standby with no active subagent workload.",
     "pending": [
       "Await next contact enrichment batch",
       "Await next LinkedIn lookup run",
@@ -35,7 +35,7 @@
       "goal": "Mission control and user orchestration",
       "task": "Running cron mission-control-live-data-refresh",
       "pending": "Continue monitoring and dispatch specialist work as needed",
-      "lastUpdatedAt": 1776058068319
+      "lastUpdatedAt": 1776058187208
     },
     {
       "agent": "contactenrichment",
@@ -43,7 +43,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich missing school contact data",
-      "task": "Last batch completed (rows processed, no new email/phone updates)",
+      "task": "Last run completed (99 rows, no new email/phone updates)",
       "pending": "Wait for new database rows or integration updates",
       "lastUpdatedAt": 1775398198839
     },
@@ -53,7 +53,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "LinkedIn profile lookup and mapping",
-      "task": "No active run; latest operational result processed zero rows",
+      "task": "No active run; latest operational run processed zero rows",
       "pending": "Start when fresh LinkedIn lookup tasks arrive",
       "lastUpdatedAt": 1775302155385
     },
