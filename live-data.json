@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T04:39:00Z",
+  "generatedAt": "2026-04-13T04:41:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -25,7 +25,7 @@
     },
     {
       "goal": "Contact enrichment throughput",
-      "progress": "Latest contactenrichment run processed 99 rows; unresolved fields marked not_found",
+      "progress": "Latest contactenrichment run processed 99 rows; unresolved fields set to not_found",
       "status": "watch"
     }
   ],
