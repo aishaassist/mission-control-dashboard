@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T03:25:00Z",
+  "generatedAt": "2026-04-13T03:27:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -11,14 +11,14 @@
       "note": "Main (Aisha) is currently running the scheduled dashboard refresh."
     },
     {
-      "name": "Contact enrichment readiness",
+      "name": "Contact enrichment throughput",
       "status": "waiting",
-      "note": "Last known batch processed 99 rows with no email or phone updates."
+      "note": "Contactenrichment is idle after the last run processed 99 rows with no field updates."
     },
     {
-      "name": "LinkedIn reliability",
+      "name": "LinkedIn stability",
       "status": "monitor",
-      "note": "LinkedIn is idle now, with mixed recent outcomes including a failed session."
+      "note": "LinkedIn is idle; recent history includes both a failed run and a zero-update completion."
     }
   ],
   "goalProgress": [
@@ -26,13 +26,13 @@
       "goal": "Keep core agents operational",
       "progress": 0.66,
       "status": "at-risk",
-      "note": "Only main is active; specialist agents are currently idle or standby."
+      "note": "Only main is active right now, while specialist agents are idle or standby."
     },
     {
       "goal": "Sustain enrichment and profile pipelines",
       "progress": 0.5,
       "status": "blocked",
-      "note": "Pipelines are defined, but specialist throughput is presently paused."
+      "note": "Pipelines remain defined, but no specialist pipeline is currently running."
     }
   ],
   "agents": [
@@ -51,17 +51,17 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Fill missing school email and phone from official sources",
-      "task": "Last run processed 99 rows with zero field updates",
-      "pending": "Resume next batch when input/readiness constraints are resolved"
+      "task": "Last run processed 99 rows with zero email and phone updates",
+      "pending": "Resume when new verified-source enrichment work is queued"
     },
     {
       "name": "linkedin",
       "displayName": "LinkedIn",
       "status": "Idle",
-      "health": "bad",
+      "health": "warn",
       "goal": "Populate LinkedIn profile fields for target records",
       "task": "Recent context includes one failed session and one zero-update completion",
-      "pending": "Run next controlled batch and validate session stability"
+      "pending": "Run next controlled batch and verify runtime stability"
     },
     {
       "name": "n8n",
