@@ -1,79 +1,67 @@
 {
-  "generatedAt": "2026-04-13T12:37:00Z",
+  "generatedAt": "2026-04-13T12:39:00Z",
   "source": {
-    "type": "openclaw-runtime",
-    "cron": "mission-control-live-data-refresh",
-    "sessionsListCount": 12,
-    "subagentsActive": 0,
-    "subagentsRecent": 0
+    "sessions": "sessions_list(limit=50,messageLimit=1)",
+    "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep mission-control runtime snapshot current",
-    "Fix main-agent WhatsApp model mismatch to prevent run errors",
-    "Queue next contact and LinkedIn enrichment batches"
+    "Keep mission-control snapshot current",
+    "Track active agent runtime health",
+    "Highlight stalled agents needing new tasks"
   ],
-  "goalProgress": [
-    {
-      "goal": "Mission control freshness",
-      "status": "on-track",
-      "progress": "Runtime snapshot refreshed from current OpenClaw sessions"
-    },
-    {
-      "goal": "Contact enrichment throughput",
-      "status": "waiting",
-      "progress": "Latest completed run processed 99 rows; awaiting next batch"
-    },
-    {
-      "goal": "Specialist runtime reliability",
-      "status": "attention",
-      "progress": "LinkedIn has a failed session in recent history; n8n and Flowise are standby"
-    }
-  ],
+  "goalProgress": {
+    "overall": "Monitoring",
+    "highlights": [
+      "Main agent actively running cron refresh",
+      "No active subagents in last 24h",
+      "Specialist agents currently on standby"
+    ]
+  },
   "agents": [
     {
       "name": "main",
       "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission control and specialist orchestration",
-      "task": "Executing mission-control live-data refresh cron",
-      "pending": "Resolve recurring WhatsApp model mismatch failure"
+      "goal": "Run mission-control live data refresh",
+      "task": "Generate current operational snapshot and publish dashboard JSON",
+      "pending": "Commit and push if data changed"
     },
     {
       "name": "contactenrichment",
       "label": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Fill missing school contacts from official sources",
-      "task": "No active run; latest completed batch processed 99 rows",
-      "pending": "Await next Notion enrichment queue"
+      "goal": "Maintain school contact completeness in Notion",
+      "task": "Last run processed 99 rows; official-source email/phone enrichment",
+      "pending": "Await next enrichment batch"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "bad",
-      "goal": "Run LinkedIn lookups for assigned records",
-      "task": "No active run; recent history includes a failed session",
-      "pending": "Stabilize failed session path and wait for next lookup batch"
+      "health": "warn",
+      "goal": "LinkedIn lookup support for contact ops",
+      "task": "Last group run returned rows_processed=0",
+      "pending": "Await new lookup queue"
     },
     {
       "name": "n8n",
       "label": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Build and deploy automation workflows",
-      "task": "No active runtime session",
-      "pending": "Stand by for next automation request"
+      "goal": "Automation workflow execution support",
+      "task": "No active runtime; last known state ANNOUNCE_SKIP",
+      "pending": "Await workflow build/deploy request"
     },
     {
       "name": "flowise",
       "label": "Flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Support Flowise build and deployment tasks",
-      "task": "No active runtime session",
-      "pending": "Stand by for next Flowise request"
+      "goal": "Flowise assistant/build support",
+      "task": "No active runtime; last prompt was availability check",
+      "pending": "Await new flow implementation task"
     }
   ]
 }
