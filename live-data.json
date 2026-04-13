@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T08:11:00Z",
+  "generatedAt": "2026-04-13T08:13:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,9 +13,9 @@
     }
   },
   "priorities": [
-    "Keep mission-control snapshot aligned with live runtime sessions",
+    "Keep mission-control snapshot aligned with current runtime sessions",
     "Maintain readiness for contact and LinkedIn enrichment queues",
-    "Keep n8n and flowise available for next automation/build request"
+    "Keep n8n and flowise ready for next automation or build request"
   ],
   "goalProgress": [
     {
@@ -26,7 +26,7 @@
     {
       "goal": "Contact enrichment execution",
       "progress": "standby",
-      "note": "Latest contact batch completed; awaiting next dataset"
+      "note": "Last contact batch completed; awaiting next dataset"
     },
     {
       "goal": "LinkedIn enrichment support",
@@ -36,7 +36,7 @@
     {
       "goal": "Automation delivery (n8n/flowise)",
       "progress": "standby",
-      "note": "Automation agents are idle and ready"
+      "note": "Automation agents are idle and available"
     }
   ],
   "agents": [
