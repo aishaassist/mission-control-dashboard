@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T19:39:00Z",
+  "generatedAt": "2026-04-13T19:41:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -12,7 +12,7 @@
   "goalProgress": {
     "operations": "Main is actively running mission-control refresh; specialists are on standby",
     "automation": "No active or recent subagents in the last 24h",
-    "dataPipelines": "Contact enrichment pipeline is blocked by Notion integration/token prerequisites"
+    "dataPipelines": "Contact enrichment remains constrained by Notion integration/token prerequisites"
   },
   "agents": [
     {
