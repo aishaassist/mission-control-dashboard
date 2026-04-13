@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-04-13T21:09:00Z",
+  "generatedAt": "2026-04-13T21:11:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
-      "fetchedAt": "2026-04-13T21:09:00Z",
+      "fetchedAt": "2026-04-13T21:11:00Z",
       "count": 12
     },
     "subagents": {
       "action": "list",
       "recentMinutes": 1440,
-      "fetchedAt": "2026-04-13T21:09:00Z",
+      "fetchedAt": "2026-04-13T21:11:00Z",
       "active": 0,
       "recent": 0
     }
@@ -18,7 +18,7 @@
   "priorities": [
     "Keep mission-control snapshot refreshes running reliably",
     "Unblock Notion access for contactenrichment to resume verified updates",
-    "Keep linkedin, n8n, and flowise on-call for next tasks"
+    "Keep linkedin, n8n, and flowise ready for immediate dispatch"
   ],
   "goalProgress": [
     {
@@ -27,7 +27,7 @@
     },
     {
       "goal": "Contact enrichment throughput",
-      "progress": "Latest contactenrichment run processed 99 rows with no new email/phone updates"
+      "progress": "Latest contactenrichment run completed 99 rows with no new email or phone updates"
     },
     {
       "goal": "Specialist readiness",
@@ -41,8 +41,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Orchestrate operations and keep mission-control current",
-      "task": "mission-control-live-data-refresh cron is running",
-      "pending": "Continue refresh cadence and trigger specialists when needed"
+      "task": "mission-control-live-data-refresh cron session is running",
+      "pending": "Continue scheduled refresh and route next tasks to specialists"
     },
     {
       "name": "contactenrichment",
@@ -51,7 +51,7 @@
       "health": "warn",
       "goal": "Complete verified contact enrichment from official sources",
       "task": "No running session; latest run completed 99 rows",
-      "pending": "Restore Notion integration/database sharing, then resume updates"
+      "pending": "Re-enable Notion integration/database access, then resume updates"
     },
     {
       "name": "linkedin",
@@ -59,8 +59,8 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Support LinkedIn lookup and profile enrichment tasks",
-      "task": "No running session; last active work is complete, with one failed session in history",
-      "pending": "Verify stability and await the next LinkedIn batch"
+      "task": "No running session; latest workflow complete with failed session in recent history",
+      "pending": "Confirm stability and wait for next LinkedIn batch"
     },
     {
       "name": "n8n",
