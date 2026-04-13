@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T10:59:00Z",
+  "generatedAt": "2026-04-13T11:01:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -15,7 +15,7 @@
   "priorities": [
     "Keep mission-control visibility current across core agents",
     "Maintain specialist readiness for contact and LinkedIn operations",
-    "Dispatch n8n and Flowise when concrete execution requests arrive"
+    "Dispatch n8n and Flowise only on concrete build requests"
   ],
   "goalProgress": [
     {
@@ -24,7 +24,7 @@
     },
     {
       "goal": "Agent readiness",
-      "progress": "Main is active, specialists are on standby pending new work"
+      "progress": "Main is active; specialists remain on standby until assigned"
     }
   ],
   "agents": [
@@ -43,7 +43,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich school contact records in Notion",
-      "task": "Last known run processed 99 rows; no session running",
+      "task": "Last run completed contact updates; no current session running",
       "pending": "Await next enrichment batch"
     },
     {
@@ -52,7 +52,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup and profile mapping",
-      "task": "Most recent run ended; no current lookup session",
+      "task": "No active lookup session in runtime",
       "pending": "Await next lookup dispatch"
     },
     {
@@ -61,7 +61,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Build and deploy workflow automations",
-      "task": "No active automation session",
+      "task": "No active automation run",
       "pending": "Await workflow implementation request"
     },
     {
@@ -70,7 +70,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Support Flowise builds and integrations",
-      "task": "No active Flowise session",
+      "task": "No active Flowise run",
       "pending": "Await next build request"
     }
   ]
