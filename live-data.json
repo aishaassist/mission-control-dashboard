@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T02:37:00Z",
+  "generatedAt": "2026-04-13T02:39:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,24 +13,24 @@
   },
   "priorities": [
     "Keep main (Aisha) stable while cron refresh is active",
-    "Re-arm contactenrichment when the next Notion-backed batch is queued",
-    "Keep linkedin, n8n, and flowise warm for incoming tasks"
+    "Queue next contactenrichment batch when data source is ready",
+    "Keep linkedin, n8n, and flowise ready for on-demand runs"
   ],
   "goalProgress": [
     {
       "goal": "Mission control observability",
       "status": "On track",
-      "progress": "Runtime snapshot regenerated from sessions_list + subagents"
+      "progress": "Live snapshot regenerated from sessions_list and subagents"
     },
     {
       "goal": "Contact enrichment execution",
       "status": "Standby",
-      "progress": "No active run; last known batch completed with FINAL counts"
+      "progress": "Last known run completed; waiting for next queue"
     },
     {
       "goal": "Automation throughput",
       "status": "Standby",
-      "progress": "n8n and flowise are idle awaiting next requests"
+      "progress": "n8n and flowise idle, ready for next request"
     }
   ],
   "agents": [
@@ -48,8 +48,8 @@
       "displayName": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school email/phone from official sources",
-      "task": "No running session; last known run finished with FINAL report",
+      "goal": "Fill missing school contact fields from official sources",
+      "task": "No running session; last run ended with FINAL counts",
       "pending": "Await next enrichment batch"
     },
     {
@@ -58,7 +58,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment support",
-      "task": "No running session; latest visible run is completed",
+      "task": "No running session in current snapshot",
       "pending": "Run next lookup batch when requested"
     },
     {
@@ -77,7 +77,7 @@
       "health": "warn",
       "goal": "Flowise builder and assistant support",
       "task": "No active run in current snapshot",
-      "pending": "Await next build/debug task"
+      "pending": "Await next build or debug task"
     }
   ]
 }
