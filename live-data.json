@@ -1,9 +1,8 @@
 {
-  "generatedAt": "2026-04-13T02:23:00Z",
+  "generatedAt": "2026-04-13T02:25:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
-      "messageLimit": 1,
       "count": 12
     },
     "subagents": {
@@ -13,64 +12,72 @@
     }
   },
   "priorities": [
-    "Keep main (Aisha) operational for live orchestration",
-    "Queue next contact enrichment batch when new records arrive",
-    "Keep LinkedIn, n8n, and Flowise on warm standby"
+    "Keep main (Aisha) session stable during cron and operator traffic",
+    "Resume/contact backlog only when Notion access is confirmed",
+    "Re-validate linkedin agent after prior failed slash session"
   ],
-  "goalProgress": {
-    "overall": "Main active, specialists mostly standby",
-    "notes": [
-      "Main is running mission-control-live-data-refresh",
-      "Contact enrichment last completed with FINAL counters",
-      "LinkedIn is standby with a recent failed session in history",
-      "n8n and Flowise are idle and ready for assignments"
-    ]
-  },
+  "goalProgress": [
+    {
+      "goal": "Mission control observability",
+      "status": "On track",
+      "progress": "Live data refresh running; agent snapshot updated"
+    },
+    {
+      "goal": "Contact enrichment execution",
+      "status": "Waiting",
+      "progress": "Last batch completed earlier; currently standby"
+    },
+    {
+      "goal": "Automation throughput",
+      "status": "Standby",
+      "progress": "n8n and flowise awaiting new tasks"
+    }
+  ],
   "agents": [
     {
       "name": "main",
-      "label": "Aisha",
+      "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate operations and keep mission control current",
-      "task": "Running cron: mission-control-live-data-refresh",
-      "pending": "Continue periodic runtime snapshot refresh"
+      "task": "Running cron refresh for live dashboard data",
+      "pending": "Publish refreshed snapshot and sync git if changed"
     },
     {
       "name": "contactenrichment",
-      "label": "contactenrichment",
-      "status": "Idle",
+      "displayName": "Contact Enrichment",
+      "status": "Standby",
       "health": "warn",
-      "goal": "Enrich missing school contact details from official sources",
-      "task": "Last run completed with FINAL summary",
-      "pending": "Await next Notion batch for email and phone updates"
+      "goal": "Fill missing school contact fields from official sources",
+      "task": "No running session now; last run reported final row processing",
+      "pending": "Await next Notion-backed enrichment batch"
     },
     {
       "name": "linkedin",
-      "label": "linkedin",
+      "displayName": "LinkedIn",
       "status": "Standby",
       "health": "bad",
-      "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "No active run; recent history includes a failed session",
-      "pending": "Await next LinkedIn lookup assignment"
+      "goal": "LinkedIn lookup and profile enrichment support",
+      "task": "No running session; recent history includes a failed slash session",
+      "pending": "Run a small validation task to confirm healthy execution"
     },
     {
       "name": "n8n",
-      "label": "n8n",
+      "displayName": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Build and execute automation workflows",
-      "task": "No current running session",
-      "pending": "Await automation deployment or execution request"
+      "goal": "Automation workflow build and deployment",
+      "task": "Idle with no active run",
+      "pending": "Queue next automation request when available"
     },
     {
       "name": "flowise",
-      "label": "flowise",
+      "displayName": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Support Flowise build and troubleshooting work",
-      "task": "No current running session",
-      "pending": "Await next flow build or debug request"
+      "goal": "Flowise assistant and builder support",
+      "task": "Idle with no active run",
+      "pending": "Await new build/debug request"
     }
   ]
 }
