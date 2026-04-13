@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T12:23:00Z",
+  "generatedAt": "2026-04-13T12:27:00Z",
   "source": {
     "type": "openclaw-runtime",
     "cron": "mission-control-live-data-refresh",
@@ -9,24 +9,24 @@
   },
   "priorities": [
     "Keep mission-control runtime snapshot current",
-    "Resolve main-agent WhatsApp model mismatch errors",
-    "Prepare next contact enrichment batch from Notion queue"
+    "Fix main-agent WhatsApp model mismatch to prevent run errors",
+    "Queue next Notion-backed contact enrichment batch"
   ],
   "goalProgress": [
     {
       "goal": "Mission control freshness",
       "status": "on-track",
-      "progress": "Live runtime snapshot refreshed from current sessions"
+      "progress": "Runtime snapshot refreshed from current OpenClaw sessions"
     },
     {
-      "goal": "Contact enrichment operations",
+      "goal": "Contact enrichment throughput",
       "status": "waiting",
-      "progress": "Latest completed run processed 99 rows; awaiting next batch"
+      "progress": "Latest completed run processed 99 rows; waiting on next batch"
     },
     {
-      "goal": "Specialist reliability",
+      "goal": "Specialist runtime reliability",
       "status": "attention",
-      "progress": "LinkedIn has failed session history; n8n and Flowise are standby"
+      "progress": "LinkedIn has prior failed session path; n8n and Flowise remain standby"
     }
   ],
   "agents": [
@@ -36,17 +36,17 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control and specialist orchestration",
-      "task": "Running mission-control live-data refresh cron",
-      "pending": "Clear recurring WhatsApp model mismatch failure"
+      "task": "Executing mission-control live-data refresh cron",
+      "pending": "Resolve recurring WhatsApp model mismatch failure"
     },
     {
       "name": "contactenrichment",
       "label": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Fill missing school contact details from official sources",
-      "task": "No active run; latest batch completed 99 rows",
-      "pending": "Await next Notion-backed enrichment batch"
+      "goal": "Fill missing school contacts from official sources",
+      "task": "No active run; most recent batch completed 99 rows",
+      "pending": "Await next Notion enrichment queue"
     },
     {
       "name": "linkedin",
@@ -54,8 +54,8 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookups for assigned records",
-      "task": "No active run; latest group run completed with older failed session",
-      "pending": "Stabilize failed session path and await next lookup queue"
+      "task": "No active run; last successful reply was done with older failed session history",
+      "pending": "Stabilize failed session path and wait for next lookup batch"
     },
     {
       "name": "n8n",
