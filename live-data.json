@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T02:19:00Z",
+  "generatedAt": "2026-04-13T02:21:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -22,7 +22,7 @@
     "notes": [
       "Main is running mission-control-live-data-refresh",
       "Contact enrichment last completed with FINAL counters",
-      "LinkedIn is standby with prior failed session signal",
+      "LinkedIn remains on standby with a recent failed session signal",
       "n8n and Flowise are idle and ready for assignments"
     ]
   },
@@ -43,7 +43,7 @@
       "health": "warn",
       "goal": "Enrich missing school contact details from official sources",
       "task": "Last run completed with FINAL summary",
-      "pending": "Await next Notion batch for email or phone updates"
+      "pending": "Await next Notion batch for email and phone updates"
     },
     {
       "name": "linkedin",
