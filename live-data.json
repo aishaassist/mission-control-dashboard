@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-04-13T05:51:00Z",
+  "generatedAt": "2026-04-13T05:53:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
       "messageLimit": 1,
-      "capturedAt": "2026-04-13T05:51:00Z"
+      "capturedAt": "2026-04-13T05:53:00Z"
     },
     "subagents": {
       "action": "list",
       "recentMinutes": 1440,
-      "capturedAt": "2026-04-13T05:51:00Z"
+      "capturedAt": "2026-04-13T05:53:00Z"
     }
   },
   "priorities": [
-    "Keep main (Aisha) responsive for active cron and live operations",
-    "Unblock contactenrichment for next Notion and official-source enrichment cycle",
-    "Keep linkedin, n8n, and flowise in ready standby for on-demand tasks"
+    "Keep main (Aisha) responsive for mission-control cron and live operations",
+    "Prepare contactenrichment for the next Notion official-source enrichment cycle",
+    "Maintain linkedin, n8n, and flowise in ready standby for on-demand work"
   ],
   "goalProgress": [
     {
@@ -26,7 +26,7 @@
     {
       "area": "contact enrichment ops",
       "status": "waiting",
-      "note": "Last contactenrichment run finished; awaiting next enrichment trigger"
+      "note": "Last contactenrichment run completed; waiting for next trigger"
     },
     {
       "area": "specialist agent readiness",
@@ -42,15 +42,15 @@
       "health": "ok",
       "goal": "Run mission-control dashboard refresh reliably",
       "task": "Collect live session and subagent state and publish live-data.json",
-      "pending": "Commit and push if this refresh changed dashboard data"
+      "pending": "Complete commit and push if this refresh changed dashboard data"
     },
     {
       "name": "contactenrichment",
       "displayName": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contact fields from official sources",
-      "task": "Standby after last Notion enrichment completion",
+      "goal": "Enrich school contact data from official sources",
+      "task": "Standby after recent Notion enrichment completion",
       "pending": "Await next Notion batch or operator instruction"
     },
     {
@@ -59,7 +59,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Handle LinkedIn lookup and update requests",
-      "task": "No running session detected; recent runs completed",
+      "task": "No running session; recent bot check-in completed",
       "pending": "Await new lookup queue"
     },
     {
@@ -67,7 +67,7 @@
       "displayName": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Execute and deploy automations",
+      "goal": "Execute and deploy automation workflows",
       "task": "No active workflow execution session",
       "pending": "Await automation or deployment task"
     },
