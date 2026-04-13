@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T12:41:00Z",
+  "generatedAt": "2026-04-13T12:43:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -24,7 +24,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control live data refresh",
-      "task": "Generate current operational snapshot and publish dashboard JSON",
+      "task": "Generate current operations snapshot and publish dashboard JSON",
       "pending": "Commit and push if data changed"
     },
     {
@@ -33,7 +33,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Maintain school contact completeness in Notion",
-      "task": "Last run processed 99 rows; official-source email/phone enrichment",
+      "task": "Last run processed 99 rows with official-source enrichment",
       "pending": "Await next enrichment batch"
     },
     {
@@ -42,7 +42,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn lookup support for contact ops",
-      "task": "Last group run returned rows_processed=0",
+      "task": "Last completed run returned rows_processed=0",
       "pending": "Await new lookup queue"
     },
     {
@@ -51,7 +51,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Automation workflow execution support",
-      "task": "No active runtime; last known state ANNOUNCE_SKIP",
+      "task": "No active runtime; last known output ANNOUNCE_SKIP",
       "pending": "Await workflow build/deploy request"
     },
     {
@@ -59,8 +59,8 @@
       "label": "Flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Flowise assistant/build support",
-      "task": "No active runtime; last prompt was availability check",
+      "goal": "Flowise assistant and implementation support",
+      "task": "No active runtime; last message was readiness check",
       "pending": "Await new flow implementation task"
     }
   ]
