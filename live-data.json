@@ -1,29 +1,18 @@
 {
-  "generatedAt": "2026-04-13T00:19:00Z",
+  "generatedAt": "2026-04-13T05:53:00+05:30",
   "source": {
-    "sessionsList": {
-      "limit": 50,
-      "messageLimit": 1,
-      "count": 12
-    },
-    "subagents": {
-      "recentMinutes": 1440,
-      "active": 0,
-      "recent": 0
-    }
+    "sessions": "sessions_list(limit=50,messageLimit=1)",
+    "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main mission-control refresh loop healthy",
-    "Resume contactenrichment when Notion access and queue are ready",
-    "Keep linkedin, n8n, and flowise on ready standby for assignments"
+    "Keep main orchestration responsive",
+    "Restart paused data pipelines only on new input",
+    "Automate repeatable ops through n8n"
   ],
   "goalProgress": {
-    "summary": "Main orchestration is active, specialist agents are mostly standby.",
-    "completion": {
-      "active": 1,
-      "standby": 4,
-      "failed": 1
-    }
+    "operations": "active",
+    "automation": "standby",
+    "outreachData": "standby"
   },
   "agents": [
     {
@@ -31,45 +20,45 @@
       "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission-control operations",
-      "task": "Running mission-control live-data refresh cron",
-      "pending": "Commit and push dashboard refresh only if diff exists"
+      "goal": "Mission-control orchestration",
+      "task": "Cron run refreshing live dashboard data",
+      "pending": "Commit and push refresh if changed"
     },
     {
       "name": "contactenrichment",
-      "label": "Contact Enrichment",
+      "label": "contactenrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school contact fields from official sources",
-      "task": "Last batch processed rows and marked unresolved contacts as not_found",
-      "pending": "Await next Notion-enabled enrichment run"
+      "goal": "Enrich contact records from Notion queue",
+      "task": "Last known batch completed (rows_processed=99)",
+      "pending": "Waiting for next enrichment rows"
     },
     {
       "name": "linkedin",
-      "label": "LinkedIn",
+      "label": "linkedin",
       "status": "Standby",
       "health": "bad",
-      "goal": "Execute LinkedIn lookup assignments",
-      "task": "No running session, recent history includes a failed slash session",
-      "pending": "Await next lookup queue and healthy rerun"
+      "goal": "LinkedIn lookup and profile updates",
+      "task": "No current run; recent session history includes failures",
+      "pending": "Stabilize next lookup run when queue resumes"
     },
     {
       "name": "n8n",
       "label": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Build and deploy automation workflows",
-      "task": "No active run in current runtime snapshot",
-      "pending": "Await next automation request"
+      "goal": "Deploy and run automation workflows",
+      "task": "No active session",
+      "pending": "Await automation execution request"
     },
     {
       "name": "flowise",
-      "label": "Flowise",
+      "label": "flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Implement Flowise workflows",
-      "task": "No active run in current runtime snapshot",
-      "pending": "Await next Flowise build task"
+      "goal": "Flowise build and support tasks",
+      "task": "No active flow build session",
+      "pending": "Await next build ticket"
     }
   ]
 }
