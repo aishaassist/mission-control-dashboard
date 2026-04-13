@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T14:15:00Z",
+  "generatedAt": "2026-04-13T14:17:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -20,7 +20,7 @@
   ],
   "goalProgress": {
     "overall": "stable",
-    "note": "Main is active now; specialist lanes are idle and ready for next tasks."
+    "note": "Main is active; specialist lanes are on standby for next queued tasks."
   },
   "agents": [
     {
@@ -29,7 +29,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Mission control continuity",
-      "task": "Executing live dashboard refresh cron run",
+      "task": "Running the live dashboard refresh cron cycle",
       "pending": "None"
     },
     {
@@ -38,7 +38,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "No running session; last run completed successfully",
+      "task": "Last batch completed; no run in progress",
       "pending": "Awaiting next enrichment batch"
     },
     {
@@ -47,7 +47,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile mapping",
-      "task": "No active run; recent workflow finished",
+      "task": "No active run; last group workflow closed",
       "pending": "Awaiting next lookup request"
     },
     {
@@ -56,8 +56,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Automation workflow support",
-      "task": "No running session at this time",
-      "pending": "Awaiting workflow build or deploy request"
+      "task": "No active execution detected",
+      "pending": "Awaiting workflow build/deploy request"
     },
     {
       "name": "flowise",
@@ -65,7 +65,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Flowise bot and flow support",
-      "task": "No running session at this time",
+      "task": "No active execution detected",
       "pending": "Awaiting next Flowise assignment"
     }
   ]
