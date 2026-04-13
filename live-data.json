@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T16:21:00Z",
+  "generatedAt": "2026-04-13T16:23:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -31,7 +31,7 @@
     {
       "goal": "LinkedIn enrichment workflow",
       "status": "at_risk",
-      "note": "No active run; a recent slash-session is marked failed"
+      "note": "No active run; recent slash-session marked failed"
     }
   ],
   "agents": [
@@ -59,7 +59,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; recent context includes failed slash-session",
+      "task": "No active run; recent slash-session failed",
       "pending": "Triage failure and relaunch"
     },
     {
