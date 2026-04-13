@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T11:21:00Z",
+  "generatedAt": "2026-04-13T11:23:00Z",
   "source": {
     "type": "openclaw-runtime",
     "sessionsListCount": 12,
@@ -7,25 +7,25 @@
     "subagentsRecent": 0
   },
   "priorities": [
-    "Keep mission-control cron refreshes running cleanly",
-    "Resolve model mismatch errors seen in some main-session channels",
-    "Reactivate specialist agents only when new queued tasks arrive"
+    "Keep mission-control runtime snapshot current",
+    "Stabilize main-channel model configuration errors",
+    "Resume specialist agents only when new queued work arrives"
   ],
   "goalProgress": [
     {
       "goal": "Mission control dashboard freshness",
       "status": "on-track",
-      "progress": "Runtime snapshot refreshed from current sessions/subagents"
+      "progress": "Live data refreshed from current runtime sessions"
     },
     {
-      "goal": "Contact enrichment workflow",
+      "goal": "Contact enrichment throughput",
       "status": "waiting",
-      "progress": "Last batch completed earlier; awaiting next Notion-driven run"
+      "progress": "Last completed batch processed 99 rows; waiting for next queue"
     },
     {
-      "goal": "LinkedIn ops",
+      "goal": "Specialist agent utilization",
       "status": "attention",
-      "progress": "No active run; last meaningful update was a no-op pass"
+      "progress": "LinkedIn, n8n, and Flowise are currently standby"
     }
   ],
   "agents": [
@@ -35,35 +35,35 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control and user-facing orchestration",
-      "task": "Running cron refresh for live dashboard data",
-      "pending": "Monitor channel model errors and keep core session healthy"
+      "task": "Running the live dashboard refresh cron",
+      "pending": "Track and resolve sporadic model mismatch errors"
     },
     {
       "name": "contactenrichment",
       "label": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Fill missing school contact fields from official sources",
-      "task": "No current run; prior batch reported FINAL on 99 rows",
-      "pending": "Await next queued enrichment batch"
+      "goal": "Fill missing school contacts from official sources",
+      "task": "No active run; last result completed 99-row pass",
+      "pending": "Await next Notion-backed enrichment batch"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "bad",
-      "goal": "Run LinkedIn lookups for assigned rows",
-      "task": "No active session; latest group run reported 0 rows processed",
-      "pending": "Needs fresh task trigger; investigate earlier failed slash session"
+      "health": "warn",
+      "goal": "Run LinkedIn lookups for assigned records",
+      "task": "No active run; latest group execution was a zero-row pass",
+      "pending": "Wait for new lookup queue and validate slash-session stability"
     },
     {
       "name": "n8n",
       "label": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Build and run workflow automations",
+      "goal": "Build and deploy automation workflows",
       "task": "No active runtime session",
-      "pending": "Stand by for next automation request"
+      "pending": "Stand by for next automation implementation request"
     },
     {
       "name": "flowise",
@@ -72,7 +72,7 @@
       "health": "warn",
       "goal": "Support Flowise build and deployment tasks",
       "task": "No active runtime session",
-      "pending": "Stand by for next Flowise task intake"
+      "pending": "Stand by for next Flowise intake"
     }
   ]
 }
