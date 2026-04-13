@@ -1,64 +1,94 @@
 {
-  "generatedAt": "2026-04-13T06:03:00+05:30",
+  "generatedAt": "2026-04-13T00:35:00Z",
   "source": {
-    "sessions": "sessions_list(limit=50,messageLimit=1)",
-    "subagents": "subagents(action=list,recentMinutes=1440)"
+    "cron": "mission-control-live-data-refresh",
+    "sessionsList": {
+      "limit": 50,
+      "messageLimit": 1,
+      "count": 12
+    },
+    "subagents": {
+      "recentMinutes": 1440,
+      "total": 0
+    }
   },
   "priorities": [
-    "Keep main orchestration responsive",
-    "Clear enrichment and LinkedIn queues quickly",
-    "Route repetitive operations through n8n"
+    "Keep main (Aisha) stable during active cron refresh runs",
+    "Re-engage contactenrichment pipeline when new rows/tasks arrive",
+    "Queue next actionable work for linkedin, n8n, and flowise"
   ],
-  "goalProgress": {
-    "operations": "active",
-    "automation": "standby",
-    "outreachData": "standby"
-  },
+  "goalProgress": [
+    {
+      "agent": "main",
+      "progress": "Live operations refresh in progress",
+      "pending": "Publish latest dashboard state"
+    },
+    {
+      "agent": "contactenrichment",
+      "progress": "Last run completed contact enrichment batch",
+      "pending": "Await next Notion/contact ops assignment"
+    },
+    {
+      "agent": "linkedin",
+      "progress": "LinkedIn bot available, no active processing",
+      "pending": "Await next lookup batch"
+    },
+    {
+      "agent": "n8n",
+      "progress": "Automation agent idle",
+      "pending": "Await workflow build/deploy request"
+    },
+    {
+      "agent": "flowise",
+      "progress": "Flowise assistant idle",
+      "pending": "Await flow or chatbot implementation task"
+    }
+  ],
   "agents": [
     {
       "name": "main",
       "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Mission-control orchestration",
-      "task": "Cron live-data refresh is running",
-      "pending": "Commit and push refresh if file changed"
+      "goal": "Run mission-control live data refresh",
+      "task": "Collect sessions and subagent state",
+      "pending": "Commit and push dashboard update if changed"
     },
     {
       "name": "contactenrichment",
-      "label": "contactenrichment",
+      "label": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Enrich Notion contact records",
-      "task": "Last run completed contact enrichment batch",
-      "pending": "Waiting for next enrichment queue"
+      "goal": "Maintain contact data completeness",
+      "task": "Last known: processed enrichment rows and finalized batch output",
+      "pending": "Await next data enrichment trigger"
     },
     {
       "name": "linkedin",
-      "label": "linkedin",
+      "label": "LinkedIn",
       "status": "Standby",
-      "health": "bad",
-      "goal": "LinkedIn lookup and update queue",
-      "task": "No active run; recent slash session failed",
-      "pending": "Await next lookup task and check stability"
+      "health": "warn",
+      "goal": "Support LinkedIn lookups and profile mapping",
+      "task": "Last known: no active rows processed in latest group command",
+      "pending": "Await new lookup list"
     },
     {
       "name": "n8n",
       "label": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Automation workflow deployment",
-      "task": "No active workflow execution",
+      "goal": "Build and deploy automations",
+      "task": "No running session detected",
       "pending": "Await automation request"
     },
     {
       "name": "flowise",
-      "label": "flowise",
+      "label": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise build and support",
-      "task": "No active build session",
-      "pending": "Await next Flowise ticket"
+      "goal": "Implement conversational flow tooling",
+      "task": "No running session detected",
+      "pending": "Await flow build request"
     }
   ]
 }
