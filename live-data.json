@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T02:39:00Z",
+  "generatedAt": "2026-04-13T02:41:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -41,7 +41,7 @@
       "health": "ok",
       "goal": "Coordinate mission control and runtime operations",
       "task": "Running mission-control-live-data-refresh cron session",
-      "pending": "Commit and push dashboard refresh if changed"
+      "pending": "Continue scheduled live-data refresh cycles"
     },
     {
       "name": "contactenrichment",
@@ -49,7 +49,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "No running session; last run ended with FINAL counts",
+      "task": "No running session; last run completed with FINAL counts",
       "pending": "Await next enrichment batch"
     },
     {
