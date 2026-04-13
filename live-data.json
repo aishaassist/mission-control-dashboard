@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T22:21:00Z",
+  "generatedAt": "2026-04-13T22:23:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -31,15 +31,15 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control refreshes and primary user assistance",
-      "task": "Cron refresh is running and a user-facing main session is also active",
-      "pending": "Watch model/session stability and keep channels responsive"
+      "task": "Cron refresh and a user-facing main session are currently running",
+      "pending": "Monitor model/session stability and keep channels responsive"
     },
     {
       "name": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich missing school contacts from official sources",
-      "task": "No running session; last enrichment batch completed with final summary",
+      "task": "No running session; last enrichment batch completed",
       "pending": "Await next Notion-enabled enrichment request"
     },
     {
@@ -47,7 +47,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Handle LinkedIn lookup and profile enrichment tasks",
-      "task": "No running session; recent context includes a failed slash session",
+      "task": "No running session; recent context includes a failed session",
       "pending": "Stabilize failure path before next lookup queue"
     },
     {
@@ -56,7 +56,7 @@
       "health": "warn",
       "goal": "Build and deploy automation workflows",
       "task": "No active n8n run in the current runtime snapshot",
-      "pending": "Stand by for workflow build and deploy requests"
+      "pending": "Stand by for workflow build/deploy requests"
     },
     {
       "name": "flowise",
