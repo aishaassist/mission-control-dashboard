@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T11:23:00Z",
+  "generatedAt": "2026-04-13T11:27:00Z",
   "source": {
     "type": "openclaw-runtime",
     "sessionsListCount": 12,
@@ -9,7 +9,7 @@
   "priorities": [
     "Keep mission-control runtime snapshot current",
     "Stabilize main-channel model configuration errors",
-    "Resume specialist agents only when new queued work arrives"
+    "Queue specialist agents only when fresh tasks arrive"
   ],
   "goalProgress": [
     {
@@ -20,12 +20,12 @@
     {
       "goal": "Contact enrichment throughput",
       "status": "waiting",
-      "progress": "Last completed batch processed 99 rows; waiting for next queue"
+      "progress": "Last completed batch processed 99 rows; awaiting next queue"
     },
     {
-      "goal": "Specialist agent utilization",
+      "goal": "Specialist agent readiness",
       "status": "attention",
-      "progress": "LinkedIn, n8n, and Flowise are currently standby"
+      "progress": "LinkedIn has recent failed session; n8n and Flowise are on standby"
     }
   ],
   "agents": [
@@ -35,26 +35,26 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control and user-facing orchestration",
-      "task": "Running the live dashboard refresh cron",
-      "pending": "Track and resolve sporadic model mismatch errors"
+      "task": "Running live dashboard refresh cron",
+      "pending": "Resolve sporadic model mismatch errors in messaging channel"
     },
     {
       "name": "contactenrichment",
       "label": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Fill missing school contacts from official sources",
-      "task": "No active run; last result completed 99-row pass",
-      "pending": "Await next Notion-backed enrichment batch"
+      "goal": "Fill missing school contact fields from official sources",
+      "task": "No active run; last pass completed 99 rows",
+      "pending": "Await next Notion-backed enrichment queue"
     },
     {
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Run LinkedIn lookups for assigned records",
-      "task": "No active run; latest group execution was a zero-row pass",
-      "pending": "Wait for new lookup queue and validate slash-session stability"
+      "task": "No active run; recent slash session failed",
+      "pending": "Stabilize session path and wait for next lookup batch"
     },
     {
       "name": "n8n",
