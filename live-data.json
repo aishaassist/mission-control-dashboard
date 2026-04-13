@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T11:09:00Z",
+  "generatedAt": "2026-04-13T11:11:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -42,7 +42,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school contact details in Notion",
-      "task": "Last run processed 99 rows; updates blocked by missing verifiable data",
+      "task": "Last run processed 99 rows; update coverage remains limited",
       "pending": "Ensure Notion integration token and DB share are correctly configured"
     },
     {
