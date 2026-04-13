@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T15:57:00Z",
+  "generatedAt": "2026-04-13T15:59:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,7 +14,7 @@
   },
   "priorities": [
     "Keep mission-control cron updates flowing without interrupting main operations",
-    "Resume contact enrichment only when a fresh Notion batch is assigned",
+    "Resume contact enrichment when a new Notion batch is assigned",
     "Triage LinkedIn failed slash-session before next outreach run"
   ],
   "goalProgress": [
