@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T21:25:00Z",
+  "generatedAt": "2026-04-13T21:27:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -26,7 +26,7 @@
     {
       "goal": "Agent execution continuity",
       "status": "partial",
-      "note": "Main active; specialist agents currently idle/standby"
+      "note": "Main active; specialist agents mostly idle or standby"
     }
   ],
   "agents": [
@@ -37,7 +37,7 @@
       "health": "ok",
       "goal": "Coordinate mission control and cross-agent orchestration",
       "task": "Running cron refresh for live dashboard data",
-      "pending": "None immediate"
+      "pending": "Monitor specialist queue and failures"
     },
     {
       "agent": "contactenrichment",
@@ -45,8 +45,8 @@
       "status": "Idle",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Last run completed with not_found-heavy results",
-      "pending": "Awaiting next dataset/access updates"
+      "task": "Last run completed with mostly not_found outcomes",
+      "pending": "Awaiting next dataset or Notion access updates"
     },
     {
       "agent": "linkedin",
@@ -54,8 +54,8 @@
       "status": "Idle",
       "health": "bad",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; last notable status includes failed session",
-      "pending": "Queue next lookup batch and verify stable run"
+      "task": "No active run; recent session history includes a failure",
+      "pending": "Queue next lookup batch and verify stable runtime"
     },
     {
       "agent": "n8n",
@@ -71,7 +71,7 @@
       "name": "flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise build/support",
+      "goal": "Flowise build and support",
       "task": "No current execution detected",
       "pending": "Awaiting flow build tasks"
     }
