@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-04-13T11:45:00Z",
+  "generatedAt": "2026-04-13T11:51:00Z",
   "source": {
     "type": "openclaw-runtime",
+    "cron": "mission-control-live-data-refresh",
     "sessionsListCount": 12,
     "subagentsActive": 0,
     "subagentsRecent": 0
@@ -9,7 +10,7 @@
   "priorities": [
     "Keep mission-control runtime snapshot current",
     "Clear main-agent model mismatch errors on WhatsApp",
-    "Keep specialist agents ready for next queues"
+    "Keep specialist agents ready for next execution queues"
   ],
   "goalProgress": [
     {
@@ -25,7 +26,7 @@
     {
       "goal": "Specialist reliability",
       "status": "attention",
-      "progress": "LinkedIn has a recent failed session; n8n and Flowise are standby"
+      "progress": "LinkedIn has failed session history; n8n and Flowise are on standby"
     }
   ],
   "agents": [
@@ -34,7 +35,7 @@
       "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission control and agent orchestration",
+      "goal": "Coordinate mission control and specialist orchestration",
       "task": "Running mission-control live-data refresh cron",
       "pending": "Resolve recurring model mismatch in WhatsApp session"
     },
@@ -53,7 +54,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookups for assigned records",
-      "task": "No active run; recent route includes a failed session",
+      "task": "No active run; recent history includes failed route",
       "pending": "Recover failed route and wait for next lookup queue"
     },
     {
