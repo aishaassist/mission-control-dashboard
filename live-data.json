@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T13:47:00Z",
+  "generatedAt": "2026-04-13T13:49:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -19,7 +19,7 @@
     },
     {
       "goal": "Specialist readiness",
-      "progress": "Specialists are mostly standby; linkedin has a recent failed path to clear",
+      "progress": "Specialists are mostly standby; linkedin has a failed path to clear",
       "health": "warn"
     }
   ],
