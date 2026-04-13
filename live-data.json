@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-13T05:59:00+05:30",
+  "generatedAt": "2026-04-13T06:01:00+05:30",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main orchestration responsive",
-    "Monitor enrichment and LinkedIn queues for new work",
-    "Automate repeatable ops through n8n"
+    "Clear new enrichment or LinkedIn queues quickly",
+    "Route repetitive operations through n8n"
   ],
   "goalProgress": {
     "operations": "active",
@@ -21,44 +21,44 @@
       "status": "Active",
       "health": "ok",
       "goal": "Mission-control orchestration",
-      "task": "Cron run refreshing live dashboard data",
-      "pending": "Commit and push refresh if changed"
+      "task": "Cron refresh of live dashboard data is running",
+      "pending": "Stage, commit, and push refresh if changed"
     },
     {
       "name": "contactenrichment",
       "label": "contactenrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Enrich contact records from Notion queue",
-      "task": "Last batch finished (rows_processed=99)",
-      "pending": "Waiting for next enrichment rows"
+      "goal": "Enrich Notion contact records",
+      "task": "Last batch completed (rows_processed=99)",
+      "pending": "Waiting for next enrichment queue"
     },
     {
       "name": "linkedin",
       "label": "linkedin",
       "status": "Standby",
-      "health": "warn",
-      "goal": "LinkedIn lookup and profile updates",
-      "task": "Last run completed with zero rows",
-      "pending": "Await next lookup queue"
+      "health": "bad",
+      "goal": "LinkedIn lookup and update queue",
+      "task": "No active run; prior slash session failed",
+      "pending": "Await next lookup task and verify session stability"
     },
     {
       "name": "n8n",
       "label": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Deploy and run automation workflows",
-      "task": "No active automation run",
-      "pending": "Await automation execution request"
+      "goal": "Automation workflow deployment",
+      "task": "No active workflow execution",
+      "pending": "Await automation request"
     },
     {
       "name": "flowise",
       "label": "flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise build and support tasks",
-      "task": "No active flow build session",
-      "pending": "Await next build ticket"
+      "goal": "Flowise build and support",
+      "task": "No active build session",
+      "pending": "Await next Flowise ticket"
     }
   ]
 }
