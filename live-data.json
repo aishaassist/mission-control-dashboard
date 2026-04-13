@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T13:49:00Z",
+  "generatedAt": "2026-04-13T13:51:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -14,12 +14,12 @@
   "goalProgress": [
     {
       "goal": "Mission-control visibility",
-      "progress": "Live runtime state refreshed from active sessions and subagent list",
+      "progress": "Live runtime state refreshed from current sessions and subagent list",
       "health": "ok"
     },
     {
       "goal": "Specialist readiness",
-      "progress": "Specialists are mostly standby; linkedin has a failed path to clear",
+      "progress": "Most specialists are standby; linkedin has a failed path to clear",
       "health": "warn"
     }
   ],
@@ -39,7 +39,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "School contact enrichment",
-      "task": "Idle after latest enrichment run completed",
+      "task": "Idle after last enrichment completion",
       "pending": "Await valid Notion API token and integration share access"
     },
     {
@@ -47,8 +47,8 @@
       "label": "LinkedIn",
       "status": "Standby",
       "health": "bad",
-      "goal": "LinkedIn profile lookup support",
-      "task": "Idle; latest group run finished with zero processed rows",
+      "goal": "LinkedIn lookup support",
+      "task": "Idle; last group run processed zero rows",
       "pending": "Fix failed slash-session route before next request"
     },
     {
