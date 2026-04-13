@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T12:33:00Z",
+  "generatedAt": "2026-04-13T12:35:00Z",
   "source": {
     "type": "openclaw-runtime",
     "cron": "mission-control-live-data-refresh",
@@ -21,7 +21,7 @@
     {
       "goal": "Contact enrichment throughput",
       "status": "waiting",
-      "progress": "Most recent completed run processed 99 rows; awaiting next batch"
+      "progress": "Latest completed run processed 99 rows; awaiting next batch"
     },
     {
       "goal": "Specialist runtime reliability",
