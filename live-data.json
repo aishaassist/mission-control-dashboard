@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T14:05:00Z",
+  "generatedAt": "2026-04-13T14:07:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -15,12 +15,12 @@
   },
   "priorities": [
     "Keep main agent responsive for live operations",
-    "Trigger specialist agents only on explicit task intake",
-    "Watch stale or failed sessions before reactivation"
+    "Route new work to specialist agents on explicit intake",
+    "Monitor idle specialist lanes for reactivation readiness"
   ],
   "goalProgress": {
     "overall": "stable",
-    "note": "Main is active, specialist lanes are on standby awaiting new assignments."
+    "note": "Main is active, specialist agents are idle and ready for next assignments."
   },
   "agents": [
     {
@@ -29,7 +29,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Mission control continuity",
-      "task": "Refreshing mission-control live data",
+      "task": "Refreshing mission-control live data in current cron run",
       "pending": "None"
     },
     {
@@ -38,7 +38,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last run completed batch update (99 rows processed)",
+      "task": "Last known run completed school contact batch",
       "pending": "Await next enrichment request"
     },
     {
@@ -47,8 +47,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile mapping",
-      "task": "No active run, latest group execution completed",
-      "pending": "Await next lookup task"
+      "task": "Last known run completed with no active queue",
+      "pending": "Await next lookup request"
     },
     {
       "name": "n8n",
@@ -56,17 +56,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Automation workflow support",
-      "task": "No active workflow session",
-      "pending": "Await workflow build/deploy request"
+      "task": "No currently running session",
+      "pending": "Await workflow build or deploy request"
     },
     {
       "name": "flowise",
       "display": "Flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Flowise bot/build support",
-      "task": "No active run",
-      "pending": "Await next Flowise task"
+      "goal": "Flowise bot and flow support",
+      "task": "No currently running session",
+      "pending": "Await next Flowise request"
     }
   ]
 }
