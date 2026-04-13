@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T02:25:00Z",
+  "generatedAt": "2026-04-13T02:27:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -13,24 +13,24 @@
   },
   "priorities": [
     "Keep main (Aisha) session stable during cron and operator traffic",
-    "Resume/contact backlog only when Notion access is confirmed",
+    "Resume contact enrichment backlog when Notion access is confirmed",
     "Re-validate linkedin agent after prior failed slash session"
   ],
   "goalProgress": [
     {
       "goal": "Mission control observability",
       "status": "On track",
-      "progress": "Live data refresh running; agent snapshot updated"
+      "progress": "Live data refresh running and snapshot updated"
     },
     {
       "goal": "Contact enrichment execution",
       "status": "Waiting",
-      "progress": "Last batch completed earlier; currently standby"
+      "progress": "Last run completed earlier; currently standby"
     },
     {
       "goal": "Automation throughput",
       "status": "Standby",
-      "progress": "n8n and flowise awaiting new tasks"
+      "progress": "n8n and flowise are idle pending new tasks"
     }
   ],
   "agents": [
@@ -77,7 +77,7 @@
       "health": "warn",
       "goal": "Flowise assistant and builder support",
       "task": "Idle with no active run",
-      "pending": "Await new build/debug request"
+      "pending": "Await new build or debug request"
     }
   ]
 }
