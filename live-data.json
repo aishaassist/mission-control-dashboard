@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-04-13T19:57:00Z",
+  "generatedAt": "2026-04-13T19:59:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main (Aisha) stable while mission-control cron work is running",
-    "Unblock contactenrichment by restoring Notion integration access",
-    "Queue scoped tasks for linkedin, n8n, and flowise to raise specialist utilization"
+    "Keep main (Aisha) stable while mission-control cron refresh is running",
+    "Restore Notion integration access so contactenrichment can resume updates",
+    "Activate linkedin, n8n, and flowise with scoped queued work to improve specialist utilization"
   ],
   "goalProgress": {
-    "operations": "Main is active and currently running the mission-control live data refresh",
+    "operations": "Main is active and currently running mission-control live data refresh",
     "automation": "No active or recent spawned subagents in the last 24 hours",
-    "dataPipelines": "Contact enrichment remains on standby pending valid Notion API key and shared DB access"
+    "dataPipelines": "Contact enrichment is on standby pending valid NOTION_API_KEY and shared Notion DB access"
   },
   "agents": [
     {
@@ -22,7 +22,7 @@
       "health": "ok",
       "goal": "Mission control orchestration",
       "task": "Executing cron live-data refresh",
-      "pending": "Maintain runtime stability and route follow-up work"
+      "pending": "Keep runtime stable and route next actions"
     },
     {
       "name": "contactenrichment",
@@ -30,8 +30,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contacts in Notion",
-      "task": "No running session; recent runs completed",
-      "pending": "Wait for valid NOTION_API_KEY and integration share to DB"
+      "task": "No running session; recent runs are completed",
+      "pending": "Wait for valid NOTION_API_KEY and integration share to target database"
     },
     {
       "name": "linkedin",
@@ -40,7 +40,7 @@
       "health": "warn",
       "goal": "LinkedIn lookup support",
       "task": "No running session; latest visible run is complete",
-      "pending": "Await next lookup batch and monitor for regressions"
+      "pending": "Await next lookup batch and watch for runtime regressions"
     },
     {
       "name": "n8n",
