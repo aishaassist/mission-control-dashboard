@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T00:41:00Z",
+  "generatedAt": "2026-04-13T00:43:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -14,23 +14,23 @@
   },
   "priorities": [
     "Keep main (Aisha) stable during active cron refresh runs",
-    "Resume contactenrichment when new data rows arrive",
-    "Prepare linkedin, n8n, and flowise for next queued tasks"
+    "Resume contactenrichment when fresh records are queued",
+    "Keep linkedin, n8n, and flowise ready for next tasks"
   ],
   "goalProgress": [
     {
       "agent": "main",
-      "progress": "Live data refresh run is active",
-      "pending": "Write, commit, and push dashboard update if changed"
+      "progress": "Live dashboard refresh is running",
+      "pending": "Write, commit, and push live-data.json if changed"
     },
     {
       "agent": "contactenrichment",
-      "progress": "Last enrichment batch finalized",
-      "pending": "Await next contact enrichment trigger"
+      "progress": "Last batch finalized (rows_processed=99)",
+      "pending": "Await next enrichment trigger"
     },
     {
       "agent": "linkedin",
-      "progress": "No active LinkedIn run",
+      "progress": "No active lookup run",
       "pending": "Await next lookup assignment"
     },
     {
@@ -51,7 +51,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control live data refresh",
-      "task": "Collect runtime sessions and subagent state",
+      "task": "Collect current sessions and subagent state",
       "pending": "Commit and push refreshed dashboard data when changed"
     },
     {
@@ -60,7 +60,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Maintain contact data completeness",
-      "task": "Last known: FINAL rows_processed=99, no new updates",
+      "task": "Last known final run completed; no active session",
       "pending": "Await next enrichment batch"
     },
     {
@@ -69,7 +69,7 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Support LinkedIn lookup requests",
-      "task": "No running session; recent slash session failed",
+      "task": "No active run; recent known slash session failed",
       "pending": "Await fresh lookup list"
     },
     {
