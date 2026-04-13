@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T18:13:00Z",
+  "generatedAt": "2026-04-13T18:15:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -33,7 +33,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact data in Notion",
-      "task": "Last run finished with FINAL summary",
+      "task": "Last run completed with FINAL row summary",
       "pending": "Await next accessible enrichment batch"
     },
     {
