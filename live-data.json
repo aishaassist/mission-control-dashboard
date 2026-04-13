@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T23:37:00Z",
+  "generatedAt": "2026-04-13T23:39:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -12,7 +12,7 @@
       "status": "on-track"
     },
     {
-      "name": "Queue next contact enrichment pass",
+      "name": "Resume contact enrichment when data queue arrives",
       "status": "queued"
     },
     {
@@ -28,8 +28,8 @@
     },
     {
       "goal": "Agent utilization",
-      "progress": 0.45,
-      "note": "Main active; specialist agents currently on standby"
+      "progress": 0.42,
+      "note": "Main active; specialist agents on standby"
     }
   ],
   "agents": [
@@ -40,7 +40,7 @@
       "health": "ok",
       "goal": "Coordinate operations and keep mission control current",
       "task": "Running mission-control live-data refresh cron",
-      "pending": "Fix spark-model compatibility issue in WhatsApp runtime"
+      "pending": "Resolve WhatsApp spark-model compatibility error"
     },
     {
       "name": "contactenrichment",
@@ -48,8 +48,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contacts from official sources",
-      "task": "Last Notion batch completed with limited updates",
-      "pending": "Await next batch and confirmed integration access"
+      "task": "Last Notion pass completed with mostly not_found results",
+      "pending": "Await next batch and verified integration access"
     },
     {
       "name": "linkedin",
@@ -57,7 +57,7 @@
       "status": "Standby",
       "health": "bad",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; recent slash session shows failed state",
+      "task": "No active run; recent session history includes failure",
       "pending": "Retry on next lookup request"
     },
     {
