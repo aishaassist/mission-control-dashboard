@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T17:29:00Z",
+  "generatedAt": "2026-04-13T17:31:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -50,7 +50,7 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup support for contact operations",
-      "task": "No active lookup session; most recent slash session failed",
+      "task": "No active lookup session; recent slash session failed",
       "pending": "Await next lookup instruction and recover on next run"
     },
     {
