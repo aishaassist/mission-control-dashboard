@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T16:39:00Z",
+  "generatedAt": "2026-04-13T16:41:00Z",
   "source": {
     "type": "openclaw-runtime",
     "sessionsList": {
@@ -15,8 +15,8 @@
   },
   "priorities": [
     "Keep Aisha mission-control loop active and healthy",
-    "Unblock contact enrichment by confirming Notion integration access",
-    "Queue next LinkedIn, n8n, and Flowise execution tasks"
+    "Unblock contact enrichment by validating Notion access before next batch",
+    "Re-queue LinkedIn, n8n, and Flowise tasks as soon as new inputs arrive"
   ],
   "goalProgress": [
     {
@@ -27,12 +27,12 @@
     {
       "goal": "Contact data enrichment",
       "status": "waiting",
-      "progress": "Last completed run processed 99 rows; awaiting next trigger"
+      "progress": "Last completed run processed 99 rows; no active session"
     },
     {
       "goal": "LinkedIn and automation pipeline",
       "status": "at-risk",
-      "progress": "LinkedIn has an unresolved failed session; n8n and Flowise are on standby"
+      "progress": "LinkedIn has a recent failed session; n8n and Flowise are idle"
     }
   ],
   "agents": [
@@ -51,7 +51,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Last run completed: rows_processed=99, email_updated=0, phone_updated=0",
+      "task": "Last run done: rows_processed=99, email_updated=0, phone_updated=0",
       "pending": "Await next batch and confirmed Notion share"
     },
     {
@@ -60,8 +60,8 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile update workflows",
-      "task": "Last group run completed with no rows; separate slash session recently failed",
-      "pending": "Stabilize session reliability and await next lookup list"
+      "task": "No active run; recent slash session failed",
+      "pending": "Stabilize runtime and await next lookup list"
     },
     {
       "agent": "n8n",
