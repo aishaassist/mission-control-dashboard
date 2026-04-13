@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T06:25:00Z",
+  "generatedAt": "2026-04-13T06:27:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -21,12 +21,12 @@
     {
       "goal": "Mission control visibility",
       "status": "on_track",
-      "progress": "Live status refreshed from runtime state"
+      "progress": "Live status refreshed from current runtime state"
     },
     {
       "goal": "Agent execution continuity",
       "status": "mixed",
-      "progress": "Aisha active; specialist agents currently standby"
+      "progress": "Aisha active; specialists mostly standby with one recent failure signal"
     }
   ],
   "agents": [
@@ -36,8 +36,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate operations and keep dashboard synced",
-      "task": "Running cron refresh for mission-control live data",
-      "pending": "Continue monitoring specialist workload handoffs"
+      "task": "Running mission-control live data refresh",
+      "pending": "Continue monitoring and handoff orchestration"
     },
     {
       "name": "contactenrichment",
@@ -45,17 +45,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last run completed contact enrichment batch",
-      "pending": "Await next enrichment batch or Notion-access-ready job"
+      "task": "Last batch completed with not_found-heavy outcomes",
+      "pending": "Await next enrichment batch or Notion-ready run"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "Latest visible run finished; no current execution",
-      "pending": "Await next lookup list to process"
+      "task": "No current execution; recent visible session includes failure",
+      "pending": "Validate stability, then resume next lookup queue"
     },
     {
       "name": "n8n",
@@ -63,8 +63,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Automation workflow execution and deployment",
-      "task": "No current runtime activity detected",
-      "pending": "Await automation build and deploy requests"
+      "task": "No active session currently running",
+      "pending": "Await automation build/deploy requests"
     },
     {
       "name": "flowise",
