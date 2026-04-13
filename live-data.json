@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T09:25:00Z",
+  "generatedAt": "2026-04-13T10:55:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,17 +14,17 @@
   },
   "priorities": [
     "Keep mission-control visibility current across core agents",
-    "Keep contact enrichment and LinkedIn specialists ready for dispatch",
-    "Trigger n8n and Flowise when concrete execution requests land"
+    "Maintain specialist readiness for contact and LinkedIn operations",
+    "Dispatch n8n and Flowise only on concrete execution requests"
   ],
   "goalProgress": [
     {
       "goal": "Mission control visibility",
-      "progress": "Live runtime snapshot refreshed from sessions and subagent telemetry"
+      "progress": "Runtime snapshot refreshed from sessions_list and subagent telemetry"
     },
     {
-      "goal": "Specialist readiness",
-      "progress": "Main is active, specialists are idle or standby pending new queues"
+      "goal": "Agent readiness",
+      "progress": "Main is active, specialists are on standby pending new work"
     }
   ],
   "agents": [
@@ -43,7 +43,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Enrich school contact records in Notion",
-      "task": "No running session, last batch reported 99 rows processed",
+      "task": "No running session, last known run processed 99 rows",
       "pending": "Await next enrichment queue"
     },
     {
@@ -52,8 +52,8 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile mapping",
-      "task": "No running session, latest known state includes a failed session",
-      "pending": "Recheck stability when next LinkedIn task starts"
+      "task": "No running session, latest known context includes a failed run",
+      "pending": "Recheck stability on next dispatch"
     },
     {
       "name": "n8n",
