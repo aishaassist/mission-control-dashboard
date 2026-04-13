@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T08:07:00Z",
+  "generatedAt": "2026-04-13T08:09:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -64,7 +64,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Support LinkedIn lookup and enrichment",
-      "task": "Latest group run completed; no active session",
+      "task": "Latest run completed; no active session",
       "pending": "Await fresh lookup tasks"
     },
     {
