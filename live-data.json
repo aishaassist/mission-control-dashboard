@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T00:55:00Z",
+  "generatedAt": "2026-04-13T00:57:00Z",
   "source": {
     "cron": "mission-control-live-data-refresh",
     "sessionsList": {
@@ -30,13 +30,13 @@
     },
     {
       "agent": "linkedin",
-      "progress": "No active lookup run",
+      "progress": "No active lookup run; last group run reported rows_processed=0",
       "pending": "Await next lookup assignment"
     },
     {
       "agent": "n8n",
       "progress": "No active automation run",
-      "pending": "Await workflow build/deploy request"
+      "pending": "Await workflow build or deploy request"
     },
     {
       "agent": "flowise",
@@ -67,9 +67,9 @@
       "name": "linkedin",
       "label": "LinkedIn",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Support LinkedIn lookup requests",
-      "task": "No active run; latest execution completed",
+      "task": "No active run; one recent slash session failed",
       "pending": "Await fresh lookup list"
     },
     {
