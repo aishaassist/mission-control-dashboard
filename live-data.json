@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T03:41:00Z",
+  "generatedAt": "2026-04-13T03:43:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -20,7 +20,7 @@
   "goalProgress": {
     "operations": "Main cron orchestration is active; no subagents running",
     "contactPipeline": "Last contact run processed 99 rows; waiting for next batch",
-    "automation": "n8n and Flowise are on standby with no active runtime sessions"
+    "automation": "n8n and Flowise remain on standby with no active sessions"
   },
   "agents": [
     {
@@ -47,8 +47,8 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment batches",
-      "task": "Recent sessions include a failed slash session; latest group run processed 0 rows",
-      "pending": "Stabilize next run and await new LinkedIn task payload"
+      "task": "Latest group run processed 0 rows; prior slash session failed",
+      "pending": "Await next payload and validate run stability"
     },
     {
       "name": "n8n",
