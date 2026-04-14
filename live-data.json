@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-13T23:57:00Z",
+  "generatedAt": "2026-04-13T23:59:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -28,7 +28,7 @@
     },
     {
       "goal": "Agent utilization",
-      "progress": 0.44,
+      "progress": 0.45,
       "note": "Main active, specialists on standby"
     }
   ],
@@ -40,7 +40,7 @@
       "health": "ok",
       "goal": "Coordinate operations and keep mission control current",
       "task": "Running mission-control live-data refresh cron",
-      "pending": "Fix WhatsApp spark-model compatibility issue"
+      "pending": "Resolve WhatsApp spark-model compatibility failure"
     },
     {
       "name": "contactenrichment",
@@ -48,7 +48,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school contacts from official sources",
-      "task": "Last Notion batch completed (99 rows processed)",
+      "task": "Last Notion run completed (99 rows processed)",
       "pending": "Await next queue and verified Notion access"
     },
     {
