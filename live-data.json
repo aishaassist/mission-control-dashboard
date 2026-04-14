@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T01:41:00Z",
+  "generatedAt": "2026-04-14T01:43:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -31,7 +31,7 @@
   "goalProgress": {
     "main": "Cron mission-control refresh is currently running",
     "contactenrichment": "Last completed batch processed 99 rows; waiting next input",
-    "linkedin": "No active run; most recent run ended with 0 rows processed",
+    "linkedin": "No active run; most recent completed run processed 0 rows",
     "n8n": "No active automation run in current runtime state",
     "flowise": "No active flow build/debug run in current runtime state"
   },
