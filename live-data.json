@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-04-14T00:55:00Z",
+  "generatedAt": "2026-04-14T00:59:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main (Aisha) stable during active cron operations",
-    "Hold specialist agents in standby until new work arrives",
-    "Watch for failed session recurrence on main/linkedin channels"
+    "Keep main (Aisha) stable while cron refresh is active",
+    "Hold specialist agents in standby until new work is assigned",
+    "Investigate repeated failed runs on non-running channels"
   ],
   "goalProgress": [
     {
       "goal": "Mission control runtime visibility",
       "status": "on_track",
-      "note": "Live snapshot refreshed from current runtime state"
+      "note": "Live dashboard data refreshed from current runtime state"
     },
     {
       "goal": "Specialist agent utilization",
@@ -28,8 +28,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control and operator-facing responses",
-      "task": "Cron refresh session is running",
-      "pending": "Maintain refresh cadence and runtime stability"
+      "task": "Cron refresh session is currently running",
+      "pending": "Complete refresh cycle and keep runtime stable"
     },
     {
       "name": "contactenrichment",
@@ -37,17 +37,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contacts from official sources",
-      "task": "Last run completed with rows_processed=99",
+      "task": "Last completed run processed 99 rows",
       "pending": "Await next Notion enrichment trigger"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "No active run; last run completed with rows_processed=0",
-      "pending": "Await next lookup request and watch prior failure patterns"
+      "task": "No active run; latest snapshot includes a failed session",
+      "pending": "Await next lookup request and review failure pattern"
     },
     {
       "name": "n8n",
@@ -65,7 +65,7 @@
       "health": "warn",
       "goal": "Support Flowise workflow and bot operations",
       "task": "No running session in current snapshot",
-      "pending": "Await next Flowise support/build request"
+      "pending": "Await next Flowise support request"
     }
   ]
 }
