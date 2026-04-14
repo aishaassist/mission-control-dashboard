@@ -1,64 +1,74 @@
 {
-  "generatedAt": "2026-04-14T03:33:00Z",
+  "generatedAt": "2026-04-14T03:37:00Z",
   "source": {
-    "sessionsList": "sessions_list(limit=50,messageLimit=1)",
-    "subagents": "subagents(action=list,recentMinutes=1440)"
+    "sessionsList": {
+      "limit": 50,
+      "messageLimit": 1,
+      "count": 12
+    },
+    "subagents": {
+      "recentMinutes": 1440,
+      "active": 0,
+      "recent": 0
+    }
   },
   "priorities": [
-    "Keep main agent stable during mission-control refresh cycles",
-    "Route specialist agents only when tasks are assigned",
-    "Watch for failed session signals across specialist agents"
+    "Keep main agent stable and responsive",
+    "Re-activate specialist agents only on demand",
+    "Monitor failed/errored sessions that may need intervention"
   ],
   "goalProgress": {
-    "operations": "Live mission-control snapshot refreshed from runtime state",
-    "coordination": "No active subagents in the last 24h",
-    "focus": "Specialist agents are on standby pending new work"
+    "main": "Operational with active cron and main runtime sessions",
+    "contactenrichment": "Last enrichment batch completed with verified/not_found handling",
+    "linkedin": "Idle after recent zero-row run; older failed slash session still noted",
+    "n8n": "Standby, no active automation execution",
+    "flowise": "Standby, waiting for new build requests"
   },
   "agents": [
     {
       "name": "main",
-      "displayName": "Aisha",
+      "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Run mission-control operations and coordination",
-      "task": "Cron refresh session is running",
-      "pending": "Continue scheduled dashboard refresh runs"
+      "goal": "Coordinate mission control and user-facing orchestration",
+      "task": "Cron refresh running; main session also running",
+      "pending": "Review older failed slash sessions for model/config drift"
     },
     {
       "name": "contactenrichment",
-      "displayName": "contactenrichment",
+      "label": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contact records",
-      "task": "Last run finished with 99 rows processed",
-      "pending": "Await next Notion enrichment batch"
+      "goal": "Fill missing school contact fields from official sources",
+      "task": "Most recent batch finished and returned summary metrics",
+      "pending": "Await next Notion-backed enrichment queue"
     },
     {
       "name": "linkedin",
-      "displayName": "linkedin",
+      "label": "linkedin",
       "status": "Idle/Standby",
-      "health": "bad",
-      "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No running session; a recent session shows failed state",
-      "pending": "Check failed session context, then await next lookup list"
+      "health": "warn",
+      "goal": "LinkedIn lookup and profile enrichment on request",
+      "task": "Most recent group run completed with zero-row pass",
+      "pending": "No active queue; monitor one older failed slash session"
     },
     {
       "name": "n8n",
-      "displayName": "n8n",
+      "label": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Automation workflow execution",
+      "goal": "Automation workflow execution and deployment",
       "task": "No running session detected",
-      "pending": "Await workflow build or deploy request"
+      "pending": "Waiting for new automation tasks"
     },
     {
       "name": "flowise",
-      "displayName": "flowise",
+      "label": "flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Flowise bot build and maintenance",
+      "goal": "Flowise build and support tasks",
       "task": "No running session detected",
-      "pending": "Await next Flowise implementation task"
+      "pending": "Waiting for new flow requests"
     }
   ]
 }
