@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T01:39:00Z",
+  "generatedAt": "2026-04-14T01:41:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -13,11 +13,11 @@
     },
     {
       "agent": "contactenrichment",
-      "priority": "Prepare next verified contact enrichment batch"
+      "priority": "Queue next verified contact enrichment batch"
     },
     {
       "agent": "linkedin",
-      "priority": "Stand by for next LinkedIn lookup run"
+      "priority": "Stand by for next LinkedIn lookup batch"
     },
     {
       "agent": "n8n",
@@ -29,27 +29,27 @@
     }
   ],
   "goalProgress": {
-    "main": "Live dashboard refresh is running in current cron session",
-    "contactenrichment": "Last completed run processed 99 rows; awaiting next batch",
-    "linkedin": "Latest run is idle; last reported 0 rows processed",
-    "n8n": "No active automation run in current runtime window",
-    "flowise": "No active flow build/debug run in current runtime window"
+    "main": "Cron mission-control refresh is currently running",
+    "contactenrichment": "Last completed batch processed 99 rows; waiting next input",
+    "linkedin": "No active run; most recent run ended with 0 rows processed",
+    "n8n": "No active automation run in current runtime state",
+    "flowise": "No active flow build/debug run in current runtime state"
   },
   "agents": [
     {
       "name": "main",
       "status": "Active",
       "health": "ok",
-      "goal": "Operate mission control and agent orchestration",
-      "task": "Refresh live-data.json from runtime state",
-      "pending": "Commit and push if file changed"
+      "goal": "Operate mission control and orchestrate agent work",
+      "task": "Refresh live dashboard data from runtime state",
+      "pending": "Commit and push if the JSON changed"
     },
     {
       "name": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records from official sources",
-      "task": "Last task completed successfully",
+      "task": "No running session right now",
       "pending": "Await next Notion/contact enrichment batch"
     },
     {
@@ -57,7 +57,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Run LinkedIn profile lookup batches",
-      "task": "No current running session",
+      "task": "No running session right now",
       "pending": "Await next lookup input list"
     },
     {
@@ -65,7 +65,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and deploy n8n automations",
-      "task": "No current running session",
+      "task": "No running session right now",
       "pending": "Await automation brief"
     },
     {
@@ -73,7 +73,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and maintain Flowise pipelines",
-      "task": "No current running session",
+      "task": "No running session right now",
       "pending": "Await flow build/debug request"
     }
   ]
