@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-14T00:21:00Z",
+  "generatedAt": "2026-04-14T00:23:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main agent stable while cron and channel sessions remain active",
-    "Re-activate specialist queues for contactenrichment, linkedin, n8n, and flowise",
-    "Address recurring model/session failures before next operator wave"
+    "Restart specialist execution lanes for contactenrichment, linkedin, n8n, and flowise",
+    "Reduce failed session churn before the next task wave"
   ],
   "goalProgress": [
     {
@@ -18,7 +18,7 @@
     {
       "goal": "Specialist agent utilization",
       "status": "needs_attention",
-      "note": "Main is active; specialist agents are idle/standby"
+      "note": "Only main is active; specialist agents are idle/standby"
     }
   ],
   "agents": [
@@ -28,8 +28,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control operations and response handling",
-      "task": "Running cron live-data refresh with active main sessions",
-      "pending": "Monitor and reduce model routing/session failure noise"
+      "task": "Cron live-data refresh running with active main sessions",
+      "pending": "Monitor model/session failures and keep channels stable"
     },
     {
       "name": "contactenrichment",
@@ -45,9 +45,9 @@
       "displayName": "linkedin",
       "status": "Idle/Standby",
       "health": "bad",
-      "goal": "Execute LinkedIn lookup and profile enrichment",
+      "goal": "Run LinkedIn lookup and profile enrichment tasks",
       "task": "No running session; recent history includes failed and zero-row runs",
-      "pending": "Stabilize run path, then queue next lookup batch"
+      "pending": "Stabilize execution path before next lookup batch"
     },
     {
       "name": "n8n",
@@ -56,7 +56,7 @@
       "health": "warn",
       "goal": "Build and deploy automation workflows",
       "task": "No active session detected",
-      "pending": "Await next automation deployment request"
+      "pending": "Await next workflow deployment request"
     },
     {
       "name": "flowise",
@@ -65,7 +65,7 @@
       "health": "warn",
       "goal": "Support Flowise workflow and bot operations",
       "task": "No active session detected",
-      "pending": "Await next Flowise support/build task"
+      "pending": "Await next Flowise build/support task"
     }
   ]
 }
