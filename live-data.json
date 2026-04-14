@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T01:15:00Z",
+  "generatedAt": "2026-04-14T01:17:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -7,7 +7,7 @@
   "priorities": [
     "Keep main (Aisha) stable while cron refresh is running",
     "Keep specialist agents ready for assignment",
-    "Investigate linkedin failed-session signal before next outreach run"
+    "Address linkedin failure signal before next outreach run"
   ],
   "goalProgress": [
     {
@@ -46,7 +46,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment",
-      "task": "No active run; recent session includes failed state",
+      "task": "No active run; recent history includes a failed session",
       "pending": "Validate failure root cause before next lookup batch"
     },
     {
