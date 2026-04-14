@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-04-14T03:29:00Z",
+  "generatedAt": "2026-04-14T03:33:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main agent stable during mission-control refresh cycles",
-    "Route new work to specialist agents only on demand",
+    "Route specialist agents only when tasks are assigned",
     "Watch for failed session signals across specialist agents"
   ],
   "goalProgress": {
-    "operations": "Mission-control snapshot refreshed from live runtime state",
-    "coordination": "No active subagents in last 24h",
-    "focus": "Specialist agents remain on standby until assigned"
+    "operations": "Live mission-control snapshot refreshed from runtime state",
+    "coordination": "No active subagents in the last 24h",
+    "focus": "Specialist agents are on standby pending new work"
   },
   "agents": [
     {
@@ -21,7 +21,7 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control operations and coordination",
-      "task": "Cron refresh currently running",
+      "task": "Cron refresh session is running",
       "pending": "Continue scheduled dashboard refresh runs"
     },
     {
@@ -30,17 +30,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last run processed rows and completed",
-      "pending": "Await next Notion-backed enrichment batch"
+      "task": "Last run finished with 99 rows processed",
+      "pending": "Await next Notion enrichment batch"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active session; last known run completed with zero-row pass",
-      "pending": "Await next lookup list from ops"
+      "task": "No running session; a recent session shows failed state",
+      "pending": "Check failed session context, then await next lookup list"
     },
     {
       "name": "n8n",
@@ -48,7 +48,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Automation workflow execution",
-      "task": "No current run detected",
+      "task": "No running session detected",
       "pending": "Await workflow build or deploy request"
     },
     {
@@ -57,7 +57,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Flowise bot build and maintenance",
-      "task": "No current run detected",
+      "task": "No running session detected",
       "pending": "Await next Flowise implementation task"
     }
   ]
