@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T01:59:00Z",
+  "generatedAt": "2026-04-14T02:01:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -31,7 +31,7 @@
   "goalProgress": {
     "main": "Mission-control cron refresh is running now",
     "contactenrichment": "Last completed batch processed 99 rows; awaiting next batch",
-    "linkedin": "No active run; latest sessions are idle with one older failure",
+    "linkedin": "No active run; most recent work idle with one older failed session",
     "n8n": "No active automation run in current runtime state",
     "flowise": "No active flow build/debug run in current runtime state"
   },
@@ -55,10 +55,10 @@
     {
       "name": "linkedin",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Run LinkedIn profile lookup batches",
       "task": "No running session right now",
-      "pending": "Await next lookup input list"
+      "pending": "Investigate last failed slash session and await next input list"
     },
     {
       "name": "n8n",
