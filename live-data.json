@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T00:01:00Z",
+  "generatedAt": "2026-04-14T00:03:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -29,7 +29,7 @@
     {
       "goal": "Agent utilization",
       "progress": 0.45,
-      "note": "Main active, specialists on standby"
+      "note": "Main active, specialists mostly on standby"
     }
   ],
   "agents": [
@@ -49,16 +49,16 @@
       "health": "warn",
       "goal": "Fill missing school contacts from official sources",
       "task": "Last Notion run completed (99 rows processed)",
-      "pending": "Await next queue and verified Notion access"
+      "pending": "Await next queue and verified Notion integration access"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment",
       "task": "No active run; last group pass returned zero updates",
-      "pending": "Await next lookup request"
+      "pending": "Investigate last failed slash session, then await next request"
     },
     {
       "name": "n8n",
