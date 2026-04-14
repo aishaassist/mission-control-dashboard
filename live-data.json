@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-14T00:25:00Z",
+  "generatedAt": "2026-04-14T00:27:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main agent stable while cron and channel sessions remain active",
-    "Re-activate specialist lanes for contactenrichment, linkedin, n8n, and flowise when new work arrives",
-    "Reduce failed session churn, especially in linkedin/main slash sessions"
+    "Keep main agent stable while cron and WhatsApp sessions are active",
+    "Keep specialist lanes warm for contactenrichment, linkedin, n8n, and flowise",
+    "Monitor recurring failed slash-session patterns in main/linkedin"
   ],
   "goalProgress": [
     {
@@ -18,7 +18,7 @@
     {
       "goal": "Specialist agent utilization",
       "status": "needs_attention",
-      "note": "Only main is active; specialist agents are idle/standby"
+      "note": "Only main is active right now; specialist agents are on standby"
     }
   ],
   "agents": [
@@ -28,8 +28,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control operations and response handling",
-      "task": "Cron live-data refresh session is running",
-      "pending": "Maintain channel stability and watch for model/session failures"
+      "task": "Cron live-data refresh is running with main chat session active",
+      "pending": "Maintain channel stability and continue runtime refresh cadence"
     },
     {
       "name": "contactenrichment",
@@ -37,17 +37,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records from official sources",
-      "task": "Last completed Notion run processed 99 rows",
-      "pending": "Await next enrichment trigger"
+      "task": "Last run completed with 99 rows processed",
+      "pending": "Await next Notion enrichment trigger"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Idle/Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "No running session; recent history includes failed and zero-row runs",
-      "pending": "Stabilize execution path before next lookup batch"
+      "task": "No active run; last group run returned zero-row completion",
+      "pending": "Await next lookup batch and watch for prior slash-session failures"
     },
     {
       "name": "n8n",
