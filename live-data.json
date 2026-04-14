@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T01:35:00Z",
+  "generatedAt": "2026-04-14T01:39:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -9,7 +9,7 @@
   "priorities": [
     {
       "agent": "main",
-      "priority": "Keep mission-control cron refreshes and orchestration healthy"
+      "priority": "Keep mission-control cron refresh and orchestration healthy"
     },
     {
       "agent": "contactenrichment",
@@ -29,11 +29,11 @@
     }
   ],
   "goalProgress": {
-    "main": "Live dashboard refresh running",
-    "contactenrichment": "Last run processed 99 rows; no new updates pending",
-    "linkedin": "Last run completed with 0 rows processed",
-    "n8n": "No active workflow task in current window",
-    "flowise": "No active flow task in current window"
+    "main": "Live dashboard refresh is running in current cron session",
+    "contactenrichment": "Last completed run processed 99 rows; awaiting next batch",
+    "linkedin": "Latest run is idle; last reported 0 rows processed",
+    "n8n": "No active automation run in current runtime window",
+    "flowise": "No active flow build/debug run in current runtime window"
   },
   "agents": [
     {
@@ -42,14 +42,14 @@
       "health": "ok",
       "goal": "Operate mission control and agent orchestration",
       "task": "Refresh live-data.json from runtime state",
-      "pending": "Complete git sync if dashboard file changed"
+      "pending": "Commit and push if file changed"
     },
     {
       "name": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records from official sources",
-      "task": "Last task completed (99 rows checked)",
+      "task": "Last task completed successfully",
       "pending": "Await next Notion/contact enrichment batch"
     },
     {
@@ -57,7 +57,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Run LinkedIn profile lookup batches",
-      "task": "No active run",
+      "task": "No current running session",
       "pending": "Await next lookup input list"
     },
     {
@@ -65,7 +65,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and deploy n8n automations",
-      "task": "No active run",
+      "task": "No current running session",
       "pending": "Await automation brief"
     },
     {
@@ -73,7 +73,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and maintain Flowise pipelines",
-      "task": "No active run",
+      "task": "No current running session",
       "pending": "Await flow build/debug request"
     }
   ]
