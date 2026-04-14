@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T03:45:00Z",
+  "generatedAt": "2026-04-14T03:47:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,13 +14,13 @@
   },
   "priorities": [
     "Keep main agent stable and responsive",
-    "Reactivate specialist agents only when tasks arrive",
-    "Review linkedin failed runs before next dispatch"
+    "Dispatch specialist agents only on demand",
+    "Review linkedin failed state before next dispatch"
   ],
   "goalProgress": {
     "main": "Active cron orchestration running",
-    "contactenrichment": "Last contact enrichment batch completed",
-    "linkedin": "Standby; failed slash session needs review",
+    "contactenrichment": "Last enrichment batch completed; queue empty",
+    "linkedin": "Standby with prior failed slash session",
     "n8n": "Standby; no active automation run",
     "flowise": "Standby awaiting new flow requests"
   },
@@ -40,7 +40,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school contacts from official sources",
-      "task": "Recent enrichment batch completed",
+      "task": "Last batch completed successfully",
       "pending": "Await next Notion-backed queue"
     },
     {
@@ -49,7 +49,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment on demand",
-      "task": "No running session",
+      "task": "No active run; previous sessions ended",
       "pending": "Investigate failed slash session before next run"
     },
     {
