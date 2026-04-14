@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T03:11:00Z",
+  "generatedAt": "2026-04-14T03:13:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -14,8 +14,8 @@
   "goalProgress": {
     "summary": "Main is active, specialist agents are on standby, and no subagent jobs are running.",
     "active": 1,
-    "standby": 4,
-    "blocked": 0
+    "standby": 3,
+    "blocked": 1
   },
   "agents": [
     {
@@ -42,8 +42,8 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment workflows",
-      "task": "No active run; last group workflow completed",
-      "pending": "Review recent failed slash session, then await next lead queue"
+      "task": "No active run; latest status includes prior failed slash session",
+      "pending": "Check slash-session failure cause, then await next lead queue"
     },
     {
       "name": "n8n",
