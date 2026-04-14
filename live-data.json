@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-04-14T01:07:00Z",
+  "generatedAt": "2026-04-14T01:09:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main (Aisha) stable while cron refresh is active",
-    "Keep specialist agents in standby until new work is assigned",
-    "Investigate repeated failed sessions on linkedin/main channels"
+    "Keep specialist agents ready for new assignments",
+    "Review recurring failed runs on linkedin before next campaign"
   ],
   "goalProgress": [
     {
       "goal": "Mission control runtime visibility",
       "status": "on_track",
-      "note": "Live dashboard data refreshed from current runtime state"
+      "note": "Live dashboard refreshed from current runtime snapshot"
     },
     {
       "goal": "Specialist agent utilization",
       "status": "needs_attention",
-      "note": "No active specialist sessions or subagents in the last 24h"
+      "note": "No specialist sessions currently running"
     }
   ],
   "agents": [
@@ -27,17 +27,17 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission control and operator-facing responses",
-      "task": "Cron refresh session is currently running",
-      "pending": "Complete refresh cycle and maintain runtime stability"
+      "goal": "Coordinate mission control and operator responses",
+      "task": "Cron refresh session running",
+      "pending": "Finish refresh cycle and keep runtime stable"
     },
     {
       "name": "contactenrichment",
       "displayName": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contacts from official sources",
-      "task": "Last completed run processed 99 rows",
+      "goal": "Enrich school contact records from official sources",
+      "task": "Last run completed contact enrichment batch",
       "pending": "Await next Notion enrichment trigger"
     },
     {
@@ -45,9 +45,9 @@
       "displayName": "linkedin",
       "status": "Idle/Standby",
       "health": "bad",
-      "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "No active run; recent history includes failed session(s)",
-      "pending": "Await next lookup request and review failure pattern"
+      "goal": "Run LinkedIn lookup and profile enrichment",
+      "task": "No active run; recent session failures detected",
+      "pending": "Await next lookup request and validate failure cause"
     },
     {
       "name": "n8n",
@@ -55,7 +55,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and deploy automation workflows",
-      "task": "No running session in current snapshot",
+      "task": "No current running session",
       "pending": "Await next automation deployment task"
     },
     {
@@ -64,7 +64,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise workflow and bot operations",
-      "task": "No running session in current snapshot",
+      "task": "No current running session",
       "pending": "Await next Flowise support request"
     }
   ]
