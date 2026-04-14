@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T01:25:00Z",
+  "generatedAt": "2026-04-14T01:27:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -7,18 +7,18 @@
   "priorities": [
     "Keep main (Aisha) stable while cron refresh is running",
     "Re-engage specialist agents when new tasks arrive",
-    "Monitor idle windows across n8n and flowise"
+    "Watch linkedin errors and recover on next assignment"
   ],
   "goalProgress": [
     {
       "goal": "Mission control runtime visibility",
       "status": "on_track",
-      "note": "Dashboard refreshed from current OpenClaw session and subagent state"
+      "note": "Dashboard refreshed from current OpenClaw sessions and subagent state"
     },
     {
       "goal": "Specialist agent utilization",
       "status": "needs_attention",
-      "note": "No specialist agents are currently in running state"
+      "note": "No specialist agents are currently running"
     }
   ],
   "agents": [
@@ -29,7 +29,7 @@
       "health": "ok",
       "goal": "Coordinate operations and keep mission control current",
       "task": "Cron live-data refresh is running",
-      "pending": "Finish refresh cycle and continue orchestration"
+      "pending": "Complete refresh cycle and maintain orchestration"
     },
     {
       "name": "contactenrichment",
@@ -37,17 +37,17 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact data from verified sources",
-      "task": "Last run completed with final enrichment summary",
+      "task": "Last run finished with enrichment summary",
       "pending": "Await next Notion/contact enrichment batch"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Run LinkedIn discovery and profile mapping",
-      "task": "No current running session",
-      "pending": "Stand by for next lookup request"
+      "task": "Latest visible slash session failed",
+      "pending": "Retry on next lookup request"
     },
     {
       "name": "n8n",
@@ -55,7 +55,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and deploy workflow automations",
-      "task": "No current running session",
+      "task": "No currently running session",
       "pending": "Await next automation assignment"
     },
     {
@@ -64,7 +64,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise pipeline operations",
-      "task": "No current running session",
+      "task": "No currently running session",
       "pending": "Await next Flowise task"
     }
   ]
