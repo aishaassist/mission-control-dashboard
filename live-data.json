@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-04-14T00:15:00Z",
+  "generatedAt": "2026-04-14T00:17:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Stabilize main agent model routing (spark model unsupported error seen recently)",
-    "Re-activate specialist agents with fresh task queues (linkedin, n8n, flowise)",
-    "Keep contact enrichment pipeline ready for next batch"
+    "Keep main agent stable while cron and channel sessions stay active",
+    "Prepare specialist queues for linkedin, n8n, and flowise reactivation",
+    "Maintain contact enrichment readiness for next Notion batch"
   ],
   "goalProgress": [
     {
       "goal": "Mission control runtime visibility",
       "status": "on_track",
-      "note": "Live snapshot refreshed from current session registry"
+      "note": "Dashboard snapshot refreshed from live OpenClaw session state"
     },
     {
-      "goal": "Contact operations",
-      "status": "in_progress",
-      "note": "Latest run completed with rows processed; awaiting next dataset"
+      "goal": "Specialist agent utilization",
+      "status": "needs_attention",
+      "note": "Only main is currently running; specialists are on standby"
     }
   ],
   "agents": [
@@ -28,44 +28,44 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control and operator responses",
-      "task": "Running cron refresh for live dashboard",
-      "pending": "Resolve intermittent unsupported model routing in one channel"
+      "task": "Executing live-data refresh cron run",
+      "pending": "Monitor model routing errors seen in recent channel sessions"
     },
     {
       "name": "contactenrichment",
       "displayName": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Fill missing school contact data from official sources",
-      "task": "Last batch completed (99 rows processed)",
-      "pending": "Await next Notion batch/input"
+      "goal": "Fill missing school email/phone fields from official sources",
+      "task": "Last completed run processed 99 rows",
+      "pending": "Await next Notion dataset and execution trigger"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active run; last quick execution processed 0 rows",
-      "pending": "Needs new lookup queue"
+      "goal": "Run LinkedIn lookup and enrichment tasks",
+      "task": "No running session; latest run reported 0 rows processed",
+      "pending": "Queue next lookup batch"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Automation workflow deployment and maintenance",
-      "task": "No active session",
-      "pending": "Queue next automation build/deploy request"
+      "goal": "Build and deploy automation workflows",
+      "task": "No active run in current window",
+      "pending": "Await next automation request"
     },
     {
       "name": "flowise",
       "displayName": "flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Flowise bot/workflow support",
-      "task": "No active session",
-      "pending": "Await next build/support request"
+      "goal": "Support Flowise bot/workflow operations",
+      "task": "No active run in current window",
+      "pending": "Await next Flowise build/support task"
     }
   ]
 }
