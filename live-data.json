@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T00:33:00Z",
+  "generatedAt": "2026-04-14T00:35:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -7,7 +7,7 @@
   "priorities": [
     "Keep main agent stable while cron and chat sessions are active",
     "Keep specialist lanes warm for contactenrichment, linkedin, n8n, and flowise",
-    "Watch for recurring failed slash-session patterns in main/linkedin"
+    "Track failed slash-session incidents and recover quickly on next triggers"
   ],
   "goalProgress": [
     {
@@ -18,7 +18,7 @@
     {
       "goal": "Specialist agent utilization",
       "status": "needs_attention",
-      "note": "Main is active; specialist agents are currently on standby"
+      "note": "Main is active; specialist agents are currently idle/standby"
     }
   ],
   "agents": [
@@ -28,8 +28,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control operations and response handling",
-      "task": "Cron refresh is running and main chat session is active",
-      "pending": "Maintain channel stability and keep refresh cadence"
+      "task": "Cron refresh session is running; main chat lane also shows running",
+      "pending": "Maintain dashboard refresh cadence and channel reliability"
     },
     {
       "name": "contactenrichment",
@@ -37,7 +37,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records from official sources",
-      "task": "Last run completed with 99 rows processed",
+      "task": "Last completion reported 99 rows processed",
       "pending": "Await next Notion enrichment trigger"
     },
     {
@@ -46,8 +46,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "No active run; last group run returned zero-row completion",
-      "pending": "Await next lookup batch and monitor prior slash-session failures"
+      "task": "Recent run completed with zero rows; no active session now",
+      "pending": "Await next lookup batch and watch prior slash-session failures"
     },
     {
       "name": "n8n",
@@ -55,7 +55,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and deploy automation workflows",
-      "task": "No active session detected",
+      "task": "No running session detected in current snapshot",
       "pending": "Await next workflow deployment request"
     },
     {
@@ -64,7 +64,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise workflow and bot operations",
-      "task": "No active session detected",
+      "task": "No running session detected in current snapshot",
       "pending": "Await next Flowise build/support task"
     }
   ]
