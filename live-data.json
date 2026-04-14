@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T02:05:00Z",
+  "generatedAt": "2026-04-14T02:07:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -31,7 +31,7 @@
   "goalProgress": {
     "main": "Mission-control cron refresh is active",
     "contactenrichment": "Last run completed 99 rows; waiting for next batch",
-    "linkedin": "No active run; last notable state includes a failed slash session",
+    "linkedin": "No active run; prior slash session failed and needs stabilization",
     "n8n": "No active automation run in current runtime state",
     "flowise": "No active flow run in current runtime state"
   },
