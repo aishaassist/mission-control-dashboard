@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-14T00:23:00Z",
+  "generatedAt": "2026-04-14T00:25:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main agent stable while cron and channel sessions remain active",
-    "Restart specialist execution lanes for contactenrichment, linkedin, n8n, and flowise",
-    "Reduce failed session churn before the next task wave"
+    "Re-activate specialist lanes for contactenrichment, linkedin, n8n, and flowise when new work arrives",
+    "Reduce failed session churn, especially in linkedin/main slash sessions"
   ],
   "goalProgress": [
     {
@@ -28,8 +28,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control operations and response handling",
-      "task": "Cron live-data refresh running with active main sessions",
-      "pending": "Monitor model/session failures and keep channels stable"
+      "task": "Cron live-data refresh session is running",
+      "pending": "Maintain channel stability and watch for model/session failures"
     },
     {
       "name": "contactenrichment",
@@ -37,7 +37,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records from official sources",
-      "task": "Last completed run processed a 99-row Notion batch",
+      "task": "Last completed Notion run processed 99 rows",
       "pending": "Await next enrichment trigger"
     },
     {
