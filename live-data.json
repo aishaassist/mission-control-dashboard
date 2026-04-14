@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T03:21:00Z",
+  "generatedAt": "2026-04-14T03:23:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -9,13 +9,13 @@
   "priorities": [
     "Keep main operations stable and active",
     "Unblock Notion-connected contact enrichment runs",
-    "Queue next LinkedIn and automation tasks"
+    "Stabilize LinkedIn runtime and queue next specialist tasks"
   ],
   "goalProgress": {
     "summary": "Main is active, specialist agents are mostly on standby, and no subagent jobs are running.",
     "active": 1,
     "standby": 4,
-    "blocked": 0
+    "blocked": 1
   },
   "agents": [
     {
