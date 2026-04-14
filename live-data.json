@@ -1,88 +1,72 @@
 {
-  "generatedAt": "2026-04-14T02:55:00Z",
+  "generatedAt": "2026-04-14T02:57:00Z",
   "source": {
-    "sessions": "sessions_list(limit=50,messageLimit=1)",
-    "subagents": "subagents(action=list,recentMinutes=1440)",
-    "sessionCount": 12,
-    "subagentActive": 0
+    "sessionsList": {
+      "limit": 50,
+      "messageLimit": 1,
+      "count": 12
+    },
+    "subagents": {
+      "recentMinutes": 1440,
+      "active": 0,
+      "recent": 0
+    }
   },
   "priorities": [
-    "Keep main (Aisha) responsive for active cron and operator requests",
-    "Unblock contactenrichment Notion integration before next enrichment run",
-    "Keep linkedin, n8n, and flowise ready for task dispatch"
+    "Keep main (Aisha) responsive for orchestration and approvals.",
+    "Re-activate specialist agents only when concrete tasks are queued.",
+    "Stabilize idle specialist coverage for contact enrichment and automation."
   ],
-  "goalProgress": [
-    {
-      "agent": "main",
-      "goal": "Mission-control live refresh and orchestration",
-      "status": "in_progress",
-      "progress": "Running current cron refresh"
-    },
-    {
-      "agent": "contactenrichment",
-      "goal": "School contact enrichment in Notion",
-      "status": "pending",
-      "progress": "Awaiting Notion integration access; last completed run processed 99 rows"
-    },
-    {
-      "agent": "linkedin",
-      "goal": "LinkedIn lookup/update support",
-      "status": "standby",
-      "progress": "No active run; awaiting new lookup batch"
-    },
-    {
-      "agent": "n8n",
-      "goal": "Automation workflow execution",
-      "status": "standby",
-      "progress": "No active run; awaiting automation task"
-    },
-    {
-      "agent": "flowise",
-      "goal": "Flowise build/support",
-      "status": "standby",
-      "progress": "No active run; awaiting new build request"
-    }
-  ],
+  "goalProgress": {
+    "operations": "Main control plane active; specialist agents mostly on standby.",
+    "delivery": "No active subagent runs in the last 24h.",
+    "nextFocus": "Queue and dispatch concrete workloads to contactenrichment/linkedin/n8n/flowise."
+  },
   "agents": [
     {
       "name": "main",
-      "display": "Aisha",
+      "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "task": "Running mission-control-live-data-refresh cron",
-      "pending": "Continue orchestration and dashboard refresh"
+      "goal": "Orchestrate mission control and specialist delegation.",
+      "task": "Running cron refresh and maintaining oversight.",
+      "pending": "None immediate."
     },
     {
       "name": "contactenrichment",
-      "display": "Contact Enrichment",
-      "status": "Standby",
+      "label": "Contact Enrichment",
+      "status": "Idle/Standby",
       "health": "warn",
-      "task": "Notion school contact enrichment",
-      "pending": "Confirm Notion API key and integration share before next run"
+      "goal": "Fill missing school contact data with verifiable sources.",
+      "task": "Last run completed with not_found-heavy output.",
+      "pending": "Awaiting next dataset + confirmed Notion access."
     },
     {
       "name": "linkedin",
-      "display": "LinkedIn",
-      "status": "Standby",
+      "label": "LinkedIn",
+      "status": "Idle/Standby",
       "health": "warn",
-      "task": "LinkedIn lookup/update support",
-      "pending": "Awaiting new assignment"
+      "goal": "Run LinkedIn lookup and enrichment tasks.",
+      "task": "No current active run; last group task processed 0 rows.",
+      "pending": "Awaiting new lookup queue."
     },
     {
       "name": "n8n",
-      "display": "n8n",
-      "status": "Standby",
+      "label": "n8n",
+      "status": "Idle/Standby",
       "health": "warn",
-      "task": "Automation workflow execution",
-      "pending": "Awaiting deployment or execution task"
+      "goal": "Build/deploy workflow automations.",
+      "task": "No active session state detected.",
+      "pending": "Awaiting automation brief."
     },
     {
       "name": "flowise",
-      "display": "Flowise",
-      "status": "Standby",
+      "label": "Flowise",
+      "status": "Idle/Standby",
       "health": "warn",
-      "task": "Flowise build/support",
-      "pending": "Awaiting new build request"
+      "goal": "Support Flowise build and integration tasks.",
+      "task": "No active session state detected.",
+      "pending": "Awaiting build request."
     }
   ]
 }
