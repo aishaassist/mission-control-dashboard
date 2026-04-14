@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-04-14T00:19:00Z",
+  "generatedAt": "2026-04-14T00:21:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main agent stable while cron and channel sessions stay active",
+    "Keep main agent stable while cron and channel sessions remain active",
     "Re-activate specialist queues for contactenrichment, linkedin, n8n, and flowise",
     "Address recurring model/session failures before next operator wave"
   ],
@@ -18,7 +18,7 @@
     {
       "goal": "Specialist agent utilization",
       "status": "needs_attention",
-      "note": "Main is active; specialist agents are idle or recently failed"
+      "note": "Main is active; specialist agents are idle/standby"
     }
   ],
   "agents": [
@@ -37,8 +37,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records from official sources",
-      "task": "Last completed run reported 99 rows processed",
-      "pending": "Await next Notion batch trigger"
+      "task": "Last completed run processed a 99-row Notion batch",
+      "pending": "Await next enrichment trigger"
     },
     {
       "name": "linkedin",
@@ -46,7 +46,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Execute LinkedIn lookup and profile enrichment",
-      "task": "No running session; recent sessions include failure and zero-row completion",
+      "task": "No running session; recent history includes failed and zero-row runs",
       "pending": "Stabilize run path, then queue next lookup batch"
     },
     {
