@@ -1,80 +1,76 @@
 {
-  "generatedAt": "2026-04-14T02:09:00Z",
+  "generatedAt": "2026-04-14T02:11:00Z",
   "source": {
-    "sessions": "sessions_list(limit=50,messageLimit=1)",
-    "subagents": "subagents(action=list,recentMinutes=1440)",
-    "sessionCount": 12,
-    "activeSubagents": 0
+    "sessionsList": {
+      "limit": 50,
+      "messageLimit": 1,
+      "count": 12
+    },
+    "subagents": {
+      "recentMinutes": 1440,
+      "active": 0,
+      "recent": 0
+    }
   },
   "priorities": [
-    {
-      "agent": "main",
-      "priority": "Keep mission-control refresh and orchestration healthy"
-    },
-    {
-      "agent": "contactenrichment",
-      "priority": "Queue the next verified contact enrichment batch"
-    },
-    {
-      "agent": "linkedin",
-      "priority": "Prepare next LinkedIn lookup batch and stabilize runtime"
-    },
-    {
-      "agent": "n8n",
-      "priority": "Stand by for automation build and deployment requests"
-    },
-    {
-      "agent": "flowise",
-      "priority": "Stand by for flow build or debug requests"
-    }
+    "Keep main agent stable for live mission-control cron refreshes",
+    "Unblock contactenrichment Notion access before next enrichment run",
+    "Queue next actionable workload for linkedin, n8n, and flowise agents"
   ],
   "goalProgress": {
-    "main": "Mission-control cron refresh is active",
-    "contactenrichment": "Last run completed 99 rows; waiting for next batch",
-    "linkedin": "No active run; prior slash session failed and needs stabilization",
-    "n8n": "No active automation run in current runtime state",
-    "flowise": "No active flow run in current runtime state"
+    "overall": "Monitoring",
+    "summary": "Main is active; specialist agents are mostly on standby with no active subagent workload.",
+    "pending": [
+      "Verify contactenrichment integration/token readiness",
+      "Assign next LinkedIn execution batch",
+      "Define next n8n automation and flowise build tasks"
+    ]
   },
   "agents": [
     {
-      "name": "main",
+      "id": "main",
+      "name": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Operate mission control and orchestrate agent work",
-      "task": "Refresh live dashboard data from runtime state",
-      "pending": "Commit and push if JSON changed"
+      "goal": "Coordinate mission control and primary assistant operations",
+      "task": "Running cron refresh and active chat session",
+      "pending": "Continue live dashboard updates and route specialist work"
     },
     {
-      "name": "contactenrichment",
+      "id": "contactenrichment",
+      "name": "Contact Enrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contact records from official sources",
-      "task": "No running session right now",
-      "pending": "Await next Notion/contact enrichment batch"
+      "goal": "Enrich missing school Email/Phone fields from official sources",
+      "task": "Last run completed with no field updates",
+      "pending": "Needs Notion integration access confirmation for next write cycle"
     },
     {
-      "name": "linkedin",
+      "id": "linkedin",
+      "name": "LinkedIn",
       "status": "Idle/Standby",
       "health": "bad",
-      "goal": "Run LinkedIn profile lookup batches",
-      "task": "No running session right now",
-      "pending": "Await next input list and clear prior failed slash-state issues"
+      "goal": "Handle LinkedIn lookup/update workflows",
+      "task": "Recent run returned zero processed rows; historical failed slash session present",
+      "pending": "Await next concrete lookup batch and session stabilization"
     },
     {
+      "id": "n8n",
       "name": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Build and deploy n8n automations",
-      "task": "No running session right now",
-      "pending": "Await automation brief"
+      "goal": "Build and deploy automation workflows",
+      "task": "No active runtime; last session shows announce-skip heartbeat",
+      "pending": "Queue next automation implementation request"
     },
     {
-      "name": "flowise",
+      "id": "flowise",
+      "name": "Flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Build and maintain Flowise pipelines",
-      "task": "No running session right now",
-      "pending": "Await flow build/debug request"
+      "goal": "Support Flowise build/help requests",
+      "task": "No active runtime; last prompt asked for new build needs",
+      "pending": "Await next Flowise build assignment"
     }
   ]
 }
