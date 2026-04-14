@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T03:43:00Z",
+  "generatedAt": "2026-04-14T03:45:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,15 +14,15 @@
   },
   "priorities": [
     "Keep main agent stable and responsive",
-    "Re-activate specialist agents only on demand",
-    "Investigate failed specialist sessions before next dispatch"
+    "Reactivate specialist agents only when tasks arrive",
+    "Review linkedin failed runs before next dispatch"
   ],
   "goalProgress": {
-    "main": "Operational with active cron runtime",
-    "contactenrichment": "Last enrichment batch completed; awaiting next queue",
-    "linkedin": "Standby with prior failed slash session to review",
-    "n8n": "Standby with no active automation run",
-    "flowise": "Standby waiting for new flow requests"
+    "main": "Active cron orchestration running",
+    "contactenrichment": "Last contact enrichment batch completed",
+    "linkedin": "Standby; failed slash session needs review",
+    "n8n": "Standby; no active automation run",
+    "flowise": "Standby awaiting new flow requests"
   },
   "agents": [
     {
@@ -30,16 +30,16 @@
       "label": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission control and user-facing orchestration",
+      "goal": "Coordinate mission control and user orchestration",
       "task": "Cron refresh session running",
-      "pending": "Review prior model compatibility failures"
+      "pending": "Check older model compatibility errors"
     },
     {
       "name": "contactenrichment",
       "label": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Fill missing school contact fields from official sources",
+      "goal": "Fill missing school contacts from official sources",
       "task": "Recent enrichment batch completed",
       "pending": "Await next Notion-backed queue"
     },
@@ -50,7 +50,7 @@
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment on demand",
       "task": "No running session",
-      "pending": "Investigate failed slash session before next dispatch"
+      "pending": "Investigate failed slash session before next run"
     },
     {
       "name": "n8n",
