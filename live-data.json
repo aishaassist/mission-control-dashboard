@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T02:03:00Z",
+  "generatedAt": "2026-04-14T02:05:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -13,27 +13,27 @@
     },
     {
       "agent": "contactenrichment",
-      "priority": "Queue next verified contact enrichment batch"
+      "priority": "Queue the next verified contact enrichment batch"
     },
     {
       "agent": "linkedin",
-      "priority": "Prepare next LinkedIn lookup batch and monitor runtime stability"
+      "priority": "Prepare next LinkedIn lookup batch and stabilize runtime"
     },
     {
       "agent": "n8n",
-      "priority": "Stand by for automation deployment requests"
+      "priority": "Stand by for automation build and deployment requests"
     },
     {
       "agent": "flowise",
-      "priority": "Stand by for flow build or debugging requests"
+      "priority": "Stand by for flow build or debug requests"
     }
   ],
   "goalProgress": {
-    "main": "Mission-control cron refresh is running now",
-    "contactenrichment": "Last completed batch processed 99 rows; awaiting next batch",
-    "linkedin": "No active run; last completed batch reported 0 rows processed",
+    "main": "Mission-control cron refresh is active",
+    "contactenrichment": "Last run completed 99 rows; waiting for next batch",
+    "linkedin": "No active run; last notable state includes a failed slash session",
     "n8n": "No active automation run in current runtime state",
-    "flowise": "No active flow build/debug run in current runtime state"
+    "flowise": "No active flow run in current runtime state"
   },
   "agents": [
     {
@@ -42,7 +42,7 @@
       "health": "ok",
       "goal": "Operate mission control and orchestrate agent work",
       "task": "Refresh live dashboard data from runtime state",
-      "pending": "Commit and push if the JSON changed"
+      "pending": "Commit and push if JSON changed"
     },
     {
       "name": "contactenrichment",
@@ -55,10 +55,10 @@
     {
       "name": "linkedin",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Run LinkedIn profile lookup batches",
       "task": "No running session right now",
-      "pending": "Await next input list; keep an eye on older failed slash session"
+      "pending": "Await next input list and clear prior failed slash-state issues"
     },
     {
       "name": "n8n",
