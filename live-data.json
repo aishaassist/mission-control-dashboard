@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-14T01:01:00Z",
+  "generatedAt": "2026-04-14T01:05:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main (Aisha) stable while cron refresh is active",
-    "Hold specialist agents in standby until new work is assigned",
-    "Investigate repeated failed runs on non-running channels"
+    "Keep specialist agents in standby until new work is assigned",
+    "Investigate repeated failed sessions on linkedin/main channels"
   ],
   "goalProgress": [
     {
@@ -29,7 +29,7 @@
       "health": "ok",
       "goal": "Coordinate mission control and operator-facing responses",
       "task": "Cron refresh session is currently running",
-      "pending": "Complete refresh cycle and keep runtime stable"
+      "pending": "Complete refresh cycle and maintain runtime stability"
     },
     {
       "name": "contactenrichment",
@@ -46,7 +46,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "No active run; latest snapshot includes a failed session",
+      "task": "No active run; recent history includes a failed session",
       "pending": "Await next lookup request and review failure pattern"
     },
     {
