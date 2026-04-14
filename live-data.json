@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T02:29:00Z",
+  "generatedAt": "2026-04-14T02:31:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -34,13 +34,13 @@
       "agent": "n8n",
       "goal": "Automation workflow execution",
       "status": "standby",
-      "progress": "No active session in current window"
+      "progress": "No active run; awaiting automation task"
     },
     {
       "agent": "flowise",
       "goal": "Flowise build/support",
       "status": "standby",
-      "progress": "Idle, waiting for new build request"
+      "progress": "No active run; awaiting new build request"
     }
   ],
   "agents": [
@@ -58,7 +58,7 @@
       "status": "Standby",
       "health": "warn",
       "task": "Notion school contact enrichment",
-      "pending": "Restore/confirm Notion integration access for next run"
+      "pending": "Restore or confirm Notion integration access for next run"
     },
     {
       "name": "linkedin",
@@ -74,7 +74,7 @@
       "status": "Standby",
       "health": "warn",
       "task": "Automation workflow execution",
-      "pending": "Awaiting deployment/execution task"
+      "pending": "Awaiting deployment or execution task"
     },
     {
       "name": "flowise",
