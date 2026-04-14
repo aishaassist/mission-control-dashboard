@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-04-14T00:45:00Z",
+  "generatedAt": "2026-04-14T00:47:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main (Aisha) stable while cron refresh is running",
-    "Re-engage specialist agents on fresh triggers only",
-    "Mitigate recurring failed slash-session reliability on linkedin"
+    "Keep main (Aisha) stable during active cron operations",
+    "Re-trigger specialist lanes only on fresh requests",
+    "Address linkedin slash-session failure pattern before next batch"
   ],
   "goalProgress": [
     {
       "goal": "Mission control runtime visibility",
       "status": "on_track",
-      "note": "Live dashboard snapshot refreshed from current OpenClaw runtime state"
+      "note": "Snapshot refreshed from current OpenClaw runtime state"
     },
     {
       "goal": "Specialist agent utilization",
       "status": "needs_attention",
-      "note": "Specialist lanes are standby with no active subagents"
+      "note": "No active specialist runs and no active subagents in last 24h"
     }
   ],
   "agents": [
@@ -27,17 +27,17 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate mission control operations and response handling",
-      "task": "Cron refresh session is running; main lane also shows running",
-      "pending": "Maintain refresh cadence and channel/model stability"
+      "goal": "Coordinate mission control and operator-facing responses",
+      "task": "Cron refresh session is running",
+      "pending": "Sustain dashboard refresh cadence and runtime stability"
     },
     {
       "name": "contactenrichment",
       "displayName": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contacts from official sources",
-      "task": "Last completed run reported FINAL rows_processed=99",
+      "goal": "Enrich school contact records from official sources",
+      "task": "Last known run completed with rows_processed=99",
       "pending": "Await next Notion enrichment trigger"
     },
     {
@@ -46,8 +46,8 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "No active run; recent history includes a failed slash-session",
-      "pending": "Await next lookup batch and fix slash-session reliability"
+      "task": "No active run; recent session history includes failed slash-session",
+      "pending": "Await next lookup request and remediate failure reliability"
     },
     {
       "name": "n8n",
@@ -55,8 +55,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Build and deploy automation workflows",
-      "task": "No running session detected in current snapshot",
-      "pending": "Await next automation deployment request"
+      "task": "No running session in current snapshot",
+      "pending": "Await next automation deployment task"
     },
     {
       "name": "flowise",
@@ -64,8 +64,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise workflow and bot operations",
-      "task": "No running session detected in current snapshot",
-      "pending": "Await next Flowise build/support task"
+      "task": "No running session in current snapshot",
+      "pending": "Await next Flowise support/build request"
     }
   ]
 }
