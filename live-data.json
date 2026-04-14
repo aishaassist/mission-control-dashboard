@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-14T00:37:00Z",
+  "generatedAt": "2026-04-14T00:39:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main agent stable while cron and chat sessions are active",
-    "Re-activate specialist lanes only when new triggers arrive",
-    "Track and reduce failed slash-session incidents"
+    "Keep main (Aisha) stable while cron refresh is running",
+    "Re-engage specialist agents on new triggers only",
+    "Address lingering failed slash-session reliability, especially on linkedin"
   ],
   "goalProgress": [
     {
@@ -18,7 +18,7 @@
     {
       "goal": "Specialist agent utilization",
       "status": "needs_attention",
-      "note": "Main is active; contactenrichment, linkedin, n8n, and flowise are idle"
+      "note": "Only main is active; specialist lanes are standby"
     }
   ],
   "agents": [
@@ -28,26 +28,26 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control operations and response handling",
-      "task": "Cron refresh session is running; another main lane also shows running",
-      "pending": "Maintain refresh cadence and channel reliability"
+      "task": "Cron refresh session is running; main WhatsApp lane also shows running",
+      "pending": "Maintain refresh cadence and channel stability"
     },
     {
       "name": "contactenrichment",
       "displayName": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contact records from official sources",
-      "task": "Last completion reported 99 rows processed",
+      "goal": "Enrich school contacts from official sources",
+      "task": "Last run completed with FINAL rows_processed=99",
       "pending": "Await next Notion enrichment trigger"
     },
     {
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Idle/Standby",
-      "health": "warn",
+      "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "Recent run completed with zero rows; no running session now",
-      "pending": "Await next lookup batch and monitor prior failed slash sessions"
+      "task": "No running session; recent history includes failed slash-session",
+      "pending": "Await next lookup batch and stabilize slash-session reliability"
     },
     {
       "name": "n8n",
@@ -56,7 +56,7 @@
       "health": "warn",
       "goal": "Build and deploy automation workflows",
       "task": "No running session detected in current snapshot",
-      "pending": "Await next workflow deployment request"
+      "pending": "Await next automation deployment request"
     },
     {
       "name": "flowise",
