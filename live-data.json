@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-04-14T01:29:00Z",
+  "generatedAt": "2026-04-14T01:31:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
-    "Keep main (Aisha) stable while cron refresh is running",
-    "Re-engage specialist agents when new tasks arrive",
-    "Watch linkedin errors and recover on next assignment"
+    "Keep main (Aisha) stable while cron refresh runs",
+    "Re-activate specialist agents only on incoming work",
+    "Monitor linkedin reliability after prior failed runs"
   ],
   "goalProgress": [
     {
       "goal": "Mission control runtime visibility",
       "status": "on_track",
-      "note": "Dashboard refreshed from current OpenClaw sessions and subagent state"
+      "note": "Live dashboard refreshed from current OpenClaw session state"
     },
     {
       "goal": "Specialist agent utilization",
       "status": "needs_attention",
-      "note": "No specialist agents are currently running"
+      "note": "No specialist agent is currently running"
     }
   ],
   "agents": [
@@ -27,9 +27,9 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate operations and keep mission control current",
-      "task": "Cron live-data refresh is running",
-      "pending": "Complete refresh cycle and maintain orchestration"
+      "goal": "Coordinate ops and keep mission control current",
+      "task": "Cron live-data refresh session is running",
+      "pending": "Finish refresh cycle and keep orchestration stable"
     },
     {
       "name": "contactenrichment",
@@ -37,8 +37,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact data from verified sources",
-      "task": "Last run finished with enrichment summary",
-      "pending": "Await next Notion/contact enrichment batch"
+      "task": "Last run completed with final enrichment summary",
+      "pending": "Await next Notion enrichment batch"
     },
     {
       "name": "linkedin",
@@ -46,16 +46,16 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn discovery and profile mapping",
-      "task": "Latest visible slash session failed",
-      "pending": "Retry on next lookup request"
+      "task": "No active run; failed session present in recent history",
+      "pending": "Retry on next lookup request and confirm stability"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Build and deploy workflow automations",
-      "task": "No currently running session",
+      "goal": "Build and deploy automation workflows",
+      "task": "No active session",
       "pending": "Await next automation assignment"
     },
     {
@@ -64,7 +64,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Support Flowise pipeline operations",
-      "task": "No currently running session",
+      "task": "No active session",
       "pending": "Await next Flowise task"
     }
   ]
