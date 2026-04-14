@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T03:17:00Z",
+  "generatedAt": "2026-04-14T03:19:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -12,7 +12,7 @@
     "Queue next LinkedIn and automation tasks"
   ],
   "goalProgress": {
-    "summary": "Main is active, specialist agents are mostly standby, and no subagent jobs are running.",
+    "summary": "Main is active, specialist agents are on standby, and no subagent jobs are running.",
     "active": 1,
     "standby": 4,
     "blocked": 0
@@ -33,7 +33,7 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Fill missing school Email and Phone from official sources",
-      "task": "Last enrichment run completed and reported final counts",
+      "task": "Last enrichment run completed with final counters",
       "pending": "Await next Notion-connected batch"
     },
     {
@@ -42,8 +42,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup and profile enrichment workflows",
-      "task": "No active run; last group response reported zero processed rows",
-      "pending": "Await next lead queue and validate slash route stability"
+      "task": "No active run; latest job completed with zero rows processed",
+      "pending": "Await next lead queue"
     },
     {
       "name": "n8n",
