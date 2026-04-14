@@ -1,71 +1,80 @@
 {
-  "generatedAt": "2026-04-14T01:33:00Z",
+  "generatedAt": "2026-04-14T01:35:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
-    "subagents": "subagents(action=list,recentMinutes=1440)"
+    "subagents": "subagents(action=list,recentMinutes=1440)",
+    "sessionCount": 12,
+    "activeSubagents": 0
   },
   "priorities": [
-    "Keep main (Aisha) stable while cron refresh runs",
-    "Re-activate specialist agents only on incoming work",
-    "Monitor linkedin reliability after prior failed runs"
-  ],
-  "goalProgress": [
     {
-      "goal": "Mission control runtime visibility",
-      "status": "on_track",
-      "note": "Live dashboard refreshed from current OpenClaw session state"
+      "agent": "main",
+      "priority": "Keep mission-control cron refreshes and orchestration healthy"
     },
     {
-      "goal": "Specialist agent utilization",
-      "status": "needs_attention",
-      "note": "No specialist agent is currently running"
+      "agent": "contactenrichment",
+      "priority": "Prepare next verified contact enrichment batch"
+    },
+    {
+      "agent": "linkedin",
+      "priority": "Stand by for next LinkedIn lookup run"
+    },
+    {
+      "agent": "n8n",
+      "priority": "Stand by for automation deployment requests"
+    },
+    {
+      "agent": "flowise",
+      "priority": "Stand by for flow build or debugging requests"
     }
   ],
+  "goalProgress": {
+    "main": "Live dashboard refresh running",
+    "contactenrichment": "Last run processed 99 rows; no new updates pending",
+    "linkedin": "Last run completed with 0 rows processed",
+    "n8n": "No active workflow task in current window",
+    "flowise": "No active flow task in current window"
+  },
   "agents": [
     {
       "name": "main",
-      "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Coordinate ops and keep mission control current",
-      "task": "Cron live-data refresh session is running",
-      "pending": "Finish refresh cycle and keep orchestration stable"
+      "goal": "Operate mission control and agent orchestration",
+      "task": "Refresh live-data.json from runtime state",
+      "pending": "Complete git sync if dashboard file changed"
     },
     {
       "name": "contactenrichment",
-      "displayName": "contactenrichment",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Enrich school contact data from verified sources",
-      "task": "Last run completed with final enrichment summary",
-      "pending": "Await next Notion enrichment batch"
+      "goal": "Enrich school contact records from official sources",
+      "task": "Last task completed (99 rows checked)",
+      "pending": "Await next Notion/contact enrichment batch"
     },
     {
       "name": "linkedin",
-      "displayName": "linkedin",
       "status": "Idle/Standby",
-      "health": "bad",
-      "goal": "Run LinkedIn discovery and profile mapping",
-      "task": "No active run; failed session present in recent history",
-      "pending": "Retry on next lookup request and confirm stability"
+      "health": "warn",
+      "goal": "Run LinkedIn profile lookup batches",
+      "task": "No active run",
+      "pending": "Await next lookup input list"
     },
     {
       "name": "n8n",
-      "displayName": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Build and deploy automation workflows",
-      "task": "No active session",
-      "pending": "Await next automation assignment"
+      "goal": "Build and deploy n8n automations",
+      "task": "No active run",
+      "pending": "Await automation brief"
     },
     {
       "name": "flowise",
-      "displayName": "flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Support Flowise pipeline operations",
-      "task": "No active session",
-      "pending": "Await next Flowise task"
+      "goal": "Build and maintain Flowise pipelines",
+      "task": "No active run",
+      "pending": "Await flow build/debug request"
     }
   ]
 }
