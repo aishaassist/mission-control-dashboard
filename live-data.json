@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T02:15:00Z",
+  "generatedAt": "2026-04-14T02:17:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -14,15 +14,15 @@
   },
   "priorities": [
     "Keep main orchestration stable during active cron execution",
-    "Resume contact enrichment only after Notion access and scope confirmation",
-    "Queue next LinkedIn and automation workloads for explicit trigger"
+    "Unblock contact enrichment only after Notion access is confirmed",
+    "Hold LinkedIn, n8n, and Flowise in ready standby for next triggers"
   ],
   "goalProgress": {
-    "overall": "Monitoring and standby across specialist agents",
+    "overall": "Main is active; specialist agents are currently in standby",
     "highlights": [
-      "Main (Aisha) is actively running mission-control refresh",
-      "Contact enrichment last completed with 99 rows processed",
-      "LinkedIn/n8n/Flowise are idle awaiting new tasks"
+      "Aisha is running mission-control-live-data-refresh",
+      "Contact enrichment last completed a 99-row pass",
+      "LinkedIn, n8n, and Flowise show no running sessions"
     ]
   },
   "agents": [
@@ -31,26 +31,26 @@
       "display": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Mission control orchestration and live data refresh",
-      "task": "Executing cron: mission-control-live-data-refresh",
-      "pending": "None, complete current refresh cycle"
+      "goal": "Mission-control orchestration",
+      "task": "Running cron live data refresh",
+      "pending": "Finish this refresh cycle"
     },
     {
       "name": "contactenrichment",
       "display": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school contact fields from official sources",
+      "goal": "Fill missing school email/phone from official sources",
       "task": "Last run completed with FINAL summary",
-      "pending": "Await next Notion-backed batch / access validation"
+      "pending": "Await Notion access confirmation and next batch"
     },
     {
       "name": "linkedin",
       "display": "LinkedIn",
       "status": "Standby",
       "health": "warn",
-      "goal": "LinkedIn lookup and enrichment support",
-      "task": "No active run; most recent group session completed",
+      "goal": "LinkedIn lookup support",
+      "task": "No active run",
       "pending": "Await new lookup instructions"
     },
     {
@@ -59,16 +59,16 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Automation workflow execution/deployment",
-      "task": "No active session",
-      "pending": "Await automation build/deploy requests"
+      "task": "No active run",
+      "pending": "Await automation requests"
     },
     {
       "name": "flowise",
       "display": "Flowise",
       "status": "Standby",
       "health": "warn",
-      "goal": "Flowise assistant/build support",
-      "task": "No active session",
+      "goal": "Flowise build support",
+      "task": "No active run",
       "pending": "Await new flow build tasks"
     }
   ]
