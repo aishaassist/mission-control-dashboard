@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T02:27:00Z",
+  "generatedAt": "2026-04-14T02:29:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -9,7 +9,7 @@
   "priorities": [
     "Keep main (Aisha) responsive for active cron and operator requests",
     "Unblock contactenrichment Notion integration before next enrichment run",
-    "Keep linkedin and n8n in standby for task dispatch"
+    "Keep linkedin, n8n, and flowise ready for task dispatch"
   ],
   "goalProgress": [
     {
@@ -22,13 +22,13 @@
       "agent": "contactenrichment",
       "goal": "School contact enrichment in Notion",
       "status": "pending",
-      "progress": "Awaiting valid Notion API key/integration share; last run processed 99 rows"
+      "progress": "Awaiting valid Notion API key/integration share; last completed run processed 99 rows"
     },
     {
       "agent": "linkedin",
       "goal": "LinkedIn lookup/update support",
       "status": "standby",
-      "progress": "No active run; last group interaction completed with no rows processed"
+      "progress": "No active run; awaiting new lookup batch"
     },
     {
       "agent": "n8n",
