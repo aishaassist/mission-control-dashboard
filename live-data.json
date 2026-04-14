@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T01:05:00Z",
+  "generatedAt": "2026-04-14T01:07:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -46,7 +46,7 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "No active run; recent history includes a failed session",
+      "task": "No active run; recent history includes failed session(s)",
       "pending": "Await next lookup request and review failure pattern"
     },
     {
