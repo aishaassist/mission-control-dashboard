@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T03:41:00Z",
+  "generatedAt": "2026-04-14T03:43:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -19,8 +19,8 @@
   ],
   "goalProgress": {
     "main": "Operational with active cron runtime",
-    "contactenrichment": "Last enrichment run completed and awaiting next queue",
-    "linkedin": "Idle with one failed slash session requiring follow-up",
+    "contactenrichment": "Last enrichment batch completed; awaiting next queue",
+    "linkedin": "Standby with prior failed slash session to review",
     "n8n": "Standby with no active automation run",
     "flowise": "Standby waiting for new flow requests"
   },
@@ -31,8 +31,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control and user-facing orchestration",
-      "task": "Cron refresh session currently running",
-      "pending": "Review older failed slash sessions for model compatibility"
+      "task": "Cron refresh session running",
+      "pending": "Review prior model compatibility failures"
     },
     {
       "name": "contactenrichment",
@@ -40,8 +40,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Recent batch completed with final metrics returned",
-      "pending": "Await next Notion-backed enrichment queue"
+      "task": "Recent enrichment batch completed",
+      "pending": "Await next Notion-backed queue"
     },
     {
       "name": "linkedin",
@@ -49,8 +49,8 @@
       "status": "Idle/Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment on demand",
-      "task": "No running session; latest group task ended",
-      "pending": "Investigate failed slash session before next run"
+      "task": "No running session",
+      "pending": "Investigate failed slash session before next dispatch"
     },
     {
       "name": "n8n",
