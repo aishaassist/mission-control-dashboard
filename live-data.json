@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T03:01:00Z",
+  "generatedAt": "2026-04-14T03:03:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -12,7 +12,7 @@
     "Queue next LinkedIn and automation tasks"
   ],
   "goalProgress": {
-    "summary": "Main is active, specialist agents are mostly on standby, no active subagent jobs.",
+    "summary": "Main is active, specialist agents are on standby, and there are no active subagent jobs.",
     "active": 1,
     "standby": 4,
     "blocked": 0
@@ -23,18 +23,18 @@
       "displayName": "Aisha",
       "status": "Active",
       "health": "ok",
-      "goal": "Run mission-control refresh and coordinate operations",
-      "task": "cron: mission-control-live-data-refresh",
-      "pending": "Monitor specialist queues and dispatch next tasks"
+      "goal": "Coordinate mission control and keep runtime operations stable",
+      "task": "Running cron mission-control-live-data-refresh",
+      "pending": "Continue monitoring queues and dispatch specialist work"
     },
     {
       "name": "contactenrichment",
       "displayName": "Contact Enrichment",
       "status": "Standby",
       "health": "warn",
-      "goal": "Fill missing school contact fields from official sources",
-      "task": "Last run completed with final contact-enrichment report",
-      "pending": "Await next Notion-backed enrichment batch"
+      "goal": "Fill missing school Email and Phone from official sources",
+      "task": "Last run completed with final enrichment report",
+      "pending": "Await next Notion-connected batch"
     },
     {
       "name": "linkedin",
@@ -42,17 +42,17 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment workflows",
-      "task": "No active run; recent slash session ended failed",
-      "pending": "Stabilize next run and await new lead/research queue"
+      "task": "No active run; latest slash session shows failed status",
+      "pending": "Stabilize next execution and wait for new lead queue"
     },
     {
       "name": "n8n",
       "displayName": "n8n",
       "status": "Standby",
       "health": "warn",
-      "goal": "Build and operate automation workflows",
-      "task": "No active session execution",
-      "pending": "Await automation deployment request"
+      "goal": "Build and operate automations for ops workflows",
+      "task": "No current running session",
+      "pending": "Await next automation deployment request"
     },
     {
       "name": "flowise",
@@ -60,8 +60,8 @@
       "status": "Standby",
       "health": "warn",
       "goal": "Support Flowise build and integration tasks",
-      "task": "No active session execution",
-      "pending": "Await next Flowise build task"
+      "task": "No current running session",
+      "pending": "Await next Flowise implementation task"
     }
   ]
 }
