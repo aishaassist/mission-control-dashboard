@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T00:47:00Z",
+  "generatedAt": "2026-04-14T00:49:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
@@ -7,7 +7,7 @@
   "priorities": [
     "Keep main (Aisha) stable during active cron operations",
     "Re-trigger specialist lanes only on fresh requests",
-    "Address linkedin slash-session failure pattern before next batch"
+    "Track linkedin reliability despite no active run"
   ],
   "goalProgress": [
     {
@@ -44,10 +44,10 @@
       "name": "linkedin",
       "displayName": "linkedin",
       "status": "Idle/Standby",
-      "health": "bad",
+      "health": "warn",
       "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "No active run; recent session history includes failed slash-session",
-      "pending": "Await next lookup request and remediate failure reliability"
+      "task": "No active run; last completed run processed 0 rows",
+      "pending": "Await next lookup request and monitor prior slash-session failures"
     },
     {
       "name": "n8n",
