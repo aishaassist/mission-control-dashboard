@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T03:13:00Z",
+  "generatedAt": "2026-04-14T03:15:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -42,7 +42,7 @@
       "status": "Standby",
       "health": "bad",
       "goal": "Run LinkedIn lookup and profile enrichment workflows",
-      "task": "No active run; latest status includes prior failed slash session",
+      "task": "No active run; recent slash session failed",
       "pending": "Check slash-session failure cause, then await next lead queue"
     },
     {
