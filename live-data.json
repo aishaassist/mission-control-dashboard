@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T03:39:00Z",
+  "generatedAt": "2026-04-14T03:41:00Z",
   "source": {
     "sessionsList": {
       "limit": 50,
@@ -15,14 +15,14 @@
   "priorities": [
     "Keep main agent stable and responsive",
     "Re-activate specialist agents only on demand",
-    "Monitor failed/errored sessions that may need intervention"
+    "Investigate failed specialist sessions before next dispatch"
   ],
   "goalProgress": {
-    "main": "Operational with active cron and main runtime sessions",
-    "contactenrichment": "Last enrichment batch completed with verified/not_found handling",
-    "linkedin": "Idle after recent zero-row run; older failed slash session still noted",
-    "n8n": "Standby, no active automation execution",
-    "flowise": "Standby, waiting for new build requests"
+    "main": "Operational with active cron runtime",
+    "contactenrichment": "Last enrichment run completed and awaiting next queue",
+    "linkedin": "Idle with one failed slash session requiring follow-up",
+    "n8n": "Standby with no active automation run",
+    "flowise": "Standby waiting for new flow requests"
   },
   "agents": [
     {
@@ -31,8 +31,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control and user-facing orchestration",
-      "task": "Cron refresh running; main session also running",
-      "pending": "Review older failed slash sessions for model/config drift"
+      "task": "Cron refresh session currently running",
+      "pending": "Review older failed slash sessions for model compatibility"
     },
     {
       "name": "contactenrichment",
@@ -40,24 +40,24 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Fill missing school contact fields from official sources",
-      "task": "Most recent batch finished and returned summary metrics",
+      "task": "Recent batch completed with final metrics returned",
       "pending": "Await next Notion-backed enrichment queue"
     },
     {
       "name": "linkedin",
       "label": "linkedin",
       "status": "Idle/Standby",
-      "health": "warn",
-      "goal": "LinkedIn lookup and profile enrichment on request",
-      "task": "Most recent group run completed with zero-row pass",
-      "pending": "No active queue; monitor one older failed slash session"
+      "health": "bad",
+      "goal": "Run LinkedIn lookup and profile enrichment on demand",
+      "task": "No running session; latest group task ended",
+      "pending": "Investigate failed slash session before next run"
     },
     {
       "name": "n8n",
       "label": "n8n",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Automation workflow execution and deployment",
+      "goal": "Execute and deploy automation workflows",
       "task": "No running session detected",
       "pending": "Waiting for new automation tasks"
     },
@@ -66,7 +66,7 @@
       "label": "flowise",
       "status": "Idle/Standby",
       "health": "warn",
-      "goal": "Flowise build and support tasks",
+      "goal": "Handle Flowise build and support requests",
       "task": "No running session detected",
       "pending": "Waiting for new flow requests"
     }
