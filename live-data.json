@@ -1,18 +1,18 @@
 {
-  "generatedAt": "2026-04-14T03:27:00Z",
+  "generatedAt": "2026-04-14T03:29:00Z",
   "source": {
     "sessionsList": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main agent stable during mission-control refresh cycles",
-    "Re-engage idle specialist agents only when routed tasks arrive",
-    "Monitor contact ops outcomes and failed session signals"
+    "Route new work to specialist agents only on demand",
+    "Watch for failed session signals across specialist agents"
   ],
   "goalProgress": {
-    "operations": "Mission-control snapshot refreshed from runtime state",
+    "operations": "Mission-control snapshot refreshed from live runtime state",
     "coordination": "No active subagents in last 24h",
-    "focus": "Standby posture for specialist agents"
+    "focus": "Specialist agents remain on standby until assigned"
   },
   "agents": [
     {
@@ -21,8 +21,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Run mission-control operations and coordination",
-      "task": "Cron refresh in progress",
-      "pending": "Continue scheduled dashboard updates"
+      "task": "Cron refresh currently running",
+      "pending": "Continue scheduled dashboard refresh runs"
     },
     {
       "name": "contactenrichment",
@@ -30,7 +30,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Enrich school contact records",
-      "task": "Last run completed row processing workflow",
+      "task": "Last run processed rows and completed",
       "pending": "Await next Notion-backed enrichment batch"
     },
     {
@@ -39,7 +39,7 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "LinkedIn lookup and profile enrichment",
-      "task": "No active processing session",
+      "task": "No active session; last known run completed with zero-row pass",
       "pending": "Await next lookup list from ops"
     },
     {
