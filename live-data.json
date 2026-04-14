@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-14T02:49:00Z",
+  "generatedAt": "2026-04-14T02:51:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)",
@@ -22,7 +22,7 @@
       "agent": "contactenrichment",
       "goal": "School contact enrichment in Notion",
       "status": "pending",
-      "progress": "Awaiting valid Notion API key/integration share; last completed run processed 99 rows"
+      "progress": "Awaiting Notion integration access; last completed run processed 99 rows"
     },
     {
       "agent": "linkedin",
@@ -58,7 +58,7 @@
       "status": "Standby",
       "health": "warn",
       "task": "Notion school contact enrichment",
-      "pending": "Restore or confirm Notion integration access for next run"
+      "pending": "Confirm Notion API key and integration share before next run"
     },
     {
       "name": "linkedin",
