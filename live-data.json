@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-04-14T00:35:00Z",
+  "generatedAt": "2026-04-14T00:37:00Z",
   "source": {
     "sessions": "sessions_list(limit=50,messageLimit=1)",
     "subagents": "subagents(action=list,recentMinutes=1440)"
   },
   "priorities": [
     "Keep main agent stable while cron and chat sessions are active",
-    "Keep specialist lanes warm for contactenrichment, linkedin, n8n, and flowise",
-    "Track failed slash-session incidents and recover quickly on next triggers"
+    "Re-activate specialist lanes only when new triggers arrive",
+    "Track and reduce failed slash-session incidents"
   ],
   "goalProgress": [
     {
@@ -18,7 +18,7 @@
     {
       "goal": "Specialist agent utilization",
       "status": "needs_attention",
-      "note": "Main is active; specialist agents are currently idle/standby"
+      "note": "Main is active; contactenrichment, linkedin, n8n, and flowise are idle"
     }
   ],
   "agents": [
@@ -28,8 +28,8 @@
       "status": "Active",
       "health": "ok",
       "goal": "Coordinate mission control operations and response handling",
-      "task": "Cron refresh session is running; main chat lane also shows running",
-      "pending": "Maintain dashboard refresh cadence and channel reliability"
+      "task": "Cron refresh session is running; another main lane also shows running",
+      "pending": "Maintain refresh cadence and channel reliability"
     },
     {
       "name": "contactenrichment",
@@ -46,8 +46,8 @@
       "status": "Idle/Standby",
       "health": "warn",
       "goal": "Run LinkedIn lookup and profile enrichment tasks",
-      "task": "Recent run completed with zero rows; no active session now",
-      "pending": "Await next lookup batch and watch prior slash-session failures"
+      "task": "Recent run completed with zero rows; no running session now",
+      "pending": "Await next lookup batch and monitor prior failed slash sessions"
     },
     {
       "name": "n8n",
